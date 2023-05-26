@@ -1,16 +1,70 @@
 import React, { useState } from 'react';
 import { FcPuzzle } from 'react-icons/fc';
+import { IoIosArrowForward, IoIosArrowDown } from 'react-icons/io';
+
+import {
+  FcBinoculars,
+  FcIdea,
+  FcCalendar,
+  FcCollaboration,
+  FcWorkflow,
+  FcDocument,
+  FcBrokenLink,
+  FcCalculator,
+} from 'react-icons/fc';
+import { MdSmartButton } from 'react-icons/md';
 
 const data = [
   {
-    label: 'Beverages',
-    children: ['Water', 'Coffee'],
+    label: 'Overview',
+    icon: 'FcBinoculars',
   },
   {
-    label: 'Other',
-    children: ['Water', 'Coffee'],
+    label: 'Basic',
+    icon: 'FcIdea',
+    children: ['Button', 'Checkbox'],
+  },
+  {
+    label: 'Data Display',
+    icon: 'FcCalendar',
+    children: ['Avatar', 'Badge', 'Divider', 'List'],
+  },
+  {
+    label: 'Feedback',
+    icon: 'FcCollaboration',
+  },
+  {
+    label: 'Navigation',
+    icon: 'FcBrokenLink',
+    children: ['Avatar', 'Badge', 'Divider', 'List'],
+  },
+  {
+    label: 'Layout',
+    icon: 'FcCalculator',
+    children: ['Avatar', 'Badge', 'Divider', 'List'],
+  },
+  {
+    label: 'Utils',
+    icon: 'FcWorkflow',
+  },
+  {
+    label: 'Pages',
+    icon: 'FcDocument',
+    children: ['Avatar', 'Badge', 'Divider', 'List'],
   },
 ];
+
+function getTitleIcon (name: string) {
+  if ( name === 'FcBinoculars' ) return <FcBinoculars className='icon' />
+  if ( name === 'FcIdea' ) return <FcIdea className='icon' />
+  if ( name === 'FcCalendar' ) return <FcCalendar className='icon' />
+  if ( name === 'FcCollaboration' ) return <FcCollaboration className='icon' />
+  if ( name === 'FcWorkflow' ) return <FcWorkflow className='icon' />
+  if ( name === 'FcDocument' ) return <FcDocument className='icon' />
+  if ( name === 'FcBrokenLink' ) return <FcBrokenLink className='icon' />
+  if ( name === 'FcCalculator' ) return <FcCalculator className='icon' />
+  return <MdSmartButton className='icon' />
+}
 
 interface SidebarProps {
   sidebarActive: boolean;
@@ -18,7 +72,7 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ sidebarActive, setSidebarActive }: SidebarProps) => {
-  const [caretStates, setCaretStates] = useState(Array(2).fill(false));
+  const [caretStates, setCaretStates] = useState(Array(data.length).fill(false));
 
   const toggleCaret = (index: number) => {
     const updatedStates = [...caretStates];
@@ -53,25 +107,37 @@ const Sidebar = ({ sidebarActive, setSidebarActive }: SidebarProps) => {
           </symbol>
         </svg>
       </div>
-      <ul id="myUL">
+      <ul>
         {data.map((item, index) => (
           <li key={index}>
             <span
-              className={`caret ${caretStates[index] ? 'active caret-down' : ''}`}
+              className={`caret ${item.children ? '' : 'no-children'}`}
               onClick={() => toggleCaret(index)}
             >
-              {item.label}
+              <div className='title'>
+                {getTitleIcon(item.icon)}
+                {item.label}
+              </div>
+              {item.children && item.children.length > 0 && caretStates[index] ? (
+                <IoIosArrowDown />
+              ) : (
+                  item.children && item.children.length > 0 && <IoIosArrowForward />
+                )}
             </span>
-            <ul className={`nested ${caretStates[index] ? 'active' : ''}`}>
-              {item.children.map((child, childIndex) => (
-                <li key={childIndex}>{child}</li>
-              ))}
-            </ul>
+            {item.children && (
+              <ul className={`${caretStates[index] ? 'active' : 'inactive'}`}>
+                {item.children.map((child, childIndex) => (
+                  <li className='caret-child' key={childIndex}>
+                    {child}
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
         ))}
       </ul>
     </aside>
   );
-}
+};
 
 export default Sidebar;

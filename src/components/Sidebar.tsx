@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FcPuzzle } from 'react-icons/fc';
+import { SiAbstract } from 'react-icons/si';
 import { IoIosArrowForward, IoIosArrowDown } from 'react-icons/io';
 
 import {
@@ -80,13 +80,22 @@ const Sidebar = ({ sidebarActive, setSidebarActive }: SidebarProps) => {
     setCaretStates(updatedStates);
   };
 
+  const redirect = (item: string) => {
+    console.log('Redirecting', item);
+  }
+
+  const handleClick = (item: string, index: number, hasChildren : boolean) => {
+    if (hasChildren) toggleCaret(index);
+    else redirect(item);
+  }
+
   return (
     <aside className={`${sidebarActive ? '' : 'inactive'}`}>
       <div className='logo'>
-        <FcPuzzle />
+        <SiAbstract />
         <div>
           <span className='heading'>
-            <h1>UI Library</h1>
+            <h1>Brutal Blend</h1>
           </span>
           <p>A collection of prebuilt elements ready for production.</p>
         </div>
@@ -111,8 +120,8 @@ const Sidebar = ({ sidebarActive, setSidebarActive }: SidebarProps) => {
         {data.map((item, index) => (
           <li key={index}>
             <span
-              className={`caret ${item.children ? '' : 'no-children'}`}
-              onClick={() => toggleCaret(index)}
+              className='caret'
+              onClick={() => handleClick(item.label, index, item.children !== undefined)}
             >
               <div className='title'>
                 {getTitleIcon(item.icon)}
@@ -127,7 +136,11 @@ const Sidebar = ({ sidebarActive, setSidebarActive }: SidebarProps) => {
             {item.children && (
               <ul className={`${caretStates[index] ? 'active' : 'inactive'}`}>
                 {item.children.map((child, childIndex) => (
-                  <li className='caret-child' key={childIndex}>
+                  <li
+                    className='caret-child'
+                    key={childIndex}
+                    onClick={() => redirect(child)}
+                  >
                     {child}
                   </li>
                 ))}

@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Roboto+Mono:wght@400&display=swap');
 
-$primary-color: #8BC34A;
-$primary-color-light: #e9f4dd;
+$primary-color: #1565c0;
+$primary-color-light: #e4effc;
+$primary-color-active: #0a3260;
 $text-color: #6F7E8C;
 $bold-color: #0A1929;
 $border-color: #E7EBF0;
@@ -13,16 +14,16 @@ $border-color: #E7EBF0;
   font-family: 'Montserrat', sans-serif;
 }
 
-main {
-  display: flex;
-  align-items: flex-start;
-  max-height: 100vh;
-}
-
 .active { display: block; }
 .inactive { display: none; }
 
+main {
+  display: flex;
+  align-items: flex-start;
+}
+
 aside {
+  position: fixed;
   height: 100vh;
   border-right: 1px solid $border-color;
   width: 300px;
@@ -33,6 +34,7 @@ aside {
     align-items: center;
     margin: 0.25em 0.75em;
     border-bottom: 1px solid $border-color;
+    color: $primary-color;
 
     & > svg {
       width: 5em;
@@ -69,7 +71,7 @@ aside {
   }
 
   .search {
-    margin: 1em auto 0 auto;
+    margin: 1em auto 0.5em auto;
     display: table;
 
     input[type=text] {
@@ -184,17 +186,171 @@ aside {
   }
 }
 
-.sidebar-icon {
-  background-color: $primary-color;
-  border: none;
-  margin: 0.5em;
-  cursor: pointer;
-  border-radius: 3px;
-  position: sticky;
+article {
+  height: 100vh;
+  display: flex;
+  flex-grow: 1;
+  margin-right: 300px;
 
-  svg {
-    width: 2.2em;
-    height: 2.2em;
-    color: white;
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    .sidebar-icon {
+      width: 2em;
+      padding: 1em;
+      background: none;
+      border: none;
+      margin: 0.5em;
+      cursor: pointer;
+      position: sticky;
+
+      svg {
+        width: 1.75em;
+        height: 1.75em;
+        color: $primary-color;
+      }
+    }
+
+    section {
+      width: 100%;
+      flex-grow: 1;
+      padding: 0 7em 7em 7em;
+      margin: auto;
+
+
+      h1, h2, h3, h4 { margin-top: 1em; }
+
+      h4 {
+        font-weight: 600;
+        font-size: 1.1em;
+      }
+
+      p {
+        margin: 1em 0;
+        line-height: 1.5;
+      }
+
+      ul {
+        margin: 1em 0 1.5em 2em;
+        li { margin: 0.75em 0; }
+      }
+
+      .quote {
+        font-family: 'Roboto Mono', monospace;
+        background-color: $primary-color-light;
+        font-weight: 400;
+        padding: 1px 5px;
+        border-radius: 3px;
+      }
+
+      .underline {
+        color: $primary-color;
+        text-decoration: underline;
+        cursor: pointer;
+
+        &:active {
+          color: $primary-color-active;
+        }
+      }
+
+      hr {
+        margin-top: 2em;
+        border: none;
+      }
+
+      .code-result {
+        border: 1px solid $border-color;
+        border-radius: 10px;
+        padding: 2em;
+        margin: 1em 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .code-container {
+        margin-top: 2em;
+
+        ul {
+          display: flex;
+          justify-content: flex-end;
+          list-style: none;
+          margin: 0 0 0.3em 0;
+
+          li {
+            padding: 3px 3px 0 3px;
+            margin: auto 0 auto 1.75em;
+            cursor: pointer;
+            border-radius: 4px;
+            transition-duration: 100ms;
+
+            &:hover {
+              background-color: $primary-color-light;
+              transition-duration: 100ms;
+            }
+          }
+        }
+
+        .code-example {
+          background-color: #282C34;
+          padding: 0.5em 1em;
+          margin-bottom: 1em;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+
+          * { font-family: 'Roboto Mono', monospace; }
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    position: fixed;
+    right: 0;
+    width: 300px;
+    padding: 4em 1.5em 1em 1.5em;
+
+    h3 {
+      color: $bold-color;
+      text-transform: uppercase;
+      font-size: 0.9em;
+      letter-spacing: 1px;
+      padding-bottom: 1em;
+      border-bottom: 2px solid $border-color;
+    }
+
+    h4 {
+      color: $bold-color;
+      font-size: 0.8em;
+      padding: 0.5em 0;
+      margin-top: 0.5em;
+      font-weight: 600;
+      transition-duration: 100ms;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-color;
+        transition-duration: 100ms;
+      }
+    }
+
+    h5 {
+      color: $text-color;
+      font-size: 0.8em;
+      padding: 0.3em 0 0.3em 1.5em;
+      margin: 0.5em 0;
+      font-weight: 600;
+      transition-duration: 100ms;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-color;
+        transition-duration: 100ms;
+      }
+    }
   }
 }
+

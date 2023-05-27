@@ -37,6 +37,7 @@ aside {
     color: $primary-color;
 
     & > svg {
+      cursor: pointer;
       width: 5em;
       height: 5em;
     }

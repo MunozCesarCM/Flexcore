@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { SiAbstract } from 'react-icons/si';
 import { IoIosArrowForward, IoIosArrowDown } from 'react-icons/io';
 
@@ -73,6 +74,7 @@ interface SidebarProps {
 
 const Sidebar = ({ sidebarActive, setSidebarActive }: SidebarProps) => {
   const [caretStates, setCaretStates] = useState(Array(data.length).fill(false));
+  const navigate = useNavigate();
 
   const toggleCaret = (index: number) => {
     const updatedStates = [...caretStates];
@@ -80,19 +82,15 @@ const Sidebar = ({ sidebarActive, setSidebarActive }: SidebarProps) => {
     setCaretStates(updatedStates);
   };
 
-  const redirect = (item: string) => {
-    console.log('Redirecting', item);
-  }
-
   const handleClick = (item: string, index: number, hasChildren : boolean) => {
     if (hasChildren) toggleCaret(index);
-    else redirect(item);
+    else navigate(`/${item.toLowerCase()}`);
   }
 
   return (
     <aside className={`${sidebarActive ? '' : 'inactive'}`}>
       <div className='logo'>
-        <SiAbstract />
+        <SiAbstract onClick={() => navigate('/')} />
         <div>
           <span className='heading'>
             <h1>Brutal Blend</h1>
@@ -139,7 +137,7 @@ const Sidebar = ({ sidebarActive, setSidebarActive }: SidebarProps) => {
                   <li
                     className='caret-child'
                     key={childIndex}
-                    onClick={() => redirect(child)}
+                    onClick={() => navigate(`/${child.toLowerCase()}`)}
                   >
                     {child}
                   </li>

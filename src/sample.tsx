@@ -1,11 +1,11 @@
 import { useState, useRef } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 import { html } from '@codemirror/lang-html';
-import Sidebar from '../components/Sidebar';
+import Sidebar from './components/Sidebar';
 import { TbArrowBigLeftLinesFilled, TbArrowBigRightLinesFilled } from 'react-icons/tb';
 import {  FiMoreVertical, FiCopy, FiRotateCcw } from 'react-icons/fi';
 
-const Overview = () => {
+function App() {
   const sampleRef = useRef<null | HTMLDivElement>(null);
 
   const [sidebarActive, setSidebarActive] = useState(true);
@@ -23,8 +23,8 @@ const Overview = () => {
               (<TbArrowBigLeftLinesFilled onClick={() => setSidebarActive(!sidebarActive)} />) :
               (<TbArrowBigRightLinesFilled onClick={() => setSidebarActive(!sidebarActive)} />)}
           </button>
-          <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
-            <h2>Overview</h2>
+          <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px)' : '100vw')}}>
+            <h2>Button</h2>
             <p>Buttons allow users to take actions, and make choices, with a single tap.</p>
             <p>Buttons communicate <span className='quote'>actions</span> that users can take. They are typically placed throughout your UI, in places like:</p>
             <ul>
@@ -180,4 +180,4 @@ Link
   );
 }
 
-export default Overview;
+export default App;

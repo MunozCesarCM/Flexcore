@@ -45,12 +45,12 @@ const Overview = () => {
               <li>Cards</li>
               <li>Toolbars</li>
             </ul>
-            <h3>Basic button</h3>
+            <h3 id='Basic Button'>Basic Button</h3>
             <p>The <span className='quote'>Button</span> comes with three variants: text (default), contained, and outlined.</p>
             <div className='code-result'>
-              <button style={{margin: '0 1em', background: 'none', cursor: 'pointer', border: 'none', color: '#1565c0', padding: '0.75em 2em', borderRadius: '3px'}}>Text</button>
-              <button style={{margin: '0 1em', background: '#1565c0', cursor: 'pointer', border: 'none', color: 'white', padding: '0.75em 2em', borderRadius: '3px'}}>Contained</button>
-              <button style={{margin: '0 1em', background: 'none', border: '1px solid #1565c0', cursor: 'pointer', color: '#1565c0', padding: '0.75em 2em', borderRadius: '3px'}}>Outlined</button>
+              <button style={{margin: '0 1em', background: 'none', cursor: 'pointer', border: 'none', color: '#007FFF', padding: '0.75em 2em', borderRadius: '3px'}}>Text</button>
+              <button style={{margin: '0 1em', background: '#007FFF', cursor: 'pointer', border: 'none', color: 'white', padding: '0.75em 2em', borderRadius: '3px'}}>Contained</button>
+              <button style={{margin: '0 1em', background: 'none', border: '1px solid #007FFF', cursor: 'pointer', color: '#007FFF', padding: '0.75em 2em', borderRadius: '3px'}}>Outlined</button>
             </div>
             <div className='code-container'>
               <ul>
@@ -69,7 +69,7 @@ const Overview = () => {
               </div>
             </div>
             <hr />
-            <h4>Text Button</h4>
+            <h4 id='Text Button'>Text Button</h4>
             <p><span className='underline'>Text buttons</span> are typically used for less-pronounced actions, including those located in:</p>
             <ul>
               <li>Dialogs</li>
@@ -77,9 +77,9 @@ const Overview = () => {
             </ul>
             <p>In cards, text buttons help maintain an emphasis on card content.</p>
             <div className='code-result'>
-              <button style={{margin: '0 1em', background: '#1565c0', cursor: 'pointer', border: 'none', color: 'white', padding: '0.75em 2em', borderRadius: '3px'}}>One</button>
-              <button style={{margin: '0 1em', background: '#1565c0', cursor: 'pointer', border: 'none', color: 'white', padding: '0.75em 2em', borderRadius: '3px'}}>Two</button>
-              <button style={{margin: '0 1em', background: '#1565c0', cursor: 'pointer', border: 'none', color: 'white', padding: '0.75em 2em', borderRadius: '3px'}}>Three</button>
+              <button style={{margin: '0 1em', background: '#007FFF', cursor: 'pointer', border: 'none', color: 'white', padding: '0.75em 2em', borderRadius: '3px'}}>One</button>
+              <button style={{margin: '0 1em', background: '#007FFF', cursor: 'pointer', border: 'none', color: 'white', padding: '0.75em 2em', borderRadius: '3px'}}>Two</button>
+              <button style={{margin: '0 1em', background: '#007FFF', cursor: 'pointer', border: 'none', color: 'white', padding: '0.75em 2em', borderRadius: '3px'}}>Three</button>
             </div>
             <div className='code-container'>
               <ul>
@@ -112,9 +112,9 @@ Link
             <h3 id="Customization">Customization</h3>
             <p>The <span className='quote'>Button</span> comes with three variants: text (default), contained, and outlined.</p>
             <div className='code-result'>
-              <button style={{margin: '0 1em', background: 'none', cursor: 'pointer', border: 'none', color: '#1565c0', padding: '0.75em 2em', borderRadius: '3px'}}>Text</button>
-              <button style={{margin: '0 1em', background: '#1565c0', cursor: 'pointer', border: 'none', color: 'white', padding: '0.75em 2em', borderRadius: '3px'}}>Contained</button>
-              <button style={{margin: '0 1em', background: 'none', border: '1px solid #1565c0', cursor: 'pointer', color: '#1565c0', padding: '0.75em 2em', borderRadius: '3px'}}>Outlined</button>
+              <button style={{margin: '0 1em', background: 'none', cursor: 'pointer', border: 'none', color: '#007FFF', padding: '0.75em 2em', borderRadius: '3px'}}>Text</button>
+              <button style={{margin: '0 1em', background: '#007FFF', cursor: 'pointer', border: 'none', color: 'white', padding: '0.75em 2em', borderRadius: '3px'}}>Contained</button>
+              <button style={{margin: '0 1em', background: 'none', border: '1px solid #007FFF', cursor: 'pointer', color: '#007FFF', padding: '0.75em 2em', borderRadius: '3px'}}>Outlined</button>
             </div>
             <div className='code-container'>
               <ul>
@@ -141,9 +141,9 @@ Link
             </ul>
             <p>In cards, text buttons help maintain an emphasis on card content.</p>
             <div className='code-result'>
-              <button style={{margin: '0 1em', background: '#1565c0', cursor: 'pointer', border: 'none', color: 'white', padding: '0.75em 2em', borderRadius: '3px'}}>One</button>
-              <button style={{margin: '0 1em', background: '#1565c0', cursor: 'pointer', border: 'none', color: 'white', padding: '0.75em 2em', borderRadius: '3px'}}>Two</button>
-              <button style={{margin: '0 1em', background: '#1565c0', cursor: 'pointer', border: 'none', color: 'white', padding: '0.75em 2em', borderRadius: '3px'}}>Three</button>
+              <button style={{margin: '0 1em', background: '#007FFF', cursor: 'pointer', border: 'none', color: 'white', padding: '0.75em 2em', borderRadius: '3px'}}>One</button>
+              <button style={{margin: '0 1em', background: '#007FFF', cursor: 'pointer', border: 'none', color: 'white', padding: '0.75em 2em', borderRadius: '3px'}}>Two</button>
+              <button style={{margin: '0 1em', background: '#007FFF', cursor: 'pointer', border: 'none', color: 'white', padding: '0.75em 2em', borderRadius: '3px'}}>Three</button>
             </div>
             <div className='code-container'>
               <ul>
@@ -171,22 +171,9 @@ Link
           <h3>Contents</h3>
 
           <h4 onClick={() => scrollPosition('Overview')}>Overview</h4>
-          <h4>Basic Button</h4>
-          <h5>Text Button</h5>
-          <h5>Contained Button</h5>
-          <h5>Outlined Button</h5>
-
-          <h4>Handling Clicks</h4>
-          <h4>Color</h4>
-          <h4>Sizes</h4>
-          <h4>Buttons with Icons</h4>
-
-          <h4>Icon Button</h4>
-          <h5>Sizes</h5>
-          <h5>Colors</h5>
-
+          <h4 onClick={() => scrollPosition('Basic Button')}>Basic Button</h4>
+          <h4 onClick={() => scrollPosition('Text Button')}>Text Button</h4>
           <h4 onClick={() => scrollPosition('Customization')}>Customization</h4>
-          <h4>Complex Button</h4>
         </div>
       </article>
     </main>

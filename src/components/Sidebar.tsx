@@ -88,16 +88,15 @@ const Sidebar = ({ sidebarActive }: SidebarProps) => {
 
   return (
     <aside className={`${sidebarActive ? '' : 'inactive'}`}>
-      <div className='logo'>
-        <SiAbstract onClick={() => navigate('/')} />
+      <div className='logo' onClick={() => navigate('/')}>
+        <SiAbstract />
         <div>
           <span className='heading'>
             <h1>Brutal Blend</h1>
           </span>
-          <p>A collection of prebuilt elements ready for production.</p>
         </div>
       </div>
-      <ul>
+      <ul className='tree-view'>
         {data.map((item, index) => (
           <li key={index}>
             <span

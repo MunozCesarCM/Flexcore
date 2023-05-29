@@ -4,7 +4,6 @@ import { FaGithub } from 'react-icons/fa';
 const Topbar = () => {
   return (
     <nav>
-      <span/>
       <div className='input-icon'>
         <TbSearch className='icon' />
         <input type='text' placeholder='Search . . .' />

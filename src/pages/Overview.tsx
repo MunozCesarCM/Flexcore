@@ -1,30 +1,42 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 import { html } from '@codemirror/lang-html';
 import Sidebar from '../components/Sidebar';
-import { TbArrowBigLeftLinesFilled, TbArrowBigRightLinesFilled } from 'react-icons/tb';
+import Topbar from '../components/Topbar';
+import { TbMenu2, TbX } from 'react-icons/tb';
 import {  FiMoreVertical, FiCopy, FiRotateCcw } from 'react-icons/fi';
 
 const Overview = () => {
-  const sampleRef = useRef<null | HTMLDivElement>(null);
-
   const [sidebarActive, setSidebarActive] = useState(true);
+
+  const scrollPosition = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    const position = element?.getBoundingClientRect().top;
+
+    let offScrollPosition = 0;
+    if (position !== undefined) {
+      offScrollPosition = position + window.pageYOffset - 85;
+    }
+
+    window.scrollTo({
+      top: offScrollPosition,
+      behavior: 'smooth'
+    });
+  }
 
   return (
     <main>
-      <Sidebar
-        sidebarActive={sidebarActive}
-        setSidebarActive={setSidebarActive}
-      />
+      <Topbar />
+      <Sidebar sidebarActive={sidebarActive} />
       <article style={{marginLeft: (sidebarActive ? '300px' : '0')}}>
         <div className='content'>
           <button className='sidebar-icon'>
             {sidebarActive ?
-              (<TbArrowBigLeftLinesFilled onClick={() => setSidebarActive(!sidebarActive)} />) :
-              (<TbArrowBigRightLinesFilled onClick={() => setSidebarActive(!sidebarActive)} />)}
+              (<TbX onClick={() => setSidebarActive(!sidebarActive)} />) :
+              (<TbMenu2 onClick={() => setSidebarActive(!sidebarActive)} />)}
           </button>
           <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
-            <h2>Overview</h2>
+            <h2 id='Overview'>Overview</h2>
             <p>Buttons allow users to take actions, and make choices, with a single tap.</p>
             <p>Buttons communicate <span className='quote'>actions</span> that users can take. They are typically placed throughout your UI, in places like:</p>
             <ul>
@@ -97,7 +109,7 @@ Link
               <li>Cards</li>
               <li>Toolbars</li>
             </ul>
-            <h3 ref={sampleRef}>Customization</h3>
+            <h3 id="Customization">Customization</h3>
             <p>The <span className='quote'>Button</span> comes with three variants: text (default), contained, and outlined.</p>
             <div className='code-result'>
               <button style={{margin: '0 1em', background: 'none', cursor: 'pointer', border: 'none', color: '#1565c0', padding: '0.75em 2em', borderRadius: '3px'}}>Text</button>
@@ -158,6 +170,7 @@ Link
         <div className='sidebar'>
           <h3>Contents</h3>
 
+          <h4 onClick={() => scrollPosition('Overview')}>Overview</h4>
           <h4>Basic Button</h4>
           <h5>Text Button</h5>
           <h5>Contained Button</h5>
@@ -172,7 +185,7 @@ Link
           <h5>Sizes</h5>
           <h5>Colors</h5>
 
-          <h4 onClick={() => sampleRef.current?.scrollIntoView({behavior: 'smooth'})}>Customization</h4>
+          <h4 onClick={() => scrollPosition('Customization')}>Customization</h4>
           <h4>Complex Button</h4>
         </div>
       </article>

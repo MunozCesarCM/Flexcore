@@ -92,7 +92,8 @@ const Sidebar = ({ sidebarActive }: SidebarProps) => {
         <SiAbstract />
         <div>
           <span className='heading'>
-            <h1>Brutal Blend</h1>
+            <h1>FleXkit</h1>
+            <h2>Your CSS Powerhouse</h2>
           </span>
         </div>
       </div>

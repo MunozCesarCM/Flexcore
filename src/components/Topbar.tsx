@@ -1,16 +1,16 @@
 import { TbSearch, TbMoon } from 'react-icons/tb';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithubAlt } from 'react-icons/fa';
 
 const Topbar = () => {
   return (
     <nav>
       <div className='input-icon'>
         <TbSearch className='icon' />
-        <input type='text' placeholder='Search . . .' />
+        <input type='text' placeholder='Search' />
       </div>
       <div className='buttons'>
       <button>
-        <FaGithub />
+        <FaGithubAlt />
       </button>
       <button>
         <TbMoon />

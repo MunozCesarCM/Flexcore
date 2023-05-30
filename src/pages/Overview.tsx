@@ -35,7 +35,7 @@ const Overview = () => {
               (<TbX onClick={() => setSidebarActive(!sidebarActive)} />) :
               (<TbMenu2 onClick={() => setSidebarActive(!sidebarActive)} />)}
           </button>
-          <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
+          <section className='documentation' style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
             <h2 id='Overview'>Overview</h2>
             <p>Buttons allow users to take actions, and make choices, with a single tap.</p>
             <p>Buttons communicate <span className='quote'>actions</span> that users can take. They are typically placed throughout your UI, in places like:</p>
@@ -172,6 +172,9 @@ Link
 
           <h4 onClick={() => scrollPosition('Overview')}>Overview</h4>
           <h4 onClick={() => scrollPosition('Basic Button')}>Basic Button</h4>
+          <h5 onClick={() => scrollPosition('Basic Button')}>Text</h5>
+          <h5 onClick={() => scrollPosition('Basic Button')}>Contained</h5>
+          <h5 onClick={() => scrollPosition('Basic Button')}>Outlined</h5>
           <h4 onClick={() => scrollPosition('Text Button')}>Text Button</h4>
           <h4 onClick={() => scrollPosition('Customization')}>Customization</h4>
         </div>

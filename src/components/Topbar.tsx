@@ -1,23 +1,26 @@
 import { TbSearch, TbMoon } from 'react-icons/tb';
 import { FaGithubAlt } from 'react-icons/fa';
+import { TbX } from 'react-icons/tb';
 
 const Topbar = () => {
   return (
-    <nav>
-      <div className='input-icon'>
-        <TbSearch className='icon' />
-        <input type='text' placeholder='Search' />
-      </div>
-      <div className='buttons'>
-      <button>
-        <FaGithubAlt />
-      </button>
-      <button>
-        <TbMoon />
-      </button>
-      </div>
+    <nav className='topbar-sb-active'>
+      <TbX />
+      <section>
+        <div>
+          <TbSearch />
+          <input type='text' placeholder='Search' />
+        </div>
+        <a>
+          <FaGithubAlt />
+        </a>
+        <button>
+          <TbMoon />
+        </button>
+      </section>
     </nav>
   );
 };
 
 export default Topbar;
+

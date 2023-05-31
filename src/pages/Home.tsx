@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Topbar from '../components/Topbar';
 import Sidebar from '../components/Sidebar';
 import {
@@ -30,10 +31,12 @@ const Home = () => {
               <section className='hero'>
                 <h1><span className='special'>Create</span> with Confidence using Intuitive <span className='special'>UI design.</span></h1>
                 <p>Craft <strong>stunning interfaces</strong> by customizing components with ease, and see your vision come to life. With FleXkit's focus on practicality and <strong>seamless integration</strong>, you can <strong>effortlessly</strong> build responsive and visually appealing websites.</p>
-                <button>
-                  <span>Get Started</span>
-                  <RiArrowDropRightLine />
-                </button>
+                <Link to='/overview'>
+                  <button>
+                    <span>Get Started</span>
+                    <RiArrowDropRightLine />
+                  </button>
+                </Link>
               </section>
               <section className='demo'>
                 Demo

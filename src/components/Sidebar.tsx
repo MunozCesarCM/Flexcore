@@ -87,7 +87,7 @@ const Sidebar = ({ sidebarActive }: SidebarProps) => {
   }
 
   return (
-    <aside className={`${sidebarActive ? '' : 'inactive'}`}>
+    <aside className={`sidebar ${sidebarActive ? '' : 'inactive'}`}>
       <div className='logo' onClick={() => navigate('/')}>
         <SiAbstract />
         <div>

@@ -88,15 +88,10 @@ const Sidebar = ({ sidebarActive }: SidebarProps) => {
 
   return (
     <aside className={`sidebar ${sidebarActive ? '' : 'inactive'}`}>
-      <div className='logo' onClick={() => navigate('/')}>
+      <header className='heading pointer' onClick={() => navigate('/')}>
         <SiAbstract />
-        <div>
-          <span className='heading'>
-            <h1>FleXkit</h1>
-            <h2>Your CSS Powerhouse</h2>
-          </span>
-        </div>
-      </div>
+        <h1>FleXkit</h1>
+      </header>
       <ul className='tree-view'>
         {data.map((item, index) => (
           <li key={index}>

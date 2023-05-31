@@ -1,20 +1,35 @@
 import { TbSearch, TbMoon } from 'react-icons/tb';
 import { FaGithubAlt } from 'react-icons/fa';
-import { TbX } from 'react-icons/tb';
+import { TbMenu2, TbX } from 'react-icons/tb';
 
-const Topbar = () => {
+interface Topbar {
+  sidebarActive: boolean;
+  setSidebarActive: any;
+}
+
+const Topbar = ({sidebarActive, setSidebarActive} : Topbar) => {
   return (
-    <nav className='topbar-sb-active'>
-      <TbX />
+    <nav className={sidebarActive ? 'topbar-sb-active' : 'topbar'}>
+      {sidebarActive ? (
+        <TbX
+          className='text-dark pointer'
+          onClick={() => setSidebarActive(!sidebarActive)}
+        />
+      ) : (
+          <TbMenu2
+            className='text-dark pointer'
+            onClick={() => setSidebarActive(!sidebarActive)}
+          />
+        )}
       <section>
-        <div>
-          <TbSearch />
+        <div className='search-container'>
+          <TbSearch className='text-primary' />
           <input type='text' placeholder='Search' />
         </div>
         <a>
-          <FaGithubAlt />
+          <FaGithubAlt className='text-primary pointer' />
         </a>
-        <button>
+        <button className='pointer'>
           <TbMoon />
         </button>
       </section>

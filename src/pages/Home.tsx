@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <main>
-      <Topbar />
+      <Topbar sidebarActive={sidebarActive} setSidebarActive={setSidebarActive} />
       <Sidebar sidebarActive={sidebarActive} />
       <article style={{marginLeft: (sidebarActive ? '300px' : '0'), marginRight: '0'}}>
         <div className='content'>

@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import Topbar from '../components/Topbar';
 import Sidebar from '../components/Sidebar';
 import {
-  TbMenu2,
-  TbX,
   TbCategory2,
   TbMoonStars,
   TbPalette,
@@ -19,13 +17,8 @@ const Home = () => {
     <main>
       <Topbar sidebarActive={sidebarActive} setSidebarActive={setSidebarActive} />
       <Sidebar sidebarActive={sidebarActive} />
-      <article style={{marginLeft: (sidebarActive ? '300px' : '0'), marginRight: '0'}}>
+      <article  className={ sidebarActive ? 'landing-page-sb-active' : 'landing-page'}>
         <div className='content'>
-          <button className='sidebar-icon'>
-            {sidebarActive ?
-              (<TbX onClick={() => setSidebarActive(!sidebarActive)} />) :
-              (<TbMenu2 onClick={() => setSidebarActive(!sidebarActive)} />)}
-          </button>
           <section className='landing' style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px)' : '100vw')}}>
             <header>
               <section className='hero'>

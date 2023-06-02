@@ -4,66 +4,74 @@ import { SiAbstract } from 'react-icons/si';
 import { IoIosArrowForward, IoIosArrowDown } from 'react-icons/io';
 
 import {
-  FcBinoculars,
-  FcIdea,
-  FcCalendar,
-  FcCollaboration,
-  FcWorkflow,
-  FcDocument,
-  FcBrokenLink,
-  FcCalculator,
-} from 'react-icons/fc';
+  TbFileFilled,
+  TbTypography,
+  TbSquareRoundedCheckFilled,
+  TbForms,
+  TbBellFilled,
+  TbWashDryShade,
+  TbArrowAutofitContentFilled,
+  TbTable,
+  TbChartCandleFilled,
+} from 'react-icons/tb';
 import { MdSmartButton } from 'react-icons/md';
 
 const data = [
   {
     label: 'Overview',
-    icon: 'FcBinoculars',
+    icon: 'TbFileFilled',
   },
   {
-    label: 'Basic',
-    icon: 'FcIdea',
-    children: ['Button', 'Checkbox'],
+    label: 'Typography',
+    icon: 'TbTypography',
+    children: ['Headings', 'Regular', 'Special'],
+  },
+  {
+    label: 'Buttons',
+    icon: 'TbSquareRoundedCheckFilled',
+    children: ['Overview', 'Icon', 'Variations'],
+  },
+  {
+    label: 'Forms and Inputs',
+    icon: 'TbForms',
+    children: ['Text Fields', 'Selection Inputs', 'Range Inputs', 'Date and Time', 'Miscellaneous'],
+  },
+  {
+    label: 'Notifications',
+    icon: 'TbBellFilled',
+    children: ['Alert', 'Toast', 'Snackbar', 'Dialog'],
+  },
+  {
+    label: 'Cards',
+    icon: 'TbWashDryShade',
+  },
+  {
+    label: 'Layouts',
+    icon: 'TbArrowAutofitContentFilled',
+    children: ['Container', 'Grid', 'Flexbox', 'Design Utilities', 'Sticky'],
   },
   {
     label: 'Data Display',
-    icon: 'FcCalendar',
-    children: ['Avatar', 'Badge', 'Divider', 'List'],
+    icon: 'TbTable',
+    children: ['Table', 'List', 'Accordion', 'Tabs'],
   },
   {
-    label: 'Feedback',
-    icon: 'FcCollaboration',
-  },
-  {
-    label: 'Navigation',
-    icon: 'FcBrokenLink',
-    children: ['Avatar', 'Badge', 'Divider', 'List'],
-  },
-  {
-    label: 'Layout',
-    icon: 'FcCalculator',
-    children: ['Avatar', 'Badge', 'Divider', 'List'],
-  },
-  {
-    label: 'Utils',
-    icon: 'FcWorkflow',
-  },
-  {
-    label: 'Pages',
-    icon: 'FcDocument',
-    children: ['Avatar', 'Badge', 'Divider', 'List'],
+    label: 'Miscellaneous',
+    icon: 'TbChartCandleFilled',
+    children: ['Social Media', 'Icon Library', 'Color Palette', 'To Top Button'],
   },
 ];
 
 function getTitleIcon (name: string) {
-  if ( name === 'FcBinoculars' ) return <FcBinoculars className='icon' />
-  if ( name === 'FcIdea' ) return <FcIdea className='icon' />
-  if ( name === 'FcCalendar' ) return <FcCalendar className='icon' />
-  if ( name === 'FcCollaboration' ) return <FcCollaboration className='icon' />
-  if ( name === 'FcWorkflow' ) return <FcWorkflow className='icon' />
-  if ( name === 'FcDocument' ) return <FcDocument className='icon' />
-  if ( name === 'FcBrokenLink' ) return <FcBrokenLink className='icon' />
-  if ( name === 'FcCalculator' ) return <FcCalculator className='icon' />
+  if ( name === 'TbFileFilled' ) return <TbFileFilled className='icon' />
+  if ( name === 'TbTypography' ) return <TbTypography className='icon' />
+  if ( name === 'TbSquareRoundedCheckFilled' ) return <TbSquareRoundedCheckFilled className='icon' />
+  if ( name === 'TbForms' ) return <TbForms className='icon' />
+  if ( name === 'TbBellFilled' ) return <TbBellFilled className='icon' />
+  if ( name === 'TbWashDryShade' ) return <TbWashDryShade className='icon' />
+  if ( name === 'TbArrowAutofitContentFilled' ) return <TbArrowAutofitContentFilled className='icon' />
+  if ( name === 'TbTable' ) return <TbTable className='icon' />
+  if ( name === 'TbChartCandleFilled' ) return <TbChartCandleFilled className='icon' />
   return <MdSmartButton className='icon' />
 }
 

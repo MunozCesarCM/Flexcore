@@ -80,7 +80,7 @@ $size-article-sidebar: 250px;
   margin-right: 0;
 
   &-sb-active {
-    @extend .article-content;
+    @extend .landing-page;
     margin-left: $size-sidebar;
     margin-right: $size-article-sidebar;
   }
@@ -277,7 +277,7 @@ input[type=text] {
     .caret-child {
       color: $text-color;
       font-weight: 400;
-      margin: 0.2em 1em 0.2em 2em;
+      margin: 0.2em 1em 0.2em 3em;
       padding: 0.75em;
       cursor: pointer;
       border-radius: 3px;
@@ -313,9 +313,15 @@ input[type=text] {
 }
 
 .article-content {
+  max-width: calc(85vw - $size-article-sidebar);
   padding: 7em 5em;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 calc(5vw + $size-article-sidebar) 0 auto;
+
+  &-sb-active {
+    @extend .article-content;
+    max-width: calc(95vw - $size-sidebar - $size-article-sidebar);
+    margin: 0 auto;
+  }
 }
 
 .code-result {

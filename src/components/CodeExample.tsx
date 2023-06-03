@@ -2,16 +2,19 @@ import { useState, useRef } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 import { html } from '@codemirror/lang-html';
 import { FiMoreVertical, FiCopy, FiRotateCcw } from 'react-icons/fi';
+import { fleXkitCSS } from '../constants/fleXkit';
 
 const formatCodeExample = (snippet: string) => {
   return `
 <html>
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link href="../fleXkit.css" rel="stylesheet">
-  <style>* { font-family: 'Poppins', sans-serif; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+* { font-family: 'Poppins', sans-serif; }
+${ fleXkitCSS }
+</style>
 </head>
 <body>
 ${snippet}
@@ -30,7 +33,9 @@ const CodeExample = ({ snippet }: CodeExample) => {
   const [srcDoc, setSrcDoc] = useState(snippet);
 
   const onLoad = () => {
-    setHeight(ref.current.contentWindow.document.body.scrollHeight + 50 + 'px');
+    if (ref.current !== null) {
+      setHeight(ref.current.contentWindow.document.body.scrollHeight + 50 + 'px');
+    }
   };
 
   return (

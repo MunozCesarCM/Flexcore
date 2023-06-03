@@ -42,17 +42,6 @@ const Headings = ({ sidebarActive }: Headings) => {
         <h3 id='Customization Options'>Customization Options</h3>
         <h4 id='Font Customization'>Font Customization</h4>
         <p>Font customization allows you to choose from a wide range of font families, sizes, and weights to achieve the desired visual style for your headings and text elements. Experimenting with different combinations of fonts can enhance the aesthetics and readability of your interface.</p>
-
-        <p>In this section, we will explore the customization options provided by FleXkit, allowing you to create unique and engaging headings that align with your design preferences.</p>
-        <blockquote>
-          <TbInfoCircle />
-          Customizing headings and text elements is crucial for creating visually appealing and well-structured web interfaces.
-        </blockquote>
-        <p>In this section, we will explore the customization options provided by FleXkit, allowing you to create unique and engaging headings that align with your design preferences.</p>
-        <blockquote>
-          <TbInfoCircle />
-          Customizing headings and text elements is crucial for creating visually appealing and well-structured web interfaces.
-        </blockquote>
       </section>
       <div className='article-sidebar'>
         <h3>Contents</h3>

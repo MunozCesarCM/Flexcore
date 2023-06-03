@@ -21,8 +21,7 @@ const GettingStarted = ({ sidebarActive }: GettingStarted) => {
   return (
     <article  className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
       <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
-        <h2 id='GettingStarted'>Getting Started</h2>
-        <p>Welcome to the FleXkit Documentation!</p>
+        <h2 id='GettingStarted'>Welcome to the FleXkit Documentation!</h2>
         <p>FleXkit is an advanced <strong>user interface (UI) library</strong> designed to simplify the process of building stunning and responsive web interfaces. In this documentation, we will explore the details of FleXkit's component library, empowering you to effortlessly create engaging user experiences.</p>
 
         <h3>FleXkit's Component Library</h3>

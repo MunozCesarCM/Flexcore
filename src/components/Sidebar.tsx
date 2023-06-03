@@ -18,7 +18,7 @@ import { MdSmartButton } from 'react-icons/md';
 
 const data = [
   {
-    label: 'Overview',
+    label: 'Getting Started',
     icon: 'TbFileFilled',
   },
   {
@@ -91,7 +91,7 @@ const Sidebar = ({ sidebarActive }: SidebarProps) => {
 
   const handleClick = (item: string, index: number, hasChildren : boolean) => {
     if (hasChildren) toggleCaret(index);
-    else navigate(`/${item.toLowerCase()}`);
+    else navigate(`/${item.toLowerCase().replaceAll(' ', '-')}`);
   }
 
   return (
@@ -123,7 +123,7 @@ const Sidebar = ({ sidebarActive }: SidebarProps) => {
                   <li
                     className='caret-child'
                     key={childIndex}
-                    onClick={() => navigate(`/${child.toLowerCase()}`)}
+                    onClick={() => navigate(`/${item.label.toLowerCase()}/${child.toLowerCase().replaceAll(' ', '-')}`)}
                   >
                     {child}
                   </li>

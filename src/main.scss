@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&family=Roboto+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&family=Roboto+Mono:wght@400+500&display=swap');
 
 $primary-color: #007FFF;
 $primary-color-light: #E5F6FD;
@@ -12,6 +12,7 @@ $color-canvas: #FFFFFF;
 $color-primary: #007FFF;
 $color-primary-light: #DDEEFF;
 $color-primary-dark: #0066CC;
+$color-secondary: #FF007F;
 $color-text-regular: #6F7E8C;
 $color-text-dark: #0A1929;
 $color-border: #E7EBF0;
@@ -320,7 +321,7 @@ input[type=text] {
   }
 
   p {
-    margin: 1em 0;
+    margin: 1.2em 0;
     line-height: 1.6;
   }
 
@@ -345,6 +346,52 @@ input[type=text] {
     svg {
       font-size: 1.5em;
       margin-right: 2rem;
+    }
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    max-height: 24em;
+    overflow-y: auto;
+    border-collapse: collapse;
+    margin: 2em 0;
+
+    thead {
+      display: table;
+      width: 100%;
+      border-bottom: 2px solid $color-border;
+
+      th {
+        padding: 0.35em 0;
+        font-weight: 500;
+        text-align: left;
+      }
+    }
+
+    tbody {
+      display: table;
+      width: 100%;
+      border-bottom: 2px solid $color-border;
+
+      tr {
+        display: table-row;
+        border-bottom: 1px solid $color-border;
+
+        td {
+          display: table-cell;
+          font-family: 'Roboto Mono', monospace;
+          font-weight: 400;
+          font-size: 0.95em;
+          padding: .75em 0;
+          color: $color-secondary;
+
+          &:first-child {
+            color: $color-primary;
+            font-size: 1em;
+          }
+        }
+      }
     }
   }
 }

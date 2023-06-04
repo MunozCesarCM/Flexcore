@@ -96,11 +96,15 @@ $size-article-sidebar: 250px;
 
 // Section - Blocks
 
+.sidebar {
+  overflow-y: scroll;
+  border-right: 1px solid $color-border;
+}
+
 body { background-color: $color-canvas; }
 
 a { text-decoration: none; }
 button { border: none; }
-.sidebar { overflow-y: scroll; }
 
 .quote {
   font-family: 'Roboto Mono', monospace;
@@ -335,12 +339,12 @@ input[type=text] {
   blockquote {
     background-color: $primary-color-light;
     border-radius: 8px;
+    margin-top: 1.25em;
     padding: 1.5em 2.5em;
     font-weight: 500;
     font-size: 0.9em;
     color: #014361;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     svg {
@@ -366,6 +370,13 @@ input[type=text] {
         padding: 0.35em 0;
         font-weight: 500;
         text-align: left;
+        vertical-align: top;
+
+        &:first-child {
+          color: $color-primary;
+          font-size: 1em;
+          width: 35%;
+        }
       }
     }
 
@@ -375,20 +386,20 @@ input[type=text] {
       border-bottom: 2px solid $color-border;
 
       tr {
-        display: table-row;
         border-bottom: 1px solid $color-border;
 
         td {
-          display: table-cell;
           font-family: 'Roboto Mono', monospace;
           font-weight: 400;
           font-size: 0.95em;
           padding: .75em 0;
           color: $color-secondary;
+          white-space: pre-wrap;
 
           &:first-child {
             color: $color-primary;
             font-size: 1em;
+            width: 35%;
           }
         }
       }

@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import GettingStarted from './pages/GettingStarted';
-import Headings from './pages/Headings';
+import TextFormatting from './pages/Typography/TextFormatting';
+import ColorStyling from './pages/Typography/ColorStyling';
 import Sidebar from './components/Sidebar';
 import Topbar from './components/Topbar';
 
@@ -15,7 +16,8 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home sidebarActive={sidebarActive} />} />
         <Route path='/getting-started' element={<GettingStarted sidebarActive={sidebarActive} />} />
-        <Route path='/typography/headings' element={<Headings sidebarActive={sidebarActive} />} />
+        <Route path='/typography/text-formatting' element={<TextFormatting sidebarActive={sidebarActive} />} />
+        <Route path='/typography/color-and-styling' element={<ColorStyling sidebarActive={sidebarActive} />} />
       </Routes>
     </main>
   );

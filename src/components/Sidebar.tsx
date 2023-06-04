@@ -24,7 +24,7 @@ const data = [
   {
     label: 'Typography',
     icon: 'TbTypography',
-    children: ['Headings', 'Regular', 'Special'],
+    children: ['Text Formatting', 'Color and Styling'],
   },
   {
     label: 'Buttons',

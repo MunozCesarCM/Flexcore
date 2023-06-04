@@ -17,6 +17,12 @@ export const example2 = `
 `.slice(1,-1);
 
 export const example3 = `
-<h3 class="text-3xl">This is a large header</h3>
-<span class="h3 text-3xl italic">This is italic text</span>
+<p>This is a regular paragraph</p>
 `.slice(1,-1);
+
+export const table1 = {
+  body: [
+    { title: 'text-xs', desc: 'item1\nnewline' },
+    { title: 'text-sm', desc: 'item2' },
+  ],
+};

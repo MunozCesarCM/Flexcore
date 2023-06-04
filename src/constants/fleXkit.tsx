@@ -57,17 +57,53 @@ export const fleXkitCSS = `
 .text-8xl { font-size: 6em; }
 .text-9xl { font-size: 8em; }
 
-.italic { font-style: italic; }
-.not-italic { font-style: normal; }
+.font-100 { font-weight: 100; }
+.font-200 { font-weight: 200; }
+.font-300 { font-weight: 300; }
+.font-400 { font-weight: 400; }
+.font-500 { font-weight: 500; }
+.font-600 { font-weight: 600; }
+.font-700 { font-weight: 700; }
+.font-800 { font-weight: 800; }
+.font-900 { font-weight: 900; }
 
-.font-thin { font-weight: 100; }
-.font-extralight { font-weight: 200; }
-.font-light { font-weight: 300; }
-.font-normal { font-weight: 400; }
-.font-medium { font-weight: 500; }
-.font-semibold { font-weight: 600; }
-.font-bold { font-weight: 700; }
-.font-extrabold { font-weight: 800; }
-.font-black { font-weight: 900; }
+.italic { font-style: italic; }
+.overline { text-decoration: overline; }
+.line-through { text-decoration: line-through; }
+.underline { text-decoration: underline; }
+.no-italic { font-style: normal; }
+.no-line { text-decoration: none; }
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+.line-height-1 { line-height: 1; }
+.line-height-1-5 { line-height: 1.5; }
+.line-height-2 { line-height: 2; }
+.line-height-2-5 { line-height: 2.5; }
+.line-height-3 { line-height: 3; }
+.line-height-3-5 { line-height: 3.5; }
+.line-height-4 { line-height: 4; }
+.line-height-4-5 { line-height: 4.5; }
+.line-height-5 { line-height: 5; }
+.line-height-5-5 { line-height: 5.5; }
+.line-height-6 { line-height: 6; }
+.line-height-6-5 { line-height: 6.5; }
+.line-height-7 { line-height: 7; }
+.line-height-7-5 { line-height: 7.5; }
+.line-height-8 { line-height: 8; }
+.line-height-8-5 { line-height: 8.5; }
+.line-height-9 { line-height: 9; }
+.line-height-9-5 { line-height: 9.5; }
+.line-height-10 { line-height: 10; }
+
+.tracking-tighter { letter-spacing: -0.05em; }
+.tracking-tight { letter-spacing: -0.025em; }
+.tracking-normal { letter-spacing: normal; }
+.tracking-wide { letter-spacing: 0.025em; }
+.tracking-wider { letter-spacing: 0.05em; }
+.tracking-widest { letter-spacing: 0.1em; }
 
 `;

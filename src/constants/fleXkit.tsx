@@ -1,5 +1,23 @@
 export const fleXkitCSS = `
 
+/* Section - Theme */
+
+.theme-light {
+  --color-canvas: #FFFFFF;
+  --color-text-default: #000000;
+}
+
+.theme-dark {
+  --color-canvas: #000000;
+  --color-text-default: #FFFFFF;
+}
+
+body {
+  color: var(--color-text-default);
+  background-color: var(--color-canvas);
+  padding: 1em 3em;
+}
+
 /* Section - Typography */
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -99,11 +117,18 @@ export const fleXkitCSS = `
 .line-height-9-5 { line-height: 9.5; }
 .line-height-10 { line-height: 10; }
 
-.tracking-tighter { letter-spacing: -0.05em; }
-.tracking-tight { letter-spacing: -0.025em; }
-.tracking-normal { letter-spacing: normal; }
-.tracking-wide { letter-spacing: 0.025em; }
-.tracking-wider { letter-spacing: 0.05em; }
-.tracking-widest { letter-spacing: 0.1em; }
+.letter-tighter { letter-spacing: -0.05em; }
+.letter-tight { letter-spacing: -0.025em; }
+.letter-normal { letter-spacing: normal; }
+.letter-wide { letter-spacing: 0.025em; }
+.letter-wider { letter-spacing: 0.05em; }
+.letter-widest { letter-spacing: 0.1em; }
+
+.list-disc { list-style-type: disc; }
+.list-decimal { list-style-type: decimal; }
+.list-none { list-style-type: none; }
+
+.list-inside { list-style-position: inside; }
+.list-outside { list-style-position: outside; }
 
 `;

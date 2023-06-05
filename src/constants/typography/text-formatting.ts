@@ -58,12 +58,30 @@ export const example7 = `
 `.slice(1,-1);
 
 export const example8 = `
-<p class="tracking-tighter">This a tracking tighter sentence</p>
-<p class="tracking-tight">This a tracking tight sentence</p>
-<p class="tracking-normal">This a tracking normal sentence</p>
-<p class="tracking-wide">This a tracking wide sentence</p>
-<p class="tracking-wider">This a tracking wider sentence</p>
-<p class="tracking-widest">This a tracking widest sentence</p>
+<p class="letter-tighter">This is a sentence with tighter text</p>
+<p class="letter-tight">This is a sentence with tight text</p>
+<p class="letter-normal">This is a sentence with normal text</p>
+<p class="letter-wide">This is a sentence with wide text</p>
+<p class="letter-wider">This is a sentence with wider text</p>
+<p class="letter-widest">This is a sentence with widest text</p>
+`.slice(1,-1);
+
+export const example9 = `
+<ul class="list-disc list-inside">
+  <li>List disc inside item</li>
+  <li>List disc inside item</li>
+  <li>List disc inside item</li>
+</ul>
+<ul class="list-decimal list-outside">
+  <li>List decimal outside item</li>
+  <li>List decimal outside item</li>
+  <li>List decimal outside item</li>
+</ul>
+<ul class="list-none">
+  <li class="italic">List none default item</li>
+  <li class="line-through">List none default item</li>
+  <li class="letter-widest">List none default item</li>
+</ul>
 `.slice(1,-1);
 
 export const table1 = {
@@ -144,11 +162,21 @@ export const table5 = {
 
 export const table6 = {
   body: [
-    { title: 'tracking-tighter', desc: 'letter-spacing: -0.05em' },
-    { title: 'tracking-tight', desc: 'letter-spacing: -0.025em' },
-    { title: 'tracking-normal', desc: 'letter-spacing: normal' },
-    { title: 'tracking-wide', desc: 'letter-spacing: 0.025em' },
-    { title: 'tracking-wider', desc: 'letter-spacing: 0.05em' },
-    { title: 'tracking-widest', desc: 'letter-spacing: 0.1em' }
+    { title: 'letter-tighter', desc: 'letter-spacing: -0.05em' },
+    { title: 'letter-tight', desc: 'letter-spacing: -0.025em' },
+    { title: 'letter-normal', desc: 'letter-spacing: normal' },
+    { title: 'letter-wide', desc: 'letter-spacing: 0.025em' },
+    { title: 'letter-wider', desc: 'letter-spacing: 0.05em' },
+    { title: 'letter-widest', desc: 'letter-spacing: 0.1em' }
+  ],
+};
+
+export const table7 = {
+  body: [
+    { title: 'list-disc', desc: 'list-style-type: disc' },
+    { title: 'list-decimal', desc: 'list-style-type: decimal' },
+    { title: 'list-none', desc: 'list-style-type: none' },
+    { title: 'list-inside', desc: 'list-style-position: inside' },
+    { title: 'list-outside', desc: 'list-style-position: outside' },
   ],
 };

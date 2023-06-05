@@ -1,13 +1,30 @@
-import { TbInfoCircle} from 'react-icons/tb';
+import { TbInfoCircle } from 'react-icons/tb';
 import CodeExample from '../../components/CodeExample';
 import ClassTable from '../../components/ClassTable';
-import { example1, example2, example3, table1 } from '../../constants/typography/text-formatting';
+import {
+  example1,
+  example2,
+  example3,
+  example4,
+  example5,
+  example6,
+  example7,
+  example8,
+  example9,
+  table1,
+  table2,
+  table3,
+  table4,
+  table5,
+  table6,
+  table7,
+} from '../../constants/typography/text-formatting';
 
-interface ColorStyling {
+interface TextFormatting {
   sidebarActive: boolean;
 }
 
-const ColorStyling = ({ sidebarActive }: ColorStyling) => {
+const ColorStyling = ({ sidebarActive }: TextFormatting) => {
 
   const scrollPosition = (elementId: string) => {
     const element = document.getElementById(elementId);
@@ -27,49 +44,91 @@ const ColorStyling = ({ sidebarActive }: ColorStyling) => {
   return (
     <article  className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
       <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
-        <h2>ColorStyling</h2>
-        <p>In this section, we will explore the customization options provided by FleXkit, allowing you to create <strong>unique</strong> and <strong>engaging</strong> headings that align with your design preferences.</p>
-        <blockquote>
+        <h2>Color and Styling</h2>
+        <p>This section provides an overview of the color and styling capabilities offered by FleXkit and how they can enhance your UI designs.</p>
+        <section className='notification-container'>
           <TbInfoCircle />
-          Customizing text elements is crucial for creating visually appealing and well-structured web interfaces.
-        </blockquote>
-        <p>All HTML headings, <span className='quote'>h1</span> through <span className='quote'>h6</span>, are available.</p>
-        <CodeExample snippet={example1} />
+          <span className='quote-text'>
+            In web interfaces, color and styling play a vital role in creating visually appealing and engaging user experiences.
+          </span>
+        </section>
 
-        <h3 id='ColorStyling Classes'>ColorStyling Classes</h3>
+        <h3 id='Headings'>Color Palette</h3>
+        <p><span className='quote'>headings</span> are crucial for organizing content and establishing a hierarchy within your web pages.</p>
+        <CodeExample snippet={example1} />
         <p>If you need to match the font styling of a <span className='quote'>heading</span> but cannot use the associated HTML element, FleXkit provides <span className='quote'>.h1</span> through <span className='quote'>.h6</span> classes for your convenience.</p>
         <CodeExample snippet={example2} />
 
-        <h3 id='Customization Options'>Customization Options</h3>
-        <ClassTable tableItems={table1} />
+        <h3 id='Font Customization'>Font Customization</h3>
+        <section className='notification-container'>
+          <TbInfoCircle />
+          <span className='quote-text'>
+            Customizing fonts is a powerful way to align your web interfaces with your design preferences.
+          </span>
+        </section>
 
-        <h4 id='Font Customization'>Font Customization</h4>
+        <h4 id='Font Size'>Font Size</h4>
+        <p>Font size is crucial for establishing visual hierarchy and readability. FleXkit offers preset <span className='quote'>font-size</span> classes to easily adjust the size of your text:</p>
+        <ClassTable tableItems={table1} />
         <p>Font customization allows you to choose from a wide range of <strong>sizes</strong> and <strong>weights</strong> to achieve the desired visual style for your <span className='quote'>headings</span> and text elements. Experimenting with different combinations of fonts can enhance the aesthetics and readability of your interface.</p>
         <CodeExample snippet={example3} />
 
-        <h4 id='Color and Styling'>Color and Styling</h4>
-        <p>Customizing the color and styling of <span className='quote'>headings</span> and text elements can help define the overall look and feel of your interface. With FleXkit, you can easily adjust the following aspects to create visually appealing designs:</p>
-        <ul>
-          <li>Text color</li>
-          <li>Letter spacing</li>
-          <li>Line height</li>
-          <li>Text alignment</li>
-        </ul>
-        <p>By customizing these elements, you can achieve a unique and cohesive visual style for your interface.</p>
-        <CodeExample snippet={example3} />
+        <h4 id='Font Weight'>Font Weight</h4>
+        <ClassTable tableItems={table2} />
+        <p><span className='quote'>font-weight</span> adds emphasis and visual impact to your text. With FleXkit, you can effortlessly customize the font weight:</p>
+        <CodeExample snippet={example4} />
+
+        <h4 id='Font Style'>Font Style</h4>
+        <p><span className='quote'>font-style</span> adds personality and character to your text. FleXkit provides easy ways to apply font styles:</p>
+        <ClassTable tableItems={table3} />
+        <CodeExample snippet={example5} />
+
+        <h3 id='Layout and Alignment'>Layout and Alignment</h3>
+        <section className='notification-container'>
+          <TbInfoCircle />
+          <span className='quote-text'>
+            Layout and alignment contribute to the visual harmony and readability of your web interfaces. FleXkit offers tools to fine-tune the layout and alignment of your text.
+          </span>
+        </section>
+
+        <h4 id='Text Alignment'>Text Alignment</h4>
+        <p>Text alignment plays a crucial role in establishing a clear visual structure. FleXkit provides classes to align text in different contexts:</p>
+        <ClassTable tableItems={table4} />
+        <CodeExample snippet={example6} />
+
+        <h4 id='Line Height'>Line Height</h4>
+        <p><span className='quote'>line-height</span> affects the spacing between lines of text, impacting readability. FleXkit offers classes to adjust the line height:</p>
+        <ClassTable tableItems={table5} />
+        <CodeExample snippet={example7} />
+
+        <h4 id='Letter Spacing'>Letter Spacing</h4>
+        <p><span className='quote'>letter-spacing</span> influences the spacing between characters, improving legibility and visual impact. FleXkit provides classes to adjust letter spacing:</p>
+        <ClassTable tableItems={table6} />
+        <CodeExample snippet={example8} />
+
+        <h3 id='Lists'>Lists</h3>
+        <p>FleXkit offers simple options for creating both ordered and unordered lists.</p>
+        <section className='notification-container'>
+          <TbInfoCircle />
+          <span className='quote-text'>
+            Lists are a great way to present information in an organized manner.
+          </span>
+        </section>
+        <ClassTable tableItems={table7} />
+        <CodeExample snippet={example9} />
 
       </section>
       <div className='article-sidebar'>
         <h3>Contents</h3>
-        <h4 onClick={() => scrollPosition('')}>ColorStyling</h4>
-        <h4 onClick={() => scrollPosition('Font Customization')}>Font Customization</h4>
-        <h5 onClick={() => scrollPosition('Font Size')}>Font Size</h5>
-        <h5 onClick={() => scrollPosition('Font Weight')}>Font Weight</h5>
-        <h4 onClick={() => scrollPosition('Color and Styling')}>Color and Styling</h4>
-        <h5 onClick={() => scrollPosition('Text Color')}>Text Color</h5>
-        <h5 onClick={() => scrollPosition('Letter Spacing')}>Letter Spacing</h5>
-        <h5 onClick={() => scrollPosition('Line Height')}>Line Height</h5>
-        <h5 onClick={() => scrollPosition('Text Alignment')}>Text Alignment</h5>
+        <h4 onClick={() => scrollPosition('')}>Color and Styling</h4>
+        <h4 onClick={() => scrollPosition('Headings')}>Color Palette</h4>
+        <h5 onClick={() => scrollPosition('Letter Spacing')}>Customization</h5>
+        <h4 onClick={() => scrollPosition('Headings')}>Text Color</h4>
+        <h5 onClick={() => scrollPosition('Letter Spacing')}>Text Color</h5>
+        <h5 onClick={() => scrollPosition('Letter Spacing')}>Background Color</h5>
+        <h5 onClick={() => scrollPosition('Letter Spacing')}>Border Color</h5>
+        <h4 onClick={() => scrollPosition('Headings')}>Theming</h4>
+        <h4 onClick={() => scrollPosition('Headings')}>Accessibility</h4>
       </div>
     </article>
   );

@@ -54,7 +54,7 @@ const TextFormatting = ({ sidebarActive }: TextFormatting) => {
         <CodeExample snippet={example2} />
 
         <h3 id='Font Customization'>Font Customization</h3>
-        <section className='notification-container'>
+        <section className='notification-container-info'>
           <TbInfoCircle />
           <span className='quote-text'>
             Customizing fonts is a powerful way to align your web interfaces with your design preferences.
@@ -78,7 +78,7 @@ const TextFormatting = ({ sidebarActive }: TextFormatting) => {
         <CodeExample snippet={example5} />
 
         <h3 id='Layout and Alignment'>Layout and Alignment</h3>
-        <section className='notification-container'>
+        <section className='notification-container-info'>
           <TbInfoCircle />
           <span className='quote-text'>
             Layout and alignment contribute to the visual harmony and readability of your web interfaces. FleXkit offers tools to fine-tune the layout and alignment of your text.
@@ -102,7 +102,7 @@ const TextFormatting = ({ sidebarActive }: TextFormatting) => {
 
         <h3 id='Lists'>Lists</h3>
         <p>FleXkit offers simple options for creating both ordered and unordered lists.</p>
-        <section className='notification-container'>
+        <section className='notification-container-info'>
           <TbInfoCircle />
           <span className='quote-text'>
             Lists are a great way to present information in an organized manner.

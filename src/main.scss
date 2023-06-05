@@ -337,14 +337,24 @@ input[type=text] {
   strong { font-weight: 600; }
 
   .notification-container {
-    background-color: $primary-color-light;
     border-radius: 8px;
     margin-top: 1.25em;
     padding: 1.5em 2.5em;
     display: flex;
     gap: 2em;
     align-items: center;
-    color: #014361;
+
+    &-info {
+      @extend .notification-container;
+      background-color: $primary-color-light;
+      color: #014361;
+    }
+
+    &-warning {
+      @extend .notification-container;
+      background-color: #FFF4E5;
+      color: #663C00;
+    }
 
     svg {
       flex-shrink: 0;
@@ -628,25 +638,25 @@ input[type=text] {
 }
 
 $color-list: (
-  #EF4444, // Red
-  #F97316, // Orange
-  #F59E0B, // Amber
-  #FACC15, // Yellow
-  #84CC16, // Lime
-  #22C55E, // Green
-  #10B981, // Emerald
-  #14B8A6, // Teal
-  #06B6D4, // Cyan
-  #0EA5E9, // Sky
-  #3B82F6, // Blue
-  #6366F1, // Indigo
-  #8B5CF6, // Violet
-  #A855F7, // Purple
-  #D946EF, // Fuchsia
-  #EC4899, // Pink
-  #F43F5E, // Rose
-  #64748B, // Slate
-  #737373, // Neutral
+#EF4444, // Red
+#F97316, // Orange
+#F59E0B, // Amber
+#FACC15, // Yellow
+#84CC16, // Lime
+#22C55E, // Green
+#10B981, // Emerald
+#14B8A6, // Teal
+#06B6D4, // Cyan
+#0EA5E9, // Sky
+#3B82F6, // Blue
+#6366F1, // Indigo
+#8B5CF6, // Violet
+#A855F7, // Purple
+#D946EF, // Fuchsia
+#EC4899, // Pink
+#F43F5E, // Rose
+#64748B, // Slate
+#737373, // Neutral
 );
 
 .color-palette-container {

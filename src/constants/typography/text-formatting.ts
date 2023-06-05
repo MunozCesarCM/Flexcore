@@ -138,6 +138,8 @@ export const table4 = {
 
 export const table5 = {
   body: [
+    { title: 'line-height-0-5', desc: 'line-height: 0.5' },
+    { title: 'line-height-0-75', desc: 'line-height: 0.75' },
     { title: 'line-height-1', desc: 'line-height: 1' },
     { title: 'line-height-1-5', desc: 'line-height: 1.5' },
     { title: 'line-height-2', desc: 'line-height: 2' },

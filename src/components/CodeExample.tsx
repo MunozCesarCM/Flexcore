@@ -41,7 +41,7 @@ const CodeExample = ({ snippet }: CodeExample) => {
 
   const onLoad = () => {
     if (ref.current !== null) {
-      setHeight(ref.current.contentWindow.document.body.scrollHeight + 50 + 'px');
+      setHeight(ref.current.contentWindow.document.body.scrollHeight + 20 + 'px');
     }
   };
 

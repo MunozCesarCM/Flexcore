@@ -1,8 +1,9 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useContext } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 import { html } from '@codemirror/lang-html';
 import { FiSun, FiCopy, FiRotateCcw } from 'react-icons/fi';
 import { fleXkitCSS } from '../constants/fleXkit';
+import AppContext from '../context/AppContext';
 
 const formatCodeExample = (snippet: string, theme: string) => {
   return `
@@ -31,7 +32,7 @@ const CodeExample = ({ snippet }: CodeExample) => {
   const ref = useRef(null);
   const [height, setHeight] = useState('0px');
   const [srcDoc, setSrcDoc] = useState(snippet);
-  const [theme, setTheme] = useState('light');
+  const {theme, setTheme} = useContext(AppContext);
 
   const toggleTheme = () => {
     const newTheme = (theme === 'light') ? 'dark' : 'light';

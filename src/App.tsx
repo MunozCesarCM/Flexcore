@@ -6,10 +6,14 @@ import TextFormatting from './pages/Typography/TextFormatting';
 import ColorStyling from './pages/Typography/ColorStyling';
 import Sidebar from './components/Sidebar';
 import Topbar from './components/Topbar';
+import AppContext from './context/AppContext';
 
 const App = () => {
   const [sidebarActive, setSidebarActive] = useState(true);
+  const [theme, setTheme] = useState('light');
+
   return (
+    <AppContext.Provider value={{ theme, setTheme }}>
     <main>
       <Topbar sidebarActive={sidebarActive} setSidebarActive={setSidebarActive} />
       <Sidebar sidebarActive={sidebarActive} />
@@ -20,6 +24,7 @@ const App = () => {
         <Route path='/typography/color-and-styling' element={<ColorStyling sidebarActive={sidebarActive} />} />
       </Routes>
     </main>
+    </AppContext.Provider>
   );
 }
 export default App;

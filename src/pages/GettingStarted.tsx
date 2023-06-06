@@ -1,8 +1,9 @@
-interface GettingStarted {
-  sidebarActive: boolean;
-}
+import { useEffect, useContext } from 'react';
+import AppContext from '../context/AppContext';
 
-const GettingStarted = ({ sidebarActive }: GettingStarted) => {
+const GettingStarted = () => {
+  const { sidebarActive, setSidebarActive } = useContext(AppContext);
+
   const scrollPosition = (elementId: string) => {
     const element = document.getElementById(elementId);
     const position = element?.getBoundingClientRect().top;
@@ -17,6 +18,10 @@ const GettingStarted = ({ sidebarActive }: GettingStarted) => {
       behavior: 'smooth'
     });
   }
+
+  useEffect(() => {
+    if (sidebarActive === null) setSidebarActive(true);
+  }, []);
 
   return (
     <article  className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>

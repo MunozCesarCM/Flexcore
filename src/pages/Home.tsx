@@ -1,3 +1,4 @@
+import { useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import {
   TbCategory2,
@@ -6,12 +7,15 @@ import {
   TbArrowAutofitWidth,
 } from 'react-icons/tb';
 import { RiArrowDropRightLine } from 'react-icons/ri';
+import AppContext from '../context/AppContext';
 
-interface Home {
-  sidebarActive: boolean;
-}
+const Home = () => {
+  const { sidebarActive, setSidebarActive } = useContext(AppContext);
 
-const Home = ({ sidebarActive }: Home) => {
+  useEffect(() => {
+    setSidebarActive(false);
+  }, []);
+
   return (
     <article  className={ sidebarActive ? 'landing-page-sb-active' : 'landing-page'}>
       <div className='content'>

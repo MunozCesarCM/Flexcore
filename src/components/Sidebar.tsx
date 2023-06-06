@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SiAbstract } from 'react-icons/si';
 import { IoIosArrowForward, IoIosArrowDown } from 'react-icons/io';
+import AppContext from '../context/AppContext';
 
 import {
   TbFileFilled,
@@ -56,9 +57,9 @@ const data = [
     children: ['Table', 'List', 'Accordion', 'Tabs'],
   },
   {
-    label: 'Miscellaneous',
+    label: 'Utilities',
     icon: 'TbChartCandleFilled',
-    children: ['Social Media', 'Icon Library', 'Color Palette', 'To Top Button'],
+    children: ['Sizing', 'Layout', 'Spacing', 'Typography', 'Interactivity'],
   },
 ];
 
@@ -75,11 +76,8 @@ function getTitleIcon (name: string) {
   return <MdSmartButton className='icon' />
 }
 
-interface SidebarProps {
-  sidebarActive: boolean;
-}
-
-const Sidebar = ({ sidebarActive }: SidebarProps) => {
+const Sidebar = () => {
+  const {sidebarActive } = useContext(AppContext);
   const [caretStates, setCaretStates] = useState(Array(data.length).fill(false));
   const navigate = useNavigate();
 

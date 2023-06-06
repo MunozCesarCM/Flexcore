@@ -1,6 +1,8 @@
+import { useEffect, useContext } from 'react';
 import { TbInfoCircle } from 'react-icons/tb';
 import CodeExample from '../../components/CodeExample';
 import ClassTable from '../../components/ClassTable';
+import AppContext from '../../context/AppContext';
 import {
   example1,
   example2,
@@ -20,11 +22,8 @@ import {
   table7,
 } from '../../constants/typography/text-formatting';
 
-interface TextFormatting {
-  sidebarActive: boolean;
-}
-
-const TextFormatting = ({ sidebarActive }: TextFormatting) => {
+const TextFormatting = () => {
+  const { sidebarActive, setSidebarActive } = useContext(AppContext);
 
   const scrollPosition = (elementId: string) => {
     const element = document.getElementById(elementId);
@@ -40,6 +39,10 @@ const TextFormatting = ({ sidebarActive }: TextFormatting) => {
       behavior: 'smooth'
     });
   }
+
+  useEffect(() => {
+    if (sidebarActive === null) setSidebarActive(true);
+  }, []);
 
   return (
     <article  className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>

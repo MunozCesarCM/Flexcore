@@ -1,13 +1,12 @@
+import { useContext } from 'react';
 import { TbSearch, TbMoon } from 'react-icons/tb';
 import { FaGithubAlt } from 'react-icons/fa';
 import { TbMenu2, TbX } from 'react-icons/tb';
+import AppContext from '../context/AppContext';
 
-interface Topbar {
-  sidebarActive: boolean;
-  setSidebarActive: any;
-}
+const Topbar = () => {
+  const {sidebarActive, setSidebarActive } = useContext(AppContext);
 
-const Topbar = ({sidebarActive, setSidebarActive} : Topbar) => {
   return (
     <nav className={sidebarActive ? 'topbar-sb-active' : 'topbar'}>
       {sidebarActive ? (

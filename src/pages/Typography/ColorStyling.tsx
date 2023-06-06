@@ -1,7 +1,9 @@
+import { useEffect, useContext } from 'react';
 import { TbInfoCircle, TbAlertTriangle, TbCircleCheck } from 'react-icons/tb';
 import CodeExample from '../../components/CodeExample';
 import ClassTable from '../../components/ClassTable';
 import ColorPalette from '../../components/ColorPalette';
+import AppContext from '../../context/AppContext';
 import {
   example1,
   example2,
@@ -15,11 +17,8 @@ import {
   table4,
 } from '../../constants/typography/color-styling';
 
-interface TextFormatting {
-  sidebarActive: boolean;
-}
-
-const ColorStyling = ({ sidebarActive }: TextFormatting) => {
+const ColorStyling = () => {
+  const { sidebarActive, setSidebarActive } = useContext(AppContext);
 
   const scrollPosition = (elementId: string) => {
     const element = document.getElementById(elementId);
@@ -35,6 +34,10 @@ const ColorStyling = ({ sidebarActive }: TextFormatting) => {
       behavior: 'smooth'
     });
   }
+
+  useEffect(() => {
+    if (sidebarActive === null) setSidebarActive(true);
+  }, []);
 
   return (
     <article  className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>

@@ -10,7 +10,7 @@ const TextFormatting = React.lazy(() => import('./pages/Typography/TextFormattin
 const ColorStyling = React.lazy(() => import('./pages/Typography/ColorStyling'));
 
 const App = () => {
-  const [sidebarActive, setSidebarActive] = useState(true);
+  const [sidebarActive, setSidebarActive] = useState(null);
   const [theme, setTheme] = useState('light');
   const { pathname } = useLocation();
 
@@ -19,16 +19,16 @@ const App = () => {
   }, [pathname]);
 
   return (
-    <AppContext.Provider value={{ theme, setTheme }}>
+    <AppContext.Provider value={{ sidebarActive, theme, setSidebarActive, setTheme }}>
       <main>
-        <Topbar sidebarActive={sidebarActive} setSidebarActive={setSidebarActive} />
-        <Sidebar sidebarActive={sidebarActive} />
+        <Topbar />
+        <Sidebar />
         <Suspense fallback={<div />}>
           <Routes>
-            <Route path='/' element={<Home sidebarActive={sidebarActive} />} />
-            <Route path='/getting-started' element={<GettingStarted sidebarActive={sidebarActive} />} />
-            <Route path='/typography/text-formatting' element={<TextFormatting sidebarActive={sidebarActive} />} />
-            <Route path='/typography/color-and-styling' element={<ColorStyling sidebarActive={sidebarActive} />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/getting-started' element={<GettingStarted />} />
+            <Route path='/typography/text-formatting' element={<TextFormatting />} />
+            <Route path='/typography/color-and-styling' element={<ColorStyling />} />
           </Routes>
         </Suspense>
       </main>

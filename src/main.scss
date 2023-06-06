@@ -1,21 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&family=Roboto+Mono:wght@400+500&display=swap');
 
-$primary-color: #007FFF;
-$primary-color-light: #E5F6FD;
-$primary-color-active: #0066CC;
-$complementary-color: #FF8000;
-$text-color: #6F7E8C;
-$bold-color: #0A1929;
-$border-color: #E7EBF0;
-
 $color-canvas: #FFFFFF;
-$color-primary: #007FFF;
-$color-primary-light: #DDEEFF;
-$color-primary-dark: #0066CC;
-$color-secondary: #FF007F;
-$color-text-regular: #6F7E8C;
-$color-text-dark: #0A1929;
 $color-border: #E7EBF0;
+
+$color-primary: #007FFF;
+$color-secondary: #FF007F;
+$color-accent: #FF007F;
+
+$color-text: #6F7E8C;
+$color-heading: #0A1929;
+$color-link: #0A1929;
+$color-link-hover: #0A1929;
+
+$color-success: #2E7D32;
+$color-success-light: #EDF7ED;
+$color-success-dark: #1E4620;
+
+$color-error: #CC3333;
+$color-error-light: #FDEDED;
+$color-error-dark: #5F2120;
+
+$color-warning: #ED6C02;
+$color-warning-light: #FFF4E5;
+$color-warning-dark: #663C00;
+
+$color-info: #0288D1;
+$color-info-light: #E5F6FD;
+$color-info-dark: #014361;
 
 $size-topbar: 4em;
 $size-sidebar: 300px;
@@ -108,7 +119,7 @@ button { border: none; }
 
 .quote {
   font-family: 'Roboto Mono', monospace;
-  background-color: $primary-color-light;
+  background-color: $color-info-light;
   font-weight: 500;
   font-size: 0.95em;
   padding: 1px 5px;
@@ -116,18 +127,18 @@ button { border: none; }
 }
 
 .underline {
-  color: $primary-color;
+  color: $color-info;
   text-decoration: underline;
   cursor: pointer;
   transition-duration: 100ms;
 
   &:hover {
-    color: $primary-color-active;
+    color: $color-info-light;
     transition-duration: 100ms;
   }
 
   &:active {
-    color: $primary-color-active;
+    color: $color-info-dark;
     transition-duration: 100ms;
   }
 }
@@ -158,11 +169,11 @@ hr {
     }
 
     a {
-      border-bottom: 1.5px solid $border-color;
+      border-bottom: 1.5px solid $color-border;
       transition-duration: 100ms;
 
       &:hover {
-        border-bottom: 1.5px solid $primary-color;
+        border-bottom: 1.5px solid $color-primary;
         transition-duration: 100ms;
       }
     }
@@ -190,17 +201,17 @@ hr {
   border-radius: 5px;
   padding: 4px;
   background-color: #F3F6F9;
-  color: $color-text-regular;
+  color: $color-text;
   display: flex;
 
   &:hover {
-    border: 1.5px solid $primary-color;
+    border: 1.5px solid $color-primary;
     transition-duration: 100ms;
   }
 
   &:focus {
     outline: none;
-    border: 1.5px solid $primary-color;
+    border: 1.5px solid $color-primary;
   }
 }
 
@@ -219,7 +230,7 @@ input[type=text] {
   padding-bottom: 5vh;
 
   .heading {
-    color: $primary-color;
+    color: $color-primary;
     display: flex;
     align-items: center;
     border-bottom: 1px solid $color-border;
@@ -252,7 +263,7 @@ input[type=text] {
     padding: 0;
 
     .caret {
-      color: $bold-color;
+      color: $color-heading;
       font-weight: 400;
       margin: 0.2em 1em;
       padding: 0.75em;
@@ -268,7 +279,7 @@ input[type=text] {
       transition-duration: 50ms;
 
       &:hover {
-        background-color: $primary-color-light;
+        background-color: $color-info-light;
         transition-duration: 50ms;
       }
 
@@ -278,13 +289,13 @@ input[type=text] {
       }
 
       .icon {
-        color: $primary-color;
+        color: $color-primary;
         margin-right: 0.75em;
       }
     }
 
     .caret-child {
-      color: $text-color;
+      color: $color-text;
       font-weight: 400;
       margin: 0.2em 1em 0.2em 3em;
       padding: 0.75em;
@@ -293,8 +304,8 @@ input[type=text] {
       transition-duration: 50ms;
 
       &:hover {
-        background-color: $primary-color-light;
-        color: $bold-color;
+        background-color: $color-info-light;
+        color: $color-heading;
         transition-duration: 50ms;
       }
     }
@@ -344,16 +355,28 @@ input[type=text] {
     gap: 2em;
     align-items: center;
 
-    &-info {
+    &-success {
       @extend .notification-container;
-      background-color: $primary-color-light;
-      color: #014361;
+      background-color: $color-success-light;
+      color: $color-success-dark;
+    }
+
+    &-error {
+      @extend .notification-container;
+      background-color: $color-error-light;
+      color: $color-error-dark;
     }
 
     &-warning {
       @extend .notification-container;
-      background-color: #FFF4E5;
-      color: #663C00;
+      background-color: $color-warning-light;
+      color: $color-warning-dark;
+    }
+
+    &-info {
+      @extend .notification-container;
+      background-color: $color-info-light;
+      color: $color-info-dark;
     }
 
     svg {
@@ -432,7 +455,7 @@ input[type=text] {
     height: 100%;
     width: 100%;
     overflow-y: hidden;
-    border: 1px solid $border-color;
+    border: 1px solid $color-border;
     border-radius: 10px;
   }
 }
@@ -454,7 +477,7 @@ input[type=text] {
       transition-duration: 100ms;
 
       &:hover {
-        background-color: $primary-color-light;
+        background-color: $color-info-light;
         transition-duration: 100ms;
       }
     }
@@ -478,7 +501,7 @@ input[type=text] {
   padding: calc(5em - $size-topbar) 2em 1em 0;
 
   h3 {
-    color: $color-text-dark;
+    color: $color-heading;
     text-transform: uppercase;
     font-size: 0.9em;
     letter-spacing: 1px;
@@ -495,20 +518,20 @@ input[type=text] {
     cursor: pointer;
 
     &:hover {
-      color: $primary-color;
+      color: $color-primary;
       transition-duration: 85ms;
-      border-left: 3px solid $primary-color;
+      border-left: 3px solid $color-primary;
     }
   }
 
   h4 {
-    color: $color-text-dark;
+    color: $color-heading;
     padding: 0.75em 0;
     &:hover { padding-left: 1em; }
   }
 
   h5 {
-    color: $color-text-regular;
+    color: $color-text;
     padding: 0.8em 0 0.8em 1.5em;
     &:hover { padding-left: 2.5em; }
   }
@@ -533,7 +556,7 @@ input[type=text] {
         font-size: 4.25em;
 
         .special {
-          color: $primary-color;
+          color: $color-primary;
         }
       }
 
@@ -549,7 +572,7 @@ input[type=text] {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: $primary-color;
+        background-color: $color-primary;
         color: white;
         font-weight: 600;
         font-size: 1.1em;
@@ -612,14 +635,14 @@ input[type=text] {
       cursor: pointer;
 
       svg {
-        color: $primary-color;
+        color: $color-primary;
         font-size: 3em;
         transition-duration: 200ms;
       }
 
       &:hover {
-        border: 2px solid $border-color;
-        svg { color: $primary-color-active; }
+        border: 2px solid $color-border;
+        svg { color: $color-info-dark; }
       }
 
       h2 {

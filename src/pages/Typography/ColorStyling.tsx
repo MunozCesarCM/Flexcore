@@ -1,4 +1,4 @@
-import { TbInfoCircle, TbAlertTriangle } from 'react-icons/tb';
+import { TbInfoCircle, TbAlertTriangle, TbCircleCheck } from 'react-icons/tb';
 import CodeExample from '../../components/CodeExample';
 import ClassTable from '../../components/ClassTable';
 import ColorPalette from '../../components/ColorPalette';
@@ -100,15 +100,14 @@ const ColorStyling = ({ sidebarActive }: TextFormatting) => {
 
       <h4 id='Custom Theme'>Custom Theme</h4>
       <p>FleXkit empowers you to create a <strong>fully customized</strong> theme that aligns with your site identity or design requirements. By modifying theme variables, you can achieve an unique design throughout your site.</p>
-      <section className='notification-container-info'>
-        <TbInfoCircle />
+      <section className='notification-container-success'>
+        <TbCircleCheck />
         <span className='quote-text'>
           By combining the customization capabilities of FleXkit with your creative vision, you can create a truly personalized and visually stunning interface.
         </span>
       </section>
       <p>To create a custom theme, identify the theme variables you want to modify and update their values accordingly. Experiment with different colors to achieve your desired aesthetic.</p>
       <CodeExample snippet={example6} template={false} />
-
 
       <div className='article-sidebar'>
         <h3>Contents</h3>

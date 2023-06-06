@@ -9,7 +9,7 @@ export const example1 = `
     --color-secondary: #FF007F;
   }
 </style>
-<!-- Change the hex values above to modify these colors -->
+<!-- Change the hex values above to modify the colors -->
 <p class="text-primary font-600">This is the primary color</p>
 <p class="text-secondary font-500">This is the secondary color</p>
 `.slice(1,-1);
@@ -53,7 +53,7 @@ export const example4 = `
     --color-secondary: #FF007F;
   }
 </style>
-<!-- Change the hex values above to modify these colors -->
+<!-- Change the hex values above to modify the colors -->
 <h1>
   <span class="text-primary">Create </span>
   with Confidence using Intuitive
@@ -79,7 +79,7 @@ export const example5 = `
     --color-primary: #FF007F;
   }
 </style>
-<!-- Change the hex values above to modify these colors -->
+<!-- Change the hex values above to modify the colors -->
 <body class="theme-light">
 <h1>
   <span class="text-primary">Change </span>
@@ -104,7 +104,7 @@ export const example6 = `
     --color-primary: #FB8500;
   }
 </style>
-<!-- Change the hex values above to modify these colors -->
+<!-- Change the hex values above to modify the colors -->
 <body class="theme-custom">
 <h1>
   This is a

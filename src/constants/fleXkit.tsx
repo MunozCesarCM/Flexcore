@@ -4,7 +4,7 @@ export const fleXkitCSS = `
 
 .theme-light {
   --color-canvas: #FFFFFF;
-  --color-text-default: #000000;
+  --color-text: #000000;
 
   --color-primary: #007FFF;
   --color-secondary: #FF007F;
@@ -12,14 +12,14 @@ export const fleXkitCSS = `
 
 .theme-dark {
   --color-canvas: #121212;
-  --color-text-default: #FFFFFF;
+  --color-text: #FFFFFF;
 
   --color-primary: #007FFF;
   --color-secondary: #FF007F;
 }
 
 body {
-  color: var(--color-text-default);
+  color: var(--color-text);
   background-color: var(--color-canvas);
   padding: 1em 3em;
 }

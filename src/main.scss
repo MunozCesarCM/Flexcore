@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&family=Roboto+Mono:wght@400+500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap');
 
 $color-canvas: #FFFFFF;
 $color-border: #E7EBF0;
@@ -451,6 +451,8 @@ input[type=text] {
 }
 
 .code-result {
+  margin-top: 2em;
+
   iframe {
     height: 100%;
     width: 100%;

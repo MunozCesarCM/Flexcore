@@ -42,13 +42,13 @@ export const example4 = `
 <style>
   .theme-light {
     --color-canvas: #FFFFFF;
-    --color-text-default: #000000;
+    --color-text: #000000;
     --color-primary: #007FFF;
     --color-secondary: #FF007F;
   }
   .theme-dark {
     --color-canvas: #121212;
-    --color-text-default: #FFFFFF;
+    --color-text: #FFFFFF;
     --color-primary: #007FFF;
     --color-secondary: #FF007F;
   }
@@ -66,6 +66,51 @@ export const example4 = `
   <span class="text-secondary"> seamless integration</span>, you
   can effortlessly build responsive and visually appealing websites.
 </p>
+`.slice(1,-1);
+
+export const example5 = `
+<style>
+  .theme-light {
+    --color-canvas: #FFFFFF;
+    --color-primary: #007FFF;
+  }
+  .theme-dark {
+    --color-canvas: #121212;
+    --color-primary: #FF007F;
+  }
+</style>
+<!-- Change the hex values above to modify these colors -->
+<body class="theme-light">
+<h1>
+  <span class="text-primary">Change </span>
+  the body class to see the
+  <span class="text-primary"> theme change.</span>
+</h1>
+</body>
+`.slice(1,-1);
+
+export const example6 = `
+<style>
+  .theme-light {
+    --color-canvas: #FFFFFF;
+    --color-primary: #007FFF;
+  }
+  .theme-dark {
+    --color-canvas: #121212;
+    --color-primary: #FF007F;
+  }
+  .theme-custom {
+    --color-canvas: #FAFAFA;
+    --color-primary: #FB8500;
+  }
+</style>
+<!-- Change the hex values above to modify these colors -->
+<body class="theme-custom">
+<h1>
+  This is a
+  <span class="text-primary"> custom theme.</span>
+</h1>
+</body>
 `.slice(1,-1);
 
 export const table1 = {
@@ -275,8 +320,8 @@ export const table1 = {
 
 export const table2 = {
   body: [
-    { title: 'Primary Color', desc: '--color-primary' },
-    { title: 'Secodary Color', desc: '--color-secondary' },
+    { title: 'primary color', desc: '--color-primary' },
+    { title: 'secodary color', desc: '--color-secondary' },
   ],
 };
 
@@ -484,3 +529,28 @@ export const table3 = {
     { title: 'bg-neutral-950', desc: 'background-color: #0A0A0A' },
   ],
 };
+
+export const table4 = {
+  body: [
+    { title: 'background', desc: '--color-canvas' },
+    { title: 'primary', desc: '--color-primary' },
+    { title: 'secondary', desc: '--color-secondary' },
+    { title: 'accent', desc: '--color-accent' },
+    { title: 'text', desc: '--color-text' },
+    { title: 'headings', desc: '--color-heading' },
+    { title: 'links', desc: '--color-link' },
+    { title: 'links:hover', desc: '--color-link-hover' },
+    { title: 'success', desc: '--color-success' },
+    { title: 'warning', desc: '--color-warning' },
+    { title: 'error', desc: '--color-error' },
+    { title: 'info', desc: '--color-info' },
+    { title: 'success-light', desc: '--color-success-light' },
+    { title: 'warning-light', desc: '--color-warning-light' },
+    { title: 'error-light', desc: '--color-error-light' },
+    { title: 'info-light', desc: '--color-info-light' },
+    { title: 'success-dark', desc: '--color-success-dark' },
+    { title: 'warning-dark', desc: '--color-warning-dark' },
+    { title: 'error-dark', desc: '--color-error-dark' },
+    { title: 'info-dark', desc: '--color-info-dark' },
+  ],
+}

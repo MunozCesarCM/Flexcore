@@ -8,6 +8,8 @@ const Home = React.lazy(() => import('./pages/Home'));
 const GettingStarted = React.lazy(() => import('./pages/GettingStarted'));
 const TextFormatting = React.lazy(() => import('./pages/Typography/TextFormatting'));
 const ColorStyling = React.lazy(() => import('./pages/Typography/ColorStyling'));
+const Sizing = React.lazy(() => import('./pages/Utilities/Sizing'));
+const Layout = React.lazy(() => import('./pages/Utilities/Layout'));
 
 const App = () => {
   const [sidebarActive, setSidebarActive] = useState(null);
@@ -29,6 +31,8 @@ const App = () => {
             <Route path='/getting-started' element={<GettingStarted />} />
             <Route path='/typography/text-formatting' element={<TextFormatting />} />
             <Route path='/typography/color-and-styling' element={<ColorStyling />} />
+            <Route path='/utilities/sizing' element={<Sizing />} />
+            <Route path='/utilities/layout' element={<Layout />} />
           </Routes>
         </Suspense>
       </main>

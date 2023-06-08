@@ -545,6 +545,7 @@ input[type=text] {
       transition-duration: 100ms;
 
       &:hover {
+        color: var(--color-heading);
         background-color: var(--color-info-light);
         transition-duration: 100ms;
       }

@@ -18,74 +18,26 @@ export const example2 = `
 
 export const table1 = {
   body: [
-    { title: 'w-px', desc: 'width: 1px' },
     { title: 'w-auto', desc: 'width: auto' },
     { title: 'w-full', desc: 'width: 100%' },
     { title: 'w-screen', desc: 'width: 100vw' },
     { title: 'w-min', desc: 'width: min-content' },
     { title: 'w-max', desc: 'width: max-content' },
     { title: 'w-fit', desc: 'width: fit-content' },
-    { title: 'w-1/2', desc: 'width: 50%' },
-    { title: 'w-1/3', desc: 'width: 33.333333%' },
-    { title: 'w-2/3', desc: 'width: 66.666667%' },
-    { title: 'w-1/4', desc: 'width: 25%' },
-    { title: 'w-2/4', desc: 'width: 50%' },
-    { title: 'w-3/4', desc: 'width: 75%' },
-    { title: 'w-1/5', desc: 'width: 20%' },
-    { title: 'w-2/5', desc: 'width: 40%' },
-    { title: 'w-3/5', desc: 'width: 60%' },
-    { title: 'w-4/5', desc: 'width: 80%' },
-    { title: 'w-1/6', desc: 'width: 16.666667%' },
-    { title: 'w-2/6', desc: 'width: 33.333333%' },
-    { title: 'w-3/6', desc: 'width: 50%' },
-    { title: 'w-4/6', desc: 'width: 66.666667%' },
-    { title: 'w-5/6', desc: 'width: 83.333333%' },
-    { title: 'w-0', desc: 'width: 0' },
-    { title: 'w-1', desc: 'width: 0.25em' },
-    { title: 'w-2', desc: 'width: 0.5em' },
-    { title: 'w-3', desc: 'width: 0.75em' },
-    { title: 'w-4', desc: 'width: 1em' },
-    { title: 'w-5', desc: 'width: 1.25em' },
-    { title: 'w-6', desc: 'width: 1.5em' },
-    { title: 'w-7', desc: 'width: 1.75em' },
-    { title: 'w-8', desc: 'width: 2.em' },
-    { title: 'w-9', desc: 'width: 1.25em' },
-    { title: 'w-10', desc: 'width: 2.5em' },
-    { title: 'w-11', desc: 'width: 2.75em' },
-    { title: 'w-12', desc: 'width: 3em' },
-    { title: 'w-13', desc: 'width: 3.25em' },
-    { title: 'w-14', desc: 'width: 3.5em' },
-    { title: 'w-15', desc: 'width: 3.75em' },
-    { title: 'w-16', desc: 'width: 4em' },
-    { title: 'w-17', desc: 'width: 4.25em' },
-    { title: 'w-18', desc: 'width: 4.5em' },
-    { title: 'w-19', desc: 'width: 4.75em' },
-    { title: 'w-20', desc: 'width: 5em' },
-    { title: 'w-22', desc: 'width: 5.5em' },
-    { title: 'w-24', desc: 'width: 6em' },
-    { title: 'w-26', desc: 'width: 6.5em' },
-    { title: 'w-28', desc: 'width: 7em' },
-    { title: 'w-30', desc: 'width: 7.5em' },
-    { title: 'w-32', desc: 'width: 8em' },
-    { title: 'w-34', desc: 'width: 8.5em' },
-    { title: 'w-36', desc: 'width: 9em' },
-    { title: 'w-38', desc: 'width: 9.5em' },
-    { title: 'w-40', desc: 'width: 10em' },
-    { title: 'w-42', desc: 'width: 10.5em' },
-    { title: 'w-44', desc: 'width: 11em' },
-    { title: 'w-46', desc: 'width: 11.5em' },
-    { title: 'w-48', desc: 'width: 12em' },
-    { title: 'w-50', desc: 'width: 12.5em' },
-    { title: 'w-55', desc: 'width: 13.75em' },
-    { title: 'w-60', desc: 'width: 15em' },
-    { title: 'w-65', desc: 'width: 16.25em' },
-    { title: 'w-70', desc: 'width: 17.5em' },
-    { title: 'w-75', desc: 'width: 18.75em' },
-    { title: 'w-80', desc: 'width: 20em' },
-    { title: 'w-85', desc: 'width: 21.25em' },
-    { title: 'w-90', desc: 'width: 22.5em' },
-    { title: 'w-95', desc: 'width: 23.75em' },
-    { title: 'w-100', desc: 'width: 25em' },
+
+    ...(function() {
+      const array = [];
+
+      for (let i = 0; i <= 100; ++i) {
+        const item = {
+          title: `w-${i}`,
+          desc: `width: ${i * 0.25}em`,
+        };
+        array.push(item);
+      }
+
+      return array;
+    })()
   ],
 };
 
@@ -113,7 +65,6 @@ export const table3 = {
 
 export const table4 = {
   body: [
-    { title: 'h-px', desc: 'height: 1px' },
     { title: 'h-auto', desc: 'height: auto' },
     { title: 'h-full', desc: 'height: 100%' },
     { title: 'h-screen', desc: 'height: 100vw' },
@@ -135,52 +86,20 @@ export const table4 = {
     { title: 'h-3/6', desc: 'height: 50%' },
     { title: 'h-4/6', desc: 'height: 66.666667%' },
     { title: 'h-5/6', desc: 'height: 83.333333%' },
-    { title: 'h-0', desc: 'height: 0' },
-    { title: 'h-1', desc: 'height: 0.25em' },
-    { title: 'h-2', desc: 'height: 0.5em' },
-    { title: 'h-3', desc: 'height: 0.75em' },
-    { title: 'h-4', desc: 'height: 1em' },
-    { title: 'h-5', desc: 'height: 1.25em' },
-    { title: 'h-6', desc: 'height: 1.5em' },
-    { title: 'h-7', desc: 'height: 1.75em' },
-    { title: 'h-8', desc: 'height: 2.em' },
-    { title: 'h-9', desc: 'height: 1.25em' },
-    { title: 'h-10', desc: 'height: 2.5em' },
-    { title: 'h-11', desc: 'height: 2.75em' },
-    { title: 'h-12', desc: 'height: 3em' },
-    { title: 'h-13', desc: 'height: 3.25em' },
-    { title: 'h-14', desc: 'height: 3.5em' },
-    { title: 'h-15', desc: 'height: 3.75em' },
-    { title: 'h-16', desc: 'height: 4em' },
-    { title: 'h-17', desc: 'height: 4.25em' },
-    { title: 'h-18', desc: 'height: 4.5em' },
-    { title: 'h-19', desc: 'height: 4.75em' },
-    { title: 'h-20', desc: 'height: 5em' },
-    { title: 'h-22', desc: 'height: 5.5em' },
-    { title: 'h-24', desc: 'height: 6em' },
-    { title: 'h-26', desc: 'height: 6.5em' },
-    { title: 'h-28', desc: 'height: 7em' },
-    { title: 'h-30', desc: 'height: 7.5em' },
-    { title: 'h-32', desc: 'height: 8em' },
-    { title: 'h-34', desc: 'height: 8.5em' },
-    { title: 'h-36', desc: 'height: 9em' },
-    { title: 'h-38', desc: 'height: 9.5em' },
-    { title: 'h-40', desc: 'height: 10em' },
-    { title: 'h-42', desc: 'height: 10.5em' },
-    { title: 'h-44', desc: 'height: 11em' },
-    { title: 'h-46', desc: 'height: 11.5em' },
-    { title: 'h-48', desc: 'height: 12em' },
-    { title: 'h-50', desc: 'height: 12.5em' },
-    { title: 'h-55', desc: 'height: 13.75em' },
-    { title: 'h-60', desc: 'height: 15em' },
-    { title: 'h-65', desc: 'height: 16.25em' },
-    { title: 'h-70', desc: 'height: 17.5em' },
-    { title: 'h-75', desc: 'height: 18.75em' },
-    { title: 'h-80', desc: 'height: 20em' },
-    { title: 'h-85', desc: 'height: 21.25em' },
-    { title: 'h-90', desc: 'height: 22.5em' },
-    { title: 'h-95', desc: 'height: 23.75em' },
-    { title: 'h-100', desc: 'height: 25em' },
+
+    ...(function() {
+      const array = [];
+
+      for (let i = 0; i <= 100; ++i) {
+        const item = {
+          title: `h-${i}`,
+          desc: `height: ${i * 0.25}em`,
+        };
+        array.push(item);
+      }
+
+      return array;
+    })()
   ],
 };
 
@@ -197,55 +116,23 @@ export const table5 = {
 
 export const table6 = {
   body: [
-    { title: 'max-h-0', desc: 'max-height: 0' },
     { title: 'max-h-full', desc: 'max-height: 100%' },
     { title: 'max-h-min', desc: 'max-height: min-content' },
     { title: 'max-h-max', desc: 'max-height: max-content' },
     { title: 'max-h-fit', desc: 'max-height: fit-content' },
-    { title: 'max-h-1', desc: 'max-height: 0.25em' },
-    { title: 'max-h-2', desc: 'max-height: 0.5em' },
-    { title: 'max-h-3', desc: 'max-height: 0.75em' },
-    { title: 'max-h-4', desc: 'max-height: 1em' },
-    { title: 'max-h-5', desc: 'max-height: 1.25em' },
-    { title: 'max-h-6', desc: 'max-height: 1.5em' },
-    { title: 'max-h-7', desc: 'max-height: 1.75em' },
-    { title: 'max-h-8', desc: 'max-height: 2.em' },
-    { title: 'max-h-9', desc: 'max-height: 1.25em' },
-    { title: 'max-h-10', desc: 'max-height: 2.5em' },
-    { title: 'max-h-11', desc: 'max-height: 2.75em' },
-    { title: 'max-h-12', desc: 'max-height: 3em' },
-    { title: 'max-h-13', desc: 'max-height: 3.25em' },
-    { title: 'max-h-14', desc: 'max-height: 3.5em' },
-    { title: 'max-h-15', desc: 'max-height: 3.75em' },
-    { title: 'max-h-16', desc: 'max-height: 4em' },
-    { title: 'max-h-17', desc: 'max-height: 4.25em' },
-    { title: 'max-h-18', desc: 'max-height: 4.5em' },
-    { title: 'max-h-19', desc: 'max-height: 4.75em' },
-    { title: 'max-h-20', desc: 'max-height: 5em' },
-    { title: 'max-h-22', desc: 'max-height: 5.5em' },
-    { title: 'max-h-24', desc: 'max-height: 6em' },
-    { title: 'max-h-26', desc: 'max-height: 6.5em' },
-    { title: 'max-h-28', desc: 'max-height: 7em' },
-    { title: 'max-h-30', desc: 'max-height: 7.5em' },
-    { title: 'max-h-32', desc: 'max-height: 8em' },
-    { title: 'max-h-34', desc: 'max-height: 8.5em' },
-    { title: 'max-h-36', desc: 'max-height: 9em' },
-    { title: 'max-h-38', desc: 'max-height: 9.5em' },
-    { title: 'max-h-40', desc: 'max-height: 10em' },
-    { title: 'max-h-42', desc: 'max-height: 10.5em' },
-    { title: 'max-h-44', desc: 'max-height: 11em' },
-    { title: 'max-h-46', desc: 'max-height: 11.5em' },
-    { title: 'max-h-48', desc: 'max-height: 12em' },
-    { title: 'max-h-50', desc: 'max-height: 12.5em' },
-    { title: 'max-h-55', desc: 'max-height: 13.75em' },
-    { title: 'max-h-60', desc: 'max-height: 15em' },
-    { title: 'max-h-65', desc: 'max-height: 16.25em' },
-    { title: 'max-h-70', desc: 'max-height: 17.5em' },
-    { title: 'max-h-75', desc: 'max-height: 18.75em' },
-    { title: 'max-h-80', desc: 'max-height: 20em' },
-    { title: 'max-h-85', desc: 'max-height: 21.25em' },
-    { title: 'max-h-90', desc: 'max-height: 22.5em' },
-    { title: 'max-h-95', desc: 'max-height: 23.75em' },
-    { title: 'max-h-100', desc: 'max-height: 25em' },
+
+    ...(function() {
+      const array = [];
+
+      for (let i = 0; i <= 100; ++i) {
+        const item = {
+          title: `max-h-${i}`,
+          desc: `max-height: ${i * 0.25}em`,
+        };
+        array.push(item);
+      }
+
+      return array;
+    })()
   ],
 };

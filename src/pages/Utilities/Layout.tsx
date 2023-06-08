@@ -4,11 +4,16 @@ import ClassTable from '../../components/ClassTable';
 import AppContext from '../../context/AppContext';
 import {
   example1,
+  example2,
+  example3,
   table1,
   table2,
   table3,
   table4,
   table5,
+  table6,
+  table7,
+  table8,
 } from '../../constants/utilities/layout';
 
 const Layout = () => {
@@ -61,8 +66,18 @@ const Layout = () => {
 
         <h4 id='TRBL'>Top Right Bottom Left</h4>
         <p>When using the <span className='quote'>position</span> property, FleXkit provides utility classes to specify the distance from the <span className='quote'>top</span>, <span className='quote'>right</span>, <span className='quote'>bottom</span>, or <span className='quote'>left</span> edges of an element's positioned container:</p>
-        <ClassTable tableItems={table4} />
+        <ClassTable tableItems={table6} />
         <CodeExample snippet={example1} />
+
+        <h3 id='Visibility'>Visibility</h3>
+        <p>The <span className='quote'>position</span> property determines whether an element is <span className='quote'>visible</span> or <span className='quote'>hidden</span>. FleXkit offers the following utility classes:</p>
+        <ClassTable tableItems={table7} />
+        <CodeExample snippet={example2} />
+
+        <h3 id='Z-Index'>Z-Index</h3>
+        <p>The <span className='quote'>z-index</span> property controls the stacking order of positioned elements. FleXkit provides utility classes to easily assign a specific <span className='quote'>z-index</span> value to an element:</p>
+        <ClassTable tableItems={table8} />
+        <CodeExample snippet={example3} />
 
       </section>
       <div className='article-sidebar'>

@@ -10,6 +10,8 @@ const TextFormatting = React.lazy(() => import('./pages/Typography/TextFormattin
 const ColorStyling = React.lazy(() => import('./pages/Typography/ColorStyling'));
 const Sizing = React.lazy(() => import('./pages/Utilities/Sizing'));
 const Layout = React.lazy(() => import('./pages/Utilities/Layout'));
+const Spacing = React.lazy(() => import('./pages/Utilities/Spacing'));
+const Interactivity = React.lazy(() => import('./pages/Utilities/Interactivity'));
 
 const App = () => {
   const [sidebarActive, setSidebarActive] = useState(null);
@@ -34,6 +36,8 @@ const App = () => {
             <Route path='/typography/color-and-styling' element={<ColorStyling />} />
             <Route path='/utilities/sizing' element={<Sizing />} />
             <Route path='/utilities/layout' element={<Layout />} />
+            <Route path='/utilities/spacing' element={<Spacing />} />
+            <Route path='/utilities/interactivity' element={<Interactivity />} />
           </Routes>
         </Suspense>
       </main>

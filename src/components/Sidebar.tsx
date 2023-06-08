@@ -59,7 +59,7 @@ const data = [
   {
     label: 'Utilities',
     icon: 'TbChartCandleFilled',
-    children: ['Sizing', 'Layout', 'Spacing', 'Typography', 'Interactivity'],
+    children: ['Sizing', 'Layout', 'Spacing', 'Interactivity'],
   },
 ];
 

@@ -4,8 +4,13 @@ import { FaGithubAlt } from 'react-icons/fa';
 import { TbMenu2, TbX } from 'react-icons/tb';
 import AppContext from '../context/AppContext';
 
-const Topbar = () => {
+const Topbar = ({ siteTheme, setSiteTheme }) => {
   const {sidebarActive, setSidebarActive } = useContext(AppContext);
+
+  const toggleTheme = () => {
+    const newTheme = (siteTheme === 'light') ? 'dark' : 'light';
+    setSiteTheme(newTheme);
+  }
 
   return (
     <nav className={sidebarActive ? 'topbar-sb-active' : 'topbar'}>
@@ -28,7 +33,7 @@ const Topbar = () => {
         <a>
           <FaGithubAlt className='text-primary pointer' />
         </a>
-        <button className='pointer'>
+        <button className='pointer' onClick={toggleTheme}>
           <TbMoon />
         </button>
       </section>

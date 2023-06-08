@@ -1,19 +1,19 @@
 export const example1 = `
-<p class="text-black bg-red-300 w-full">This is full width</p>
-<p class="text-black bg-orange-300 w-1/2">This is 50% width</p>
-<p class="text-black bg-yellow-300 w-1/3">This is 33% width</p>
-<p class="text-black bg-green-300 w-1/4">This is 25% width</p>
-<p class="text-black bg-blue-300 w-50">This is width 50</p>
-<p class="text-black bg-purple-300 w-100">This is width 100</p>
+<p class="text-black bg-red-400 w-full">This is full width</p>
+<p class="text-black bg-orange-400 w-1/2">This is 50% width</p>
+<p class="text-black bg-yellow-400 w-1/3">This is 33% width</p>
+<p class="text-black bg-green-400 w-1/4">This is 25% width</p>
+<p class="text-black bg-blue-400 w-50">This is width 50</p>
+<p class="text-black bg-purple-400 w-100">This is width 100</p>
 `.slice(1,-1);
 
 export const example2 = `
-<p class="text-black bg-red-300 h-10">This is height 10</p>
-<p class="text-black bg-orange-300 h-20">This is height 20</p>
-<p class="text-black bg-yellow-300 h-30">This is height 30</p>
-<p class="text-black bg-green-300 h-40">This is height 40</p>
-<p class="text-black bg-blue-300 h-60">This is height 60</p>
-<p class="text-black bg-purple-300 h-100">This is height 100</p>
+<p class="text-black bg-red-400 h-10">This is height 10</p>
+<p class="text-black bg-orange-400 h-20">This is height 20</p>
+<p class="text-black bg-yellow-400 h-30">This is height 30</p>
+<p class="text-black bg-green-400 h-40">This is height 40</p>
+<p class="text-black bg-blue-400 h-60">This is height 60</p>
+<p class="text-black bg-purple-400 h-100">This is height 100</p>
 `.slice(1,-1);
 
 export const table1 = {

@@ -79,7 +79,7 @@ const ColorPalette = () => {
         item.style.boxShadow = "none";
       });
       const color = colors[el.name][6];
-      el.style.boxShadow = `0px 0px 0px 2px white, 0px 0px 0px 4px ${color}`;
+      el.style.boxShadow = `0px 0px 0px 2px var(--color-canvas), 0px 0px 0px 4px ${color}`;
     };
 
     const rippleEffect = (event, color) => {

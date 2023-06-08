@@ -47,7 +47,7 @@ export const example4 = `
     --color-secondary: #FF007F;
   }
   .theme-dark {
-    --color-canvas: #121212;
+    --color-canvas: #000919;
     --color-text: #FFFFFF;
     --color-primary: #007FFF;
     --color-secondary: #FF007F;
@@ -75,7 +75,7 @@ export const example5 = `
     --color-primary: #007FFF;
   }
   .theme-dark {
-    --color-canvas: #121212;
+    --color-canvas: #000919;
     --color-primary: #FF007F;
   }
 </style>
@@ -96,7 +96,7 @@ export const example6 = `
     --color-primary: #007FFF;
   }
   .theme-dark {
-    --color-canvas: #121212;
+    --color-canvas: #000919;
     --color-primary: #FF007F;
   }
   .theme-custom {

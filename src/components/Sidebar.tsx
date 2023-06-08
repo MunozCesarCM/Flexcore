@@ -96,7 +96,7 @@ const Sidebar = () => {
     <aside className={`sidebar ${sidebarActive ? '' : 'inactive'}`}>
       <header className='heading pointer' onClick={() => navigate('/')}>
         <SiAbstract />
-        <h1>FleXkit</h1>
+        <h1>Flexcore</h1>
       </header>
       <ul className='tree-view'>
         {data.map((item, index) => (

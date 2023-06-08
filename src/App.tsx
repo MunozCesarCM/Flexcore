@@ -13,7 +13,8 @@ const Layout = React.lazy(() => import('./pages/Utilities/Layout'));
 
 const App = () => {
   const [sidebarActive, setSidebarActive] = useState(null);
-  const [theme, setTheme] = useState('light');
+  const [siteTheme, setSiteTheme] = useState('dark')
+  const [editorTheme, setEditorTheme] = useState(siteTheme);
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -21,9 +22,9 @@ const App = () => {
   }, [pathname]);
 
   return (
-    <AppContext.Provider value={{ sidebarActive, theme, setSidebarActive, setTheme }}>
-      <main>
-        <Topbar />
+    <AppContext.Provider value={{ sidebarActive, editorTheme, setSidebarActive, setEditorTheme }}>
+      <main className={`theme-${siteTheme}`}>
+        <Topbar siteTheme={siteTheme} setSiteTheme={setSiteTheme} />
         <Sidebar />
         <Suspense fallback={<div />}>
           <Routes>

@@ -1,36 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap');
 
-$color-canvas: #FFFFFF;
-$color-border: #E7EBF0;
-
-$color-primary: #007FFF;
-$color-secondary: #FF007F;
-$color-accent: #FF007F;
-
-$color-text: #6F7E8C;
-$color-heading: #0A1929;
-$color-link: #0A1929;
-$color-link-hover: #0A1929;
-
-$color-success: #2E7D32;
-$color-success-light: #EDF7ED;
-$color-success-dark: #1E4620;
-
-$color-error: #CC3333;
-$color-error-light: #FDEDED;
-$color-error-dark: #5F2120;
-
-$color-warning: #ED6C02;
-$color-warning-light: #FFF4E5;
-$color-warning-dark: #663C00;
-
-$color-info: #0288D1;
-$color-info-light: #E5F6FD;
-$color-info-dark: #014361;
-
 $size-topbar: 4em;
 $size-sidebar: 300px;
 $size-article-sidebar: 250px;
+
+.theme-light {
+  --color-canvas: #FFFFFF;
+  --color-text: #6F7E8C;
+  --color-heading: #0A1929;
+  --color-link: #0A1929;
+  --color-link-hover: #0A1929;
+  --color-border: #E7EBF0;
+
+  --color-primary: #007FFF;
+  --color-secondary: #FF007F;
+  --color-accent: #FF007F;
+
+  --color-success: #2E7D32;
+  --color-success-light: #EDF7ED;
+  --color-success-dark: #1E4620;
+
+  --color-error: #CC3333;
+  --color-error-light: #FDEDED;
+  --color-error-dark: #5F2120;
+
+  --color-warning: #ED6C02;
+  --color-warning-light: #FFF4E5;
+  --color-warning-dark: #663C00;
+
+  --color-info: #0288D1;
+  --color-info-light: #E5F6FD;
+  --color-info-dark: #014361;
+
+  background-color: var(--color-canvas);
+  color: var(--color-text);
+}
+
+.theme-dark {
+  --color-canvas: #000919;
+  --color-text: #B2BAC2;
+  --color-heading: #F3F6F9;
+  --color-link: #0A1929;
+  --color-link-hover: #0A1929;
+  --color-border: #2D3843;
+
+  --color-primary: #007FFF;
+  --color-secondary: #CC0033;
+  --color-accent: #FF007F;
+
+  --color-success: #66CC66;
+  --color-success-light: #0C130D;
+  --color-success-dark: #CCE8CD;
+
+  --color-error: #FF3333;
+  --color-error-light: #160B0B;
+  --color-error-dark: #F4C7C7;
+
+  --color-warning: #663C00;
+  --color-warning-light: #191207;
+  --color-warning-dark: #FFE2B7;
+
+  --color-info: #29B6F6;
+  --color-info-light: #071318;
+  --color-info-dark: #B8E7FB;
+
+  background-color: var(--color-canvas);
+  color: var(--color-text);
+}
 
 * {
   margin: 0;
@@ -39,10 +75,25 @@ $size-article-sidebar: 250px;
   font-family: 'Work Sans', sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  right:5px;
+  position:absolute;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--color-text);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-canvas);
+}
+
 // Section - Composition
 
 .topbar {
-  background-color: $color-canvas;
+  background-color: var(--color-canvas);
   position: fixed;
   height: $size-topbar;
   width: 100vw;
@@ -56,7 +107,7 @@ $size-article-sidebar: 250px;
 }
 
 .sidebar {
-  background-color: $color-canvas;
+  background-color: var(--color-canvas);
   height: 100vh;
   width: $size-sidebar;
   position: fixed;
@@ -64,7 +115,7 @@ $size-article-sidebar: 250px;
 }
 
 .article-content {
-  background-color: $color-canvas;
+  background-color: var(--color-canvas);
   padding-top: $size-topbar;
   margin-left: 0;
   margin-right: 0;
@@ -76,7 +127,7 @@ $size-article-sidebar: 250px;
   }
 
   .article-sidebar {
-    background-color: $color-canvas;
+    background-color: var(--color-canvas);
     width: $size-article-sidebar;
     height: calc(100vh - $size-topbar);
     position: fixed;
@@ -86,7 +137,7 @@ $size-article-sidebar: 250px;
 }
 
 .landing-page {
-  background-color: $color-canvas;
+  background-color: var(--color-canvas);
   padding-top: $size-topbar;
   margin-left: 0;
   margin-right: 0;
@@ -100,26 +151,29 @@ $size-article-sidebar: 250px;
 
 // Section - Utilities
 
-.text-primary { color: $color-primary; }
+.text-primary { color: var(--color-primary); }
 .pointer { cursor: pointer; }
 .active { display: block; }
 .inactive { display: none; }
 
 // Section - Blocks
 
-.sidebar {
-  overflow-y: scroll;
-  border-right: 1px solid $color-border;
+h1, h2, h3, h4, strong {
+  color: var(--color-heading);
 }
 
-body { background-color: $color-canvas; }
+.sidebar {
+  overflow-y: scroll;
+  border-right: 1px solid var(--color-border);
+}
 
 a { text-decoration: none; }
 button { border: none; }
 
 .quote {
   font-family: 'Roboto Mono', monospace;
-  background-color: $color-info-light;
+  background-color: var(--color-info-light);
+  color: var(--color-info-dark);
   font-weight: 500;
   font-size: 0.95em;
   padding: 1px 5px;
@@ -127,18 +181,18 @@ button { border: none; }
 }
 
 .underline {
-  color: $color-info;
+  color: var(--color-info);
   text-decoration: underline;
   cursor: pointer;
   transition-duration: 100ms;
 
   &:hover {
-    color: $color-info-light;
+    color: var(--color-info-light);
     transition-duration: 100ms;
   }
 
   &:active {
-    color: $color-info-dark;
+    color: var(--color-info-dark);
     transition-duration: 100ms;
   }
 }
@@ -149,14 +203,17 @@ hr {
 }
 
 .topbar, .topbar-sb-active {
-  border-bottom: 1px solid $color-border;
+  border-bottom: 1px solid var(--color-border);
   padding: 0 2em 0 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   // Hamburger menu
-  svg { font-size: 1.3em; }
+  svg {
+    color: var(--color-text);
+    font-size: 1.3em;
+  }
 
   section {
     display: flex;
@@ -165,15 +222,15 @@ hr {
 
     & svg {
       font-size: 1.3em;
-      color: $color-primary;
+      color: var(--color-primary);
     }
 
     a {
-      border-bottom: 1.5px solid $color-border;
+      border-bottom: 1.5px solid var(--color-border);
       transition-duration: 100ms;
 
       &:hover {
-        border-bottom: 1.5px solid $color-primary;
+        border-bottom: 1.5px solid var(--color-primary);
         transition-duration: 100ms;
       }
     }
@@ -181,15 +238,15 @@ hr {
     button {
       width: 2.5em;
       height: 2.5em;
-      background-color: $color-canvas;
+      background-color: var(--color-canvas);
       border-radius: 8px;
-      border: 1.5px solid $color-border;
+      border: 1.5px solid var(--color-border);
       padding: 0.5em;
       padding: 0.2em;
       transition-duration: 100ms;
 
       &:hover {
-        border: 1.5px solid $color-primary;
+        border: 1.5px solid var(--color-primary);
         transition-duration: 100ms;
       }
     }
@@ -197,29 +254,29 @@ hr {
 }
 
 .search-container {
-  border: 1.5px solid $color-border;
+  border: 1.5px solid var(--color-border);
   border-radius: 5px;
   padding: 4px;
-  background-color: #F3F6F9;
-  color: $color-text;
+  // background-color: #F3F6F9;
+  background-color: var(--color-canvas);
+  color: var(--color-border);
   display: flex;
 
   &:hover {
-    border: 1.5px solid $color-primary;
+    border: 1.5px solid var(--color-primary);
     transition-duration: 100ms;
   }
 
   &:focus {
     outline: none;
-    border: 1.5px solid $color-primary;
+    border: 1.5px solid var(--color-primary);
   }
 }
 
 input[type=text] {
   border: none;
-  background-color: #F3F6F9;
   padding-left: 0.5em;
-  transition-duration: 100ms;
+  background-color: var(--color-canvas);
 
   &:focus {
     outline: none;
@@ -230,10 +287,10 @@ input[type=text] {
   padding-bottom: 5vh;
 
   .heading {
-    color: $color-primary;
+    color: var(--color-primary);
     display: flex;
     align-items: center;
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid var(--color-border);
     padding: 1em 1.25em;
     height: 4em;
 
@@ -263,7 +320,7 @@ input[type=text] {
     padding: 0;
 
     .caret {
-      color: $color-heading;
+      color: var(--color-heading);
       font-weight: 400;
       margin: 0.2em 1em;
       padding: 0.75em;
@@ -279,8 +336,13 @@ input[type=text] {
       transition-duration: 50ms;
 
       &:hover {
-        background-color: $color-info-light;
+        background-color: var(--color-info-light);
         transition-duration: 50ms;
+
+        .icon {
+          color: var(--color-secondary);
+          transition-duration: 50ms;
+        }
       }
 
       .title {
@@ -289,13 +351,14 @@ input[type=text] {
       }
 
       .icon {
-        color: $color-primary;
+        color: var(--color-primary);
         margin-right: 0.75em;
+        transition-duration: 50ms;
       }
     }
 
     .caret-child {
-      color: $color-text;
+      color: var(--color-text);
       font-weight: 400;
       margin: 0.2em 1em 0.2em 3em;
       padding: 0.75em;
@@ -304,8 +367,8 @@ input[type=text] {
       transition-duration: 50ms;
 
       &:hover {
-        background-color: $color-info-light;
-        color: $color-heading;
+        background-color: var(--color-info-light);
+        color: var(--color-heading);
         transition-duration: 50ms;
       }
     }
@@ -314,6 +377,8 @@ input[type=text] {
 
 .article-content,
 .article-content-sb-active {
+  color: var(--color-text);
+
   h1, h2, h3, h4 {
     margin-top: 1.5em;
     line-height: 1.2;
@@ -357,26 +422,26 @@ input[type=text] {
 
     &-success {
       @extend .notification-container;
-      background-color: $color-success-light;
-      color: $color-success-dark;
+      background-color: var(--color-success-light);
+      color: var(--color-success-dark);
     }
 
     &-error {
       @extend .notification-container;
-      background-color: $color-error-light;
-      color: $color-error-dark;
+      background-color: var(--color-error-light);
+      color: var(--color-error-dark);
     }
 
     &-warning {
       @extend .notification-container;
-      background-color: $color-warning-light;
-      color: $color-warning-dark;
+      background-color: var(--color-warning-light);
+      color: var(--color-warning-dark);
     }
 
     &-info {
       @extend .notification-container;
-      background-color: $color-info-light;
-      color: $color-info-dark;
+      background-color: var(--color-info-light);
+      color: var(--color-info-dark);
     }
 
     svg {
@@ -402,7 +467,7 @@ input[type=text] {
     thead {
       display: table;
       width: 100%;
-      border-bottom: 2px solid $color-border;
+      border-bottom: 2px solid var(--color-border);
 
       th {
         padding: 0.35em 0;
@@ -415,21 +480,21 @@ input[type=text] {
     tbody {
       display: table;
       width: 100%;
-      border-bottom: 2px solid $color-border;
+      border-bottom: 2px solid var(--color-border);
 
       tr {
-        border-bottom: 1px solid $color-border;
+        border-bottom: 1px solid var(--color-border);
 
         td {
           font-family: 'Roboto Mono', monospace;
           font-weight: 400;
           font-size: 0.95em;
           padding: .75em 0;
-          color: $color-secondary;
+          color: var(--color-secondary);
           white-space: pre-wrap;
 
           &:first-child {
-            color: $color-primary;
+            color: var(--color-primary);
             font-size: 1em;
             width: 35%;
           }
@@ -440,6 +505,7 @@ input[type=text] {
 }
 
 .article-content {
+  min-height: 100vh;
   max-width: 1100px;
   padding: 5em;
   margin: 0 auto;
@@ -457,7 +523,7 @@ input[type=text] {
     height: 100%;
     width: 100%;
     overflow-y: hidden;
-    border: 1px solid $color-border;
+    border: 1px solid var(--color-border);
     border-radius: 10px;
   }
 }
@@ -479,7 +545,7 @@ input[type=text] {
       transition-duration: 100ms;
 
       &:hover {
-        background-color: $color-info-light;
+        background-color: var(--color-info-light);
         transition-duration: 100ms;
       }
     }
@@ -503,13 +569,13 @@ input[type=text] {
   padding: calc(5em - $size-topbar) 2em 1em 0;
 
   h3 {
-    color: $color-heading;
+    color: var(--color-heading);
     text-transform: uppercase;
     font-size: 0.9em;
     letter-spacing: 1px;
     padding-bottom: 1em;
     margin-bottom: 1em;
-    border-bottom: 2px solid $color-border;
+    border-bottom: 2px solid var(--color-border);
   }
 
   h4, h5 {
@@ -520,20 +586,20 @@ input[type=text] {
     cursor: pointer;
 
     &:hover {
-      color: $color-primary;
+      color: var(--color-primary);
       transition-duration: 85ms;
-      border-left: 3px solid $color-primary;
+      border-left: 3px solid var(--color-primary);
     }
   }
 
   h4 {
-    color: $color-heading;
+    color: var(--color-heading);
     padding: 0.75em 0;
     &:hover { padding-left: 1em; }
   }
 
   h5 {
-    color: $color-text;
+    color: var(--color-text);
     padding: 0.8em 0 0.8em 1.5em;
     &:hover { padding-left: 2.5em; }
   }
@@ -558,7 +624,7 @@ input[type=text] {
         font-size: 4.25em;
 
         .special {
-          color: $color-primary;
+          color: var(--color-primary);
         }
       }
 
@@ -574,7 +640,7 @@ input[type=text] {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: $color-primary;
+        background-color: var(--color-primary);
         color: white;
         font-weight: 600;
         font-size: 1.1em;
@@ -637,14 +703,14 @@ input[type=text] {
       cursor: pointer;
 
       svg {
-        color: $color-primary;
+        color: var(--color-primary);
         font-size: 3em;
         transition-duration: 200ms;
       }
 
       &:hover {
-        border: 2px solid $color-border;
-        svg { color: $color-info-dark; }
+        border: 2px solid var(--color-border);
+        svg { color: var(--color-info-dark); }
       }
 
       h2 {
@@ -713,7 +779,6 @@ $color-list: (
 
   .color-button:nth-child(1) {
     $default-bg: nth($color-list, 1);
-    box-shadow: 0px 0px 0px 2px white, 0px 0px 0px 4px white;
   }
 
   @mixin color-buttons($count) {
@@ -750,7 +815,7 @@ $color-list: (
   border-radius: 5px;
   cursor: pointer;
   transition: 500ms ease;
-  background-color: $color-border;
+  background-color: var(--color-border);
 
   .ripple {
     position: absolute;

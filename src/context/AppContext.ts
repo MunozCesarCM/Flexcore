@@ -2,18 +2,18 @@ import React from 'react';
 
 interface AppContext {
   sidebarActive: boolean | null;
-  theme: string;
+  editorTheme: string;
 
   setSidebarActive: React.Dispatch<React.SetStateAction<boolean>>;
-  setTheme: React.Dispatch<React.SetStateAction<string>>;
+  setEditorTheme: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const AppContext = React.createContext<AppContext>({
   sidebarActive: null,
-  theme: 'light',
+  editorTheme: 'light',
 
   setSidebarActive: () => {null},
-  setTheme: () => {null},
+  setEditorTheme: () => {null},
 });
 
 export default AppContext;

@@ -13,18 +13,30 @@ const Layout = React.lazy(() => import('./pages/Utilities/Layout'));
 const Spacing = React.lazy(() => import('./pages/Utilities/Spacing'));
 const Interactivity = React.lazy(() => import('./pages/Utilities/Interactivity'));
 
+const getTheme = () => {
+  const theme = localStorage.getItem('theme');
+  if (theme) return theme;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
+}
+
 const App = () => {
   const [sidebarActive, setSidebarActive] = useState(null);
-  const [siteTheme, setSiteTheme] = useState('dark')
-  const [editorTheme, setEditorTheme] = useState(siteTheme);
+  const [siteTheme, setSiteTheme] = useState(getTheme);
+  const [editorTheme, setEditorTheme] = useState(null);
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
+  useEffect(() => {
+    localStorage.setItem('theme', siteTheme);
+  }, [siteTheme]);
+
+  console.log();
+
   return (
-    <AppContext.Provider value={{ sidebarActive, editorTheme, setSidebarActive, setEditorTheme }}>
+    <AppContext.Provider value={{ sidebarActive, editorTheme, setSidebarActive, setEditorTheme, siteTheme }}>
       <main className={`theme-${siteTheme}`}>
         <Topbar siteTheme={siteTheme} setSiteTheme={setSiteTheme} />
         <Sidebar />

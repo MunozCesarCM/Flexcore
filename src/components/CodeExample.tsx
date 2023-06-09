@@ -6,7 +6,7 @@ import { html } from '@codemirror/lang-html';
 import { FiSun, FiCopy, FiRotateCcw } from 'react-icons/fi';
 import AppContext from '../context/AppContext';
 
-const formatCodeExample = (snippet: string, template: boolean, editorTheme: string) => {
+const formatCodeExample = (snippet: string, template: boolean, editorTheme: string, siteTheme: string) => {
 
   if (template) {
     return `
@@ -21,7 +21,7 @@ const formatCodeExample = (snippet: string, template: boolean, editorTheme: stri
 body { padding: 2em; }
 </style>
 </head>
-<body class="theme-${editorTheme}">
+<body class="theme-${(editorTheme === null) ? siteTheme : editorTheme}">
 ${snippet}
 </body>
 </html>
@@ -54,10 +54,12 @@ const CodeExample = ({ snippet, template = true }: CodeExample) => {
   const ref = useRef(null);
   const [height, setHeight] = useState('0px');
   const [srcDoc, setSrcDoc] = useState(snippet);
-  const {editorTheme, setEditorTheme} = useContext(AppContext);
+  const {editorTheme, setEditorTheme, siteTheme} = useContext(AppContext);
 
   const toggleTheme = () => {
-    const newTheme = (editorTheme === 'light') ? 'dark' : 'light';
+    let newTheme = null;
+    if (editorTheme === null) newTheme = (siteTheme === 'light') ? 'dark' : 'light';
+    else newTheme = (editorTheme === 'light') ? 'dark' : 'light';
     setEditorTheme(newTheme);
   }
 
@@ -73,7 +75,7 @@ const CodeExample = ({ snippet, template = true }: CodeExample) => {
         <iframe
           ref={ref}
           onLoad={onLoad}
-          srcDoc={formatCodeExample(srcDoc, template, editorTheme)}
+          srcDoc={formatCodeExample(srcDoc, template, editorTheme, siteTheme)}
           title='output'
           sandbox='allow-same-origin'
           frameBorder='0'

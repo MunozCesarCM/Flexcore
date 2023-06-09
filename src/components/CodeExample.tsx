@@ -16,7 +16,7 @@ const formatCodeExample = (snippet: string, template: boolean, editorTheme: stri
 <link rel="stylesheet" href="/flexcore.css">
 <style>
 * { font-family: 'Poppins', sans-serif; }
-body { padding: 1em 2em; }
+body { padding: 2em; }
 </style>
 </head>
 <body class="theme-${editorTheme}">
@@ -35,7 +35,7 @@ ${snippet}
 <link rel="stylesheet" href="/flexcore.css">
 <style>
 * { font-family: 'Poppins', sans-serif; }
-body { padding: 1em 2em; }
+body { padding: 2em; }
 </style>
 </head>
 ${snippet}

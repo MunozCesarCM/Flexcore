@@ -18,11 +18,10 @@ export const table1 = {
       const array = [];
 
       for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `p-${i}`,
           desc: `padding: ${i * 0.25}em`,
-        };
-        array.push(item);
+        });
       }
 
       return array;
@@ -44,11 +43,10 @@ export const table2 = {
       }
 
       for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `py-${i}`,
           desc: `padding-top: ${i * 0.25}em\npadding-bottom: ${i * 0.25}em`,
-        };
-        array.push(item);
+        });
       }
 
       return array;
@@ -62,35 +60,25 @@ export const table3 = {
       const array = [];
 
       for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `pt-${i}`,
           desc: `padding-top: ${i * 0.25}em`,
-        };
-        array.push(item);
-      }
+        });
 
-      for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `pr-${i}`,
           desc: `padding-right: ${i * 0.25}em`,
-        };
-        array.push(item);
-      }
+        });
 
-      for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `pb-${i}`,
           desc: `padding-bottom: ${i * 0.25}em`,
-        };
-        array.push(item);
-      }
+        });
 
-      for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `pl-${i}`,
           desc: `padding-left: ${i * 0.25}em`,
-        };
-        array.push(item);
+        });
       }
 
       return array;
@@ -104,11 +92,10 @@ export const table4 = {
       const array = [];
 
       for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `m-${i}`,
           desc: `margin: ${i * 0.25}em`,
-        };
-        array.push(item);
+        });
       }
 
       return array;
@@ -122,19 +109,15 @@ export const table5 = {
       const array = [];
 
       for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `mx-${i}`,
           desc: `margin-left: ${i * 0.25}em\nmargin-right: ${i * 0.25}em`,
-        };
-        array.push(item);
-      }
+        });
 
-      for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `my-${i}`,
           desc: `margin-top: ${i * 0.25}em\nmargin-bottom: ${i * 0.25}em`,
-        };
-        array.push(item);
+        });
       }
 
       return array;
@@ -148,35 +131,25 @@ export const table6 = {
       const array = [];
 
       for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `mt-${i}`,
           desc: `margin-top: ${i * 0.25}em`,
-        };
-        array.push(item);
-      }
+        });
 
-      for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `mr-${i}`,
           desc: `margin-right: ${i * 0.25}em`,
-        };
-        array.push(item);
-      }
+        });
 
-      for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `mb-${i}`,
           desc: `margin-bottom: ${i * 0.25}em`,
-        };
-        array.push(item);
-      }
+        });
 
-      for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `ml-${i}`,
           desc: `margin-left: ${i * 0.25}em`,
-        };
-        array.push(item);
+        });
       }
 
       return array;

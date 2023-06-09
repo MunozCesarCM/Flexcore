@@ -1,24 +1,24 @@
 export const example1 = `
 <div class="h-50 bg-primary relative">
-  <span class="text-white absolute left-0">Top Left</span>
-  <span class="text-white absolute right-0">Top Right</span>
-  <span class="text-white absolute left-0 bottom-0">Bottom Left</span>
-  <span class="text-white absolute right-0 bottom-0">Bottom Right</span>
+<span class="text-white absolute left-0">Top Left</span>
+<span class="text-white absolute right-0">Top Right</span>
+<span class="text-white absolute left-0 bottom-0">Bottom Left</span>
+<span class="text-white absolute right-0 bottom-0">Bottom Right</span>
 </div>
 `.slice(1,-1);
 
 export const example2 = `
-<span class="text-white bg-primary visible">This is visible</span>
-<span class="text-white bg-primary hidden">This is hidden</span>
+<span class="visible">This is visible</span>
+<span class="hidden">This is hidden</span>
 `.slice(1,-1);
 
 export const example3 = `
-<div class="relative">
-  <span class="absolute w-15 top-0 z-30 bg-red-400 left-0">1</span>
-  <span class="absolute w-15 top-2 z-20 bg-yellow-400 left-10">2</span>
-  <span class="absolute w-15 top-4 z-10 bg-green-400 left-20">3</span>
-  <span class="absolute w-15 top-2 z-20 bg-blue-400 left-30">4</span>
-  <span class="absolute w-15 top-0 z-30 bg-purple-400 left-40">5</span>
+<div class="relative mb-7">
+<span class="absolute w-15 top-0 z-30 bg-red-400 left-0">1</span>
+<span class="absolute w-15 top-2 z-20 bg-yellow-400 left-10">2</span>
+<span class="absolute w-15 top-4 z-10 bg-green-400 left-20">3</span>
+<span class="absolute w-15 top-2 z-20 bg-blue-400 left-30">4</span>
+<span class="absolute w-15 top-0 z-30 bg-purple-400 left-40">5</span>
 </div>
 `.slice(1,-1);
 
@@ -95,36 +95,26 @@ export const table6 = {
     ...(function() {
       const array = [];
 
-      for (let i = 0; i <= 100; ++i) {
-        const item = {
+      for (let i = 0; i <= 100; i++) {
+        array.push({
           title: `top-${i}`,
           desc: `top: ${i * 0.25}em`,
-        };
-        array.push(item);
-      }
+        });
 
-      for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `right-${i}`,
           desc: `right: ${i * 0.25}em`,
-        };
-        array.push(item);
-      }
+        });
 
-      for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `bottom-${i}`,
           desc: `bottom: ${i * 0.25}em`,
-        };
-        array.push(item);
-      }
+        });
 
-      for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `left-${i}`,
           desc: `left: ${i * 0.25}em`,
-        };
-        array.push(item);
+        });
       }
 
       return array;
@@ -145,11 +135,10 @@ export const table8 = {
       const array = [];
 
       for (let i = 0; i <= 10; ++i) {
-        const item = {
+        array.push({
           title: `z-${i * 10}`,
           desc: `z-index: ${i * 10}`,
-        };
-        array.push(item);
+        });
       }
 
       return array;

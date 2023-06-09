@@ -73,6 +73,7 @@ $size-article-sidebar: 250px;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
+  transition-duration: 100ms;
 }
 
 ::-webkit-scrollbar {
@@ -83,12 +84,10 @@ $size-article-sidebar: 250px;
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: var(--color-text);
+  background-color: var(--color-border);
 }
 
-::-webkit-scrollbar-track {
-  background: var(--color-canvas);
-}
+body { background-color: #000919; }
 
 // Section - Composition
 

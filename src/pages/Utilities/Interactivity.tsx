@@ -51,13 +51,9 @@ const Interactivity = () => {
       <div className='article-sidebar'>
         <h3>Contents</h3>
         <h4 onClick={() => scrollPosition('')}>Interactivity</h4>
+        <h4 onClick={() => scrollPosition('States')}>States</h4>
         <h4 onClick={() => scrollPosition('Cursor')}>Cursor</h4>
         <h4 onClick={() => scrollPosition('User Select')}>User Select</h4>
-        <h4 onClick={() => scrollPosition('States')}>States</h4>
-        <h5 onClick={() => scrollPosition('Hover')}>Hover</h5>
-        <h5 onClick={() => scrollPosition('Active')}>Active</h5>
-        <h5 onClick={() => scrollPosition('Focus')}>Focus</h5>
-        <h5 onClick={() => scrollPosition('Target')}>Target</h5>
       </div>
     </article>
   );

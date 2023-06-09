@@ -29,11 +29,10 @@ export const table1 = {
       const array = [];
 
       for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `w-${i}`,
           desc: `width: ${i * 0.25}em`,
-        };
-        array.push(item);
+        });
       }
 
       return array;
@@ -91,11 +90,10 @@ export const table4 = {
       const array = [];
 
       for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `h-${i}`,
           desc: `height: ${i * 0.25}em`,
-        };
-        array.push(item);
+        });
       }
 
       return array;
@@ -125,11 +123,10 @@ export const table6 = {
       const array = [];
 
       for (let i = 0; i <= 100; ++i) {
-        const item = {
+        array.push({
           title: `max-h-${i}`,
           desc: `max-height: ${i * 0.25}em`,
-        };
-        array.push(item);
+        });
       }
 
       return array;

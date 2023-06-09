@@ -1,5 +1,7 @@
 import { useState, useRef, useContext } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
+import { vscodeDarkInit } from '@uiw/codemirror-theme-vscode';
+import { tags as t } from '@lezer/highlight';
 import { html } from '@codemirror/lang-html';
 import { FiSun, FiCopy, FiRotateCcw } from 'react-icons/fi';
 import AppContext from '../context/AppContext';
@@ -87,9 +89,34 @@ const CodeExample = ({ snippet, template = true }: CodeExample) => {
         <div className='code-example'>
           <CodeMirror
             value={srcDoc}
-            theme="dark"
-            extensions={html()}
+            theme={vscodeDarkInit({
+              settings: {
+                background: 'var(--color-canvas)',
+                foreground: 'var(--color-editor-text)',
+                caret: 'var(--color-text)',
+                selection: 'var(--color-border)',
+                selectionMatch: 'var(--color-border)',
+                gutterBackground: 'var(--color-canvas)',
+                gutterActiveForeground: 'var(--color-heading)',
+                gutterBorder: 'transparent',
+                lineHighlight: 'var(--color-border)',
+              },
+              styles: [
+                { tag: [t.tagName, t.heading], color: 'var(--color-editor-red)' },
+                { tag: t.comment, color: 'var(--color-editor-comment)' },
+                { tag: [t.attributeName, t.number], color: 'var(--color-editor-orange)' },
+                { tag: t.className, color: 'var(--color-editor-yellow)' },
+                { tag: [t.string, t.regexp, t.special(t.propertyName)], color: 'var(--color-editor-green)' },
+                { tag: t.variableName, color: 'var(--color-editor-purple)' },
+                { tag: t.className, color: 'var(--color-editor-orange)' },
+                { tag: t.brace, color: 'var(--color-text)' },
+              ]
+            })}
+            extensions={[html()]}
             onChange={(e) => setSrcDoc(e)}
+            basicSetup={{
+              foldGutter: false,
+            }}
           />
         </div>
       </div>

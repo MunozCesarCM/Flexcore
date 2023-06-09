@@ -64,7 +64,7 @@ const ColorStyling = () => {
       <section className='notification-container-warning'>
         <TbAlertTriangle />
         <span className='quote-text'>
-          For more detailed information on using FleXkit's theming, please refer to the <strong>"Theming"</strong> section in this document.
+          For more detailed information on using FleXkit's theming, please refer to the "Theming" section in this document.
         </span>
       </section>
 

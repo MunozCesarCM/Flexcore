@@ -16,6 +16,27 @@ export const example2 = `
 <p class="select-none">This text is not</p>
 `.slice(1,-1);
 
+export const example3 = `
+<span class="
+  bg-primary text-white px-4 py-2
+  hover:bg-secondary hover:px-8 hover:py-4
+  duration-100">
+  Hover Me
+</span>
+`.slice(1,-1);
+
+export const example4 = `
+<span class="
+  bg-primary text-white px-4 py-2
+  active:bg-secondary cursor-pointer select-none">
+  Click Me
+</span>
+`.slice(1,-1);
+
+export const example5 = `
+<input type="text" placeholder="Write some text" class="focus:bg-blue-50 focus:font-500">
+`.slice(1,-1);
+
 export const table1 = {
   body: [
     { title: 'cursor-auto', desc: 'cursor: auto' },
@@ -63,5 +84,22 @@ export const table2 = {
     { title: 'select-text', desc: 'user-select: text' },
     { title: 'select-all', desc: 'user-select: all' },
     { title: 'select-auto', desc: 'user-select: auto' },
+  ],
+}
+
+export const table3 = {
+  body: [
+    ...(function() {
+      const array = [];
+
+      for (let i = 0; i <= 20; ++i) {
+        array.push({
+          title: `duration-${i * 50}`,
+          desc: `transition-duration: ${i * 50}ms`,
+        });
+      }
+
+      return array;
+    })()
   ],
 }

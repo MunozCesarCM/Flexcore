@@ -101,6 +101,7 @@ const CodeExample = ({ snippet, template = true }: CodeExample) => {
           <CodeMirror
             value={srcDoc}
             theme={vscodeDarkInit({
+              theme: siteTheme === 'light' ? 'light' : 'dark',
               settings: {
                 background: 'var(--color-canvas)',
                 foreground: 'var(--color-editor-text)',
@@ -108,9 +109,10 @@ const CodeExample = ({ snippet, template = true }: CodeExample) => {
                 selection: 'var(--color-border)',
                 selectionMatch: 'var(--color-border)',
                 gutterBackground: 'var(--color-canvas)',
+                gutterForeground: 'var(--color-editor-comment)',
                 gutterActiveForeground: 'var(--color-heading)',
                 gutterBorder: 'transparent',
-                lineHighlight: 'var(--color-border)',
+                // lineHighlight: 'var(--color-border)',
               },
               styles: [
                 { tag: [t.tagName, t.heading], color: 'var(--color-editor-red)' },
@@ -120,7 +122,7 @@ const CodeExample = ({ snippet, template = true }: CodeExample) => {
                 { tag: [t.string, t.regexp, t.special(t.propertyName)], color: 'var(--color-editor-green)' },
                 { tag: t.variableName, color: 'var(--color-editor-purple)' },
                 { tag: t.className, color: 'var(--color-editor-orange)' },
-                { tag: [t.brace, t.operator, t.angleBracket], color: 'var(--color-text)' },
+                { tag: [t.brace, t.operator, t.angleBracket], color: 'var(--color-editor-text)' },
               ]
             })}
             extensions={[html()]}

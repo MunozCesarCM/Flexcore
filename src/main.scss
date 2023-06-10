@@ -6,7 +6,7 @@ $size-article-sidebar: 250px;
 
 .theme-light {
   --color-canvas: #FFFFFF;
-  --color-text: #6F7E8C;
+  --color-text: #535E69;
   --color-heading: #0A1929;
   --color-link: #0A1929;
   --color-link-hover: #0A1929;
@@ -399,7 +399,7 @@ input[type=text] {
   }
 
   h3, h4 {
-    margin-top: 2.25em;
+    margin-top: 1.5em;
     line-height: 1.2;
     letter-spacing: 0.4px;
   }
@@ -416,12 +416,12 @@ input[type=text] {
 
   h4 {
     font-size: 1.4em;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   p {
-    margin: 1.2em 0;
-    line-height: 1.6;
+    margin: 1em 0;
+    line-height: 1.75;
   }
 
   ul {
@@ -471,7 +471,7 @@ input[type=text] {
     .quote-text {
       font-weight: 500;
       font-size: 0.95em;
-      line-height: 1.6;
+      line-height: 1.75;
     }
   }
 
@@ -598,7 +598,7 @@ input[type=text] {
   h4, h5 {
     font-size: 0.8em;
     font-weight: 500;
-    margin-top: 0;
+    margin-top: 0.25em;
     transition-duration: 85ms;
     cursor: pointer;
 
@@ -861,3 +861,4 @@ $color-list: (
   }
 }
 
+.cm-focused { outline: 0px solid black !important; }

@@ -861,6 +861,15 @@ body {
   }
 }
 
+// Utilities - Interactivity
+
+@for $i from 0 through 20 {
+  $duration: $i * 50ms;
+  .duration-#{$i * 50} {
+    transition-duration: $duration;
+  }
+}
+
 // Utilities - Interactivity - Cursor
 
 @include gen-states(cursor-auto) { cursor: auto; }

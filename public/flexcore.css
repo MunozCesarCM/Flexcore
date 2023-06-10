@@ -11152,3 +11152,67 @@ body { color: var(--color-text); background-color: var(--color-canvas); }
 .hover\:select-auto:hover { user-select: auto; }
 .active\:select-auto:active { user-select: auto; }
 .focus\:select-auto:focus { user-select: auto; }
+.duration-0 {
+	 transition-duration: 0ms;
+}
+ .duration-50 {
+	 transition-duration: 50ms;
+}
+ .duration-100 {
+	 transition-duration: 100ms;
+}
+ .duration-150 {
+	 transition-duration: 150ms;
+}
+ .duration-200 {
+	 transition-duration: 200ms;
+}
+ .duration-250 {
+	 transition-duration: 250ms;
+}
+ .duration-300 {
+	 transition-duration: 300ms;
+}
+ .duration-350 {
+	 transition-duration: 350ms;
+}
+ .duration-400 {
+	 transition-duration: 400ms;
+}
+ .duration-450 {
+	 transition-duration: 450ms;
+}
+ .duration-500 {
+	 transition-duration: 500ms;
+}
+ .duration-550 {
+	 transition-duration: 550ms;
+}
+ .duration-600 {
+	 transition-duration: 600ms;
+}
+ .duration-650 {
+	 transition-duration: 650ms;
+}
+ .duration-700 {
+	 transition-duration: 700ms;
+}
+ .duration-750 {
+	 transition-duration: 750ms;
+}
+ .duration-800 {
+	 transition-duration: 800ms;
+}
+ .duration-850 {
+	 transition-duration: 850ms;
+}
+ .duration-900 {
+	 transition-duration: 900ms;
+}
+ .duration-950 {
+	 transition-duration: 950ms;
+}
+ .duration-1000 {
+	 transition-duration: 1000ms;
+}
+

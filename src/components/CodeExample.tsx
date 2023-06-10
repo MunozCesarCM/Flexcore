@@ -4,7 +4,9 @@ import { vscodeDarkInit } from '@uiw/codemirror-theme-vscode';
 import { tags as t } from '@lezer/highlight';
 import { html } from '@codemirror/lang-html';
 import { FiSun, FiCopy, FiRotateCcw } from 'react-icons/fi';
+import { ToastContainer, toast } from 'react-toastify';
 import AppContext from '../context/AppContext';
+import '../styles/toast.scss';
 
 const formatCodeExample = (snippet: string, template: boolean, editorTheme: string, siteTheme: string) => {
 
@@ -56,6 +58,8 @@ const CodeExample = ({ snippet, template = true }: CodeExample) => {
   const [srcDoc, setSrcDoc] = useState(snippet);
   const {editorTheme, setEditorTheme, siteTheme} = useContext(AppContext);
 
+  const notify = () => toast.success('Text Copied to Clipboard!');
+
   const toggleTheme = () => {
     let newTheme = null;
     if (editorTheme === null) newTheme = (siteTheme === 'light') ? 'dark' : 'light';
@@ -68,6 +72,11 @@ const CodeExample = ({ snippet, template = true }: CodeExample) => {
       setHeight(ref.current.contentWindow.document.body.scrollHeight + 20 + 'px');
     }
   };
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(srcDoc);
+    notify();
+  }
 
   return (
     <>
@@ -85,7 +94,7 @@ const CodeExample = ({ snippet, template = true }: CodeExample) => {
       <div className='code-container'>
         <ul>
           <li onClick={() => setSrcDoc(snippet)}><FiRotateCcw /></li>
-          <li onClick={() => navigator.clipboard.writeText(srcDoc)}><FiCopy /></li>
+          <li onClick={handleCopy}><FiCopy /></li>
           <li onClick={toggleTheme}><FiSun /></li>
         </ul>
         <div className='code-example'>
@@ -111,7 +120,7 @@ const CodeExample = ({ snippet, template = true }: CodeExample) => {
                 { tag: [t.string, t.regexp, t.special(t.propertyName)], color: 'var(--color-editor-green)' },
                 { tag: t.variableName, color: 'var(--color-editor-purple)' },
                 { tag: t.className, color: 'var(--color-editor-orange)' },
-                { tag: t.brace, color: 'var(--color-text)' },
+                { tag: [t.brace, t.operator, t.angleBracket], color: 'var(--color-text)' },
               ]
             })}
             extensions={[html()]}
@@ -122,6 +131,17 @@ const CodeExample = ({ snippet, template = true }: CodeExample) => {
           />
         </div>
       </div>
+      <ToastContainer position="bottom-center"
+        autoClose={1250}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable={false}
+        pauseOnHover={false}
+        theme={ siteTheme === 'light' ? 'light' : 'dark' }
+      />
     </>
   )
 }

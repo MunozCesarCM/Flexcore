@@ -33,14 +33,12 @@ const App = () => {
     localStorage.setItem('theme', siteTheme);
   }, [siteTheme]);
 
-  console.log();
-
   return (
     <AppContext.Provider value={{ sidebarActive, editorTheme, setSidebarActive, setEditorTheme, siteTheme }}>
       <main className={`theme-${siteTheme}`}>
         <Topbar siteTheme={siteTheme} setSiteTheme={setSiteTheme} />
         <Sidebar />
-        <Suspense fallback={<div />}>
+        <Suspense fallback={<div style={{ width: '100vw', height: '100vh', }} />}>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/getting-started' element={<GettingStarted />} />

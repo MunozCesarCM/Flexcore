@@ -8,6 +8,7 @@ const Home = React.lazy(() => import('./pages/Home'));
 const GettingStarted = React.lazy(() => import('./pages/GettingStarted'));
 const TextFormatting = React.lazy(() => import('./pages/Typography/TextFormatting'));
 const ColorStyling = React.lazy(() => import('./pages/Typography/ColorStyling'));
+const Borders = React.lazy(() => import('./pages/Utilities/Borders'));
 const Sizing = React.lazy(() => import('./pages/Utilities/Sizing'));
 const Layout = React.lazy(() => import('./pages/Utilities/Layout'));
 const Spacing = React.lazy(() => import('./pages/Utilities/Spacing'));
@@ -44,6 +45,7 @@ const App = () => {
             <Route path='/getting-started' element={<GettingStarted />} />
             <Route path='/typography/text-formatting' element={<TextFormatting />} />
             <Route path='/typography/color-and-styling' element={<ColorStyling />} />
+            <Route path='/utilities/borders' element={<Borders />} />
             <Route path='/utilities/sizing' element={<Sizing />} />
             <Route path='/utilities/layout' element={<Layout />} />
             <Route path='/utilities/spacing' element={<Spacing />} />

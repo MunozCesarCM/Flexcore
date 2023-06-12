@@ -42,10 +42,10 @@ export const example4 = `
 `.slice(1,-1);
 
 export const example5 = `
-<p class="border-2 px-4 py-2 my-10 border-secondary outline-3 outline-primary outline-offset-5 outline-solid">Solid</p>
-<p class="border-2 px-4 py-2 my-10 border-secondary outline-3 outline-primary outline-offset-5 outline-dashed">Dashed</p>
-<p class="border-2 px-4 py-2 my-10 border-secondary outline-3 outline-primary outline-offset-5 outline-dotted">Dotted</p>
-<p class="border-2 px-4 py-2 my-10 border-secondary outline-3 outline-primary outline-offset-5 outline-double">Double</p>
+<p class="border px-4 py-2 my-10 border-secondary outline-3 outline-primary outline-offset-5 outline-solid">Solid</p>
+<p class="border px-4 py-2 my-10 border-secondary outline-3 outline-primary outline-offset-5 outline-dashed">Dashed</p>
+<p class="border px-4 py-2 my-10 border-secondary outline-3 outline-primary outline-offset-5 outline-dotted">Dotted</p>
+<p class="border px-4 py-2 my-10 border-secondary outline-3 outline-primary outline-offset-5 outline-double">Double</p>
 `.slice(1,-1);
 
 const borderRadii = {

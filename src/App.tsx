@@ -6,8 +6,12 @@ import AppContext from './context/AppContext';
 
 const Home = React.lazy(() => import('./pages/Home'));
 const GettingStarted = React.lazy(() => import('./pages/GettingStarted'));
+
 const TextFormatting = React.lazy(() => import('./pages/Typography/TextFormatting'));
 const ColorStyling = React.lazy(() => import('./pages/Typography/ColorStyling'));
+
+const Buttons = React.lazy(() => import('./pages/FormsInputs/Buttons'));
+
 const Borders = React.lazy(() => import('./pages/Utilities/Borders'));
 const Sizing = React.lazy(() => import('./pages/Utilities/Sizing'));
 const Layout = React.lazy(() => import('./pages/Utilities/Layout'));
@@ -43,8 +47,12 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/getting-started' element={<GettingStarted />} />
+
+            <Route path='/forms-and-inputs/buttons' element={<Buttons />} />
+
             <Route path='/typography/text-formatting' element={<TextFormatting />} />
             <Route path='/typography/color-and-styling' element={<ColorStyling />} />
+
             <Route path='/utilities/borders' element={<Borders />} />
             <Route path='/utilities/sizing' element={<Sizing />} />
             <Route path='/utilities/layout' element={<Layout />} />

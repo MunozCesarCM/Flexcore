@@ -28,14 +28,14 @@ const data = [
     children: ['Text Formatting', 'Color and Styling'],
   },
   {
-    label: 'Buttons',
+    label: 'Data Display',
     icon: 'TbSquareRoundedCheckFilled',
     children: ['Overview', 'Icon', 'Variations'],
   },
   {
     label: 'Forms and Inputs',
     icon: 'TbForms',
-    children: ['Text Fields', 'Selection Inputs', 'Range Inputs', 'Date and Time', 'Miscellaneous'],
+    children: ['Buttons', 'Text Fields', 'Selection Inputs', 'Range Inputs', 'Date and Time', 'Miscellaneous'],
   },
   {
     label: 'Notifications',
@@ -121,7 +121,7 @@ const Sidebar = () => {
                   <li
                     className='caret-child'
                     key={childIndex}
-                    onClick={() => navigate(`/${item.label.toLowerCase()}/${child.toLowerCase().replaceAll(' ', '-')}`)}
+                    onClick={() => navigate(`/${item.label.toLowerCase().replaceAll(' ', '-')}/${child.toLowerCase().replaceAll(' ', '-')}`)}
                   >
                     {child}
                   </li>

@@ -133,7 +133,7 @@ const CodeExample = ({ snippet, template = true }: CodeExample) => {
           />
         </div>
       </div>
-      <ToastContainer position="bottom-center"
+      <ToastContainer position="bottom-right"
         autoClose={1250}
         hideProgressBar={true}
         newestOnTop={false}

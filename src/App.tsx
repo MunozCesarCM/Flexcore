@@ -12,6 +12,8 @@ const ColorStyling = React.lazy(() => import('./pages/Typography/ColorStyling'))
 
 const Buttons = React.lazy(() => import('./pages/FormsInputs/Buttons'));
 
+const Flexbox = React.lazy(() => import('./pages/Layouts/Flexbox'));
+
 const Borders = React.lazy(() => import('./pages/Utilities/Borders'));
 const Sizing = React.lazy(() => import('./pages/Utilities/Sizing'));
 const Layout = React.lazy(() => import('./pages/Utilities/Layout'));
@@ -49,6 +51,8 @@ const App = () => {
             <Route path='/getting-started' element={<GettingStarted />} />
 
             <Route path='/forms-and-inputs/buttons' element={<Buttons />} />
+
+            <Route path='/layouts/flexbox' element={<Flexbox />} />
 
             <Route path='/typography/text-formatting' element={<TextFormatting />} />
             <Route path='/typography/color-and-styling' element={<ColorStyling />} />

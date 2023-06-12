@@ -113,6 +113,14 @@ export const example6 = `
 </body>
 `.slice(1,-1);
 
+export const example7 = `
+<p class="text-white bg-primary opacity-100">This has opacity 100</p>
+<p class="text-white bg-primary opacity-80">This has opacity 80</p>
+<p class="text-white bg-primary opacity-60">This has opacity 60</p>
+<p class="text-white bg-primary opacity-40">This has opacity 40</p>
+<p class="text-white bg-primary opacity-20">This has opacity 20</p>
+`.slice(1,-1);
+
 export const table1 = {
   body: [
     { title: 'text-black', desc: 'color: #000000' },
@@ -553,5 +561,22 @@ export const table4 = {
     { title: 'warning-dark', desc: '--color-warning-dark' },
     { title: 'error-dark', desc: '--color-error-dark' },
     { title: 'info-dark', desc: '--color-info-dark' },
+  ],
+}
+
+export const table5 = {
+  body: [
+    ...(function() {
+      const array = [];
+
+      for (let i = 0; i <= 20; ++i) {
+        array.push({
+          title: `opacity-${i * 5}`,
+          desc: `opacity: ${(i * 0.05).toFixed(2)}`,
+        });
+      }
+
+      return array;
+    })()
   ],
 }

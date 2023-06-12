@@ -14,7 +14,7 @@
   --color-text: #000000;
 
   --color-primary: #007FFF;
-  --color-secondary: #FF007F;
+  --color-secondary: #E50072;
 
   --color-success: #2E7D32;
   --color-success-bg: #EDF7ED;
@@ -44,7 +44,7 @@
   --color-text: #FFFFFF;
 
   --color-primary: #007FFF;
-  --color-secondary: #FF007F;
+  --color-secondary: #E50072;
 
   --color-success: #66CC66;
   --color-success-bg: #0C130D;
@@ -671,6 +671,25 @@ body {
 
 @include gen-states(list-inside) { list-style-position: inside; }
 @include gen-states(list-outside) { list-style-position: outside; }
+
+// Typography - Color Styling - Opacity
+
+@for $i from 0 through 20 {
+  $opacity: $i * 0.05;
+  @include gen-states(opacity-#{$i * 5}) { opacity: $opacity; }
+}
+
+// Layouts - Flexbox - Flex
+
+@for $i from 0 through 100 {
+  $basis: $i * 0.25em;
+  @include gen-states(basis-#{$i}) { flex-basis: $basis; }
+}
+
+@include gen-states(flex-row) { flex-direction: row; }
+@include gen-states(flex-row-reverse) { flex-direction: row-reverse; }
+@include gen-states(flex-col) { flex-direction: column; }
+@include gen-states(flex-col-reverse) { flex-direction: column-reverse; }
 
 // Utilities - Borders - Properties
 
@@ -1486,6 +1505,13 @@ $border-radius-values: (
     margin-bottom: $margin-y;
   }
 }
+
+@include gen-states(mt-auto) { margin-top: auto; }
+@include gen-states(mr-auto) { margin-right: auto; }
+@include gen-states(mb-auto) { margin-bottom: auto; }
+@include gen-states(ml-auto) { margin-left: auto; }
+@include gen-states(mx-auto) { margin-left: auto; margin-right: auto; }
+@include gen-states(my-auto) { margin-top: auto; margin-bottom: auto; }
 
 // Utilities - Interactivity
 

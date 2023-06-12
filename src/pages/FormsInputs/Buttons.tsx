@@ -4,6 +4,9 @@ import AppContext from '../../context/AppContext';
 import {
   example1,
   example2,
+  example3,
+  example4,
+  example5,
 } from '../../constants/forms-inputs/buttons';
 
 const Buttons = () => {
@@ -42,6 +45,18 @@ const Buttons = () => {
         <p>For added visual appeal, FleXkit offers stylistic buttons that provide different looks and feels. Choose between outline, filled, or text buttons to match your design preferences and create eye-catching interfaces.</p>
         <CodeExample snippet={example2} />
 
+        <h3 id=''>State Buttons</h3>
+        <p>State buttons allow you to indicate the disabled state of a button. These buttons appear much lighter and are non-interactive, providing visual feedback that certain actions are not currently available or applicable.</p>
+        <CodeExample snippet={example3} />
+
+        <h3 id=''>Size Buttons</h3>
+        <p>Adjust the size of your buttons to suit different contexts or emphasize specific actions. With FleXkit you can create small and large buttons that can be used to create visual hierarchy or optimize space allocation.</p>
+        <CodeExample snippet={example4} />
+
+        <h3 id=''>Icon Buttons</h3>
+        <p>Combine the power of icons with buttons to enhance usability and visual communication. FleXkit allows you to integrate icons with your buttons, either as standalone icon-only buttons or buttons with icons and accompanying text.</p>
+        <CodeExample snippet={example5} />
+
       </section>
       <div className='article-sidebar'>
         <h3>Contents</h3>
@@ -51,7 +66,6 @@ const Buttons = () => {
         <h4 onClick={() => scrollPosition('')}>State Buttons</h4>
         <h4 onClick={() => scrollPosition('')}>Size Buttons</h4>
         <h4 onClick={() => scrollPosition('')}>Icon Buttons</h4>
-        <h4 onClick={() => scrollPosition('')}>Link Button</h4>
       </div>
     </article>
   );

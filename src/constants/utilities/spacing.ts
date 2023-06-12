@@ -105,6 +105,9 @@ export const table4 = {
 
 export const table5 = {
   body: [
+    { title: 'my-auto', desc: 'margin-top: auto\nmargin-bottom: auto' },
+    { title: 'mx-auto', desc: 'margin-left: auto\nmargin-right: auto' },
+
     ...(function() {
       const array = [];
 
@@ -127,6 +130,11 @@ export const table5 = {
 
 export const table6 = {
   body: [
+    { title: 'mt-auto', desc: 'margin-top: auto' },
+    { title: 'mr-auto', desc: 'margin-right: auto' },
+    { title: 'mb-auto', desc: 'margin-bottom: auto' },
+    { title: 'ml-auto', desc: 'margin-left: auto' },
+
     ...(function() {
       const array = [];
 

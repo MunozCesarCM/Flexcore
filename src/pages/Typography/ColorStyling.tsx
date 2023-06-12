@@ -11,10 +11,12 @@ import {
   example4,
   example5,
   example6,
+  example7,
   table1,
   table2,
   table3,
   table4,
+  table5,
 } from '../../constants/typography/color-styling';
 
 const ColorStyling = () => {
@@ -81,6 +83,11 @@ const ColorStyling = () => {
       <p>With FleXkit, you can easily customize the <span className='quote'>background-color</span> of elements such as containers, buttons, or sections:</p>
       <CodeExample snippet={example3} />
 
+      <h4 id='Opacity'>Opacity</h4>
+      <p>FleXkit allows you to control the <span className='quote'>opacity</span> of various elements, providing you with flexibility in creating visually appealing interfaces. Opacity refers to the transparency level of an element, with lower values indicating greater transparency.</p>
+      <ClassTable tableItems={table5} />
+      <CodeExample snippet={example7} />
+
       <h3 id='Theming'>Theming</h3>
       <p>FleXkit provides a powerful theming feature that allows you to create your own unique design by modifying theme variables. With FleXkit theming, you can effortlessly customize the overall appearance of your web interface to match your brand or design preferences.</p>
 
@@ -120,6 +127,7 @@ const ColorStyling = () => {
         <h4 onClick={() => scrollPosition('Element Colors')}>Element Colors</h4>
         <h5 onClick={() => scrollPosition('Text Color')}>Text Color</h5>
         <h5 onClick={() => scrollPosition('Background Color')}>Background Color</h5>
+        <h5 onClick={() => scrollPosition('Opacity')}>Opacity</h5>
         <h4 onClick={() => scrollPosition('Theming')}>Theming</h4>
         <h5 onClick={() => scrollPosition('Theme Variables')}>Theme Variables</h5>
         <h5 onClick={() => scrollPosition('Light Dark Mode')}>Light / Dark Mode</h5>

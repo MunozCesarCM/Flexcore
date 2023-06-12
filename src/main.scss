@@ -8,6 +8,7 @@ $size-article-sidebar: 250px;
   --color-canvas: #FFFFFF;
   --color-text: #535E69;
   --color-heading: #0A1929;
+
   --color-link: #0A1929;
   --color-link-hover: #0A1929;
   --color-border: #E7EBF0;
@@ -17,20 +18,26 @@ $size-article-sidebar: 250px;
   --color-accent: #FF007F;
 
   --color-success: #2E7D32;
-  --color-success-light: #EDF7ED;
-  --color-success-dark: #1E4620;
+  --color-success-bg: #EDF7ED;
+  --color-success-fg: #1E4620;
 
   --color-error: #CC3333;
-  --color-error-light: #FDEDED;
-  --color-error-dark: #5F2120;
+  --color-error-bg: #FDEDED;
+  --color-error-fg: #5F2120;
 
   --color-warning: #ED6C02;
-  --color-warning-light: #FFF4E5;
-  --color-warning-dark: #663C00;
+  --color-warning-bg: #FFF4E5;
+  --color-warning-fg: #663C00;
 
   --color-info: #0288D1;
-  --color-info-light: #E5F6FD;
-  --color-info-dark: #014361;
+  --color-info-bg: #E5F6FD;
+  --color-info-fg: #014361;
+
+  --color-shade-1: #F6F8FA;
+  --color-shade-2: #EAEEF2;
+  --color-shade-3: #D0D7DE;
+  --color-shade-4: #AFB8C1;
+  --color-shade-5: #8C959F;
 
   background-color: var(--color-canvas);
   color: var(--color-text);
@@ -48,6 +55,7 @@ $size-article-sidebar: 250px;
   --color-canvas: #000919;
   --color-text: #B2BAC2;
   --color-heading: #F3F6F9;
+
   --color-link: #0A1929;
   --color-link-hover: #0A1929;
   --color-border: #2D3843;
@@ -57,20 +65,26 @@ $size-article-sidebar: 250px;
   --color-accent: #FF007F;
 
   --color-success: #66CC66;
-  --color-success-light: #0C130D;
-  --color-success-dark: #CCE8CD;
+  --color-success-bg: #0C130D;
+  --color-success-fg: #CCE8CD;
 
   --color-error: #FF3333;
-  --color-error-light: #160B0B;
-  --color-error-dark: #F4C7C7;
+  --color-error-bg: #160B0B;
+  --color-error-fg: #F4C7C7;
 
   --color-warning: #663C00;
-  --color-warning-light: #191207;
-  --color-warning-dark: #FFE2B7;
+  --color-warning-bg: #191207;
+  --color-warning-fg: #FFE2B7;
 
   --color-info: #29B6F6;
-  --color-info-light: #071318;
-  --color-info-dark: #B8E7FB;
+  --color-info-bg: #071318;
+  --color-info-fg: #B8E7FB;
+
+  --color-shade-1: #1E272F;
+  --color-shade-2: #263341;
+  --color-shade-3: #2E3D50;
+  --color-shade-4: #354654;
+  --color-shade-5: #3C515D;
 
   background-color: var(--color-canvas);
   color: var(--color-text);
@@ -185,8 +199,8 @@ button { border: none; }
 
 .quote {
   font-family: 'Roboto Mono', monospace;
-  background-color: var(--color-info-light);
-  color: var(--color-info-dark);
+  background-color: var(--color-info-bg);
+  color: var(--color-info-fg);
   font-weight: 500;
   font-size: 0.95em;
   padding: 1px 5px;
@@ -200,12 +214,12 @@ button { border: none; }
   transition-duration: 100ms;
 
   &:hover {
-    color: var(--color-info-light);
+    color: var(--color-info-bg);
     transition-duration: 100ms;
   }
 
   &:active {
-    color: var(--color-info-dark);
+    color: var(--color-info-fg);
     transition-duration: 100ms;
   }
 }
@@ -349,7 +363,7 @@ input[type=text] {
       transition-duration: 50ms;
 
       &:hover {
-        background-color: var(--color-info-light);
+        background-color: var(--color-info-bg);
         transition-duration: 50ms;
 
         .icon {
@@ -380,7 +394,7 @@ input[type=text] {
       transition-duration: 50ms;
 
       &:hover {
-        background-color: var(--color-info-light);
+        background-color: var(--color-info-bg);
         color: var(--color-heading);
         transition-duration: 50ms;
       }
@@ -441,26 +455,26 @@ input[type=text] {
 
     &-success {
       @extend .notification-container;
-      background-color: var(--color-success-light);
-      color: var(--color-success-dark);
+      background-color: var(--color-success-bg);
+      color: var(--color-success-fg);
     }
 
     &-error {
       @extend .notification-container;
-      background-color: var(--color-error-light);
-      color: var(--color-error-dark);
+      background-color: var(--color-error-bg);
+      color: var(--color-error-fg);
     }
 
     &-warning {
       @extend .notification-container;
-      background-color: var(--color-warning-light);
-      color: var(--color-warning-dark);
+      background-color: var(--color-warning-bg);
+      color: var(--color-warning-fg);
     }
 
     &-info {
       @extend .notification-container;
-      background-color: var(--color-info-light);
-      color: var(--color-info-dark);
+      background-color: var(--color-info-bg);
+      color: var(--color-info-fg);
     }
 
     svg {
@@ -565,7 +579,7 @@ input[type=text] {
 
       &:hover {
         color: var(--color-heading);
-        background-color: var(--color-info-light);
+        background-color: var(--color-info-bg);
         transition-duration: 100ms;
       }
     }
@@ -727,7 +741,7 @@ input[type=text] {
 
       &:hover {
         border: 2px solid var(--color-border);
-        svg { color: var(--color-info-dark); }
+        svg { color: var(--color-info-fg); }
       }
 
       h2 {

@@ -327,6 +327,7 @@ export const table2 = {
 
 export const table3 = {
   body: [
+    { title: 'bg-none', desc: 'background: none' },
     { title: 'bg-black', desc: 'background-color: #000000' },
     { title: 'bg-white', desc: 'background-color: #FFFFFF' },
     { title: 'bg-red-50', desc: 'background-color: #FEF2F2' },

@@ -76,9 +76,33 @@ body {
 
 @include gen-states(text-primary) { color: var(--color-primary); }
 @include gen-states(text-secondary) { color: var(--color-secondary); }
+@include gen-states(text-success) { color: var(--color-success); }
+@include gen-states(text-success-bg) { color: var(--color-success-bg); }
+@include gen-states(text-success-fg) { color: var(--color-success-fg); }
+@include gen-states(text-error) { color: var(--color-error); }
+@include gen-states(text-error-bg) { color: var(--color-error-bg); }
+@include gen-states(text-error-fg) { color: var(--color-error-fg); }
+@include gen-states(text-warning) { color: var(--color-warning); }
+@include gen-states(text-warning-bg) { color: var(--color-warning-bg); }
+@include gen-states(text-warning-fg) { color: var(--color-warning-fg); }
+@include gen-states(text-info) { color: var(--color-info); }
+@include gen-states(text-info-bg) { color: var(--color-info-bg); }
+@include gen-states(text-info-fg) { color: var(--color-info-fg); }
 
 @include gen-states(bg-primary) { background-color: var(--color-primary); }
 @include gen-states(bg-secondary) { background-color: var(--color-secondary); }
+@include gen-states(bg-success) { background-color: var(--color-success); }
+@include gen-states(bg-success-bg) { background-color: var(--color-success-bg); }
+@include gen-states(bg-success-fg) { background-color: var(--color-success-fg); }
+@include gen-states(bg-error) { background-color: var(--color-error); }
+@include gen-states(bg-error-bg) { background-color: var(--color-error-bg); }
+@include gen-states(bg-error-fg) { background-color: var(--color-error-fg); }
+@include gen-states(bg-warning) { background-color: var(--color-warning); }
+@include gen-states(bg-warning-bg) { background-color: var(--color-warning-bg); }
+@include gen-states(bg-warning-fg) { background-color: var(--color-warning-fg); }
+@include gen-states(bg-info) { background-color: var(--color-info); }
+@include gen-states(bg-info-bg) { background-color: var(--color-info-bg); }
+@include gen-states(bg-info-fg) { background-color: var(--color-info-fg); }
 
 @include gen-states(text-black) { color: #000000; }
 @include gen-states(text-white) { color: #FFFFFF; }
@@ -292,6 +316,7 @@ body {
 @include gen-states(text-neutral-900) { color: #171717; }
 @include gen-states(text-neutral-950) { color: #0A0A0A; }
 
+@include gen-states(bg-none) { background: none; }
 @include gen-states(bg-black) { background-color: #000000; }
 @include gen-states(bg-white) { background-color: #FFFFFF; }
 @include gen-states(bg-slate-50) { background-color: #F8FAFC; }
@@ -712,6 +737,19 @@ $border-radius-values: (
 
 @include gen-states(border-primary) { border-color: var(--color-primary); }
 @include gen-states(border-secondary) { border-color: var(--color-secondary); }
+@include gen-states(border-success) { border-color: var(--color-success); }
+@include gen-states(border-success-bg) { border-color: var(--color-success-bg); }
+@include gen-states(border-success-fg) { border-color: var(--color-success-fg); }
+@include gen-states(border-error) { border-color: var(--color-error); }
+@include gen-states(border-error-bg) { border-color: var(--color-error-bg); }
+@include gen-states(border-error-fg) { border-color: var(--color-error-fg); }
+@include gen-states(border-warning) { border-color: var(--color-warning); }
+@include gen-states(border-warning-bg) { border-color: var(--color-warning-bg); }
+@include gen-states(border-warning-fg) { border-color: var(--color-warning-fg); }
+@include gen-states(border-info) { border-color: var(--color-info); }
+@include gen-states(border-info-bg) { border-color: var(--color-info-bg); }
+@include gen-states(border-info-fg) { border-color: var(--color-info-fg); }
+
 @include gen-states(border-black) { border-color: #000000; }
 @include gen-states(border-white) { border-color: #FFFFFF; }
 @include gen-states(border-red-50) { border-color: #FEF2F2; }
@@ -943,6 +981,19 @@ $border-radius-values: (
 
 @include gen-states(outline-primary) { outline-color: var(--color-primary); }
 @include gen-states(outline-secondary) { outline-color: var(--color-secondary); }
+@include gen-states(outline-success) { outline-color: var(--color-success); }
+@include gen-states(outline-success-bg) { outline-color: var(--color-success-bg); }
+@include gen-states(outline-success-fg) { outline-color: var(--color-success-fg); }
+@include gen-states(outline-error) { outline-color: var(--color-error); }
+@include gen-states(outline-error-bg) { outline-color: var(--color-error-bg); }
+@include gen-states(outline-error-fg) { outline-color: var(--color-error-fg); }
+@include gen-states(outline-warning) { outline-color: var(--color-warning); }
+@include gen-states(outline-warning-bg) { outline-color: var(--color-warning-bg); }
+@include gen-states(outline-warning-fg) { outline-color: var(--color-warning-fg); }
+@include gen-states(outline-info) { outline-color: var(--color-info); }
+@include gen-states(outline-info-bg) { outline-color: var(--color-info-bg); }
+@include gen-states(outline-info-fg) { outline-color: var(--color-info-fg); }
+
 @include gen-states(outline-black) { outline-color: #000000; }
 @include gen-states(outline-white) { outline-color: #FFFFFF; }
 @include gen-states(outline-red-50) { outline-color: #FEF2F2; }

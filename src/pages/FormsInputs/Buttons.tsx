@@ -1,9 +1,9 @@
 import { useEffect, useContext } from 'react';
 import CodeExample from '../../components/CodeExample';
-import ClassTable from '../../components/ClassTable';
 import AppContext from '../../context/AppContext';
 import {
   example1,
+  example2,
 } from '../../constants/forms-inputs/buttons';
 
 const Buttons = () => {
@@ -37,6 +37,10 @@ const Buttons = () => {
         <h3 id=''>Standard Buttons</h3>
         <p>These buttons serve as the foundation for most interactions. They provide clear and distinguishable styles for primary, secondary, success, warning, danger, and info actions. Use them to guide users towards important actions or convey different levels of urgency.</p>
         <CodeExample snippet={example1} />
+
+        <h3 id=''>Stylistic Buttons</h3>
+        <p>For added visual appeal, FleXkit offers stylistic buttons that provide different looks and feels. Choose between outline, filled, or text buttons to match your design preferences and create eye-catching interfaces.</p>
+        <CodeExample snippet={example2} />
 
       </section>
       <div className='article-sidebar'>

@@ -127,7 +127,7 @@ const ColorPalette = () => {
       indigo: "Indigo",
       violet: "Violet",
       purple: "Purple",
-      fuchsia: "Fuchsia",
+      magenta: "Magenta",
       pink: "Pink",
       rose: "Rose",
       slate: "Slate",
@@ -151,10 +151,10 @@ const ColorPalette = () => {
       blue:    [ '#EFF6FF', '#DBEAFE', '#BFDBFE', '#93C5FD', '#60A5FA', '#3B82F6', '#2563EB', '#1D4ED8', '#1E40AF', '#1E3A8A', '#172554', ],
       indigo:  [ '#EEF2FF', '#E0E7FF', '#C7D2FE', '#A5B4FC', '#818CF8', '#6366F1', '#4F46E5', '#4338CA', '#3730A3', '#312E81', '#1E1B4B', ],
       violet:  [ '#F5F3FF', '#EDE9FE', '#DDD6FE', '#C4B5FD', '#A78BFA', '#8B5CF6', '#7C3AED', '#6D28D9', '#5B21B6', '#4C1D95', '#2E1065', ],
-      purple:  [ '#FAF5FF', '#F3E8FF', '#E9D5FF', '#D8B4FE', '#C084FC', '#A855F7', '#9333EA', '#7E22CE', '#6B21A8', '#581C87', '#3F0E5E', ],
-      fuchsia: [ '#FAF5FF', '#F3E8FF', '#E9D5FF', '#D8B4FE', '#C084FC', '#A855F7', '#9333EA', '#7E22CE', '#6B21A8', '#581C87', '#3F0E5E', ],
-      pink:    [ '#FDF2F8', '#FCE7F3', '#FBCFE8', '#F9A8D4', '#F472B6', '#EC4899', '#DB2777', '#BE185D', '#9D174D', '#831843', '#520339', ],
-      rose:    [ '#FFF1F2', '#FFE4E6', '#FECDD3', '#FDA4AF', '#FB7185', '#F43F5E', '#E11D48', '#BE123C', '#9F1239', '#881337', '#450A11', ],
+      purple:  [ '#FAF5FF', '#F3E8FF', '#E9D5FF', '#D8B4FE', '#C084FC', '#A855F7', '#9333EA', '#7E22CE', '#6B21A8', '#581C87', '#3B0764', ],
+      magenta: [ '#FDF4FF', '#FAE8FF', '#F5D0FE', '#F0ABFC', '#E879F9', '#D946EF', '#C026D3', '#A21CAF', '#86198F', '#701A75', '#4A044E', ],
+      pink:    [ '#FDF2F8', '#FCE7F3', '#FBCFE8', '#F9A8D4', '#F472B6', '#EC4899', '#DB2777', '#BE185D', '#9D174D', '#831843', '#500724', ],
+      rose:    [ '#FFF1F2', '#FFE4E6', '#FECDD3', '#FDA4AF', '#FB7185', '#F43F5E', '#E11D48', '#BE123C', '#9F1239', '#881337', '#4C0519', ],
       slate:   [ '#F8FAFC', '#F1F5F9', '#E2E8F0', '#CBD5E1', '#94A3B8', '#64748B', '#475569', '#334155', '#1E293B', '#0F172A', '#020617', ],
       neutral: [ '#FAFAFA', '#F5F5F5', '#E5E5E5', '#D4D4D4', '#A3A3A3', '#737373', '#525252', '#404040', '#262626', '#171717', '#0A0A0A', ],
     };
@@ -184,7 +184,7 @@ const ColorPalette = () => {
         <button className="color-button" name="indigo" />
         <button className="color-button" name="violet" />
         <button className="color-button" name="purple" />
-        <button className="color-button" name="fuchsia" />
+        <button className="color-button" name="magenta" />
         <button className="color-button" name="pink" />
         <button className="color-button" name="rose" />
         <button className="color-button" name="slate" />

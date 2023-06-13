@@ -123,6 +123,8 @@ export const example7 = `
 
 export const table1 = {
   body: [
+    { title: 'text-normal', desc: 'color: var(--color-text)' },
+    { title: 'text-header', desc: 'color: var(--color-header)' },
     { title: 'text-black', desc: 'color: #000000' },
     { title: 'text-white', desc: 'color: #FFFFFF' },
     { title: 'text-red-50', desc: 'color: #FEF2F2' },

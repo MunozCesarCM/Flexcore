@@ -440,7 +440,10 @@ input[type=text] {
 
   ul {
     margin: 1em 0 1.5em 2em;
-    li { margin: 0.75em 0; }
+    li {
+      margin: 1em 0;
+      line-height: 1.75;
+    }
   }
 
   strong { font-weight: 600; }
@@ -591,288 +594,288 @@ input[type=text] {
     border-radius: 10px;
     border: 1px solid var(--color-border);
 
-    * { font-family: 'Roboto Mono', monospace; }
-  }
-}
-
-
-.article-sidebar {
-  padding: calc(5em - $size-topbar) 2em 1em 0;
-
-  h3 {
-    color: var(--color-heading);
-    text-transform: uppercase;
-    font-size: 0.9em;
-    letter-spacing: 1px;
-    padding-bottom: 1em;
-    margin-bottom: 1em;
-    border-bottom: 2px solid var(--color-border);
-  }
-
-  h4, h5 {
-    font-size: 0.8em;
-    font-weight: 500;
-    margin-top: 0.25em;
-    transition-duration: 85ms;
-    cursor: pointer;
-
-    &:hover {
-      color: var(--color-primary);
-      transition-duration: 85ms;
-      border-left: 3px solid var(--color-primary);
-    }
-  }
-
-  h4 {
-    color: var(--color-heading);
-    padding: 0.75em 0;
-    &:hover { padding-left: 1em; }
-  }
-
-  h5 {
-    color: var(--color-text);
-    padding: 0.8em 0 0.8em 1.5em;
-    &:hover { padding-left: 2.5em; }
-  }
-}
-
-.landing-page {
-
-  header {
-    margin-left: 10vw;
-    display: flex;
-    height: 90vh;
-
-    .hero {
-      width: calc(50% - 5vw);
-      padding-right: 6em;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 1.5em;
-
-      h1 {
-        font-size: 4.25em;
-
-        .special {
-          color: var(--color-primary);
-        }
-      }
-
-      p {
-        line-height: 1.8em;
-
-        strong {
-          font-weight: 600;
-        }
-      }
-
-      button {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: var(--color-primary);
-        color: white;
-        font-weight: 600;
-        font-size: 1.1em;
-        letter-spacing: 0.5px;
-        margin-right: auto;
-        padding: 0.8em 1em;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        transition-duration: 200ms;
-
-        &:hover {
-          box-shadow: 1px 3px 15px rgba(0,0,0,0.12);
-          -webkit-box-shadow: 1px 3px 15px rgba(0,0,0,0.12);
-          -moz-box-shadow: 1px 3px 15px rgba(0,0,0,0.12);
-          transition-duration: 200ms;
-
-          svg {
-            margin-left: 0.7em;
-            margin-right: 0;
+            * { font-family: 'Roboto Mono', monospace; }
           }
         }
 
-        svg {
-          font-size: 1.5em;
-          margin-left: 0.5em;
-          margin-right: 0.2em;
-          transition-duration: 200ms;
+
+        .article-sidebar {
+          padding: calc(5em - $size-topbar) 2em 1em 0;
+
+          h3 {
+            color: var(--color-heading);
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+            padding-bottom: 1em;
+            margin-bottom: 1em;
+            border-bottom: 2px solid var(--color-border);
+          }
+
+          h4, h5 {
+            font-size: 0.8em;
+            font-weight: 500;
+            margin-top: 0.25em;
+            transition-duration: 85ms;
+            cursor: pointer;
+
+            &:hover {
+              color: var(--color-primary);
+              transition-duration: 85ms;
+              border-left: 3px solid var(--color-primary);
+            }
+          }
+
+          h4 {
+            color: var(--color-heading);
+            padding: 0.75em 0;
+            &:hover { padding-left: 1em; }
+          }
+
+          h5 {
+            color: var(--color-text);
+            padding: 0.8em 0 0.8em 1.5em;
+            &:hover { padding-left: 2.5em; }
+          }
         }
-      }
-    }
 
-    .demo {
-      flex-grow: 1;
-      background-color: #F3F6F9;
-      border-bottom-left-radius: 20px;
-    }
-  }
+        .landing-page {
 
-  .features {
-    min-height: 30vh;
-    margin: 5em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 5em;
+          header {
+            margin-left: 10vw;
+            display: flex;
+            height: 90vh;
 
-    .feature {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 1em;
-      width: 15%;
-      padding: 2.5em 0;
-      border: 2px solid white;
-      border-radius: 10px;
-      transition-duration: 200ms;
-      cursor: pointer;
+            .hero {
+              width: calc(50% - 5vw);
+              padding-right: 6em;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              gap: 1.5em;
 
-      svg {
-        color: var(--color-primary);
-        font-size: 3em;
-        transition-duration: 200ms;
-      }
+              h1 {
+                font-size: 4.25em;
 
-      &:hover {
-        border: 2px solid var(--color-border);
-        svg { color: var(--color-info-fg); }
-      }
+                .special {
+                  color: var(--color-primary);
+                }
+              }
 
-      h2 {
-        font-weight: 500;
-        max-width: 75%;
-      }
-    }
-  }
+              p {
+                line-height: 1.8em;
 
-  .showcase {
-    background-color: #F3F6F9;
-    min-height: 75vh;
-    padding: 5em 10vw;
-    margin-bottom: 50vh;
-  }
-}
+                strong {
+                  font-weight: 600;
+                }
+              }
 
-$color-list: (
-#EF4444, // Red
-#F97316, // Orange
-#F59E0B, // Amber
-#FACC15, // Yellow
-#84CC16, // Lime
-#22C55E, // Green
-#10B981, // Emerald
-#14B8A6, // Teal
-#06B6D4, // Cyan
-#0EA5E9, // Sky
-#3B82F6, // Blue
-#6366F1, // Indigo
-#8B5CF6, // Violet
-#A855F7, // Purple
-#D946EF, // Magenta
-#EC4899, // Pink
-#F43F5E, // Rose
-#64748B, // Slate
-#737373, // Neutral
-);
+              button {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: var(--color-primary);
+                color: white;
+                font-weight: 600;
+                font-size: 1.1em;
+                letter-spacing: 0.5px;
+                margin-right: auto;
+                padding: 0.8em 1em;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                transition-duration: 200ms;
 
-.color-palette-container {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  margin: 2em 0;
-}
+                &:hover {
+                  box-shadow: 1px 3px 15px rgba(0,0,0,0.12);
+                  -webkit-box-shadow: 1px 3px 15px rgba(0,0,0,0.12);
+                  -moz-box-shadow: 1px 3px 15px rgba(0,0,0,0.12);
+                  transition-duration: 200ms;
 
-.color-picker {
-  display: flex;
-  flex-direction: column;
-  margin: auto 0px;
-  padding: 5px;
-  border-radius: 5px 0px 0px 5px;
+                  svg {
+                    margin-left: 0.7em;
+                    margin-right: 0;
+                  }
+                }
 
-  .color-button {
-    position: relative;
-    overflow: hidden;
-    transition: background 400ms;
-    border: none;
-    padding: 8px;
-    margin: 5px;
-    border-radius: 50%;
-    outline: none;
-    cursor: pointer;
-    background: black;
-  }
+                svg {
+                  font-size: 1.5em;
+                  margin-left: 0.5em;
+                  margin-right: 0.2em;
+                  transition-duration: 200ms;
+                }
+              }
+            }
 
-  .color-button:nth-child(1) {
-    $default-bg: nth($color-list, 1);
-  }
+            .demo {
+              flex-grow: 1;
+              background-color: #F3F6F9;
+              border-bottom-left-radius: 20px;
+            }
+          }
 
-  @mixin color-buttons($count) {
-    @for $i from 1 through $count {
-      $background: nth($color-list, $i);
-      .color-button:nth-child(#{$i}) {
-        background: $background;
-      }
-    }
-  }
-  @include color-buttons(19);
-}
+          .features {
+            min-height: 30vh;
+            margin: 5em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 5em;
 
-.color-chart {
-  margin: auto 0px;
-  width: 70%;
-  padding: 5px;
+            .feature {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              gap: 1em;
+              width: 15%;
+              padding: 2.5em 0;
+              border: 2px solid white;
+              border-radius: 10px;
+              transition-duration: 200ms;
+              cursor: pointer;
 
-  .color-name {
-    padding: 8px;
-    margin: 0px;
-    font-weight: 600;
-    transition: 0.6s ease;
-  }
-}
+              svg {
+                color: var(--color-primary);
+                font-size: 3em;
+                transition-duration: 200ms;
+              }
 
-.color-palette-item {
-  position: relative;
-  overflow: hidden;
-  height: auto;
-  width: 90%;
-  margin: 5px 0px;
-  padding: 11px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 500ms ease;
-  background-color: var(--color-border);
+              &:hover {
+                border: 2px solid var(--color-border);
+                svg { color: var(--color-info-fg); }
+              }
 
-  .ripple {
-    position: absolute;
-    border-radius: 50%;
-    transform: scale(0);
-    animation: ripple 600ms linear;
-  }
+              h2 {
+                font-weight: 500;
+                max-width: 75%;
+              }
+            }
+          }
 
-  .hex-code { float: right; }
+          .showcase {
+            background-color: #F3F6F9;
+            min-height: 75vh;
+            padding: 5em 10vw;
+            margin-bottom: 50vh;
+          }
+        }
 
-  .copied {
-    margin-left: 20%;
-    animation: fade 600ms linear;
-  }
+        $color-list: (
+        #EF4444, // Red
+        #F97316, // Orange
+        #F59E0B, // Amber
+        #FACC15, // Yellow
+        #84CC16, // Lime
+        #22C55E, // Green
+        #10B981, // Emerald
+        #14B8A6, // Teal
+        #06B6D4, // Cyan
+        #0EA5E9, // Sky
+        #3B82F6, // Blue
+        #6366F1, // Indigo
+        #8B5CF6, // Violet
+        #A855F7, // Purple
+        #D946EF, // Magenta
+        #EC4899, // Pink
+        #F43F5E, // Rose
+        #64748B, // Slate
+        #737373, // Neutral
+        );
 
-  @keyframes ripple {
-    to {
-      transform: scale(4);
-      opacity: 0;
-    }
-  }
-  @keyframes fade {
-    to {
-      opacity: 0;
-    }
-  }
-}
+        .color-palette-container {
+          display: flex;
+          justify-content: center;
+          gap: 1em;
+          margin: 2em 0;
+        }
 
-.cm-focused { outline: 0px solid black !important; }
+        .color-picker {
+          display: flex;
+          flex-direction: column;
+          margin: auto 0px;
+          padding: 5px;
+          border-radius: 5px 0px 0px 5px;
+
+          .color-button {
+            position: relative;
+            overflow: hidden;
+            transition: background 400ms;
+            border: none;
+            padding: 8px;
+            margin: 5px;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+            background: black;
+          }
+
+          .color-button:nth-child(1) {
+            $default-bg: nth($color-list, 1);
+          }
+
+          @mixin color-buttons($count) {
+            @for $i from 1 through $count {
+              $background: nth($color-list, $i);
+              .color-button:nth-child(#{$i}) {
+                background: $background;
+              }
+            }
+          }
+          @include color-buttons(19);
+        }
+
+        .color-chart {
+          margin: auto 0px;
+          width: 70%;
+          padding: 5px;
+
+          .color-name {
+            padding: 8px;
+            margin: 0px;
+            font-weight: 600;
+            transition: 0.6s ease;
+          }
+        }
+
+        .color-palette-item {
+          position: relative;
+          overflow: hidden;
+          height: auto;
+          width: 90%;
+          margin: 5px 0px;
+          padding: 11px 10px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: 500ms ease;
+          background-color: var(--color-border);
+
+          .ripple {
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple 600ms linear;
+          }
+
+          .hex-code { float: right; }
+
+          .copied {
+            margin-left: 20%;
+            animation: fade 600ms linear;
+          }
+
+          @keyframes ripple {
+            to {
+              transform: scale(4);
+              opacity: 0;
+            }
+          }
+          @keyframes fade {
+            to {
+              opacity: 0;
+            }
+          }
+        }
+
+        .cm-focused { outline: 0px solid black !important; }

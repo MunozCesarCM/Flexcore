@@ -11,7 +11,8 @@
 
 .theme-light {
   --color-canvas: #FFFFFF;
-  --color-text: #000000;
+  --color-header: #000000;
+  --color-text: #535E69;
 
   --color-primary: #007FFF;
   --color-secondary: #E50072;
@@ -41,7 +42,8 @@
 
 .theme-dark {
   --color-canvas: #000919;
-  --color-text: #FFFFFF;
+  --color-header: #FFFFFF;
+  --color-text: #B2BAC2;
 
   --color-primary: #007FFF;
   --color-secondary: #E50072;
@@ -70,10 +72,15 @@
 }
 
 body {
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-header);
+  }
   color: var(--color-text);
   background-color: var(--color-canvas);
 }
 
+@include gen-states(text-normal) { color: var(--color-text); }
+@include gen-states(text-header) { color: var(--color-header); }
 @include gen-states(text-primary) { color: var(--color-primary); }
 @include gen-states(text-secondary) { color: var(--color-secondary); }
 @include gen-states(text-success) { color: var(--color-success); }
@@ -89,6 +96,7 @@ body {
 @include gen-states(text-info-bg) { color: var(--color-info-bg); }
 @include gen-states(text-info-fg) { color: var(--color-info-fg); }
 
+@include gen-states(bg-canvas) { background-color: var(--color-canvas); }
 @include gen-states(bg-primary) { background-color: var(--color-primary); }
 @include gen-states(bg-secondary) { background-color: var(--color-secondary); }
 @include gen-states(bg-success) { background-color: var(--color-success); }
@@ -802,6 +810,7 @@ $border-radius-values: (
   }
 }
 
+@include gen-states(border-transparent) { border-color: rgba(0,0,0,0); }
 @include gen-states(border-primary) { border-color: var(--color-primary); }
 @include gen-states(border-secondary) { border-color: var(--color-secondary); }
 @include gen-states(border-success) { border-color: var(--color-success); }
@@ -817,6 +826,8 @@ $border-radius-values: (
 @include gen-states(border-info-bg) { border-color: var(--color-info-bg); }
 @include gen-states(border-info-fg) { border-color: var(--color-info-fg); }
 
+@include gen-states(border-text) { border-color: var(--color-text); }
+@include gen-states(border-header) { border-color: var(--color-header); }
 @include gen-states(border-black) { border-color: #000000; }
 @include gen-states(border-white) { border-color: #FFFFFF; }
 @include gen-states(border-red-50) { border-color: #FEF2F2; }

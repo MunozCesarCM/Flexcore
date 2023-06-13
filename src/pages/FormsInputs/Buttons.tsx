@@ -49,7 +49,7 @@ const Buttons = () => {
         <p>State buttons allow you to indicate the disabled state of a button. These buttons appear much lighter and are non-interactive, providing visual feedback that certain actions are not currently available or applicable.</p>
         <CodeExample snippet={example3} />
 
-        <h3 id=''>Size Buttons</h3>
+        <h3 id=''>Buttons Size</h3>
         <p>Adjust the size of your buttons to suit different contexts or emphasize specific actions. With FleXkit you can create small and large buttons that can be used to create visual hierarchy or optimize space allocation.</p>
         <CodeExample snippet={example4} />
 
@@ -64,7 +64,7 @@ const Buttons = () => {
         <h4 onClick={() => scrollPosition('')}>Standard Buttons</h4>
         <h4 onClick={() => scrollPosition('')}>Stylistic Buttons</h4>
         <h4 onClick={() => scrollPosition('')}>State Buttons</h4>
-        <h4 onClick={() => scrollPosition('')}>Size Buttons</h4>
+        <h4 onClick={() => scrollPosition('')}>Buttons Size</h4>
         <h4 onClick={() => scrollPosition('')}>Icon Buttons</h4>
       </div>
     </article>

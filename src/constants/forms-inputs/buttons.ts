@@ -75,8 +75,32 @@ export const example4 = `
 `.slice(1,-1);
 
 export const example5 = `
-<button class="bg-primary text-white font-500 border-none px-5 py-2 rounded hover:bg-blue-700 duration-100 cursor-pointer active:bg-blue-800">
-  <svg aria-hidden="true" class="w-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
-  Buy Now
+<button class="bg-blue-600 text-white font-500 border-none my-5 px-5 py-2 rounded flex inline-flex items-center hover:bg-blue-700 duration-100 cursor-pointer active:bg-blue-800">
+  <svg class="w-5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+  Like
+</button>
+<button class="bg-green-600 text-white font-500 border-none my-5 px-5 py-2 rounded flex inline-flex items-center hover:bg-green-700 duration-100 cursor-pointer active:bg-green-800">
+  <svg class="w-5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+  Message
+</button>
+<button class="bg-purple-600 text-white font-500 border-none my-5 px-5 py-2 rounded flex inline-flex items-center hover:bg-purple-700 duration-100 cursor-pointer active:bg-purple-800">
+  <svg class="w-5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+  Play
+</button>
+<br />
+<button class="bg-rose-600 font-500 border-none my-5 px-3 py-3 rounded-3xl flex inline-flex items-center hover:bg-rose-700 duration-100 cursor-pointer active:bg-rose-800">
+  <svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+</button>
+<button class="bg-yellow-500 font-500 border-none my-5 px-3 py-3 rounded flex inline-flex items-center hover:bg-yellow-600 duration-100 cursor-pointer active:bg-yellow-700">
+  <svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+</button>
+<button class="bg-green-600 font-500 border-none my-5 px-3 py-3 rounded-3xl flex inline-flex items-center hover:bg-green-700 duration-100 cursor-pointer active:bg-green-800">
+  <svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M20.4 14.5L16 10 4 20"/></svg>
+</button>
+<button class="bg-blue-600 font-500 border-none my-5 px-3 py-3 rounded flex inline-flex items-center hover:bg-blue-700 duration-100 cursor-pointer active:bg-blue-800">
+  <svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16.2 7.8l-2 6.3-6.4 2.1 2-6.3z"/></svg>
+</button>
+<button class="bg-purple-600 font-500 border-none my-5 px-3 py-3 rounded-3xl flex inline-flex items-center hover:bg-purple-700 duration-100 cursor-pointer active:bg-purple-800">
+  <svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
 </button>
 `.slice(1,-1);

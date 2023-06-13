@@ -691,6 +691,54 @@ body {
 @include gen-states(flex-col) { flex-direction: column; }
 @include gen-states(flex-col-reverse) { flex-direction: column-reverse; }
 
+@include gen-states(flex-wrap) { flex-wrap: wrap; }
+@include gen-states(flex-wrap-reverse) { flex-wrap: wrap-reverse; }
+@include gen-states(flex-nowrap) { flex-wrap: nowrap; }
+
+@for $i from 0 through 10 {
+  @include gen-states(flex-grow-#{$i}) { flex-grow: $i; }
+  @include gen-states(flex-shrink-#{$i}) { flex-shrink: $i; }
+}
+
+@for $i from 0 through 100 {
+  $gap: $i * 0.25em;
+  @include gen-states(gap-#{$i}) { gap: $gap; }
+  @include gen-states(gap-x-#{$i}) { column-gap: $gap; }
+  @include gen-states(gap-y-#{$i}) { row-gap: $gap; }
+}
+
+@include gen-states(justify-start) { justify-content: flex-start; }
+@include gen-states(justify-center) { justify-content: center; }
+@include gen-states(justify-end) { justify-content: flex-end; }
+@include gen-states(justify-between) { justify-content: space-between; }
+@include gen-states(justify-around) { justify-content: space-around; }
+@include gen-states(justify-evenly) { justify-content: space-evenly; }
+
+@include gen-states(items-stretch) { align-items: stretch; }
+@include gen-states(items-start) { align-items: flex-start; }
+@include gen-states(items-center) { align-items: center; }
+@include gen-states(items-end) { align-items: flex-end; }
+@include gen-states(items-baseline) { align-items: baseline; }
+
+@include gen-states(self-auto) { align-self: auto; }
+@include gen-states(self-start) { align-self: flex-start; }
+@include gen-states(self-center) { align-self: center; }
+@include gen-states(self-end) { align-self: flex-end; }
+@include gen-states(self-stretch) { align-self: stretch; }
+@include gen-states(self-baseline) { align-self: baseline; }
+
+
+@include gen-states(justify-items-stretch) { justify-items: stretch; }
+@include gen-states(justify-items-start) { justify-items: start; }
+@include gen-states(justify-items-center) { justify-items: center; }
+@include gen-states(justify-items-end) { justify-items: end; }
+
+@include gen-states(justify-self-stretch) { justify-self: stretch; }
+@include gen-states(justify-self-start) { justify-self: start; }
+@include gen-states(justify-self-center) { justify-self: center; }
+@include gen-states(justify-self-end) { justify-self: end; }
+@include gen-states(justify-self-auto) { justify-self: auto; }
+
 // Utilities - Borders - Properties
 
 [class*='border'] { border-style: solid; }

@@ -19,21 +19,21 @@ export const example2 = `
 export const example3 = `
 <p class="text-xs">This is a sentence with xs text</p>
 <p class="text-sm">This is a sentence with sm text</p>
-<p class="text-base">This is a sentence with base text</p>
+<p class="text-md">This is a sentence with md text</p>
 <p class="text-lg">This is a sentence with large text</p>
 <p class="text-xl">This is a sentence with extra large text</p>
 `.slice(1,-1);
 
 export const example4 = `
-<p class="font-100">This is a sentence with font-100</p>
-<p class="font-200">This is a sentence with font-200</p>
-<p class="font-300">This is a sentence with font-300</p>
-<p class="font-400">This is a sentence with font-400</p>
-<p class="font-500">This is a sentence with font-500</p>
-<p class="font-600">This is a sentence with font-600</p>
-<p class="font-700">This is a sentence with font-700</p>
-<p class="font-800">This is a sentence with font-800</p>
-<p class="font-900">This is a sentence with font-900</p>
+<p class="weight-100">This is a sentence with weight-100</p>
+<p class="weight-200">This is a sentence with weight-200</p>
+<p class="weight-300">This is a sentence with weight-300</p>
+<p class="weight-400">This is a sentence with weight-400</p>
+<p class="weight-500">This is a sentence with weight-500</p>
+<p class="weight-600">This is a sentence with weight-600</p>
+<p class="weight-700">This is a sentence with weight-700</p>
+<p class="weight-800">This is a sentence with weight-800</p>
+<p class="weight-900">This is a sentence with weight-900</p>
 `.slice(1,-1);
 
 export const example5 = `
@@ -88,7 +88,7 @@ export const table1 = {
   body: [
     { title: 'text-xs', desc: 'font-size: 0.75em' },
     { title: 'text-sm', desc: 'font-size: 0.875em' },
-    { title: 'text-base', desc: 'font-size: 1em' },
+    { title: 'text-md', desc: 'font-size: 1em' },
     { title: 'text-lg', desc: 'font-size: 1.125em' },
     { title: 'text-xl', desc: 'font-size: 1.25em' },
     { title: 'text-2xl', desc: 'font-size: 1.5em' },
@@ -104,15 +104,15 @@ export const table1 = {
 
 export const table2 = {
   body: [
-    { title: 'font-100', desc: 'font-weight: 100' },
-    { title: 'font-200', desc: 'font-weight: 200' },
-    { title: 'font-300', desc: 'font-weight: 300' },
-    { title: 'font-400', desc: 'font-weight: 400' },
-    { title: 'font-500', desc: 'font-weight: 500' },
-    { title: 'font-600', desc: 'font-weight: 600' },
-    { title: 'font-700', desc: 'font-weight: 700' },
-    { title: 'font-800', desc: 'font-weight: 800' },
-    { title: 'font-900', desc: 'font-weight: 900' },
+    { title: 'weight-100', desc: 'font-weight: 100' },
+    { title: 'weight-200', desc: 'font-weight: 200' },
+    { title: 'weight-300', desc: 'font-weight: 300' },
+    { title: 'weight-400', desc: 'font-weight: 400' },
+    { title: 'weight-500', desc: 'font-weight: 500' },
+    { title: 'weight-600', desc: 'font-weight: 600' },
+    { title: 'weight-700', desc: 'font-weight: 700' },
+    { title: 'weight-800', desc: 'font-weight: 800' },
+    { title: 'weight-900', desc: 'font-weight: 900' },
   ],
 };
 

@@ -10,8 +10,8 @@ export const example1 = `
   }
 </style>
 <!-- Change the hex values above to modify the colors -->
-<p class="text-primary font-600">This is the primary color</p>
-<p class="text-secondary font-500">This is the secondary color</p>
+<p class="text-primary weight-600">This is the primary color</p>
+<p class="text-secondary weight-500">This is the secondary color</p>
 `.slice(1,-1);
 
 export const example2 = `

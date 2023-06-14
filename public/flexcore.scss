@@ -606,7 +606,7 @@ body {
 
 @include gen-states(text-xs) { font-size: 0.75em; }
 @include gen-states(text-sm) { font-size: 0.875em; }
-@include gen-states(text-base) { font-size: 1em; }
+@include gen-states(text-md) { font-size: 1em; }
 @include gen-states(text-lg) { font-size: 1.125em; }
 @include gen-states(text-xl) { font-size: 1.25em; }
 @include gen-states(text-2xl) { font-size: 1.5em; }
@@ -618,15 +618,15 @@ body {
 @include gen-states(text-8xl) { font-size: 6em; }
 @include gen-states(text-9xl) { font-size: 8em; }
 
-@include gen-states(font-100) { font-weight: 100; }
-@include gen-states(font-200) { font-weight: 200; }
-@include gen-states(font-300) { font-weight: 300; }
-@include gen-states(font-400) { font-weight: 400; }
-@include gen-states(font-500) { font-weight: 500; }
-@include gen-states(font-600) { font-weight: 600; }
-@include gen-states(font-700) { font-weight: 700; }
-@include gen-states(font-800) { font-weight: 800; }
-@include gen-states(font-900) { font-weight: 900; }
+@include gen-states(weight-100) { font-weight: 100; }
+@include gen-states(weight-200) { font-weight: 200; }
+@include gen-states(weight-300) { font-weight: 300; }
+@include gen-states(weight-400) { font-weight: 400; }
+@include gen-states(weight-500) { font-weight: 500; }
+@include gen-states(weight-600) { font-weight: 600; }
+@include gen-states(weight-700) { font-weight: 700; }
+@include gen-states(weight-800) { font-weight: 800; }
+@include gen-states(weight-900) { font-weight: 900; }
 
 @include gen-states(italic) { font-style: italic; }
 @include gen-states(overline) { text-decoration: overline; }

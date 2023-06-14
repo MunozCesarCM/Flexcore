@@ -34,7 +34,7 @@ export const example4 = `
 `.slice(1,-1);
 
 export const example5 = `
-<input type="text" placeholder="Write some text" class="focus:bg-blue-50 focus:font-500">
+<input type="text" placeholder="Write some text" class="focus:bg-blue-50 focus:weight-500">
 `.slice(1,-1);
 
 export const table1 = {

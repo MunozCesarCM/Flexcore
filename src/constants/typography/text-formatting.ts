@@ -49,6 +49,12 @@ export const example6 = `
 <p class="text-right">This is a right aligned paragraph</p>
 `.slice(1,-1);
 
+export const example10 = `
+<p class="uppercase">This is a sentence with uppercased text</p>
+<p class="lowercase">This is a sentence with lowercased text</p>
+<p class="capitalize">This is a sentence with capitalized text</p>
+`.slice(1,-1);
+
 export const example7 = `
 <p class="line-height-1">This has a line height of 1</p>
 <p class="line-height-3">This has a line height of 3</p>
@@ -136,28 +142,47 @@ export const table4 = {
   ],
 };
 
+export const table8 = {
+  body: [
+    { title: 'uppercase', desc: 'text-transform: uppercase' },
+    { title: 'lowercase', desc: 'text-transform: lowercase' },
+    { title: 'capitalize', desc: 'text-transform: capitalize' },
+    { title: 'normal-text', desc: 'text-transform: none' },
+  ],
+};
+
 export const table5 = {
   body: [
     { title: 'line-height-0-5', desc: 'line-height: 0.5' },
     { title: 'line-height-0-75', desc: 'line-height: 0.75' },
     { title: 'line-height-1', desc: 'line-height: 1' },
+    { title: 'line-height-1-25', desc: 'line-height: 1.25' },
     { title: 'line-height-1-5', desc: 'line-height: 1.5' },
-    { title: 'line-height-2', desc: 'line-height: 2' },
+    { title: 'line-height-1-75', desc: 'line-height: 1.75' },
+    { title: 'line-height-2-25', desc: 'line-height: 2.25' },
     { title: 'line-height-2-5', desc: 'line-height: 2.5' },
-    { title: 'line-height-3', desc: 'line-height: 3' },
+    { title: 'line-height-2-75', desc: 'line-height: 2.75' },
+    { title: 'line-height-3-25', desc: 'line-height: 3.25' },
     { title: 'line-height-3-5', desc: 'line-height: 3.5' },
-    { title: 'line-height-4', desc: 'line-height: 4' },
+    { title: 'line-height-3-75', desc: 'line-height: 3.75' },
+    { title: 'line-height-4-25', desc: 'line-height: 4.25' },
     { title: 'line-height-4-5', desc: 'line-height: 4.5' },
-    { title: 'line-height-5', desc: 'line-height: 5' },
+    { title: 'line-height-4-75', desc: 'line-height: 4.75' },
+    { title: 'line-height-5-25', desc: 'line-height: 5.25' },
     { title: 'line-height-5-5', desc: 'line-height: 5.5' },
-    { title: 'line-height-6', desc: 'line-height: 6' },
+    { title: 'line-height-5-75', desc: 'line-height: 5.75' },
+    { title: 'line-height-6-25', desc: 'line-height: 6.25' },
     { title: 'line-height-6-5', desc: 'line-height: 6.5' },
-    { title: 'line-height-7', desc: 'line-height: 7' },
+    { title: 'line-height-6-75', desc: 'line-height: 6.75' },
+    { title: 'line-height-7-25', desc: 'line-height: 7.25' },
     { title: 'line-height-7-5', desc: 'line-height: 7.5' },
-    { title: 'line-height-8', desc: 'line-height: 8' },
+    { title: 'line-height-7-75', desc: 'line-height: 7.75' },
+    { title: 'line-height-8-25', desc: 'line-height: 8.25' },
     { title: 'line-height-8-5', desc: 'line-height: 8.5' },
-    { title: 'line-height-9', desc: 'line-height: 9' },
+    { title: 'line-height-8-75', desc: 'line-height: 8.75' },
+    { title: 'line-height-9-25', desc: 'line-height: 9.25' },
     { title: 'line-height-9-5', desc: 'line-height: 9.5' },
+    { title: 'line-height-9-75', desc: 'line-height: 9.75' },
     { title: 'line-height-10', desc: 'line-height: 10' }
   ],
 };

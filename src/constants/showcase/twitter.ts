@@ -33,7 +33,7 @@ export const example1 = `
 
 export const example2 = `
 <main>
-  <section class="py-6 border-0 border-b border-neutral-200 flex justify-start">
+  <section class="py-6 border-0 border-b border-text flex justify-start">
     <div class="bg-white border-2 border-white w-15 h-15 rounded-full">
       <img class="select-none w-15 rounded-full" src="https://i.pinimg.com/originals/df/2d/87/df2d873c89ccf9743b6f426268e4ba25.jpg" />
     </div>
@@ -56,7 +56,7 @@ export const example2 = `
       </div>
     </div>
   </section>
-  <section class="py-6 border-0 border-b border-neutral-200 flex justify-start">
+  <section class="py-6 border-0 border-b border-text flex justify-start">
     <div class="bg-white border-2 border-white w-15 h-15 rounded-full">
       <img class="select-none w-15 rounded-full" src="https://www.aestheticversion.com/wp-content/uploads/2022/10/83e4352ae4930f6753a4af87b2a18337.jpg" />
     </div>
@@ -106,11 +106,44 @@ export const example2 = `
 `.slice(1,-1);
 
 export const example3 = `
-<aside>
-  <svg class="w-10" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48"><path fill="#03A9F4" d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"></path></svg>
-  <div class="flex">
+<aside class="flex flex-col gap-7">
+  <div class="flex items-center cursor-pointer">
     <svg class="w-10" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48"><path fill="#03A9F4" d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"></path></svg>
-    Hello World
   </div>
+  <div class="flex items-center cursor-pointer">
+    <svg class="w-8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"/><path d="M19 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9H0l10.327-9.388a1 1 0 0 1 1.346 0L22 11h-3v9zm-8-5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></g></svg>
+    <span class="ml-5 text-header weight-600">Home</span>
+  </div>
+  <div class="flex items-center cursor-pointer">
+    <svg class="w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 3L8 21" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 3L14 21" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 9H21.5" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.5 15H20.5" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span class="ml-5 text-header">Explore</span>
+  </div>
+  <div class="flex items-center cursor-pointer">
+    <svg class="w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 17V18C9 18.394 9.0776 18.7841 9.22836 19.1481C9.37913 19.512 9.6001 19.8427 9.87868 20.1213C10.1573 20.3999 10.488 20.6209 10.8519 20.7716C11.2159 20.9224 11.606 21 12 21C12.394 21 12.7841 20.9224 13.1481 20.7716C13.512 20.6209 13.8427 20.3999 14.1213 20.1213C14.3999 19.8427 14.6209 19.512 14.7716 19.1481C14.9224 18.7841 15 18.394 15 18V17M18 9C18 12 20 17 20 17H4C4 17 6 13 6 9C6 5.732 8.732 3 12 3C15.268 3 18 5.732 18 9Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span class="ml-5 text-header">Notifications</span>
+  </div>
+  <div class="flex items-center cursor-pointer">
+    <svg class="w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.29289 5.29289C3.47386 5.11193 3.72386 5 4 5H20C20.2761 5 20.5261 5.11193 20.7071 5.29289M3.29289 5.29289C3.11193 5.47386 3 5.72386 3 6V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.72386 20.8881 5.47386 20.7071 5.29289M3.29289 5.29289L10.5858 12.5857C11.3668 13.3668 12.6332 13.3668 13.4142 12.5857L20.7071 5.29289" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span class="ml-5 text-header">Messages</span>
+  </div>
+  <div class="flex items-center cursor-pointer">
+    <svg class="w-8" fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M26 1.25h-20c-0.414 0-0.75 0.336-0.75 0.75v0 28.178c0 0 0 0 0 0.001 0 0.414 0.336 0.749 0.749 0.749 0.181 0 0.347-0.064 0.476-0.171l-0.001 0.001 9.53-7.793 9.526 7.621c0.127 0.102 0.29 0.164 0.468 0.164 0.414 0 0.75-0.336 0.751-0.75v-28c-0-0.414-0.336-0.75-0.75-0.75v0zM25.25 28.439l-8.781-7.025c-0.127-0.102-0.29-0.164-0.468-0.164-0.181 0-0.347 0.064-0.477 0.171l0.001-0.001-8.775 7.176v-25.846h18.5z"></path></svg>
+    <span class="ml-5 text-header">Bookmarks</span>
+  </div>
+  <div class="flex items-center cursor-pointer">
+    <svg class="w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0" d="M20 4H4V20H20V4Z" fill="#000000"/><path d="M7 8H17M7 12H17M7 16H13M4 4H20V20H4V4Z" stroke="#000000" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span class="ml-5 text-header">Lists</span>
+  </div>
+  <div class="flex items-center cursor-pointer">
+    <svg class="w-8" fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g><path d="M16,16A7,7,0,1,0,9,9,7,7,0,0,0,16,16ZM16,4a5,5,0,1,1-5,5A5,5,0,0,1,16,4Z"/><path d="M17,18H15A11,11,0,0,0,4,29a1,1,0,0,0,1,1H27a1,1,0,0,0,1-1A11,11,0,0,0,17,18ZM6.06,28A9,9,0,0,1,15,20h2a9,9,0,0,1,8.94,8Z"/></g></svg>
+    <span class="ml-5 text-header">Profile</span>
+  </div>
+  <div class="flex items-center cursor-pointer">
+    <svg class="w-8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#000000;}</style></defs><g><path id="more-h-circle-Regular-2" data-name="more-h-circle-Regular" class="cls-1" d="M17.5,12a1,1,0,1,1-1-1A1,1,0,0,1,17.5,12ZM12,11a1,1,0,1,0,1,1A1,1,0,0,0,12,11ZM7.5,11a1,1,0,1,0,1,1A1,1,0,0,0,7.5,11Zm14.25,1A9.75,9.75,0,1,1,12,2.25,9.761,9.761,0,0,1,21.75,12Zm-1.5,0A8.25,8.25,0,1,0,12,20.25,8.259,8.259,0,0,0,20.25,12Z"/></g></svg>
+    <span class="ml-5 text-header">More</span>
+  </div>
+  <button class="bg-sky-500 border-none w-60 text-white text-center weight-600 py-4 letter-wide rounded-full cursor-pointer">
+    Tweet
+  </button>
 </aside>
 `.slice(1,-1);

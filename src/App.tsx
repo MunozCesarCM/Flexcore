@@ -11,6 +11,7 @@ const TextFormatting = React.lazy(() => import('./pages/Typography/TextFormattin
 const ColorStyling = React.lazy(() => import('./pages/Typography/ColorStyling'));
 
 const Twitter = React.lazy(() => import('./pages/Showcase/Twitter'));
+const Google = React.lazy(() => import('./pages/Showcase/Google'));
 
 const Buttons = React.lazy(() => import('./pages/FormsInputs/Buttons'));
 
@@ -54,6 +55,7 @@ const App = () => {
             <Route path='/getting-started' element={<GettingStarted />} />
 
             <Route path='/showcase/twitter' element={<Twitter />} />
+            <Route path='/showcase/google' element={<Google />} />
 
             <Route path='/forms-and-inputs/buttons' element={<Buttons />} />
 

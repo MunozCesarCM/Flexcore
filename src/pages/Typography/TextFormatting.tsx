@@ -13,6 +13,7 @@ import {
   example7,
   example8,
   example9,
+  example10,
   table1,
   table2,
   table3,
@@ -20,6 +21,7 @@ import {
   table5,
   table6,
   table7,
+  table8,
 } from '../../constants/typography/text-formatting';
 
 const TextFormatting = () => {
@@ -93,6 +95,11 @@ const TextFormatting = () => {
         <ClassTable tableItems={table4} />
         <CodeExample snippet={example6} />
 
+        <h4 id='Text Transform'>Text Transform</h4>
+        <p><span className='quote'>text-transform</span> allows you to control the capitalization and styling of text within your web interface:</p>
+        <ClassTable tableItems={table8} />
+        <CodeExample snippet={example10} />
+
         <h4 id='Line Height'>Line Height</h4>
         <p><span className='quote'>line-height</span> affects the spacing between lines of text, impacting readability. FleXkit offers classes to adjust the line height:</p>
         <ClassTable tableItems={table5} />
@@ -125,6 +132,7 @@ const TextFormatting = () => {
         <h5 onClick={() => scrollPosition('Font Style')}>Font Style</h5>
         <h4 onClick={() => scrollPosition('Layout and Alignment')}>Layout and Alignment</h4>
         <h5 onClick={() => scrollPosition('Text Alignment')}>Text Alignment</h5>
+        <h5 onClick={() => scrollPosition('Text Transform')}>Text Transform</h5>
         <h5 onClick={() => scrollPosition('Line Height')}>Line Height</h5>
         <h5 onClick={() => scrollPosition('Letter Spacing')}>Letter Spacing</h5>
         <h4 onClick={() => scrollPosition('Lists')}>Lists</h4>

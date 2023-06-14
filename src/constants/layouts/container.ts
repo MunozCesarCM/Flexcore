@@ -30,11 +30,11 @@ export const example2 = `
 <section class="flex gap-15">
   <svg class="w-1/2" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M0 10L21.5 10C43 10 86 10 128.8 37C171.7 64 214.3 118 257.2 124C300 130 343 88 385.8 103C428.7 118 471.3 190 514.2 187C557 184 600 106 642.8 94C685.7 82 728.3 136 771.2 163C814 190 857 190 878.5 190L900 190L900 0L878.5 0C857 0 814 0 771.2 0C728.3 0 685.7 0 642.8 0C600 0 557 0 514.2 0C471.3 0 428.7 0 385.8 0C343 0 300 0 257.2 0C214.3 0 171.7 0 128.8 0C86 0 43 0 21.5 0L0 0Z" fill="#d57daf"></path><path d="M0 199L21.5 205C43 211 86 223 128.8 227.5C171.7 232 214.3 229 257.2 236.5C300 244 343 262 385.8 313C428.7 364 471.3 448 514.2 443.5C557 439 600 346 642.8 343C685.7 340 728.3 427 771.2 512.5C814 598 857 682 878.5 724L900 766L900 188L878.5 188C857 188 814 188 771.2 161C728.3 134 685.7 80 642.8 92C600 104 557 182 514.2 185C471.3 188 428.7 116 385.8 101C343 86 300 128 257.2 122C214.3 116 171.7 62 128.8 35C86 8 43 8 21.5 8L0 8Z" fill="#c960af"></path><path d="M0 217L21.5 250C43 283 86 349 128.8 374.5C171.7 400 214.3 385 257.2 395.5C300 406 343 442 385.8 470.5C428.7 499 471.3 520 514.2 487C557 454 600 367 642.8 386.5C685.7 406 728.3 532 771.2 626.5C814 721 857 784 878.5 815.5L900 847L900 764L878.5 722C857 680 814 596 771.2 510.5C728.3 425 685.7 338 642.8 341C600 344 557 437 514.2 441.5C471.3 446 428.7 362 385.8 311C343 260 300 242 257.2 234.5C214.3 227 171.7 230 128.8 225.5C86 221 43 209 21.5 203L0 197Z" fill="#b643b3"></path><path d="M0 514L21.5 562C43 610 86 706 128.8 751C171.7 796 214.3 790 257.2 802C300 814 343 844 385.8 851.5C428.7 859 471.3 844 514.2 800.5C557 757 600 685 642.8 674.5C685.7 664 728.3 715 771.2 761.5C814 808 857 850 878.5 871L900 892L900 845L878.5 813.5C857 782 814 719 771.2 624.5C728.3 530 685.7 404 642.8 384.5C600 365 557 452 514.2 485C471.3 518 428.7 497 385.8 468.5C343 440 300 404 257.2 393.5C214.3 383 171.7 398 128.8 372.5C86 347 43 281 21.5 248L0 215Z" fill="#9a28bb"></path><path d="M0 901L21.5 901C43 901 86 901 128.8 901C171.7 901 214.3 901 257.2 901C300 901 343 901 385.8 901C428.7 901 471.3 901 514.2 901C557 901 600 901 642.8 901C685.7 901 728.3 901 771.2 901C814 901 857 901 878.5 901L900 901L900 890L878.5 869C857 848 814 806 771.2 759.5C728.3 713 685.7 662 642.8 672.5C600 683 557 755 514.2 798.5C471.3 842 428.7 857 385.8 849.5C343 842 300 812 257.2 800C214.3 788 171.7 794 128.8 749C86 704 43 608 21.5 560L0 512Z" fill="#7011c5"></path></svg>
   <div class="w-1/2">
-    <h2 class="text-sm text-violet-600 letter-wider">YOUR TAGLINE</h2>
-    <h1 class="text-5xl weight-800 letter-tight">Medium length display headline.</h1>
-    <p class="w-4/5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sem ipsum, hendrerit eget posuere vitae, fringilla sit amet sapien.</p>
-    <div class="flex flex-wrap w-full mt-2 -mx-4 text-left">
-          <div class="w-1/4 p-4 mt-4 sm:w-1/4">
+    <h2 class="text-sm text-violet-600 letter-wider uppercase">Where Art Meets Technology</h2>
+    <h1 class="text-5xl weight-800 letter-tight line-height-1-25 mt-3">Unleash Your Creative Vision.</h1>
+    <p class="w-4/5 mt-0">Discover a world of endless inspiration, innovative techniques, and breathtaking aesthetics. Here, imagination knows no bounds.</p>
+    <div class="flex">
+          <div class="w-1/4 p-4 mt-4">
             <svg width="42" height="42" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
                 <path d="M16 32.076L30 24.065V8.05701L16 16.067V32.076Z" fill="#000001"></path>
@@ -102,7 +102,7 @@ export const example4 = `
       <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFC300" stroke="#FFC300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="20.5" r="1"/><circle cx="18" cy="20.5" r="1"/><path d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"/></svg>Cart
       <span class="w-6 h-6 text-xs bg-red-500 text-white rounded-3xl text-center fixed mb-7 ml-5">3</span>
     </div>
-    <button class="bg-none text-header weight-500 border border-neutral-200 px-4 py-2 rounded-lg cursor-pointer">
+    <button class="bg-none text-header weight-500 border border-neutral-200 hover:border-primary px-4 py-2 rounded-lg cursor-pointer duration-100">
       Sign In
     </button>
   </section>

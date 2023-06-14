@@ -7,7 +7,7 @@ import AppContext from '../context/AppContext';
 import {
   TbFileFilled,
   TbTypography,
-  TbSquareRoundedCheckFilled,
+  TbAppWindowFilled,
   TbForms,
   TbBellFilled,
   TbWashDryShade,
@@ -28,9 +28,9 @@ const data = [
     children: ['Text Formatting', 'Color and Styling'],
   },
   {
-    label: 'Data Display',
-    icon: 'TbSquareRoundedCheckFilled',
-    children: ['Overview', 'Icon', 'Variations'],
+    label: 'Showcase',
+    icon: 'TbAppWindowFilled',
+    children: ['Twitter'],
   },
   {
     label: 'Forms and Inputs',
@@ -66,7 +66,7 @@ const data = [
 function getTitleIcon (name: string) {
   if ( name === 'TbFileFilled' ) return <TbFileFilled className='icon' />
   if ( name === 'TbTypography' ) return <TbTypography className='icon' />
-  if ( name === 'TbSquareRoundedCheckFilled' ) return <TbSquareRoundedCheckFilled className='icon' />
+  if ( name === 'TbAppWindowFilled' ) return <TbAppWindowFilled className='icon' />
   if ( name === 'TbForms' ) return <TbForms className='icon' />
   if ( name === 'TbBellFilled' ) return <TbBellFilled className='icon' />
   if ( name === 'TbWashDryShade' ) return <TbWashDryShade className='icon' />

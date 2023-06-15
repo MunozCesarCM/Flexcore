@@ -42,22 +42,22 @@ const Layout = () => {
     <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
       <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
         <h2>Layout</h2>
-        <p>The FleXkit utility classes provide a range of options to control the layout and positioning of elements within your interface. These classes allow you to adjust properties such as <span className='quote'>box-sizing</span>, <span className='quote'>display</span>, <span className='quote'>float</span>, <span className='quote'>overflow</span>, <span className='quote'>position</span>, <span className='quote'>visibility</span>, and <span className='quote'>z-index</span>, providing you with flexible control over the layout of your UI components.</p>
+        <p>The FleXkit utility classes provide a range of options to control the layout and positioning of elements within your interface. These classes allow you to adjust properties such as <span className='quote'>box-sizing</span>, <span className='quote'>display</span>, <span className='quote'>float</span>, <span className='quote'>overflow</span>, <span className='quote'>position</span>, <span className='quote'>visibility</span>, and <span className='quote'>z-index</span>.</p>
 
         <h3 id='Box Sizing'>Box Sizing</h3>
-        <p>The <span className='quote'>box-sizing</span> property determines how the <span className='quote'>width</span> and <span className='quote'>height</span> of an element are calculated, including <span className='quote'>padding</span> and <span className='quote'>border</span>. FleXkit offers the following utility classes:</p>
+        <p>The <span className='quote'>box-sizing</span> property determines how the <span className='quote'>width</span> and <span className='quote'>height</span> of an element are calculated, including <span className='quote'>padding</span> and <span className='quote'>border</span>:</p>
         <ClassTable tableItems={table1} />
 
         <h3 id='Display'>Display</h3>
-        <p>The <span className='quote'>display</span> property controls how an element is rendered in the document flow. FleXkit provides the following utility classes:</p>
+        <p>The <span className='quote'>display</span> property controls how an element is rendered in the document flow:</p>
         <ClassTable tableItems={table2} />
 
         <h3 id='Float'>Float</h3>
-        <p>The <span className='quote'>float</span> property allows elements to be positioned to the left or right of their containers. FleXkit provides the following utility classes:</p>
+        <p>The <span className='quote'>float</span> property allows elements to be positioned to the left or right of their containers:</p>
         <ClassTable tableItems={table3} />
 
         <h3 id='Overflow'>Overflow</h3>
-        <p>The <span className='quote'>overflow</span> property determines how content that exceeds the dimensions of an element is handled. FleXkit offers the following utility classes:</p>
+        <p>The <span className='quote'>overflow</span> property determines how content that exceeds the dimensions of an element is handled:</p>
         <ClassTable tableItems={table4} />
 
         <h3 id='Position'>Position</h3>
@@ -70,7 +70,7 @@ const Layout = () => {
         <CodeExample snippet={example1} />
 
         <h3 id='Visibility'>Visibility</h3>
-        <p>The <span className='quote'>position</span> property determines whether an element is <span className='quote'>visible</span> or <span className='quote'>hidden</span>. FleXkit offers the following utility classes:</p>
+        <p>The <span className='quote'>position</span> property determines whether an element is <span className='quote'>visible</span> or <span className='quote'>hidden</span>:</p>
         <ClassTable tableItems={table7} />
         <CodeExample snippet={example2} />
 

@@ -35,14 +35,14 @@ const Buttons = () => {
     <article  className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
       <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
         <h2>Buttons</h2>
-        <p>FleXkit offers a wide range of button styles and variations to enhance your user interface. Each button type is designed with a specific purpose and visual style, allowing you to create engaging and interactive experiences. Let's explore the different button types you can create with FleXkit:</p>
+        <p>FleXkit offers a wide range of button styles and variations to enhance your user interface. Let's explore the different button types you can create with FleXkit:</p>
 
         <h3 id=''>Standard Buttons</h3>
-        <p>These buttons serve as the foundation for most interactions. They provide clear and distinguishable styles for primary, secondary, success, warning, danger, and info actions. Use them to guide users towards important actions or convey different levels of urgency.</p>
+        <p>These buttons serve as the foundation for most interactions. They provide clear and distinguishable styles for different actions. Use them to guide users towards important actions or convey different levels of urgency.</p>
         <CodeExample snippet={example1} />
 
         <h3 id=''>Stylistic Buttons</h3>
-        <p>For added visual appeal, FleXkit offers stylistic buttons that provide different looks and feels. Choose between outline, filled, or text buttons to match your design preferences and create eye-catching interfaces.</p>
+        <p>For added visual appeal, you can create styled buttons to match your design preferences and create eye-catching interfaces.</p>
         <CodeExample snippet={example2} />
 
         <h3 id=''>State Buttons</h3>
@@ -50,7 +50,7 @@ const Buttons = () => {
         <CodeExample snippet={example3} />
 
         <h3 id=''>Buttons Size</h3>
-        <p>Adjust the size of your buttons to suit different contexts or emphasize specific actions. With FleXkit you can create small and large buttons that can be used to create visual hierarchy or optimize space allocation.</p>
+        <p>Adjust the size of your buttons to suit different contexts or emphasize specific actions. With FleXkit you can create small and large buttons to create visual hierarchy or optimize space allocation.</p>
         <CodeExample snippet={example4} />
 
         <h3 id=''>Icon Buttons</h3>

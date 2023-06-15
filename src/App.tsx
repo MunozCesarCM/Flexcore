@@ -10,8 +10,8 @@ const GettingStarted = React.lazy(() => import('./pages/GettingStarted'));
 const TextFormatting = React.lazy(() => import('./pages/Typography/TextFormatting'));
 const ColorStyling = React.lazy(() => import('./pages/Typography/ColorStyling'));
 
-const Twitter = React.lazy(() => import('./pages/Showcase/Twitter'));
 const Google = React.lazy(() => import('./pages/Showcase/Google'));
+const Twitter = React.lazy(() => import('./pages/Showcase/Twitter'));
 
 const Buttons = React.lazy(() => import('./pages/FormsInputs/Buttons'));
 
@@ -54,8 +54,8 @@ const App = () => {
             <Route path='/' element={<Home />} />
             <Route path='/getting-started' element={<GettingStarted />} />
 
-            <Route path='/showcase/twitter' element={<Twitter />} />
             <Route path='/showcase/google' element={<Google />} />
+            <Route path='/showcase/twitter' element={<Twitter />} />
 
             <Route path='/forms-and-inputs/buttons' element={<Buttons />} />
 

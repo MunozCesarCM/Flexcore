@@ -10,7 +10,7 @@ export const example1 = `
   .theme-dark {
     --color-canvas: #000000;
     --color-header: #FFFFFF;
-    --color-normal: #D1D2D3;
+    --color-normal: #EEEEEE;
     --color-primary: #007FFF;
     --color-secondary: #C678DD;
   }
@@ -76,7 +76,7 @@ export const example6 = `
   .theme-dark {
     --color-canvas: #000000;
     --color-header: #FFFFFF;
-    --color-normal: #D1D2D3;
+    --color-normal: #EEEEEE;
     --color-primary: #007FFF;
     --color-secondary: #C678DD;
   }

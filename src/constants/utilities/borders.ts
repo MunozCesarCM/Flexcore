@@ -17,13 +17,24 @@ export const example1 = `
 `.slice(1,-1);
 
 export const example2 = `
-<span class="border-2 px-4 py-2 rounded-2xl border-red-400">Red</span>
+<span class="border-3 px-4 py-2 rounded-2xl border-red-400">Red</span>
 <span class="border-3 px-4 py-2 rounded-2xl border-yellow-400">Yellow</span>
-<span class="border-4 px-4 py-2 rounded-2xl border-green-400">Green</span>
-<span class="border-5 px-4 py-2 rounded-2xl border-blue-400">Blue</span>
-<span class="border-6 px-4 py-2 rounded-2xl border-purple-400">Purple</span>
-<span class="border-7 px-4 py-2 rounded-2xl border-secondary">Secondary</span>
-<span class="border-8 px-4 py-2 rounded-2xl border-primary">Primary</span>
+<span class="border-3 px-4 py-2 rounded-2xl border-green-400">Green</span>
+<span class="border-3 px-4 py-2 rounded-2xl border-blue-400">Blue</span>
+<span class="border-3 px-4 py-2 rounded-2xl border-purple-400">Purple</span>
+<span class="border-3 px-4 py-2 rounded-2xl border-secondary">Secondary</span>
+<span class="border-3 px-4 py-2 rounded-2xl border-primary">Primary</span>
+<p class="border-3 px-4 py-2 rounded-2xl light:border-primary dark:border-secondary">
+  This border changes with the theme
+</p>
+`.slice(1,-1);
+
+export const example6 = `
+<p class="border-2 border-primary px-4 py-2 rounded">Border - 2</p>
+<p class="border-4 border-secondary px-4 py-2 rounded">Border - 4</p>
+<p class="border-6 border-primary px-4 py-2 rounded">Border - 6</p>
+<p class="border-8 border-secondary px-4 py-2 rounded">Border - 8</p>
+<p class="border-10 border-primary px-4 py-2 rounded">Border - 10</p>
 `.slice(1,-1);
 
 export const example3 = `
@@ -33,12 +44,21 @@ export const example3 = `
 <p class="border-4 px-4 py-2 border-secondary border-double">Double</p>
 `.slice(1,-1);
 
+export const example7 = `
+<p class="border px-4 py-2 my-10 border-gray-500 outline-2 outline-offset-5 outline-primary">Outline - 2</p>
+<p class="border px-4 py-2 my-10 border-gray-500 outline-4 outline-offset-5 outline-secondary">Outline - 4</p>
+<p class="border px-4 py-2 my-10 border-gray-500 outline-6 outline-offset-5 outline-primary">Outline - 6</p>
+<p class="border px-4 py-2 my-10 border-gray-500 outline-8 outline-offset-5 outline-secondary">Outline - 8</p>
+<p class="border px-4 py-2 my-10 border-gray-500 outline-10 outline-offset-5 outline-primary">Outline - 10</p>
+`.slice(1,-1);
+
 export const example4 = `
-<p class="border px-4 py-2 my-10 border-gray-500 outline-2 outline-offset-5 outline-red-400">Solid</p>
-<p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-5 outline-yellow-400">Solid</p>
-<p class="border px-4 py-2 my-10 border-gray-500 outline-4 outline-offset-5 outline-green-400">Solid</p>
-<p class="border px-4 py-2 my-10 border-gray-500 outline-5 outline-offset-5 outline-blue-400">Solid</p>
-<p class="border px-4 py-2 my-10 border-gray-500 outline-6 outline-offset-5 outline-purple-400">Solid</p>
+<p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-5 outline-red-400">Red</p>
+<p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-5 outline-yellow-400">Yellow</p>
+<p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-5 outline-green-400">Green</p>
+<p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-5 outline-blue-400">Blue</p>
+<p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-5 outline-purple-400">Purple</p>
+<p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-5 light:outline-primary dark:outline-secondary">This outline changes with the theme</p>
 `.slice(1,-1);
 
 export const example5 = `
@@ -46,6 +66,14 @@ export const example5 = `
 <p class="border px-4 py-2 my-10 border-secondary outline-3 outline-primary outline-offset-5 outline-dashed">Dashed</p>
 <p class="border px-4 py-2 my-10 border-secondary outline-3 outline-primary outline-offset-5 outline-dotted">Dotted</p>
 <p class="border px-4 py-2 my-10 border-secondary outline-3 outline-primary outline-offset-5 outline-double">Double</p>
+`.slice(1,-1);
+
+export const example8 = `
+<p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-2 outline-primary">Offset - 2</p>
+<p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-4 outline-secondary">Offset - 4</p>
+<p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-6 outline-primary">Offset - 6</p>
+<p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-8 outline-secondary">Offset - 8</p>
+<p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-10 outline-primary">Offset - 10</p>
 `.slice(1,-1);
 
 const borderRadii = {

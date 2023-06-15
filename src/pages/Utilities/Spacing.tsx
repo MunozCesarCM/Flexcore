@@ -62,7 +62,7 @@ const Spacing = () => {
         </section>
 
         <h3 id='Margin'>Margin</h3>
-        <p>Margin is the space outside an element, creating gaps between elements. FleXkit offers utility classes to set <span className='quote'>margin</span> values:</p>
+        <p><span className='quote'>margin</span> is the space outside an element, creating gaps between elements. FleXkit offers utility classes to set <span className='quote'>margin</span> values:</p>
         <ClassTable tableItems={table4} />
         <CodeExample snippet={example2} />
 

@@ -1,4 +1,5 @@
 import { useEffect, useContext } from 'react';
+import { TbAlertTriangle, TbCircleCheck } from 'react-icons/tb';
 import CodeExample from '../../components/CodeExample';
 import ClassTable from '../../components/ClassTable';
 import AppContext from '../../context/AppContext';
@@ -8,6 +9,9 @@ import {
   example3,
   example4,
   example5,
+  example6,
+  example7,
+  example8,
   table1,
   table2,
   table3,
@@ -55,9 +59,18 @@ const Interactivity = () => {
         <h4 id='Border Width'>Border Width</h4>
         <p>The <span className='quote'>border-width</span> classes allow you to set the width of element borders. You can apply different widths to achieve thin or thick borders.</p>
         <ClassTable tableItems={table2} />
+        <CodeExample snippet={example6} />
 
         <h4 id='Border Color'>Border Color</h4>
         <p>The <span className='quote'>border-color</span> utility classes allow you to change the color of element borders. You can apply different colors to match your design preferences.</p>
+
+        <section className='notification-container-success'>
+          <TbCircleCheck />
+          <span className='quote-text'>
+            Remember that the borders also have the light and dark prefixes.
+          </span>
+        </section>
+
         <ClassTable tableItems={table3} />
         <CodeExample snippet={example2} />
 
@@ -67,25 +80,34 @@ const Interactivity = () => {
         <CodeExample snippet={example3} />
 
         <h3 id='Outline'>Outline</h3>
-        <p>The outline category includes utility classes to customize the <span className='quote'>outline</span> of elements.</p>
+        <p>The outline category includes utility classes to customize the <span className='quote'>outline</span> of elements. An outline is a line drawn outside the element's border.</p>
+
+        <section className='notification-container-warning'>
+          <TbAlertTriangle />
+          <span className='quote-text'>
+            The outline is drawn outside the element's border, and may overlap other content. It is NOT a part of an element' dimensions; the element's total width and height is not affected by the width of the outline.
+          </span>
+        </section>
 
         <h4 id='Outline Width'>Outline Width</h4>
         <p>The <span className='quote'>outline-width</span> utility classes allow you to set the width of element outlines. You can apply different widths to achieve thin or thick outlines.</p>
         <ClassTable tableItems={table5} />
+        <CodeExample snippet={example7} />
 
         <h4 id='Outline Color'>Outline Color</h4>
-        <p>The <span className='quote'>outline-width</span> utility classes allow you to set the width of element outlines. You can apply different widths to achieve thin or thick outlines.</p>
+        <p>The <span className='quote'>outline-color</span> classes set the color of the outline.</p>
         <ClassTable tableItems={table6} />
         <CodeExample snippet={example4} />
 
         <h4 id='Outline Style'>Outline Style</h4>
-        <p>The <span className='quote'>outline-width</span> utility classes allow you to set the width of element outlines. You can apply different widths to achieve thin or thick outlines.</p>
+        <p>With the <span className='quote'>outline-style</span> classes, you can choose from various outlines styles:</p>
         <ClassTable tableItems={table7} />
         <CodeExample snippet={example5} />
 
         <h4 id='Outline Offset'>Outline Offset</h4>
         <p>The <span className='quote'>outline-width</span> utility classes allow you to set the width of element outlines. You can apply different widths to achieve thin or thick outlines.</p>
         <ClassTable tableItems={table8} />
+        <CodeExample snippet={example8} />
 
       </section>
       <div className='article-sidebar'>

@@ -1,7 +1,7 @@
 export const example1 = `
 <div class="flex">
   <div class="text-white text-center bg-primary basis-25">Basis 25</div>
-  <div class="text-white text-center bg-secondary basis-40">Basis 50</div>
+  <div class="text-white text-center bg-secondary basis-50">Basis 50</div>
   <div class="text-white text-center bg-primary basis-25">Basis 25</div>
   <div class="text-white text-center bg-primary basis-25">Basis 25</div>
   <div class="text-white text-center bg-primary basis-25">Basis 25</div>
@@ -33,8 +33,8 @@ export const example3 = `
   <div class="text-white text-center bg-primary basis-50">Item 7</div>
   <div class="text-white text-center bg-primary basis-50">Item 8</div>
 </div>
-<h3>Flex Wrap Reverse</h3>
-<div class="flex flex-wrap-reverse">
+<h3>Flex No Wrap</h3>
+<div class="flex flex-nowrap">
   <div class="text-white text-center bg-secondary basis-50">Item 1</div>
   <div class="text-white text-center bg-secondary basis-50">Item 2</div>
   <div class="text-white text-center bg-secondary basis-50">Item 3</div>

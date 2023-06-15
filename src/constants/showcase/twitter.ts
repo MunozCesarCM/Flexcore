@@ -1,7 +1,7 @@
 export const example1 = `
 <section>
   <img class="select-none w-full h-50" src="https://lareclame.fr/wp-content/uploads/2021/01/twitter-chapo.jpg" />
-  <div class="bg-white border-2 border-white w-25 h-25 rounded-full fixed top-48 left-14">
+  <div class="bg-white border-2 border-white dark:border-black w-25 h-25 rounded-full fixed top-48 left-14">
     <img class="select-none w-25 rounded-full" src="https://www.aestheticversion.com/wp-content/uploads/2022/10/83e4352ae4930f6753a4af87b2a18337.jpg" />
   </div>
   <header class="text-sm ml-5 flex flex-col">
@@ -33,7 +33,7 @@ export const example1 = `
 
 export const example2 = `
 <main>
-  <section class="py-6 border-0 border-b border-text flex justify-start">
+  <section class="py-6 border-0 border-b border-neutral-200 dark:border-neutral-600 flex justify-start">
     <div class="bg-white border-2 border-white w-15 h-15 rounded-full">
       <img class="select-none w-15 rounded-full" src="https://i.pinimg.com/originals/df/2d/87/df2d873c89ccf9743b6f426268e4ba25.jpg" />
     </div>
@@ -56,7 +56,7 @@ export const example2 = `
       </div>
     </div>
   </section>
-  <section class="py-6 border-0 border-b border-text flex justify-start">
+  <section class="py-6 border-0 border-b border-neutral-200 dark:border-neutral-600 flex justify-start">
     <div class="bg-white border-2 border-white w-15 h-15 rounded-full">
       <img class="select-none w-15 rounded-full" src="https://www.aestheticversion.com/wp-content/uploads/2022/10/83e4352ae4930f6753a4af87b2a18337.jpg" />
     </div>

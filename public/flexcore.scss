@@ -41,12 +41,14 @@
   --color-secondary: #E50072;
 }
 
-body {
+* {
   h1, h2, h3, h4, h5, h6, strong {
     color: var(--color-header);
   }
   color: var(--color-normal);
   background-color: var(--color-canvas);
+  padding: 0;
+  margin: 0;
 }
 
 @include gen-states(text-normal) { color: var(--color-normal); }
@@ -483,6 +485,7 @@ body {
 @include gen-themes(bg-primary) { background-color: var(--color-primary); }
 @include gen-states(bg-secondary) { background-color: var(--color-secondary); }
 @include gen-themes(bg-secondary) { background-color: var(--color-secondary); }
+
 @include gen-states(bg-none) { background: none; }
 @include gen-themes(bg-none) { background: none; }
 @include gen-states(bg-black) { background-color: #000000; }
@@ -1365,6 +1368,7 @@ $border-radius-values: (
 @include gen-states(border-transparent) { border-color: rgba(0,0,0,0); }
 @include gen-themes(border-transparent) { border-color: rgba(0,0,0,0); }
 @include gen-states(border-black) { border-color: #000000; }
+@include gen-themes(border-black) { border-color: #FFFFFF; }
 @include gen-states(border-white) { border-color: #FFFFFF; }
 @include gen-themes(border-white) { border-color: #FFFFFF; }
 @include gen-states(border-red-50) { border-color: #FEF2F2; }

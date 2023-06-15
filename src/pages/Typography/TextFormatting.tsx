@@ -73,8 +73,8 @@ const TextFormatting = () => {
         <CodeExample snippet={example3} />
 
         <h4 id='Font Weight'>Font Weight</h4>
-        <ClassTable tableItems={table2} />
         <p><span className='quote'>font-weight</span> adds emphasis and visual impact to your text. With FleXkit, you can effortlessly customize the font weight:</p>
+        <ClassTable tableItems={table2} />
         <CodeExample snippet={example4} />
 
         <h4 id='Font Style'>Font Style</h4>

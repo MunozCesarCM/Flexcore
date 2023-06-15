@@ -30,7 +30,7 @@ const data = [
   {
     label: 'Showcase',
     icon: 'TbAppWindowFilled',
-    children: ['Twitter', 'Google'],
+    children: ['Google', 'Twitter'],
   },
   {
     label: 'Forms and Inputs',

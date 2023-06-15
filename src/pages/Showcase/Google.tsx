@@ -3,6 +3,7 @@ import CodeExample from '../../components/CodeExample';
 import AppContext from '../../context/AppContext';
 import {
   example1,
+  example2,
 } from '../../constants/showcase/google';
 
 const Google = () => {
@@ -35,11 +36,15 @@ const Google = () => {
         <h3 id='Search'>Search</h3>
         <CodeExample snippet={example1} />
 
+        <h3 id='Results'>Results</h3>
+        <CodeExample snippet={example2} />
+
       </section>
       <div className='article-sidebar'>
         <h3>Contents</h3>
         <h4 onClick={() => scrollPosition('')}>Google</h4>
         <h4 onClick={() => scrollPosition('Search')}>Search</h4>
+        <h4 onClick={() => scrollPosition('Results')}>Results</h4>
       </div>
     </article>
   );

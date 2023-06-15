@@ -80,17 +80,17 @@ export const example2 = `
   <article class="flex flex-col gap-4 mt-5 px-4">
     <section class="flex flex-col gap-1 text-sm">
       <p class="text-xs m-0">https://en.wikipedia.org > wiki > Flexcore</p>
-      <h3 class="p-0 m-0 text-xl weight-500 text-blue-700 hover:underline cursor-pointer">Flexcore - Wikipedia</h3>
+      <h3 class="p-0 m-0 text-xl weight-500 text-blue-700 dark:text-blue-400 hover:underline cursor-pointer">Flexcore - Wikipedia</h3>
       <p class="m-0 w-3/5 text-sm"><strong>Flexcore</strong> is an advanced UI library designed to simplify the process of building stunning and responsive web interfaces. Founded ...</p>
-      <div class="mt-2 flex gap-5">
-        <span class="text-blue-700 hover:underline cursor-pointer">Download</span>
-        <span class="text-blue-700 hover:underline cursor-pointer">Documentation</span>
-        <span class="text-blue-700 hover:underline cursor-pointer">Showcase</span>
+      <div class="mt-1 flex gap-5">
+        <span class="text-blue-700 dark:text-blue-400 hover:underline cursor-pointer">Download</span>
+        <span class="text-blue-700 dark:text-blue-400 hover:underline cursor-pointer">Documentation</span>
+        <span class="text-blue-700 dark:text-blue-400 hover:underline cursor-pointer">Showcase</span>
       </div>
     </section>
     <section class="flex flex-col gap-1 text-sm">
       <p class="text-xs m-0">https://github.com > MunozCesarCM</p>
-      <h3 class="p-0 m-0 text-xl weight-500 text-blue-700 hover:underline cursor-pointer">MunozCesarCM > Flexcore - GitHub</h3>
+      <h3 class="p-0 m-0 text-xl weight-500 text-blue-700 dark:text-blue-400 hover:underline cursor-pointer">MunozCesarCM > Flexcore - GitHub</h3>
       <p class="m-0 w-3/5 text-sm">An advanced UI library designed to simplify the process of building stunning and responsive web interfaces.</p>
     </section>
   </article>

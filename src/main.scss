@@ -33,12 +33,6 @@ $size-article-sidebar: 250px;
   --color-info-bg: #E5F6FD;
   --color-info-fg: #014361;
 
-  --color-shade-1: #F6F8FA;
-  --color-shade-2: #EAEEF2;
-  --color-shade-3: #D0D7DE;
-  --color-shade-4: #AFB8C1;
-  --color-shade-5: #8C959F;
-
   background-color: var(--color-canvas);
   color: var(--color-text);
 
@@ -79,12 +73,6 @@ $size-article-sidebar: 250px;
   --color-info: #29B6F6;
   --color-info-bg: #071318;
   --color-info-fg: #B8E7FB;
-
-  --color-shade-1: #1E272F;
-  --color-shade-2: #263341;
-  --color-shade-3: #2E3D50;
-  --color-shade-4: #354654;
-  --color-shade-5: #3C515D;
 
   background-color: var(--color-canvas);
   color: var(--color-text);
@@ -542,7 +530,7 @@ input[type=text] {
 
 .article-content {
   min-height: 100vh;
-  max-width: 70em;
+  max-width: 1200px;
   padding: 5em;
   margin: 0 auto;
 

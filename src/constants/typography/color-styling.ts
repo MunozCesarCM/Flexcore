@@ -1,17 +1,33 @@
 export const example1 = `
 <style>
   .theme-light {
+    --color-canvas: #FFFFFF;
+    --color-header: #000000;
+    --color-normal: #535E69;
     --color-primary: #007FFF;
-    --color-secondary: #FF007F;
+    --color-secondary: #E50072;
   }
   .theme-dark {
+    --color-canvas: #000000;
+    --color-header: #FFFFFF;
+    --color-normal: #D1D2D3;
     --color-primary: #007FFF;
-    --color-secondary: #FF007F;
+    --color-secondary: #C678DD;
   }
 </style>
 <!-- Change the hex values above to modify the colors -->
-<p class="text-primary weight-600">This is the primary color</p>
-<p class="text-secondary weight-500">This is the secondary color</p>
+<h1>
+  <span class="text-primary">Create </span>
+  with Confidence using Intuitive
+  <span class="text-primary"> UI design.</span>
+</h1>
+<p>
+  Craft <strong class="text-secondary">stunning</strong> interfaces
+  by customizing components with ease, and see your vision come
+  to life. With FleXkit's focus on practicality and
+  <strong class="text-secondary"> seamless integration</strong>, you
+  can effortlessly build responsive and visually appealing websites.
+</p>
 `.slice(1,-1);
 
 export const example2 = `
@@ -38,78 +54,50 @@ export const example3 = `
 <p class="text-white bg-purple-500">Sentence with the background purple-500</p>
 `.slice(1,-1);
 
-export const example4 = `
-<style>
-  .theme-light {
-    --color-canvas: #FFFFFF;
-    --color-text: #000000;
-    --color-primary: #007FFF;
-    --color-secondary: #FF007F;
-  }
-  .theme-dark {
-    --color-canvas: #000919;
-    --color-text: #FFFFFF;
-    --color-primary: #007FFF;
-    --color-secondary: #FF007F;
-  }
-</style>
-<!-- Change the hex values above to modify the colors -->
-<h1>
-  <span class="text-primary">Create </span>
-  with Confidence using Intuitive
-  <span class="text-primary"> UI design.</span>
-</h1>
-<p class="">
-  Craft <span class="text-secondary">stunning</span> interfaces
-  by customizing components with ease, and see your vision come
-  to life. With FleXkit's focus on practicality and
-  <span class="text-secondary"> seamless integration</span>, you
-  can effortlessly build responsive and visually appealing websites.
-</p>
-`.slice(1,-1);
-
 export const example5 = `
-<style>
-  .theme-light {
-    --color-canvas: #FFFFFF;
-    --color-primary: #007FFF;
-  }
-  .theme-dark {
-    --color-canvas: #000919;
-    --color-primary: #FF007F;
-  }
-</style>
-<!-- Change the hex values above to modify the colors -->
-<body class="theme-light">
-<h1>
-  <span class="text-primary">Change </span>
-  the body class to see the
-  <span class="text-primary"> theme change.</span>
-</h1>
-</body>
+<h1 class="light:text-blue-500 dark:text-yellow-400">QuantumX Pro</h1>
+<p>
+  Designed to <strong class="light:text-purple-500 dark:text-amber-500">revolutionize </strong>
+  the world of computing, this <strong class="light:text-purple-500 dark:text-amber-500">
+  powerful machine</strong> combines the cutting-edge technology of quantum computing
+  with a sleek and user-friendly interface.
+<p>
 `.slice(1,-1);
 
 export const example6 = `
 <style>
   .theme-light {
     --color-canvas: #FFFFFF;
+    --color-header: #000000;
+    --color-normal: #535E69;
     --color-primary: #007FFF;
+    --color-secondary: #E50072;
   }
   .theme-dark {
-    --color-canvas: #000919;
-    --color-primary: #FF007F;
+    --color-canvas: #000000;
+    --color-header: #FFFFFF;
+    --color-normal: #D1D2D3;
+    --color-primary: #007FFF;
+    --color-secondary: #C678DD;
   }
   .theme-custom {
-    --color-canvas: #FAFAFA;
-    --color-primary: #FB8500;
+    --color-canvas: #434E56;
+    --color-header: #FFFFFF;
+    --color-normal: #F8F8F8;
+    --color-primary: #D8FA3C;
+    --color-secondary: #FBEF74;
   }
 </style>
 <!-- Change the hex values above to modify the colors -->
 <body class="theme-custom">
-<h1>
-  This is a
-  <span class="text-primary"> custom theme.</span>
-</h1>
+<strong>Introducing our revolutionary product:</strong>
+<h1>SmartHome <span class="text-primary">Assistant X</span></h1>
+<p>
+  With its advanced <strong class="text-secondary">AI technology </strong>
+  and seamless integration with your home devices, the
+  <strong class="text-secondary"> SmartHome Assistant X </strong>
+  is designed to make your life easier and more connected than ever before.
+</p>
 </body>
 `.slice(1,-1);
 
@@ -123,8 +111,10 @@ export const example7 = `
 
 export const table1 = {
   body: [
-    { title: 'text-normal', desc: 'color: var(--color-text)' },
+    { title: 'text-normal', desc: 'color: var(--color-normal)' },
     { title: 'text-header', desc: 'color: var(--color-header)' },
+    { title: 'text-primary', desc: 'color: var(--color-primary)' },
+    { title: 'text-secondary', desc: 'color: var(--color-secondary)' },
     { title: 'text-black', desc: 'color: #000000' },
     { title: 'text-white', desc: 'color: #FFFFFF' },
     { title: 'text-red-50', desc: 'color: #FEF2F2' },
@@ -330,13 +320,19 @@ export const table1 = {
 
 export const table2 = {
   body: [
-    { title: 'primary color', desc: '--color-primary' },
-    { title: 'secodary color', desc: '--color-secondary' },
+    { title: '--color-canvas', desc: 'The site\'s background color' },
+    { title: '--color-header', desc: 'The color for headers (h1 to h6, strong)' },
+    { title: '--color-normal', desc: 'The color for normal text' },
+    { title: '--color-primary', desc: 'The site\'s primary color' },
+    { title: '--color-secondary', desc: 'The site\'s secondary color' },
   ],
 };
 
 export const table3 = {
   body: [
+    { title: 'bg-canvas', desc: 'background: var(--color-canvas)' },
+    { title: 'bg-primary', desc: 'background: var(--color-primary)' },
+    { title: 'bg-secondary', desc: 'background: var(--color-secondary)' },
     { title: 'bg-none', desc: 'background: none' },
     { title: 'bg-black', desc: 'background-color: #000000' },
     { title: 'bg-white', desc: 'background-color: #FFFFFF' },
@@ -540,31 +536,6 @@ export const table3 = {
     { title: 'bg-neutral-950', desc: 'background-color: #0A0A0A' },
   ],
 };
-
-export const table4 = {
-  body: [
-    { title: 'background', desc: '--color-canvas' },
-    { title: 'primary', desc: '--color-primary' },
-    { title: 'secondary', desc: '--color-secondary' },
-    { title: 'accent', desc: '--color-accent' },
-    { title: 'text', desc: '--color-text' },
-    { title: 'headings', desc: '--color-heading' },
-    { title: 'links', desc: '--color-link' },
-    { title: 'links:hover', desc: '--color-link-hover' },
-    { title: 'success', desc: '--color-success' },
-    { title: 'warning', desc: '--color-warning' },
-    { title: 'error', desc: '--color-error' },
-    { title: 'info', desc: '--color-info' },
-    { title: 'success-light', desc: '--color-success-light' },
-    { title: 'warning-light', desc: '--color-warning-light' },
-    { title: 'error-light', desc: '--color-error-light' },
-    { title: 'info-light', desc: '--color-info-light' },
-    { title: 'success-dark', desc: '--color-success-dark' },
-    { title: 'warning-dark', desc: '--color-warning-dark' },
-    { title: 'error-dark', desc: '--color-error-dark' },
-    { title: 'info-dark', desc: '--color-info-dark' },
-  ],
-}
 
 export const table5 = {
   body: [

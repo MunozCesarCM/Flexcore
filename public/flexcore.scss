@@ -42,7 +42,7 @@
 }
 
 body {
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, strong {
     color: var(--color-header);
   }
   color: var(--color-normal);
@@ -483,7 +483,6 @@ body {
 @include gen-themes(bg-primary) { background-color: var(--color-primary); }
 @include gen-states(bg-secondary) { background-color: var(--color-secondary); }
 @include gen-themes(bg-secondary) { background-color: var(--color-secondary); }
-
 @include gen-states(bg-none) { background: none; }
 @include gen-themes(bg-none) { background: none; }
 @include gen-states(bg-black) { background-color: #000000; }
@@ -1354,17 +1353,17 @@ $border-radius-values: (
   }
 }
 
-@include gen-states(border-transparent) { border-color: rgba(0,0,0,0); }
-@include gen-themes(border-transparent) { border-color: rgba(0,0,0,0); }
+
+@include gen-states(border-normal) { border-color: var(--color-normal); }
+@include gen-themes(border-normal) { border-color: var(--color-normal); }
+@include gen-states(border-header) { border-color: var(--color-header); }
+@include gen-themes(border-header) { border-color: var(--color-header); }
 @include gen-states(border-primary) { border-color: var(--color-primary); }
 @include gen-themes(border-primary) { border-color: var(--color-primary); }
 @include gen-states(border-secondary) { border-color: var(--color-secondary); }
 @include gen-themes(border-secondary) { border-color: var(--color-secondary); }
-
-@include gen-states(border-text) { border-color: var(--color-normal); }
-@include gen-themes(border-text) { border-color: var(--color-normal); }
-@include gen-states(border-header) { border-color: var(--color-header); }
-@include gen-themes(border-header) { border-color: var(--color-header); }
+@include gen-states(border-transparent) { border-color: rgba(0,0,0,0); }
+@include gen-themes(border-transparent) { border-color: rgba(0,0,0,0); }
 @include gen-states(border-black) { border-color: #000000; }
 @include gen-states(border-white) { border-color: #FFFFFF; }
 @include gen-themes(border-white) { border-color: #FFFFFF; }

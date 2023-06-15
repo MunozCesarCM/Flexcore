@@ -8,14 +8,12 @@ import {
   example1,
   example2,
   example3,
-  example4,
   example5,
   example6,
   example7,
   table1,
   table2,
   table3,
-  table4,
   table5,
 } from '../../constants/typography/color-styling';
 
@@ -59,7 +57,8 @@ const ColorStyling = () => {
       </section>
 
       <h4 id='Customization'>Customization</h4>
-      <p>FleXkit also offers variables you can change to set your own <strong>custom theme</strong>. This enables you to tailor the color palette to your specific needs, infusing your brand's personality and style into the UI. Here's an example of how to customize the variables:</p>
+      <p>FleXkit also offers the ability to create variables you can change to set your own <strong>custom theme</strong>. This enables you to tailor a color palette to your specific needs.</p>
+      <p>FleXkit offers a few basic variables to get you started:</p>
       <ClassTable tableItems={table2} />
       <CodeExample snippet={example1} />
 
@@ -71,25 +70,24 @@ const ColorStyling = () => {
       </section>
 
       <h3 id='Element Colors'>Element Colors</h3>
-      <p>In FleXkit, you have the flexibility to customize the colors of various UI elements, allowing you to create visually appealing and cohesive designs. This section explores how you can modify the <span className='quote'>text-color</span>, <span className='quote'>background-color</span>, and <span className='quote'>border</span> color to suit your specific design requirements.</p>
+      <p>In FleXkit, you have the flexibility to customize the colors of various UI elements, allowing you to create visually appealing designs. This section explores how you can modify the <span className='quote'>text-color</span>, <span className='quote'>background-color</span>, and <span className='quote'>border-color</span> to suit your specific design requirements.</p>
 
       <h4 id='Text Color'>Text Color</h4>
       <ClassTable tableItems={table1} />
-      <p>FleXkit provides easy ways to modify the <span className='quote'>text-color</span> throughout your interface. To change the text color for a specific element or component, you can use FleXkit's color classes and override the default color property:</p>
       <CodeExample snippet={example2} />
 
       <h4 id='Background Color'>Background Color</h4>
-      <ClassTable tableItems={table3} />
       <p>With FleXkit, you can easily customize the <span className='quote'>background-color</span> of elements such as containers, buttons, or sections:</p>
+      <ClassTable tableItems={table3} />
       <CodeExample snippet={example3} />
 
       <h4 id='Opacity'>Opacity</h4>
-      <p>FleXkit allows you to control the <span className='quote'>opacity</span> of various elements, providing you with flexibility in creating visually appealing interfaces. Opacity refers to the transparency level of an element, with lower values indicating greater transparency.</p>
+      <p>FleXkit allows you to control the <span className='quote'>opacity</span> of various elements. Opacity refers to the transparency level of an element, with lower values indicating greater transparency.</p>
       <ClassTable tableItems={table5} />
       <CodeExample snippet={example7} />
 
       <h3 id='Theming'>Theming</h3>
-      <p>FleXkit provides a powerful theming feature that allows you to create your own unique design by modifying theme variables. With FleXkit theming, you can effortlessly customize the overall appearance of your web interface to match your brand or design preferences.</p>
+      <p>FleXkit provides a powerful theming feature that allows you to create your own unique design by modifying theme variables or adding a theme prefix.</p>
 
       <section className='notification-container-info'>
         <TbInfoCircle />
@@ -99,17 +97,17 @@ const ColorStyling = () => {
       </section>
 
       <h4 id='Theme Variables'>Theme Variables</h4>
-      <ClassTable tableItems={table4} />
+      <ClassTable tableItems={table2} />
       <p>By modifying theme variables, you can easily tailor the colors, and other design elements of your interface. FleXkit offers a range of theme variables that control various aspects of the UI. To customize a theme variable, you can update its value using CSS:</p>
-      <CodeExample snippet={example4} />
+      <CodeExample snippet={example1} />
 
-      <h4 id='Light Dark Mode'>Light / Dark Mode</h4>
-      <p>FleXkit offers built-in support for both light and dark modes, allowing your interface to seamlessly adapt to different user preferences or environments. This ensures that your design remains visually appealing and accessible in various contexts.</p>
-      <p>Switching between light and dark modes is as simple as toggling a CSS class. By applying the appropriate class to the root element of your interface, you can instantly transition between the two modes. FleXkit provides the classes <span className='quote'>theme-light</span> and <span className='quote'>theme-dark</span> that you can use, or you can define your own custom classes.</p>
-      <CodeExample snippet={example5} template={false} />
+      <h4 id='Theme Prefix'>Theme Prefix</h4>
+      <p>To apply colors specific to each mode, FleXkit introduces a <strong>prefix system</strong>. By adding the prefix <span className='quote'>dark:</span> or <span className='quote'>light:</span> to any color class, you can ensure that the color is only applied when using the corresponding theme.</p>
+      <p>This allows you to define specific color variations for light mode, dark mode, or even different shades within each mode:</p>
+      <CodeExample snippet={example5} />
 
       <h4 id='Custom Theme'>Custom Theme</h4>
-      <p>FleXkit empowers you to create a <strong>fully customized</strong> theme that aligns with your site identity or design requirements. By modifying theme variables, you can achieve an unique design throughout your site.</p>
+      <p>FleXkit allows you to create a <strong>fully customized</strong> theme that aligns with your design requirements. By creating a new theme class, you can achieve an unique design throughout your site.</p>
       <section className='notification-container-success'>
         <TbCircleCheck />
         <span className='quote-text'>
@@ -130,7 +128,7 @@ const ColorStyling = () => {
         <h5 onClick={() => scrollPosition('Opacity')}>Opacity</h5>
         <h4 onClick={() => scrollPosition('Theming')}>Theming</h4>
         <h5 onClick={() => scrollPosition('Theme Variables')}>Theme Variables</h5>
-        <h5 onClick={() => scrollPosition('Light Dark Mode')}>Light / Dark Mode</h5>
+        <h5 onClick={() => scrollPosition('Theme Prefix')}>Theme Prefix</h5>
         <h5 onClick={() => scrollPosition('Custom Theme')}>Custom Theme</h5>
       </div>
     </article>

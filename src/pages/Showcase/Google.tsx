@@ -4,6 +4,7 @@ import AppContext from '../../context/AppContext';
 import {
   example1,
   example2,
+  example3,
 } from '../../constants/showcase/google';
 
 const Google = () => {
@@ -34,10 +35,13 @@ const Google = () => {
         <h2>Google</h2>
 
         <h3 id='Search'>Search</h3>
-        <CodeExample snippet={example1} />
+        <CodeExample snippet={example1} font='Helvetica' />
 
         <h3 id='Results'>Results</h3>
-        <CodeExample snippet={example2} />
+        <CodeExample snippet={example2} font='Helvetica' />
+
+        <h3 id='Drive'>Drive</h3>
+        <CodeExample snippet={example3} />
 
       </section>
       <div className='article-sidebar'>
@@ -45,6 +49,7 @@ const Google = () => {
         <h4 onClick={() => scrollPosition('')}>Google</h4>
         <h4 onClick={() => scrollPosition('Search')}>Search</h4>
         <h4 onClick={() => scrollPosition('Results')}>Results</h4>
+        <h4 onClick={() => scrollPosition('Drive')}>Drive</h4>
       </div>
     </article>
   );

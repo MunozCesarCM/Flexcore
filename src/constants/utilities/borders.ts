@@ -24,7 +24,7 @@ export const example2 = `
 <span class="border-3 px-4 py-2 rounded-2xl border-purple-400">Purple</span>
 <span class="border-3 px-4 py-2 rounded-2xl border-secondary">Secondary</span>
 <span class="border-3 px-4 py-2 rounded-2xl border-primary">Primary</span>
-<p class="border-3 px-4 py-2 rounded-2xl light:border-primary dark:border-secondary">
+<p class="border-3 px-4 py-2 rounded-2xl border-primary dark:border-secondary">
   This border changes with the theme
 </p>
 `.slice(1,-1);
@@ -58,7 +58,7 @@ export const example4 = `
 <p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-5 outline-green-400">Green</p>
 <p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-5 outline-blue-400">Blue</p>
 <p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-5 outline-purple-400">Purple</p>
-<p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-5 light:outline-primary dark:outline-secondary">This outline changes with the theme</p>
+<p class="border px-4 py-2 my-10 border-gray-500 outline-3 outline-offset-5 outline-primary dark:outline-secondary">This outline changes with the theme</p>
 `.slice(1,-1);
 
 export const example5 = `

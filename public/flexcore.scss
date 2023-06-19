@@ -8,9 +8,7 @@
 }
 
 @mixin gen-themes($class) {
-  .theme-light .light\:#{$class} { @content; }
   .theme-dark .dark\:#{$class} { @content; }
-  .theme-light .light\:hover\:#{$class} { &:hover { @content; } }
   .theme-dark .dark\:hover\:#{$class} { &:hover { @content; } }
 }
 
@@ -2402,6 +2400,7 @@ $border-radius-values: (
 
 @include gen-states(block) { display: block; }
 @include gen-size(block) { display: block; }
+@include gen-themes(block) { display: block; }
 @include gen-states(inline-block) { display: inline-block; }
 @include gen-size(inline-block) { display: inline-block; }
 @include gen-states(inline) { display: inline; }
@@ -2442,6 +2441,7 @@ $border-radius-values: (
 @include gen-size(list-item) { display: list-item; }
 @include gen-states(hidden) { display: none; }
 @include gen-size(hidden) { display: none; }
+@include gen-themes(hidden) { display: none; }
 
 // Utilities - Layout - Float
 

@@ -102,7 +102,7 @@ const ColorStyling = () => {
       <CodeExample snippet={example1} />
 
       <h4 id='Theme Prefix'>Theme Prefix</h4>
-      <p>To apply colors specific to each mode, FleXkit introduces a <strong>prefix system</strong>. By adding the prefix <span className='quote'>dark:</span> or <span className='quote'>light:</span> to any color class, you can ensure that the color is only applied when using the corresponding theme.</p>
+      <p>To apply colors specific to each mode, FleXkit introduces a <strong>prefix system</strong>. By adding the prefix <span className='quote'>dark:</span> to any color class, you can ensure that the color is only applied when using the dark theme.</p>
       <p>This allows you to define specific color variations for light mode, dark mode, or even different shades within each mode:</p>
       <CodeExample snippet={example5} />
 

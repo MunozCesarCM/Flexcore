@@ -55,10 +55,10 @@ export const example3 = `
 `.slice(1,-1);
 
 export const example5 = `
-<h1 class="light:text-blue-500 dark:text-yellow-400">QuantumX Pro</h1>
+<h1 class="text-blue-500 dark:text-yellow-400">QuantumX Pro</h1>
 <p>
-  Designed to <strong class="light:text-purple-500 dark:text-amber-500">revolutionize </strong>
-  the world of computing, this <strong class="light:text-purple-500 dark:text-amber-500">
+  Designed to <strong class="text-purple-500 dark:text-amber-500">revolutionize </strong>
+  the world of computing, this <strong class="text-purple-500 dark:text-amber-500">
   powerful machine</strong> combines the cutting-edge technology of quantum computing
   with a sleek and user-friendly interface.
 <p>

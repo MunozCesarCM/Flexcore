@@ -35,27 +35,29 @@ const data = [
   {
     label: 'Forms and Inputs',
     icon: 'TbForms',
-    children: ['Buttons', 'Text Fields', 'Selection Inputs', 'Range Inputs', 'Date and Time', 'Miscellaneous'],
+    // children: ['Buttons', 'Text Fields', 'Selection Inputs', 'Range Inputs', 'Date and Time', 'Miscellaneous'],
+    children: ['Buttons'],
   },
-  {
-    label: 'Notifications',
-    icon: 'TbBellFilled',
-    children: ['Alert', 'Toast', 'Snackbar', 'Dialog'],
-  },
-  {
-    label: 'Cards',
-    icon: 'TbWashDryShade',
-  },
+  // {
+  //   label: 'Notifications',
+  //   icon: 'TbBellFilled',
+  //   children: ['Alert', 'Toast', 'Snackbar', 'Dialog'],
+  // },
+  // {
+  //   label: 'Cards',
+  //   icon: 'TbWashDryShade',
+  // },
   {
     label: 'Layouts',
     icon: 'TbArrowAutofitContentFilled',
-    children: ['Container', 'Grid', 'Flexbox', 'Design Utilities', 'Sticky'],
+    // children: ['Container', 'Grid', 'Flexbox', 'Design Utilities', 'Sticky'],
+    children: ['Container', 'Flexbox'],
   },
-  {
-    label: 'Data Display',
-    icon: 'TbTable',
-    children: ['Table', 'List', 'Accordion', 'Tabs'],
-  },
+  // {
+  //   label: 'Data Display',
+  //   icon: 'TbTable',
+  //   children: ['Table', 'List', 'Accordion', 'Tabs'],
+  // },
   {
     label: 'Utilities',
     icon: 'TbChartCandleFilled',

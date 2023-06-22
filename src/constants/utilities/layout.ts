@@ -1,9 +1,9 @@
 export const example1 = `
 <div class="h-50 bg-primary relative">
-<span class="text-white absolute left-0">Top Left</span>
-<span class="text-white absolute right-0">Top Right</span>
-<span class="text-white absolute left-0 bottom-0">Bottom Left</span>
-<span class="text-white absolute right-0 bottom-0">Bottom Right</span>
+<span class="text-white absolute bg-none left-0">Top Left</span>
+<span class="text-white absolute bg-none right-0">Top Right</span>
+<span class="text-white absolute bg-none left-0 bottom-0">Bottom Left</span>
+<span class="text-white absolute bg-none right-0 bottom-0">Bottom Right</span>
 </div>
 `.slice(1,-1);
 

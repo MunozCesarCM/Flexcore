@@ -36,7 +36,7 @@ const data = [
     label: 'Forms and Inputs',
     icon: 'TbForms',
     // children: ['Buttons', 'Text Fields', 'Selection Inputs', 'Range Inputs', 'Date and Time', 'Miscellaneous'],
-    children: ['Buttons'],
+    children: ['Buttons', 'Text Fields'],
   },
   // {
   //   label: 'Notifications',

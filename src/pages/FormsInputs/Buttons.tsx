@@ -37,23 +37,23 @@ const Buttons = () => {
         <h2>Buttons</h2>
         <p>FleXkit offers a wide range of button styles and variations to enhance your user interface. Let's explore the different button types you can create with FleXkit:</p>
 
-        <h3 id=''>Standard Buttons</h3>
+        <h3 id='Standard Buttons'>Standard Buttons</h3>
         <p>These buttons serve as the foundation for most interactions. They provide clear and distinguishable styles for different actions. Use them to guide users towards important actions or convey different levels of urgency.</p>
         <CodeExample snippet={example1} />
 
-        <h3 id=''>Stylistic Buttons</h3>
+        <h3 id='Stylistic Buttons'>Stylistic Buttons</h3>
         <p>For added visual appeal, you can create styled buttons to match your design preferences and create eye-catching interfaces.</p>
         <CodeExample snippet={example2} />
 
-        <h3 id=''>State Buttons</h3>
+        <h3 id='State Buttons'>State Buttons</h3>
         <p>State buttons allow you to indicate the disabled state of a button. These buttons appear much lighter and are non-interactive, providing visual feedback that certain actions are not currently available or applicable.</p>
         <CodeExample snippet={example3} />
 
-        <h3 id=''>Buttons Size</h3>
+        <h3 id='Buttons Size'>Buttons Size</h3>
         <p>Adjust the size of your buttons to suit different contexts or emphasize specific actions. With FleXkit you can create small and large buttons to create visual hierarchy or optimize space allocation.</p>
         <CodeExample snippet={example4} />
 
-        <h3 id=''>Icon Buttons</h3>
+        <h3 id='Icon Buttons'>Icon Buttons</h3>
         <p>Combine the power of icons with buttons to enhance usability and visual communication. FleXkit allows you to integrate icons with your buttons, either as standalone icon-only buttons or buttons with icons and accompanying text.</p>
         <CodeExample snippet={example5} />
 
@@ -61,11 +61,11 @@ const Buttons = () => {
       <div className='article-sidebar'>
         <h3>Contents</h3>
         <h4 onClick={() => scrollPosition('')}>Buttons</h4>
-        <h4 onClick={() => scrollPosition('')}>Standard Buttons</h4>
-        <h4 onClick={() => scrollPosition('')}>Stylistic Buttons</h4>
-        <h4 onClick={() => scrollPosition('')}>State Buttons</h4>
-        <h4 onClick={() => scrollPosition('')}>Buttons Size</h4>
-        <h4 onClick={() => scrollPosition('')}>Icon Buttons</h4>
+        <h4 onClick={() => scrollPosition('Standard Buttons')}>Standard Buttons</h4>
+        <h4 onClick={() => scrollPosition('Stylistic Buttons')}>Stylistic Buttons</h4>
+        <h4 onClick={() => scrollPosition('State Buttons')}>State Buttons</h4>
+        <h4 onClick={() => scrollPosition('Buttons Size')}>Buttons Size</h4>
+        <h4 onClick={() => scrollPosition('Icon Buttons')}>Icon Buttons</h4>
       </div>
     </article>
   );

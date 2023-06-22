@@ -14,6 +14,7 @@ const Google = React.lazy(() => import('./pages/Showcase/Google'));
 const Twitter = React.lazy(() => import('./pages/Showcase/Twitter'));
 
 const Buttons = React.lazy(() => import('./pages/FormsInputs/Buttons'));
+const TextFields = React.lazy(() => import('./pages/FormsInputs/TextFields'));
 
 const Flexbox = React.lazy(() => import('./pages/Layouts/Flexbox'));
 const Container = React.lazy(() => import('./pages/Layouts/Container'));
@@ -58,6 +59,7 @@ const App = () => {
             <Route path='/showcase/twitter' element={<Twitter />} />
 
             <Route path='/forms-and-inputs/buttons' element={<Buttons />} />
+            <Route path='/forms-and-inputs/text-fields' element={<TextFields />} />
 
             <Route path='/layouts/flexbox' element={<Flexbox />} />
             <Route path='/layouts/container' element={<Container />} />

@@ -2,6 +2,7 @@ import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SiAbstract } from 'react-icons/si';
 import { IoIosArrowForward, IoIosArrowDown } from 'react-icons/io';
+import { TbX } from 'react-icons/tb';
 import AppContext from '../context/AppContext';
 
 import {
@@ -79,7 +80,7 @@ function getTitleIcon (name: string) {
 }
 
 const Sidebar = () => {
-  const {sidebarActive } = useContext(AppContext);
+  const {sidebarActive, setSidebarActive} = useContext(AppContext);
   const [caretStates, setCaretStates] = useState(Array(data.length).fill(false));
   const navigate = useNavigate();
 
@@ -96,9 +97,12 @@ const Sidebar = () => {
 
   return (
     <aside className={`sidebar ${sidebarActive ? '' : 'inactive'}`}>
-      <header className='heading pointer' onClick={() => navigate('/')}>
-        <SiAbstract />
-        <h1>Flexcore</h1>
+      <header className='heading pointer'>
+        <div className='title' onClick={() => navigate('/')}>
+          <SiAbstract />
+          <h1>Flexcore</h1>
+        </div>
+        <TbX onClick={() => setSidebarActive(!sidebarActive)}/>
       </header>
       <ul className='tree-view'>
         {data.map((item, index) => (

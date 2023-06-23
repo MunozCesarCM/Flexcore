@@ -16,6 +16,7 @@ const Topbar = ({ siteTheme, setSiteTheme }) => {
     <nav className={sidebarActive ? 'topbar-sb-active' : 'topbar'}>
       {sidebarActive ? (
         <TbX
+          id='topbar-close'
           className='text-dark pointer'
           onClick={() => setSidebarActive(!sidebarActive)}
         />

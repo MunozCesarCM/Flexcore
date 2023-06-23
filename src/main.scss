@@ -95,14 +95,8 @@ $size-article-sidebar: 250px;
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-  right:5px;
-  position:absolute;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: var(--color-border);
+  width: 0px;
+  right: 0px;
 }
 
 // Section - Composition
@@ -681,7 +675,8 @@ input[type=text] {
           header {
             margin-left: 10vw;
             display: flex;
-            height: 90vh;
+            align-items: center;
+            min-height: 90vh;
 
             .hero {
               width: calc(50% - 5vw);
@@ -707,7 +702,13 @@ input[type=text] {
                 }
               }
 
-              button {
+              .actions {
+                display: flex;
+                align-items: center;
+                gap: 1em;
+              }
+
+              .primary {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -742,12 +743,34 @@ input[type=text] {
                   transition-duration: 200ms;
                 }
               }
+
+              .secondary {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: transparent;
+                color: var(--color-primary);
+                font-weight: 600;
+                font-size: 1em;
+                letter-spacing: 0.5px;
+                margin-right: auto;
+                margin-left: 1.5em;
+                padding: 0.8em 1em;
+                border-radius: 6px;
+                cursor: pointer;
+                transition-duration: 200ms;
+
+                &:hover {
+                  color: var(--color-heading);
+                }
+              }
             }
 
             .demo {
               flex-grow: 1;
-              background-color: #F3F6F9;
-              border-bottom-left-radius: 20px;
+              max-width: 45vw;
+              margin-right: 3em;
+              overflow: hidden;
             }
           }
 
@@ -761,6 +784,7 @@ input[type=text] {
             gap: 5em;
 
             .feature {
+              color: var(--color-text);
               display: flex;
               flex-direction: column;
               align-items: center;
@@ -768,7 +792,7 @@ input[type=text] {
               gap: 1em;
               width: 15%;
               padding: 2.5em 0;
-              border: 2px solid white;
+              border: 2px solid var(--color-border);
               border-radius: 10px;
               transition-duration: 200ms;
               cursor: pointer;
@@ -780,8 +804,7 @@ input[type=text] {
               }
 
               &:hover {
-                border: 2px solid var(--color-border);
-                svg { color: var(--color-info-fg); }
+                border: 2px solid var(--color-primary);
               }
 
               h2 {
@@ -795,7 +818,6 @@ input[type=text] {
             background-color: #F3F6F9;
             min-height: 75vh;
             padding: 5em 10vw;
-            margin-bottom: 50vh;
           }
         }
 

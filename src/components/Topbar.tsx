@@ -31,7 +31,7 @@ const Topbar = ({ siteTheme, setSiteTheme }) => {
           <TbSearch className='text-primary' />
           <input type='text' placeholder='Search' />
         </div>
-        <a>
+        <a href='https://github.com/MunozCesarCM/Flexcore' target='_blank'>
           <FaGithubAlt className='text-primary pointer' />
         </a>
         <button className='pointer' onClick={toggleTheme}>

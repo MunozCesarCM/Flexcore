@@ -150,12 +150,6 @@ $size-article-sidebar: 250px;
   padding-top: $size-topbar;
   margin-left: 0;
   margin-right: 0;
-
-  &-sb-active {
-    @extend .landing-page;
-    margin-left: $size-sidebar;
-    margin-right: $size-article-sidebar;
-  }
 }
 
 // Section - Utilities
@@ -688,7 +682,6 @@ input[type=text] {
 
               h1 {
                 font-size: 4.25em;
-
                 .special {
                   color: var(--color-primary);
                 }
@@ -938,3 +931,14 @@ input[type=text] {
         }
 
         .cm-focused { outline: 0px solid black !important; }
+
+        @media (width < 1440px) {
+          .landing-page {
+            header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 90vh;
+            }
+          }
+        }

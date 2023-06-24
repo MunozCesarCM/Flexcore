@@ -1,0 +1,20 @@
+{
+  "name": "flexcore",
+  "version": "1.0.0",
+  "description": "An advanced UI library designed to simplify the process of building stunning and responsive web interfaces.",
+  "main": "flexcore.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MunozCesarCM/Flexcore.git"
+  },
+  "keywords": [],
+  "author": "MunozCesarCM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MunozCesarCM/Flexcore/issues"
+  },
+  "homepage": "https://github.com/MunozCesarCM/Flexcore#readme"
+}

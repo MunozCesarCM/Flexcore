@@ -45,8 +45,8 @@
   }
   color: var(--color-normal);
   background-color: var(--color-canvas);
-  padding: 0;
-  margin: 0;
+  // padding: 0;
+  // margin: 0;
 }
 
 @include gen-states(text-normal) { color: var(--color-normal); }

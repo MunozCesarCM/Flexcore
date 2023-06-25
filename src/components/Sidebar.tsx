@@ -96,22 +96,22 @@ const Sidebar = () => {
   }
 
   return (
-    <aside className={`sidebar ${sidebarActive ? '' : 'inactive'}`}>
-      <header className='heading pointer'>
-        <div className='title' onClick={() => navigate('/')}>
+    <aside className={`sidebar h-screen pb-10 fixed z-20 overflow-y-scroll border-0 border-r border-neutral-200 dark:border-neutral-800 ${sidebarActive ? '' : 'inactive'}`}>
+      <header className='heading py-4 px-5 h-16 flex justify-between items-center border-0 border-b border-neutral-200 dark:border-neutral-800 cursor-pointer'>
+        <div className='title flex items-center' onClick={() => navigate('/')}>
           <SiAbstract />
-          <h1>Flexcore</h1>
+          <h1 className='pl-4 text-xl weight-700 letter-wide'>Flexcore</h1>
         </div>
         <TbX onClick={() => setSidebarActive(!sidebarActive)}/>
       </header>
-      <ul className='tree-view'>
+      <ul className='tree-view list-none p-0 m-0'>
         {data.map((item, index) => (
           <li key={index}>
             <span
-              className='caret'
+              className='caret text-header weight-400 my-1 mx-4 p-3 flex justify-between items-center rounded cursor-pointer select-none duration-50'
               onClick={() => handleClick(item.label, index, item.children !== undefined)}
             >
-              <div className='title'>
+              <div className='flex items-center'>
                 {getTitleIcon(item.icon)}
                 {item.label}
               </div>
@@ -122,10 +122,10 @@ const Sidebar = () => {
                 )}
             </span>
             {item.children && (
-              <ul className={`${caretStates[index] ? 'active' : 'inactive'}`}>
+              <ul className={`list-none ${caretStates[index] ? 'active' : 'inactive'}`}>
                 {item.children.map((child, childIndex) => (
                   <li
-                    className='caret-child'
+                    className='caret-child text-normal weight-400 my-1 mr-4 ml-12 p-3 rounded cursor-pointer duration-50'
                     key={childIndex}
                     onClick={() => navigate(`/${item.label.toLowerCase().replaceAll(' ', '-')}/${child.toLowerCase().replaceAll(' ', '-')}`)}
                   >

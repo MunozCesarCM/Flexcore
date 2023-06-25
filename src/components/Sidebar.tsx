@@ -96,13 +96,13 @@ const Sidebar = () => {
   }
 
   return (
-    <aside className={`sidebar h-screen pb-10 fixed z-20 overflow-y-scroll border-0 border-r border-neutral-200 dark:border-neutral-800 ${sidebarActive ? '' : 'inactive'}`}>
+    <aside className={`sidebar h-screen pb-10 fixed z-20 overflow-y-scroll border-0 border-r border-neutral-200 dark:border-neutral-800 ${sidebarActive ? '' : 'hidden'}`}>
       <header className='heading py-4 px-5 h-16 flex justify-between items-center border-0 border-b border-neutral-200 dark:border-neutral-800 cursor-pointer'>
         <div className='title flex items-center' onClick={() => navigate('/')}>
-          <SiAbstract />
+          <SiAbstract className='block w-8 h-8 text-primary' />
           <h1 className='pl-4 text-xl weight-700 letter-wide'>Flexcore</h1>
         </div>
-        <TbX onClick={() => setSidebarActive(!sidebarActive)}/>
+        <TbX onClick={() => setSidebarActive(!sidebarActive)} className='close-icon' />
       </header>
       <ul className='tree-view list-none p-0 m-0'>
         {data.map((item, index) => (
@@ -122,7 +122,7 @@ const Sidebar = () => {
                 )}
             </span>
             {item.children && (
-              <ul className={`list-none ${caretStates[index] ? 'active' : 'inactive'}`}>
+              <ul className={`list-none ${caretStates[index] ? 'visible' : 'hidden'}`}>
                 {item.children.map((child, childIndex) => (
                   <li
                     className='caret-child text-normal weight-400 my-1 mr-4 ml-12 p-3 rounded cursor-pointer duration-50'

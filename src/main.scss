@@ -143,17 +143,7 @@ $size-article-sidebar: 250px;
   padding-top: $size-topbar;
 }
 
-// Section - Utilities
-
-.text-primary { color: var(--color-primary); }
-.active { display: block; }
-.inactive { display: none; }
-
 // Section - Blocks
-
-h1, h2, h3, h4, strong {
-  color: var(--color-heading);
-}
 
 a { text-decoration: none; }
 button { border: none; }
@@ -194,7 +184,6 @@ hr {
 
   // Hamburger menu
   #topbar-close {
-
     @media (width < 670px) {
       display: none;
     }
@@ -202,40 +191,11 @@ hr {
 
 
   section {
-    display: flex;
-    align-items: center;
-    gap: 1.5em;
-
     & svg {
       font-size: 1.3em;
       color: var(--color-primary);
     }
 
-    a {
-      border-bottom: 1.5px solid var(--color-border);
-      transition-duration: 100ms;
-
-      &:hover {
-        border-bottom: 1.5px solid var(--color-primary);
-        transition-duration: 100ms;
-      }
-    }
-
-    button {
-      width: 2.5em;
-      height: 2.5em;
-      background-color: var(--color-canvas);
-      border-radius: 8px;
-      border: 1.5px solid var(--color-border);
-      padding: 0.5em;
-      padding: 0.2em;
-      transition-duration: 100ms;
-
-      &:hover {
-        border: 1.5px solid var(--color-primary);
-        transition-duration: 100ms;
-      }
-    }
   }
 }
 
@@ -249,21 +209,11 @@ input[type=text] {
 
   .heading {
 
-    .title {
-
-      svg {
-        color: var(--color-primary);
-        width: 2em;
-        height: 2em;
-        display: block;
-      }
-    }
-
-    svg {
+    .close-icon {
       font-size: 1.3em;
       display: none;
 
-      @media (width < 670px) {
+      @media (max-width: 768px) {
         display: block;
       }
     }

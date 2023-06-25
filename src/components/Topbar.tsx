@@ -26,15 +26,15 @@ const Topbar = ({ siteTheme, setSiteTheme }) => {
             onClick={() => setSidebarActive(!sidebarActive)}
           />
         )}
-      <section>
+      <section className='flex items-center gap-6'>
         <div className='border border-neutral-200 dark:border-neutral-800 rounded p-1 flex hover:border-primary duration-100'>
           <TbSearch className='text-primary' />
           <input type='text' placeholder='Search' className='border-0 pl-2' />
         </div>
-        <a href='https://github.com/MunozCesarCM/Flexcore' target='_blank'>
+        <a href='https://github.com/MunozCesarCM/Flexcore' target='_blank' className='border-0 border-b border-neutral-200 dark:border-neutral-800 hover:border-primary duration-100'>
           <FaGithubAlt className='text-primary cursor-pointer' />
         </a>
-        <button className='cursor-pointer' onClick={toggleTheme}>
+        <button className='w-10 h-10 rounded border border-neutral-200 hover:border-primary p-1 cursor-pointer duration-100' onClick={toggleTheme}>
           <TbMoon />
         </button>
       </section>

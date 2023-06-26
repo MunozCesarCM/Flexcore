@@ -52,17 +52,17 @@ const Interactivity = () => {
 
         <h3 id='Properties'>Properties</h3>
         <h4 id='Border Radius'>Border Radius</h4>
-        <p>The <span className='quote'>border-radius</span> utility classes allow you to round the corners of elements. You can apply different levels of border radius, from small to large, to achieve different visual effects.</p>
+        <p>The <mark>border-radius</mark> utility classes allow you to round the corners of elements. You can apply different levels of border radius, from small to large, to achieve different visual effects.</p>
         <ClassTable tableItems={table1} />
         <CodeExample snippet={example1} />
 
         <h4 id='Border Width'>Border Width</h4>
-        <p>The <span className='quote'>border-width</span> classes allow you to set the width of element borders. You can apply different widths to achieve thin or thick borders.</p>
+        <p>The <mark>border-width</mark> classes allow you to set the width of element borders. You can apply different widths to achieve thin or thick borders.</p>
         <ClassTable tableItems={table2} />
         <CodeExample snippet={example6} />
 
         <h4 id='Border Color'>Border Color</h4>
-        <p>The <span className='quote'>border-color</span> utility classes allow you to change the color of element borders. You can apply different colors to match your design preferences.</p>
+        <p>The <mark>border-color</mark> utility classes allow you to change the color of element borders. You can apply different colors to match your design preferences.</p>
 
         <section className='notification-container-success'>
           <TbCircleCheck />
@@ -75,12 +75,12 @@ const Interactivity = () => {
         <CodeExample snippet={example2} />
 
         <h4 id='Border Style'>Border Style</h4>
-        <p>The <span className='quote'>border-style</span> classes allow you to set the style of element borders, such as solid, dashed, or dotted.</p>
+        <p>The <mark>border-style</mark> classes allow you to set the style of element borders, such as solid, dashed, or dotted.</p>
         <ClassTable tableItems={table4} />
         <CodeExample snippet={example3} />
 
         <h3 id='Outline'>Outline</h3>
-        <p>The outline category includes utility classes to customize the <span className='quote'>outline</span> of elements. An outline is a line drawn outside the element's border.</p>
+        <p>The outline category includes utility classes to customize the <mark>outline</mark> of elements. An outline is a line drawn outside the element's border.</p>
 
         <section className='notification-container-warning'>
           <TbAlertTriangle />
@@ -90,22 +90,22 @@ const Interactivity = () => {
         </section>
 
         <h4 id='Outline Width'>Outline Width</h4>
-        <p>The <span className='quote'>outline-width</span> utility classes allow you to set the width of element outlines. You can apply different widths to achieve thin or thick outlines.</p>
+        <p>The <mark>outline-width</mark> utility classes allow you to set the width of element outlines. You can apply different widths to achieve thin or thick outlines.</p>
         <ClassTable tableItems={table5} />
         <CodeExample snippet={example7} />
 
         <h4 id='Outline Color'>Outline Color</h4>
-        <p>The <span className='quote'>outline-color</span> classes set the color of the outline.</p>
+        <p>The <mark>outline-color</mark> classes set the color of the outline.</p>
         <ClassTable tableItems={table6} />
         <CodeExample snippet={example4} />
 
         <h4 id='Outline Style'>Outline Style</h4>
-        <p>With the <span className='quote'>outline-style</span> classes, you can choose from various outlines styles:</p>
+        <p>With the <mark>outline-style</mark> classes, you can choose from various outlines styles:</p>
         <ClassTable tableItems={table7} />
         <CodeExample snippet={example5} />
 
         <h4 id='Outline Offset'>Outline Offset</h4>
-        <p>The <span className='quote'>outline-width</span> utility classes allow you to set the width of element outlines. You can apply different widths to achieve thin or thick outlines.</p>
+        <p>The <mark>outline-width</mark> utility classes allow you to set the width of element outlines. You can apply different widths to achieve thin or thick outlines.</p>
         <ClassTable tableItems={table8} />
         <CodeExample snippet={example8} />
 

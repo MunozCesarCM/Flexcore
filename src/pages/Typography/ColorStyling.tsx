@@ -70,19 +70,19 @@ const ColorStyling = () => {
       </section>
 
       <h3 id='Element Colors'>Element Colors</h3>
-      <p>In FleXkit, you have the flexibility to customize the colors of various UI elements, allowing you to create visually appealing designs. This section explores how you can modify the <span className='quote'>text-color</span>, <span className='quote'>background-color</span>, and <span className='quote'>border-color</span> to suit your specific design requirements.</p>
+      <p>In FleXkit, you have the flexibility to customize the colors of various UI elements, allowing you to create visually appealing designs. This section explores how you can modify the <mark>text-color</mark>, <mark>background-color</mark>, and <mark>border-color</mark> to suit your specific design requirements.</p>
 
       <h4 id='Text Color'>Text Color</h4>
       <ClassTable tableItems={table1} />
       <CodeExample snippet={example2} />
 
       <h4 id='Background Color'>Background Color</h4>
-      <p>With FleXkit, you can easily customize the <span className='quote'>background-color</span> of elements such as containers, buttons, or sections:</p>
+      <p>With FleXkit, you can easily customize the <mark>background-color</mark> of elements such as containers, buttons, or sections:</p>
       <ClassTable tableItems={table3} />
       <CodeExample snippet={example3} />
 
       <h4 id='Opacity'>Opacity</h4>
-      <p>FleXkit allows you to control the <span className='quote'>opacity</span> of various elements. Opacity refers to the transparency level of an element, with lower values indicating greater transparency.</p>
+      <p>FleXkit allows you to control the <mark>opacity</mark> of various elements. Opacity refers to the transparency level of an element, with lower values indicating greater transparency.</p>
       <ClassTable tableItems={table5} />
       <CodeExample snippet={example7} />
 
@@ -102,7 +102,7 @@ const ColorStyling = () => {
       <CodeExample snippet={example1} />
 
       <h4 id='Theme Prefix'>Theme Prefix</h4>
-      <p>To apply colors specific to each mode, FleXkit introduces a <strong>prefix system</strong>. By adding the prefix <span className='quote'>dark:</span> to any color class, you can ensure that the color is only applied when using the dark theme.</p>
+      <p>To apply colors specific to each mode, FleXkit introduces a <strong>prefix system</strong>. By adding the prefix <mark>dark:</mark> to any color class, you can ensure that the color is only applied when using the dark theme.</p>
       <p>This allows you to define specific color variations for light mode, dark mode, or even different shades within each mode:</p>
       <CodeExample snippet={example5} />
 

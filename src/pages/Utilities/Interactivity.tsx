@@ -8,7 +8,6 @@ import {
   example3,
   example4,
   example5,
-  table1,
   table2,
   table3,
 } from '../../constants/utilities/interactivity';
@@ -33,7 +32,7 @@ const Interactivity = () => {
 
   useEffect(() => {
     if (sidebarActive === null) setSidebarActive(true);
-  }, []);
+  }, [sidebarActive, setSidebarActive]);
 
   return (
     <article  className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
@@ -49,24 +48,24 @@ const Interactivity = () => {
         <p>To apply specific styles to elements based on their current state or interaction. These classes allow you to enhance the user experience by visually indicating different states or actions.</p>
 
         <h4 id='Hover'>Hover</h4>
-        <p>The <span className='quote'>hover</span> pseudo-class is used to apply styles when an element is being hovered over by the cursor. It enables you to add visual effects or highlight elements to provide feedback to users.</p>
-        <p>You can combine the <span className='quote'>hover</span> pseudo-class with any existing utility class by using the syntax <span className='quote'>hover:class-name</span>. This allows you to apply the utility class specifically when the element is being hovered.</p>
+        <p>The <mark>hover</mark> pseudo-class is used to apply styles when an element is being hovered over by the cursor. It enables you to add visual effects or highlight elements to provide feedback to users.</p>
+        <p>You can combine the <mark>hover</mark> pseudo-class with any existing utility class by using the syntax <mark>hover:class-name</mark>. This allows you to apply the utility class specifically when the element is being hovered.</p>
         <CodeExample snippet={example3} />
 
         <h4 id='Active'>Active</h4>
-        <p>The <span className='quote'>active</span> pseudo-class is used to apply styles when an element is being actively interacted with, such as when it is being clicked or tapped. It allows you to provide visual feedback to indicate the element is being pressed.</p>
+        <p>The <mark>active</mark> pseudo-class is used to apply styles when an element is being actively interacted with, such as when it is being clicked or tapped. It allows you to provide visual feedback to indicate the element is being pressed.</p>
         <CodeExample snippet={example4} />
 
         <h4 id='Focus'>Focus</h4>
-        <p>The <span className='quote'>active</span> pseudo-class is used to apply styles when an element is being actively interacted with, such as when it is being clicked or tapped. It allows you to provide visual feedback to indicate the element is being pressed.</p>
+        <p>The <mark>active</mark> pseudo-class is used to apply styles when an element is being actively interacted with, such as when it is being clicked or tapped. It allows you to provide visual feedback to indicate the element is being pressed.</p>
         <CodeExample snippet={example5} />
 
         <h3 id='Cursor'>Cursor</h3>
-        <p>The <span className='quote'>focus</span> pseudo-class is used to apply styles when an element gains focus.</p>
+        <p>The <mark>focus</mark> pseudo-class is used to apply styles when an element gains focus.</p>
         <CodeExample snippet={example1} />
 
         <h3 id='User Select'>User Select</h3>
-        <p>The <span className='quote'>user-select</span> utility class allows you to control the selection behavior of text within an element:</p>
+        <p>The <mark>user-select</mark> utility class allows you to control the selection behavior of text within an element:</p>
         <ClassTable tableItems={table2} />
         <CodeExample snippet={example2} />
 

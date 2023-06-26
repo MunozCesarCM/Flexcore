@@ -1,11 +1,5 @@
 import { useState, useEffect, useRef, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  TbCategory2,
-  TbMoonStars,
-  TbPalette,
-  TbArrowAutofitWidth,
-} from 'react-icons/tb';
 import { RiArrowDropRightLine } from 'react-icons/ri';
 import AppContext from '../context/AppContext';
 import { formatCode } from '../helpers/formatCode';
@@ -14,7 +8,7 @@ import { example1 } from '../constants/demo';
 const Home = () => {
   const ref = useRef(null);
   const [height, setHeight] = useState('0px');
-  const { sidebarActive, setSidebarActive, siteTheme } = useContext(AppContext);
+  const { setSidebarActive, siteTheme } = useContext(AppContext);
 
   useEffect(() => {
     setSidebarActive(false);

@@ -1,4 +1,4 @@
-import{r,A as p,j as i,d as m}from"./index-b0774712.js";import{C as o}from"./CodeExample-ff5e3bdd.js";import{C as n}from"./ClassTable-4ce7c370.js";import"./formatCode-85636521.js";const g=`
+import{r,A as p,j as i,T as m}from"./index-779011e1.js";import{C as o}from"./CodeExample-a97533e0.js";import{C as n}from"./ClassTable-3d10a490.js";import"./formatCode-85636521.js";const g=`
 <span class="bg-primary text-white p-0">padding 0</span>
 <span class="bg-primary text-white p-1">padding 1</span>
 <span class="bg-primary text-white p-2">padding 2</span>

@@ -1,4 +1,4 @@
-import{r as l,A as h,j as e}from"./index-b0774712.js";import{C as n}from"./CodeExample-ff5e3bdd.js";import{C as r}from"./ClassTable-4ce7c370.js";import"./formatCode-85636521.js";const d=`
+import{r as l,A as h,j as e}from"./index-779011e1.js";import{C as n}from"./CodeExample-a97533e0.js";import{C as r}from"./ClassTable-3d10a490.js";import"./formatCode-85636521.js";const d=`
 <span class="bg-primary text-white p-3 cursor-default">auto</span>
 <span class="bg-primary text-white p-3 cursor-wait">wait</span>
 <span class="bg-primary text-white p-3 cursor-text">text</span>

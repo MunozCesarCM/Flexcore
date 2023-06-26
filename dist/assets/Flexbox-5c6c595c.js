@@ -1,4 +1,4 @@
-import{r as d,A as o,j as e}from"./index-b0774712.js";import{C as r}from"./CodeExample-ff5e3bdd.js";import{C as a}from"./ClassTable-4ce7c370.js";import"./formatCode-85636521.js";const b=`
+import{r as d,A as o,j as e}from"./index-779011e1.js";import{C as r}from"./CodeExample-a97533e0.js";import{C as a}from"./ClassTable-3d10a490.js";import"./formatCode-85636521.js";const b=`
 <div class="flex">
   <div class="text-white text-center bg-primary basis-25">Basis 25</div>
   <div class="text-white text-center bg-secondary basis-50">Basis 50</div>

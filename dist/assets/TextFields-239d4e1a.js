@@ -1,4 +1,4 @@
-import{r as d,A as b,j as e,d as i}from"./index-b0774712.js";import{C as l}from"./CodeExample-ff5e3bdd.js";import"./formatCode-85636521.js";const c=`
+import{r as d,A as b,j as e,T as i}from"./index-779011e1.js";import{C as l}from"./CodeExample-a97533e0.js";import"./formatCode-85636521.js";const c=`
 <label class="block text-sm weight-500">First Name</label>
 <input type="text" value="Cesar" class="w-50 bg-neutral-50 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600 dark:text-white focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg px-3 py-1" />
 `.slice(1,-1),x=`

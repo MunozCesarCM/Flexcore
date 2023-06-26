@@ -433,33 +433,13 @@ input[type=text] {
   .article-content { padding: 5em 2.5em; }
 }
 
-.code-result {
-  margin-top: 2em;
-
-  iframe {
-    height: 100%;
-    width: 100%;
-    overflow-y: hidden;
-    border: 1px solid var(--color-border);
-    border-radius: 10px;
-  }
-}
 
 .code-container {
   margin-top: 1em;
 
-  ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    margin: 0 0 0.3em 0;
+  ol {
 
     li {
-      padding: 3px 3px 0 3px;
-      margin: auto 0 auto 1.75em;
-      cursor: pointer;
-      border-radius: 4px;
-      transition-duration: 100ms;
 
       &:hover {
         color: var(--color-heading);
@@ -469,15 +449,8 @@ input[type=text] {
     }
   }
 
-  .code-example {
-    margin-bottom: 1em;
-    padding: 1em;
-    border-radius: 10px;
-    border: 1px solid var(--color-border);
-
-            * { font-family: 'Roboto Mono', monospace; }
-          }
-        }
+  .code-example * { font-family: 'Roboto Mono', monospace; }
+}
 
 
         .article-sidebar {

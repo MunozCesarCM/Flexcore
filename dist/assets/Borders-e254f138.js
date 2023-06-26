@@ -1,4 +1,4 @@
-import{r as n,A as a,j as e,f as p,e as F}from"./index-b0774712.js";import{C as l}from"./CodeExample-ff5e3bdd.js";import{C as i}from"./ClassTable-4ce7c370.js";import"./formatCode-85636521.js";const y=`
+import{r as n,A as a,j as e,b as p,a as F}from"./index-779011e1.js";import{C as l}from"./CodeExample-a97533e0.js";import{C as i}from"./ClassTable-3d10a490.js";import"./formatCode-85636521.js";const y=`
 <span class="bg-primary text-white px-4 py-2 rounded">Normal</span>
 <span class="bg-primary text-white px-4 py-2 rounded-lg">Large</span>
 <span class="bg-primary text-white px-4 py-2 rounded-xl">Extra Large</span>

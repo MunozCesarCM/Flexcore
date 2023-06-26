@@ -1,4 +1,4 @@
-import{r as l,A as d,j as e}from"./index-b0774712.js";import{C as r}from"./CodeExample-ff5e3bdd.js";import"./formatCode-85636521.js";const p=`
+import{r as l,A as d,j as e}from"./index-779011e1.js";import{C as r}from"./CodeExample-a97533e0.js";import"./formatCode-85636521.js";const p=`
 <section class="flex flex-col justify-center items-center">
   <div class="flex justify-between items-center py-1 pl-1 pr-1 hover:pl-2 hover:pr-0 w-95 cursor-pointer duration-200">
     <span class="bg-primary text-white text-xs px-5 py-2 rounded-3xl">New</span>

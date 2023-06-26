@@ -43,7 +43,7 @@ const CodeExample = ({ snippet, template = true, font = 'Poppins' }: CodeExample
 
   return (
     <>
-      <div className='code-result'>
+      <div className='code-result mt-8'>
         <iframe
           ref={ref}
           onLoad={onLoad}
@@ -52,15 +52,16 @@ const CodeExample = ({ snippet, template = true, font = 'Poppins' }: CodeExample
           sandbox='allow-same-origin'
           frameBorder='0'
           style={{height: height}}
+          className='h-full w-full overflow-y-hidden border border-neutral-200 dark:border-neutral-800 rounded'
         />
       </div>
       <div className='code-container'>
-        <ul>
-          <li onClick={() => setSrcDoc(snippet)}><FiRotateCcw /></li>
-          <li onClick={handleCopy}><FiCopy /></li>
-          <li onClick={toggleTheme}><FiSun /></li>
-        </ul>
-        <div className='code-example'>
+        <ol className='flex justify-end list-none mb-1'>
+          <li onClick={() => setSrcDoc(snippet)} className='p-1 pb-0 rounded cursor-pointer duration-100'><FiRotateCcw /></li>
+          <li onClick={handleCopy} className='p-1 pb-0 ml-5 rounded cursor-pointer duration-100'><FiCopy /></li>
+          <li onClick={toggleTheme} className='p-1 pb-0 ml-5 rounded cursor-pointer duration-100'><FiSun /></li>
+        </ol>
+        <div className='code-example mb-4 p-4 rounded border border-neutral-200 dark:border-neutral-800'>
           <CodeMirror
             value={srcDoc}
             theme={vscodeDarkInit({

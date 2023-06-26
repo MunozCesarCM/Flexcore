@@ -13,10 +13,10 @@
 }
 
 @mixin gen-size($class) {
-  .sm\:#{$class} { @media (min-width: 640px) { @content; } }
-  .md\:#{$class} { @media (min-width: 768px) { @content; } }
-  .lg\:#{$class} { @media (min-width: 1024px) { @content; } }
-  .xl\:#{$class} { @media (min-width: 1536px) { @content; } }
+  .sm\:#{$class} { @media (max-width: 640px) { @content; } }
+  .md\:#{$class} { @media (max-width: 768px) { @content; } }
+  .lg\:#{$class} { @media (max-width: 1024px) { @content; } }
+  .xl\:#{$class} { @media (max-width: 1536px) { @content; } }
 }
 
 // Theming
@@ -43,8 +43,8 @@
   h1, h2, h3, h4, h5, h6, strong {
     color: var(--color-header);
   }
-  color: var(--color-normal);
-  background-color: var(--color-canvas);
+  color: inherit;
+  background-color: inherit;
   // padding: 0;
   // margin: 0;
 }

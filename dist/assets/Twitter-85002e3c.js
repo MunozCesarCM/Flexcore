@@ -1,4 +1,4 @@
-import{r as a,A as d,j as e}from"./index-b0774712.js";import{C as o}from"./CodeExample-ff5e3bdd.js";import"./formatCode-85636521.js";const p=`
+import{r as a,A as d,j as e}from"./index-779011e1.js";import{C as o}from"./CodeExample-a97533e0.js";import"./formatCode-85636521.js";const p=`
 <section>
   <img class="select-none w-full h-50" src="https://lareclame.fr/wp-content/uploads/2021/01/twitter-chapo.jpg" />
   <div class="bg-white border-2 border-white dark:border-black w-25 h-25 rounded-full fixed top-48 left-14">

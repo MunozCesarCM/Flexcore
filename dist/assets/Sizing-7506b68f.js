@@ -1,4 +1,4 @@
-import{r as a,A as m,j as t}from"./index-b0774712.js";import{C as d}from"./CodeExample-ff5e3bdd.js";import{C as h}from"./ClassTable-4ce7c370.js";import"./formatCode-85636521.js";const x=`
+import{r as a,A as m,j as t}from"./index-779011e1.js";import{C as d}from"./CodeExample-a97533e0.js";import{C as h}from"./ClassTable-3d10a490.js";import"./formatCode-85636521.js";const x=`
 <p class="text-black bg-red-400 w-full">This is full width</p>
 <p class="text-black bg-orange-400 w-1/2">This is 50% width</p>
 <p class="text-black bg-yellow-400 w-1/3">This is 33% width</p>

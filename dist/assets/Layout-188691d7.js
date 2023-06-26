@@ -1,4 +1,4 @@
-import{r as d,A as p,j as e}from"./index-b0774712.js";import{C as n}from"./CodeExample-ff5e3bdd.js";import{C as l}from"./ClassTable-4ce7c370.js";import"./formatCode-85636521.js";const h=`
+import{r as d,A as p,j as e}from"./index-779011e1.js";import{C as n}from"./CodeExample-a97533e0.js";import{C as l}from"./ClassTable-3d10a490.js";import"./formatCode-85636521.js";const h=`
 <div class="h-50 bg-primary relative">
 <span class="text-white absolute bg-none left-0">Top Left</span>
 <span class="text-white absolute bg-none right-0">Top Right</span>

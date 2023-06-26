@@ -1,4 +1,4 @@
-import{r as o,A as p,j as e,d as a}from"./index-b0774712.js";import{C as i}from"./CodeExample-ff5e3bdd.js";import{C as s}from"./ClassTable-4ce7c370.js";import"./formatCode-85636521.js";const g=`
+import{r as o,A as p,j as e,T as a}from"./index-779011e1.js";import{C as i}from"./CodeExample-a97533e0.js";import{C as s}from"./ClassTable-3d10a490.js";import"./formatCode-85636521.js";const g=`
 <h1>Welcome to FleXkit</h1>
 <h2>Welcome to FleXkit</h2>
 <h3>Welcome to FleXkit</h3>

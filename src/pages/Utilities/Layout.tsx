@@ -36,11 +36,11 @@ const Layout = () => {
 
   useEffect(() => {
     if (sidebarActive === null) setSidebarActive(true);
-  }, []);
+  }, [sidebarActive, setSidebarActive]);
 
   return (
     <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
-      <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
+      <section>
         <h2>Layout</h2>
         <p>The FleXkit utility classes provide a range of options to control the layout and positioning of elements within your interface. These classes allow you to adjust properties such as <mark>box-sizing</mark>, <mark>display</mark>, <mark>float</mark>, <mark>overflow</mark>, <mark>position</mark>, <mark>visibility</mark>, and <mark>z-index</mark>.</p>
 

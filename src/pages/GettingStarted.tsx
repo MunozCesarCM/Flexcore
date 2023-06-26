@@ -21,12 +21,12 @@ const GettingStarted = () => {
 
   useEffect(() => {
     if (sidebarActive === null) setSidebarActive(true);
-  }, []);
+  }, [sidebarActive, setSidebarActive]);
 
   return (
-    <article  className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
-      <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
-        <h2 id='GettingStarted'>Welcome to the FleXkit Documentation!</h2>
+    <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
+      <section>
+        <h2 id='GettingStarted'>Welcome to the <span className='text-primary'>FleXkit</span> Documentation!</h2>
         <p>FleXkit is an advanced <strong>user interface (UI) library</strong> designed to simplify the process of building stunning and responsive web interfaces. In this documentation, we will explore the details of FleXkit's component library, empowering you to effortlessly create engaging user experiences.</p>
 
         <h3>FleXkit's Component Library</h3>

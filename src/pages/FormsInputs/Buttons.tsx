@@ -29,11 +29,11 @@ const Buttons = () => {
 
   useEffect(() => {
     if (sidebarActive === null) setSidebarActive(true);
-  }, []);
+  }, [sidebarActive, setSidebarActive]);
 
   return (
-    <article  className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
-      <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
+    <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
+      <section>
         <h2>Buttons</h2>
         <p>FleXkit offers a wide range of button styles and variations to enhance your user interface. Let's explore the different button types you can create with FleXkit:</p>
 

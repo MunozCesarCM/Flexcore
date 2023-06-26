@@ -36,7 +36,7 @@ const Interactivity = () => {
 
   return (
     <article  className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
-      <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
+      <section>
         <h2>Interactivity</h2>
         <p>FleXkit provides utility classes to modify various interactive aspects of elements to create engaging user experiences.</p>
 

@@ -94,7 +94,8 @@ $size-article-sidebar: 250px;
   transition-duration: 50ms;
 }
 
-::-webkit-scrollbar {
+html::-webkit-scrollbar,
+.sidebar::-webkit-scrollbar {
   width: 0px;
   right: 0px;
 }

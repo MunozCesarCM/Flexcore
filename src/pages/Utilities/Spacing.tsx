@@ -34,11 +34,11 @@ const Spacing = () => {
 
   useEffect(() => {
     if (sidebarActive === null) setSidebarActive(true);
-  }, []);
+  }, [sidebarActive, setSidebarActive]);
 
   return (
-    <article  className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
-      <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
+    <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
+      <section>
         <h2>Spacing</h2>
         <p>The FleXkit utility classes provide flexible options for managing spacing within your interface. These classes allow you to easily apply <mark>padding</mark>, <mark>margin</mark>, and <mark>space between</mark> elements to achieve the desired layout and spacing.</p>
 

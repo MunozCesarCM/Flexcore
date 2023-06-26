@@ -28,11 +28,11 @@ const Flexbox = () => {
 
   useEffect(() => {
     if (sidebarActive === null) setSidebarActive(true);
-  }, []);
+  }, [sidebarActive, setSidebarActive]);
 
   return (
-    <article  className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
-      <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
+    <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
+      <section>
         <h2>Container</h2>
 
         <h3 id='Heroes'>Heroes</h3>

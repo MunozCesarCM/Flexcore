@@ -37,11 +37,11 @@ const ColorStyling = () => {
 
   useEffect(() => {
     if (sidebarActive === null) setSidebarActive(true);
-  }, []);
+  }, [sidebarActive, setSidebarActive]);
 
   return (
-    <article  className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
-      <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
+    <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
+      <section>
         <h2>Color and Styling</h2>
         <p>This section provides an overview of the color and styling capabilities offered by FleXkit and how they can enhance your UI designs.</p>
         <section className='notification-container-info'>

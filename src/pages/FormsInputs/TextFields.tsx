@@ -30,11 +30,11 @@ const TextFields = () => {
 
   useEffect(() => {
     if (sidebarActive === null) setSidebarActive(true);
-  }, []);
+  }, [sidebarActive, setSidebarActive]);
 
   return (
-    <article  className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
-      <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
+    <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
+      <section>
         <h2>Text Fields</h2>
         <p>Text fields provide an input mechanism for users to enter text or data into a web form. With FleXkit you can create a versatile set of text field components that can be easily customized into your interface.</p>
 

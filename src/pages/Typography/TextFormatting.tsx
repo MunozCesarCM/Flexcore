@@ -44,11 +44,11 @@ const TextFormatting = () => {
 
   useEffect(() => {
     if (sidebarActive === null) setSidebarActive(true);
-  }, []);
+  }, [sidebarActive, setSidebarActive]);
 
   return (
-    <article  className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
-      <section style={{maxWidth: (sidebarActive ? 'calc(100vw - 300px - 275px)' : '100vw')}}>
+    <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
+      <section>
         <h2>Text Formatting</h2>
         <p>Text formatting is essential for creating visually appealing and readable interfaces. FleXkit offers a range of options to customize the typography of your web pages. Let's dive into the various aspects of text formatting that FleXkit provides.</p>
 

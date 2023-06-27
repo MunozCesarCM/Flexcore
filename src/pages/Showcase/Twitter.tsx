@@ -4,7 +4,6 @@ import AppContext from '../../context/AppContext';
 import {
   example1,
   example2,
-  example3,
 } from '../../constants/showcase/twitter';
 
 const Twitter = () => {
@@ -40,16 +39,12 @@ const Twitter = () => {
         <h3 id='Feed'>Feed</h3>
         <CodeExample snippet={example2} />
 
-        <h3 id='Sidebar'>Sidebar</h3>
-        <CodeExample snippet={example3} />
-
       </section>
       <div className='article-sidebar'>
         <h3>Contents</h3>
         <h4 onClick={() => scrollPosition('')}>Twitter</h4>
         <h4 onClick={() => scrollPosition('Profile')}>Profile</h4>
         <h4 onClick={() => scrollPosition('Feed')}>Feed</h4>
-        <h4 onClick={() => scrollPosition('Sidebar')}>Sidebar</h4>
       </div>
     </article>
   );

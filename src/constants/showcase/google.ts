@@ -14,7 +14,7 @@ export const example1 = `
   </nav>
   <section class="flex flex-col items-center gap-5 mb-5">
     <img class="w-1/3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" />
-    <input type="text" placeholder="Search" class="bg-canvas text-header border border-neutral-300 rounded-full w-1/2 px-6 py-3 cursor-pointer" />
+    <input type="text" placeholder="Search" class="bg-canvas text-header border border-neutral-300 dark:border-neutral-700 rounded-full w-1/2 px-6 py-3 cursor-pointer" />
     <div>
       <button class="border-none dark:bg-neutral-700 dark:text-white px-3 py-2 rounded cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-800 duration-100">Google Search</button>
       <button class="border-none dark:bg-neutral-700 dark:text-white px-3 py-2 rounded cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-800 duration-100">I'm Feeling Lucky</button>

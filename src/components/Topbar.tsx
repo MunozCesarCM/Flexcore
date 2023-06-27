@@ -34,7 +34,7 @@ const Topbar = ({ siteTheme, setSiteTheme }) => {
         <a href='https://github.com/MunozCesarCM/Flexcore' target='_blank' className='border-0 border-b border-neutral-200 dark:border-neutral-800 hover:border-primary duration-100'>
           <FaGithubAlt className='text-primary cursor-pointer' />
         </a>
-        <button className='w-10 h-10 rounded border border-neutral-200 hover:border-primary p-1 cursor-pointer duration-100' onClick={toggleTheme}>
+        <button className='w-10 h-10 rounded border border-neutral-200 dark:border-neutral-800 hover:border-primary p-1 cursor-pointer duration-100' onClick={toggleTheme}>
           <TbMoon />
         </button>
       </section>

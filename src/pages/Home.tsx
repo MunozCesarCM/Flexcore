@@ -27,7 +27,7 @@ const Home = () => {
           <h1 className='text-7xl'><span className='text-primary'>Create</span> with Confidence using Intuitive <span className='text-primary'>UI design.</span></h1>
           <p className='line-height-1-75'>Craft <strong>stunning interfaces</strong> by customizing components with ease, and see your vision come to life. With Flexcore's focus on practicality and <strong>seamless integration</strong>, you can <strong>effortlessly</strong> build responsive and visually appealing websites.</p>
           <div className='flex align-center gap-4'>
-            <Link to='/getting-started'>
+            <Link to='/getting-started' onClick={() => {if(window.innerWidth > 768) setSidebarActive(true)}}>
               <button className='primary flex justify-between items-center bg-primary weight-600 text-lg letter-wide mr-auto py-3 px-4 border-none rounded cursor-pointer duration-200'>
                 <span className='text-white'>Get Started</span>
                 <RiArrowDropRightLine className='ml-2 mr-1 duration-100 text-2xl' />

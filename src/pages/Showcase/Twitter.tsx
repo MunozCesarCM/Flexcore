@@ -16,7 +16,7 @@ const Twitter = () => {
 
     let offScrollPosition = 0;
     if (position !== undefined) {
-      offScrollPosition = position + window.pageYOffset - 85;
+      offScrollPosition = position + window.scrollY - 85;
     }
 
     window.scrollTo({

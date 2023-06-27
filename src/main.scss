@@ -303,6 +303,30 @@ input[type=text] {
 
   strong { font-weight: 600; }
 
+  code {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9em;
+    font-weight: 500;
+    display: block;
+    padding: 0.5em 1em;
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    cursor: pointer;
+    transition-duration: 100ms;
+
+    &:hover {
+      border: 2px solid var(--color-primary);
+      transition-duration: 100ms;
+    }
+
+    svg {
+      color: var(--color-primary);
+    }
+  }
+
   .notification-container {
     border-radius: 8px;
     margin-top: 1.25em;

@@ -48,7 +48,7 @@ const Interactivity = () => {
     <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
       <section>
         <h2>Borders</h2>
-        <p>FleXkit provides utility classes to customize and style the borders of elements.</p>
+        <p>Flexcore provides utility classes to customize and style the borders of elements.</p>
 
         <h3 id='Properties'>Properties</h3>
         <h4 id='Border Radius'>Border Radius</h4>

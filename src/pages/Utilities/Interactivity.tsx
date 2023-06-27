@@ -38,10 +38,10 @@ const Interactivity = () => {
     <article  className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
       <section>
         <h2>Interactivity</h2>
-        <p>FleXkit provides utility classes to modify various interactive aspects of elements to create engaging user experiences.</p>
+        <p>Flexcore provides utility classes to modify various interactive aspects of elements to create engaging user experiences.</p>
 
         <h4 id='Transition Duration'>Transition Duration</h4>
-        <p>FleXkit has utility classes to define the duration of CSS transitions, allowing you to control the speed of animations and smooth transitions between different states:</p>
+        <p>Flexcore has utility classes to define the duration of CSS transitions, allowing you to control the speed of animations and smooth transitions between different states:</p>
         <ClassTable tableItems={table3} />
 
         <h3 id='States'>States</h3>

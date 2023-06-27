@@ -24,7 +24,7 @@ export const example1 = `
 <p>
   Craft <strong class="text-secondary">stunning</strong> interfaces
   by customizing components with ease, and see your vision come
-  to life. With FleXkit's focus on practicality and
+  to life. With Flexcore's focus on practicality and
   <strong class="text-secondary"> seamless integration</strong>, you
   can effortlessly build responsive and visually appealing websites.
 </p>

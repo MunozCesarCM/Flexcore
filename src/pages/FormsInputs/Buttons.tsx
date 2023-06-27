@@ -35,7 +35,7 @@ const Buttons = () => {
     <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
       <section>
         <h2>Buttons</h2>
-        <p>FleXkit offers a wide range of button styles and variations to enhance your user interface. Let's explore the different button types you can create with FleXkit:</p>
+        <p>Flexcore offers a wide range of button styles and variations to enhance your user interface. Let's explore the different button types you can create with Flexcore:</p>
 
         <h3 id='Standard Buttons'>Standard Buttons</h3>
         <p>These buttons serve as the foundation for most interactions. They provide clear and distinguishable styles for different actions. Use them to guide users towards important actions or convey different levels of urgency.</p>
@@ -50,11 +50,11 @@ const Buttons = () => {
         <CodeExample snippet={example3} />
 
         <h3 id='Buttons Size'>Buttons Size</h3>
-        <p>Adjust the size of your buttons to suit different contexts or emphasize specific actions. With FleXkit you can create small and large buttons to create visual hierarchy or optimize space allocation.</p>
+        <p>Adjust the size of your buttons to suit different contexts or emphasize specific actions. With Flexcore you can create small and large buttons to create visual hierarchy or optimize space allocation.</p>
         <CodeExample snippet={example4} />
 
         <h3 id='Icon Buttons'>Icon Buttons</h3>
-        <p>Combine the power of icons with buttons to enhance usability and visual communication. FleXkit allows you to integrate icons with your buttons, either as standalone icon-only buttons or buttons with icons and accompanying text.</p>
+        <p>Combine the power of icons with buttons to enhance usability and visual communication. Flexcore allows you to integrate icons with your buttons, either as standalone icon-only buttons or buttons with icons and accompanying text.</p>
         <CodeExample snippet={example5} />
 
       </section>

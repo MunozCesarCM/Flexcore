@@ -50,7 +50,7 @@ const Flexbox = () => {
         <p>Flexbox is a powerful layout system that allows you to arrange and align elements within a container, creating dynamic and adaptable designs.</p>
 
         <h3 id='Flex'>Flex</h3>
-        <p>FleXkit offers a range of properties to control various aspects of <mark>flexbox</mark>, allowing you to achieve the desired layout and alignment for your interface.</p>
+        <p>Flexcore offers a range of properties to control various aspects of <mark>flexbox</mark>, allowing you to achieve the desired layout and alignment for your interface.</p>
 
         <h4 id='Flex Basis'>Flex Basis</h4>
         <p><mark>flex-basis</mark> determines the initial size of flex items along the main axis before any remaining space is distributed. It specifies the default size of flex items when there is no <mark>flex-grow</mark> or <mark>flex-shrink</mark> value applied.</p>
@@ -83,7 +83,7 @@ const Flexbox = () => {
         <CodeExample snippet={example6} />
 
         <h3 id='Align'>Align</h3>
-        <p>FleXkit offers a set of properties to control the alignment of flex items along the cross axis of a flex container.</p>
+        <p>Flexcore offers a set of properties to control the alignment of flex items along the cross axis of a flex container.</p>
 
         <h4 id='Align Items'>Align Items</h4>
         <p><mark>align-items</mark> allows you to position flex items at the start, end, center, stretch, or baseline within the container.</p>

@@ -36,7 +36,7 @@ const TextFields = () => {
     <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
       <section>
         <h2>Text Fields</h2>
-        <p>Text fields provide an input mechanism for users to enter text or data into a web form. With FleXkit you can create a versatile set of text field components that can be easily customized into your interface.</p>
+        <p>Text fields provide an input mechanism for users to enter text or data into a web form. With Flexcore you can create a versatile set of text field components that can be easily customized into your interface.</p>
 
         <h3 id='Basic Example'>Basic Example</h3>
         <p>To get started with text fields, you can use the following code snippet as a basic example:</p>

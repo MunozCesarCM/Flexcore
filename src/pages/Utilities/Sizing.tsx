@@ -39,7 +39,7 @@ const Sizing = () => {
     <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
       <section>
         <h2>Sizing</h2>
-        <p>The FleXkit utility classes provide convenient ways to modify the sizing of elements within your interface. These classes allow you to control the <mark>width</mark>, <mark>height</mark>, <mark>min-width</mark>, <mark>min-height</mark>, <mark>max-width</mark> and <mark>max-height</mark> of elements, giving you precise control over the dimensions of your UI components.</p>
+        <p>The Flexcore utility classes provide convenient ways to modify the sizing of elements within your interface. These classes allow you to control the <mark>width</mark>, <mark>height</mark>, <mark>min-width</mark>, <mark>min-height</mark>, <mark>max-width</mark> and <mark>max-height</mark> of elements, giving you precise control over the dimensions of your UI components.</p>
 
         <h3 id='Width'>Width</h3>
         <p>To modify the <mark>width</mark> of an element, you can use the following utility classes:</p>

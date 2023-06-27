@@ -42,7 +42,7 @@ const Layout = () => {
     <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
       <section>
         <h2>Layout</h2>
-        <p>The FleXkit utility classes provide a range of options to control the layout and positioning of elements within your interface. These classes allow you to adjust properties such as <mark>box-sizing</mark>, <mark>display</mark>, <mark>float</mark>, <mark>overflow</mark>, <mark>position</mark>, <mark>visibility</mark>, and <mark>z-index</mark>.</p>
+        <p>The Flexcore utility classes provide a range of options to control the layout and positioning of elements within your interface. These classes allow you to adjust properties such as <mark>box-sizing</mark>, <mark>display</mark>, <mark>float</mark>, <mark>overflow</mark>, <mark>position</mark>, <mark>visibility</mark>, and <mark>z-index</mark>.</p>
 
         <h3 id='Box Sizing'>Box Sizing</h3>
         <p>The <mark>box-sizing</mark> property determines how the <mark>width</mark> and <mark>height</mark> of an element are calculated, including <mark>padding</mark> and <mark>border</mark>:</p>
@@ -61,11 +61,11 @@ const Layout = () => {
         <ClassTable tableItems={table4} />
 
         <h3 id='Position'>Position</h3>
-        <p>The <mark>position</mark> property determines the positioning method of an element. FleXkit provides the following utility classes:</p>
+        <p>The <mark>position</mark> property determines the positioning method of an element. Flexcore provides the following utility classes:</p>
         <ClassTable tableItems={table5} />
 
         <h4 id='TRBL'>Top Right Bottom Left</h4>
-        <p>When using the <mark>position</mark> property, FleXkit provides utility classes to specify the distance from the <mark>top</mark>, <mark>right</mark>, <mark>bottom</mark>, or <mark>left</mark> edges of an element's positioned container:</p>
+        <p>When using the <mark>position</mark> property, Flexcore provides utility classes to specify the distance from the <mark>top</mark>, <mark>right</mark>, <mark>bottom</mark>, or <mark>left</mark> edges of an element's positioned container:</p>
         <ClassTable tableItems={table6} />
         <CodeExample snippet={example1} />
 
@@ -75,7 +75,7 @@ const Layout = () => {
         <CodeExample snippet={example2} />
 
         <h3 id='Z-Index'>Z-Index</h3>
-        <p>The <mark>z-index</mark> property controls the stacking order of positioned elements. FleXkit provides utility classes to easily assign a specific <mark>z-index</mark> value to an element:</p>
+        <p>The <mark>z-index</mark> property controls the stacking order of positioned elements. Flexcore provides utility classes to easily assign a specific <mark>z-index</mark> value to an element:</p>
         <ClassTable tableItems={table8} />
         <CodeExample snippet={example3} />
 

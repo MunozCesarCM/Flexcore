@@ -26,7 +26,7 @@ const Home = () => {
         <section className='hero flex flex-col justify-center gap-6'>
           <h1 className='text-7xl'><span className='text-primary'>Create</span> with Confidence using Intuitive <span className='text-primary'>UI design.</span></h1>
           <p className='line-height-1-75'>Craft <strong>stunning interfaces</strong> by customizing components with ease, and see your vision come to life. With Flexcore's focus on practicality and <strong>seamless integration</strong>, you can <strong>effortlessly</strong> build responsive and visually appealing websites.</p>
-          <div className='flex align-center gap-4'>
+          <div className='flex items-center gap-4'>
             <Link to='/getting-started' onClick={() => {if(window.innerWidth > 768) setSidebarActive(true)}}>
               <button className='primary flex justify-between items-center bg-primary weight-600 text-lg letter-wide mr-auto py-3 px-4 border-none rounded cursor-pointer duration-200'>
                 <span className='text-white'>Get Started</span>
@@ -34,7 +34,7 @@ const Home = () => {
               </button>
             </Link>
             <Link to='/showcase/google'>
-              <button className='flex justify-between items-center text-header hover:text-primary weight-600 text-md letter-wide mr-auto ml-6 py-3 px-4 border-none rounded cursor-pointer duration-100'>
+              <button className='text-header hover:text-primary weight-600 text-md letter-wide mr-auto p-4 border-none rounded cursor-pointer duration-100'>
                 <span>Showcase</span>
               </button>
             </Link>

@@ -1,9 +1,12 @@
 import { useEffect, useContext } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 import { FiCopy } from 'react-icons/fi';
 import AppContext from '../context/AppContext';
+import '../styles/toast.scss';
 
 const GettingStarted = () => {
-  const { sidebarActive, setSidebarActive } = useContext(AppContext);
+  const { sidebarActive, setSidebarActive, siteTheme } = useContext(AppContext);
+  const notify = () => toast.success('Text Copied to Clipboard!');
 
   const scrollPosition = (elementId: string) => {
     const element = document.getElementById(elementId);
@@ -43,18 +46,42 @@ const GettingStarted = () => {
           <li>
             <strong>Via CDN:</strong>
             <p>To quickly get started with FleXkit, you can include the framework via a Content Delivery Network (CDN). Add the following <mark>link</mark> tag in the <mark>head</mark> section of your HTML file:</p>
-            <code className='bg-neutral-50 dark:bg-slate-900'><FiCopy />&lt;link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/munozcesarcm/flexcore/public/flexcore.css' /&gt;</code>
+            <code
+              className='bg-neutral-50 dark:bg-slate-900'
+              onClick={() => {
+                navigator.clipboard.writeText('<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/munozcesarcm/flexcore/public/flexcore.css" />');
+                notify();
+              }}
+            >
+              <FiCopy />&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/munozcesarcm/flexcore/public/flexcore.css" /&gt;
+            </code>
             <p>This link will fetch the minified CSS file from the FleXkit CDN and apply the framework's utility classes to your project.</p>
           </li>
           <li>
             <strong>Via npm (Node.js):</strong>
             <p>If you prefer managing dependencies through npm, install FleXkit as a development dependency:</p>
-            <code className='bg-neutral-50 dark:bg-slate-900'><FiCopy />npm install flexcore</code>
+            <code
+              className='bg-neutral-50 dark:bg-slate-900'
+              onClick={() => {
+                navigator.clipboard.writeText('npm install flexcore');
+                notify();
+              }}
+            >
+              <FiCopy />npm install flexcore
+            </code>
           </li>
           <li>
             <strong>Via yarn:</strong>
             <p>Run the following command to install FleXkit as a development dependency using yarn:</p>
-            <code className='bg-neutral-50 dark:bg-slate-900'><FiCopy />yarn add flexcore</code>
+            <code
+              className='bg-neutral-50 dark:bg-slate-900'
+              onClick={() => {
+                navigator.clipboard.writeText('yarn add flexcore');
+                notify();
+              }}
+            >
+              <FiCopy />yarn add flexcore
+            </code>
           </li>
         </ul>
 
@@ -65,6 +92,18 @@ const GettingStarted = () => {
         <h4 onClick={() => scrollPosition('Key Features')}>Key Features</h4>
         <h4 onClick={() => scrollPosition('Installation')}>Installation</h4>
       </div>
+
+      <ToastContainer position="bottom-right"
+        autoClose={1250}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable={false}
+        pauseOnHover={false}
+        theme={ siteTheme === 'light' ? 'light' : 'dark' }
+      />
     </article>
   );
 }

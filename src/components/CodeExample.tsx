@@ -21,6 +21,10 @@ const CodeExample = ({ snippet, template = true, font = 'Poppins' }: CodeExample
   const [srcDoc, setSrcDoc] = useState(snippet);
   const {editorTheme, setEditorTheme, siteTheme} = useContext(AppContext);
 
+  const snippetLines = snippet.split('\n').length;
+  const [showComplete, setShowComplete] = useState(snippetLines < 10 ? true : false);
+  console.log(showComplete);
+
   const notify = () => toast.success('Text Copied to Clipboard!');
 
   const toggleTheme = () => {
@@ -63,7 +67,7 @@ const CodeExample = ({ snippet, template = true, font = 'Poppins' }: CodeExample
         </ol>
         <div className='code-example mb-4 p-4 rounded border border-neutral-200 dark:border-neutral-800'>
           <CodeMirror
-            value={srcDoc}
+            value={ showComplete ? srcDoc : srcDoc.split('\n').slice(0, 10).join('\n') }
             theme={vscodeDarkInit({
               theme: siteTheme === 'light' ? 'light' : 'dark',
               settings: {
@@ -96,6 +100,16 @@ const CodeExample = ({ snippet, template = true, font = 'Poppins' }: CodeExample
             }}
           />
         </div>
+        {
+          !showComplete ? (
+            <div className='flex justify-center mt-5'>
+              <button
+                onClick={() => setShowComplete(true)}
+                className='hover:bg-primary text-primary hover:text-white px-4 py-2 border border-primary rounded cursor-pointer duration-100'
+              >Expand Code</button>
+            </div>
+          ) : null
+        }
       </div>
       <ToastContainer position="bottom-right"
         autoClose={1250}

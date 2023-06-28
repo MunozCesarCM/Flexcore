@@ -32,9 +32,9 @@ const getTheme = () => {
 }
 
 const App = () => {
-  const [sidebarActive, setSidebarActive] = useState(null);
+  const [sidebarActive, setSidebarActive] = useState(true);
   const [siteTheme, setSiteTheme] = useState(getTheme);
-  const [editorTheme, setEditorTheme] = useState(null);
+  const [editorTheme, setEditorTheme] = useState(siteTheme);
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -48,9 +48,9 @@ const App = () => {
   return (
     <AppContext.Provider value={{ sidebarActive, editorTheme, setSidebarActive, setEditorTheme, siteTheme }}>
       <main className={`theme-${siteTheme}`}>
-        <Topbar siteTheme={siteTheme} setSiteTheme={setSiteTheme} />
+        <Topbar siteTheme={siteTheme} setSiteTheme={setSiteTheme} setEditorTheme={setEditorTheme} />
         <Sidebar />
-        <Suspense fallback={<div style={{ width: '100vw', height: '100vh', }} />}>
+        <Suspense fallback={<div className='w-screen h-screen' />}>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/getting-started' element={<GettingStarted />} />

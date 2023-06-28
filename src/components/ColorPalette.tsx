@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const ColorPalette = () => {
   useEffect(() => {
     const buttons = document.querySelectorAll(".color-button");
 
-    const selectColor = (name: string) => {
+    const selectColor = (name) => {
       const color = colors[name];
       const palettes = document.querySelectorAll(".color-palette-item");
       const hexes = document.querySelectorAll(".hex-code");

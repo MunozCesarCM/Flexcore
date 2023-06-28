@@ -1,4 +1,4 @@
-import { useEffect, useContext } from 'react';
+import { useContext } from 'react';
 import CodeExample from '../../components/CodeExample';
 import AppContext from '../../context/AppContext';
 import {
@@ -7,7 +7,7 @@ import {
 } from '../../constants/showcase/twitter';
 
 const Twitter = () => {
-  const { sidebarActive, setSidebarActive } = useContext(AppContext);
+  const { sidebarActive } = useContext(AppContext);
 
   const scrollPosition = (elementId: string) => {
     const element = document.getElementById(elementId);
@@ -23,10 +23,6 @@ const Twitter = () => {
       behavior: 'smooth'
     });
   }
-
-  useEffect(() => {
-    if (sidebarActive === null) setSidebarActive(true);
-  }, [sidebarActive, setSidebarActive]);
 
   return (
     <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>

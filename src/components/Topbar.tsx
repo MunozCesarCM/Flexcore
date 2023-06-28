@@ -4,12 +4,19 @@ import { FaGithubAlt } from 'react-icons/fa';
 import { TbMenu2, TbX } from 'react-icons/tb';
 import AppContext from '../context/AppContext';
 
-const Topbar = ({ siteTheme, setSiteTheme }) => {
+interface Topbar {
+  siteTheme: string,
+  setSiteTheme: React.Dispatch<React.SetStateAction<string>>,
+  setEditorTheme: React.Dispatch<React.SetStateAction<string>>,
+}
+
+const Topbar = ({ siteTheme, setSiteTheme, setEditorTheme }: Topbar) => {
   const {sidebarActive, setSidebarActive } = useContext(AppContext);
 
   const toggleTheme = () => {
     const newTheme = (siteTheme === 'light') ? 'dark' : 'light';
     setSiteTheme(newTheme);
+    setEditorTheme(newTheme);
   }
 
   return (
@@ -43,4 +50,3 @@ const Topbar = ({ siteTheme, setSiteTheme }) => {
 };
 
 export default Topbar;
-

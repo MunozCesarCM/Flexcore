@@ -1,5 +1,8 @@
+interface ClassTable {
+  tableItems: any,
+}
 
-const ClassTable = ({ tableItems }) => {
+const ClassTable = ({ tableItems }: ClassTable ) => {
   return (
     <table>
       <thead>
@@ -9,7 +12,7 @@ const ClassTable = ({ tableItems }) => {
         </tr>
       </thead>
       <tbody>
-        {tableItems.body.map((item) => (
+        {tableItems.body.map((item: {title: string, desc:string}) => (
           <tr key={item.title}>
             <td>{item.title}</td>
             <td>{item.desc}</td>

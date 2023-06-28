@@ -16,26 +16,24 @@ interface CodeExample {
 }
 
 const CodeExample = ({ snippet, template = true, font = 'Poppins' }: CodeExample) => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState('0px');
   const [srcDoc, setSrcDoc] = useState(snippet);
   const {editorTheme, setEditorTheme, siteTheme} = useContext(AppContext);
 
   const snippetLines = snippet.split('\n').length;
   const [showComplete, setShowComplete] = useState(snippetLines < 10 ? true : false);
-  console.log(showComplete);
 
   const notify = () => toast.success('Text Copied to Clipboard!');
 
   const toggleTheme = () => {
     let newTheme = null;
-    if (editorTheme === null) newTheme = (siteTheme === 'light') ? 'dark' : 'light';
-    else newTheme = (editorTheme === 'light') ? 'dark' : 'light';
+    newTheme = (editorTheme === 'light') ? 'dark' : 'light';
     setEditorTheme(newTheme);
   }
 
   const onLoad = () => {
-    if (ref.current !== null) {
+    if (ref.current !== null && ref.current.contentWindow !== null) {
       setHeight(ref.current.contentWindow.document.body.scrollHeight + 32 + 'px');
     }
   };

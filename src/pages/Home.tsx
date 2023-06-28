@@ -6,23 +6,23 @@ import { formatCode } from '../helpers/formatCode';
 import { example1 } from '../constants/demo';
 
 const Home = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState('0px');
   const { setSidebarActive, siteTheme } = useContext(AppContext);
 
   useEffect(() => {
     setSidebarActive(false);
-  }, []);
+  }, [setSidebarActive]);
 
   const onLoad = () => {
-    if (ref.current !== null) {
+    if (ref.current !== null && ref.current.contentWindow !== null) {
       setHeight(ref.current.contentWindow.document.body.scrollHeight + 32 + 'px');
     }
   };
 
   return (
-    <article  className='landing-page h-screen min-h-screen'>
-      <header className='flex items-center gap-24'>
+    <article  className='landing-page h-screen min-h-screen flex items-center'>
+      <header className='flex items-center'>
         <section className='hero flex flex-col justify-center gap-6'>
           <h1 className='text-7xl'><span className='text-primary'>Create</span> with Confidence using Intuitive <span className='text-primary'>UI design.</span></h1>
           <p className='line-height-1-75'>Craft <strong>stunning interfaces</strong> by customizing components with ease, and see your vision come to life. With Flexcore's focus on practicality and <strong>seamless integration</strong>, you can <strong>effortlessly</strong> build responsive and visually appealing websites.</p>

@@ -1,4 +1,5 @@
 import { useEffect, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { TbInfoCircle } from 'react-icons/tb';
 import CodeExample from '../../components/CodeExample';
 import AppContext from '../../context/AppContext';
@@ -34,37 +35,40 @@ const TextFields = () => {
 
   return (
     <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
-      <section>
-        <h2>Text Fields</h2>
-        <p>Text fields provide an input mechanism for users to enter text or data into a web form. With Flexcore you can create a versatile set of text field components that can be easily customized into your interface.</p>
+      <h2>Text Fields</h2>
+      <p>Text fields provide an input mechanism for users to enter text or data into a web form. With Flexcore you can create a versatile set of text field components that can be easily customized into your interface.</p>
 
-        <h3 id='Basic Example'>Basic Example</h3>
-        <p>To get started with text fields, you can use the following code snippet as a basic example:</p>
-        <CodeExample snippet={example1} />
+      <h3 id='Basic Example'>Basic Example</h3>
+      <p>To get started with text fields, you can use the following code snippet as a basic example:</p>
+      <CodeExample snippet={example1} />
 
-        <h3 id='Sizing'>Sizing</h3>
-        <p>To get started with text fields, you can use the following code snippet as a basic example:</p>
-        <CodeExample snippet={example2} />
+      <h3 id='Sizing'>Sizing</h3>
+      <p>To get started with text fields, you can use the following code snippet as a basic example:</p>
+      <CodeExample snippet={example2} />
 
-        <h3 id='Disabled'>Disabled</h3>
-        <p>You can disable a text field by adding the <mark>disabled</mark> attribute to the HTML input element. This will prevent user from interacting with the text field.</p>
-        <CodeExample snippet={example3} />
+      <h3 id='Disabled'>Disabled</h3>
+      <p>You can disable a text field by adding the <mark>disabled</mark> attribute to the HTML input element. This will prevent user from interacting with the text field.</p>
+      <CodeExample snippet={example3} />
 
-        <h3 id='Readonly'>Readonly</h3>
-        <p>If you want to make a text field read-only, you can use the <mark>readonly</mark> attribute. This will allow users to view the content of the text field but prevent them from editing it.</p>
-        <section className='notification-container-info'>
-          <TbInfoCircle />
-          <span className='quote-text'>
-            Disabled fields are entirely non-editable and unselectable, while readonly fields allow selection but restrict any modifications to the content
-          </span>
-        </section>
-        <CodeExample snippet={example4} />
-
-        <h3 id='Input Types'>Input Types</h3>
-        <p>An <mark>input</mark> can change considerably depending on the value of its <mark>type</mark> attribute:</p>
-        <CodeExample snippet={example5} />
-
+      <h3 id='Readonly'>Readonly</h3>
+      <p>If you want to make a text field read-only, you can use the <mark>readonly</mark> attribute. This will allow users to view the content of the text field but prevent them from editing it.</p>
+      <section className='notification-container-info'>
+        <TbInfoCircle />
+        <span className='quote-text'>
+          Disabled fields are entirely non-editable and unselectable, while readonly fields allow selection but restrict any modifications to the content
+        </span>
       </section>
+      <CodeExample snippet={example4} />
+
+      <h3 id='Input Types'>Input Types</h3>
+      <p>An <mark>input</mark> can change considerably depending on the value of its <mark>type</mark> attribute:</p>
+      <CodeExample snippet={example5} />
+
+      <footer>
+        <Link to='/forms-and-inputs/buttons'>Buttons</Link>
+        <Link to='/layouts/container'>Container</Link>
+      </footer>
+
       <div className='article-sidebar'>
         <h3>Contents</h3>
         <h4 onClick={() => scrollPosition('')}>Text Fields</h4>

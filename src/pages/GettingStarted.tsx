@@ -1,4 +1,5 @@
 import { useEffect, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import { FiCopy } from 'react-icons/fi';
 import AppContext from '../context/AppContext';
@@ -84,7 +85,10 @@ const GettingStarted = () => {
             </code>
           </li>
         </ul>
-
+        <footer>
+          <span />
+          <Link to='/typography/color-and-styling'>Color and Styling</Link>
+        </footer>
       </section>
       <div className='article-sidebar'>
         <h3>Contents</h3>

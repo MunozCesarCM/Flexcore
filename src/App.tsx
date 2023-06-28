@@ -55,17 +55,17 @@ const App = () => {
             <Route path='/' element={<Home />} />
             <Route path='/getting-started' element={<GettingStarted />} />
 
+            <Route path='/typography/color-and-styling' element={<ColorStyling />} />
+            <Route path='/typography/text-formatting' element={<TextFormatting />} />
+
             <Route path='/showcase/google' element={<Google />} />
             <Route path='/showcase/twitter' element={<Twitter />} />
 
             <Route path='/forms-and-inputs/buttons' element={<Buttons />} />
             <Route path='/forms-and-inputs/text-fields' element={<TextFields />} />
 
-            <Route path='/layouts/flexbox' element={<Flexbox />} />
             <Route path='/layouts/container' element={<Container />} />
-
-            <Route path='/typography/text-formatting' element={<TextFormatting />} />
-            <Route path='/typography/color-and-styling' element={<ColorStyling />} />
+            <Route path='/layouts/flexbox' element={<Flexbox />} />
 
             <Route path='/utilities/borders' element={<Borders />} />
             <Route path='/utilities/sizing' element={<Sizing />} />

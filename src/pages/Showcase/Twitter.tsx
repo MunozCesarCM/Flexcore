@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import CodeExample from '../../components/CodeExample';
 import AppContext from '../../context/AppContext';
 import {
@@ -26,16 +27,19 @@ const Twitter = () => {
 
   return (
     <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
-      <section>
-        <h2>Twitter</h2>
+      <h2>Twitter</h2>
 
-        <h3 id='Profile'>Profile</h3>
-        <CodeExample snippet={example1} />
+      <h3 id='Profile'>Profile</h3>
+      <CodeExample snippet={example1} />
 
-        <h3 id='Feed'>Feed</h3>
-        <CodeExample snippet={example2} />
+      <h3 id='Feed'>Feed</h3>
+      <CodeExample snippet={example2} />
 
-      </section>
+      <footer>
+        <Link to='/showcase/google'>Google</Link>
+        <Link to='/forms-and-inputs/buttons'>Buttons</Link>
+      </footer>
+
       <div className='article-sidebar'>
         <h3>Contents</h3>
         <h4 onClick={() => scrollPosition('')}>Twitter</h4>

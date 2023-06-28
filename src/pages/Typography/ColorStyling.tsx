@@ -1,4 +1,5 @@
 import { useEffect, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { TbInfoCircle, TbAlertTriangle, TbCircleCheck } from 'react-icons/tb';
 import CodeExample from '../../components/CodeExample';
 import ClassTable from '../../components/ClassTable';
@@ -41,20 +42,18 @@ const ColorStyling = () => {
 
   return (
     <article className={ sidebarActive ? 'article-content-sb-active' : 'article-content'}>
-      <section>
-        <h2>Color and Styling</h2>
-        <p>This section provides an overview of the color and styling capabilities offered by Flexcore and how they can enhance your UI designs.</p>
-        <section className='notification-container-info'>
-          <TbInfoCircle />
-          <span className='quote-text'>
-            In web interfaces, color and styling play a vital role in creating visually appealing and engaging user experiences.
-          </span>
-        </section>
-
-        <h3 id='Color Palette'>Color Palette</h3>
-        <p>If you lack a specific branding concept, Flexcore provides a meticulously designed default color palette that serves as an excellent foundation right from the start:</p>
-        <ColorPalette />
+      <h2>Color and Styling</h2>
+      <p>This section provides an overview of the color and styling capabilities offered by Flexcore and how they can enhance your UI designs.</p>
+      <section className='notification-container-info'>
+        <TbInfoCircle />
+        <span className='quote-text'>
+          In web interfaces, color and styling play a vital role in creating visually appealing and engaging user experiences.
+        </span>
       </section>
+
+      <h3 id='Color Palette'>Color Palette</h3>
+      <p>If you lack a specific branding concept, Flexcore provides a meticulously designed default color palette that serves as an excellent foundation right from the start:</p>
+      <ColorPalette />
 
       <h4 id='Customization'>Customization</h4>
       <p>Flexcore also offers the ability to create variables you can change to set your own <strong>custom theme</strong>. This enables you to tailor a color palette to your specific needs.</p>
@@ -116,6 +115,11 @@ const ColorStyling = () => {
       </section>
       <p>To create a custom theme, identify the theme variables you want to modify and update their values accordingly. Experiment with different colors to achieve your desired aesthetic.</p>
       <CodeExample snippet={example6} template={false} />
+
+      <footer>
+        <Link to='/getting-started'>Getting Started</Link>
+        <Link to='/typography/text-formatting'>Text Formatting</Link>
+      </footer>
 
       <div className='article-sidebar'>
         <h3>Contents</h3>

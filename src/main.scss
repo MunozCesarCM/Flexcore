@@ -99,6 +99,11 @@ html::-webkit-scrollbar,
   right: 0px;
 }
 
+article ::-webkit-scrollbar { width: 8px; }
+article ::-webkit-scrollbar-track { background: none; }
+article ::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 10px; }
+article ::-webkit-scrollbar-thumb:hover { background: var(--color-text); }
+
 // Section - Composition
 
 .topbar {
@@ -297,6 +302,25 @@ input[type=text] {
     li {
       margin: 1em 0;
       line-height: 1.75;
+    }
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 4em 0;
+
+    a {
+      color: var(--color-primary);
+      font-weight: 500;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:first-child::before { content: '← '; }
+      &:last-child::after { content: ' →'; }
     }
   }
 

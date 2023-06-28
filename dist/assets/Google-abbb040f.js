@@ -1,4 +1,4 @@
-import{r as a,A as c,j as e}from"./index-779011e1.js";import{C as n}from"./CodeExample-a97533e0.js";import"./formatCode-85636521.js";const p=`
+import{r as i,A as p,j as e,L as d}from"./index-e977f244.js";import{C as n}from"./CodeExample-afb20d1c.js";import"./toast-04da3939.js";import"./formatCode-85636521.js";const g=`
 <main class="text-sm flex flex-col justify-between gap-35">
   <nav class="flex justify-between items-center">
     <div class="flex gap-5">
@@ -14,7 +14,7 @@ import{r as a,A as c,j as e}from"./index-779011e1.js";import{C as n}from"./CodeE
   </nav>
   <section class="flex flex-col items-center gap-5 mb-5">
     <img class="w-1/3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" />
-    <input type="text" placeholder="Search" class="bg-canvas text-header border border-neutral-300 rounded-full w-1/2 px-6 py-3 cursor-pointer" />
+    <input type="text" placeholder="Search" class="bg-canvas text-header border border-neutral-300 dark:border-neutral-700 rounded-full w-1/2 px-6 py-3 cursor-pointer" />
     <div>
       <button class="border-none dark:bg-neutral-700 dark:text-white px-3 py-2 rounded cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-800 duration-100">Google Search</button>
       <button class="border-none dark:bg-neutral-700 dark:text-white px-3 py-2 rounded cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-800 duration-100">I'm Feeling Lucky</button>
@@ -33,7 +33,7 @@ import{r as a,A as c,j as e}from"./index-779011e1.js";import{C as n}from"./CodeE
     </div>
   </footer>
 </main>
-`.slice(1,-1),g=`
+`.slice(1,-1),u=`
 <main>
   <header class="border-0 border-b border-neutral-200 dark:border-neutral-600 mb-2 px-4">
     <div class="flex justify-between items-center">
@@ -285,4 +285,4 @@ import{r as a,A as c,j as e}from"./index-779011e1.js";import{C as n}from"./CodeE
     </section>
   </main>
 </section>
-`.slice(1,-1),w=()=>{const{sidebarActive:s,setSidebarActive:i}=a.useContext(c),r=d=>{const t=document.getElementById(d),o=t==null?void 0:t.getBoundingClientRect().top;let l=0;o!==void 0&&(l=o+window.pageYOffset-85),window.scrollTo({top:l,behavior:"smooth"})};return a.useEffect(()=>{s===null&&i(!0)},[]),e.jsxs("article",{className:s?"article-content-sb-active":"article-content",children:[e.jsxs("section",{style:{maxWidth:s?"calc(100vw - 300px - 275px)":"100vw"},children:[e.jsx("h2",{children:"Google"}),e.jsx("h3",{id:"Search",children:"Search"}),e.jsx(n,{snippet:p,font:"Helvetica"}),e.jsx("h3",{id:"Results",children:"Results"}),e.jsx(n,{snippet:g,font:"Helvetica"}),e.jsx("h3",{id:"Drive",children:"Drive"}),e.jsx(n,{snippet:v})]}),e.jsxs("div",{className:"article-sidebar",children:[e.jsx("h3",{children:"Contents"}),e.jsx("h4",{onClick:()=>r(""),children:"Google"}),e.jsx("h4",{onClick:()=>r("Search"),children:"Search"}),e.jsx("h4",{onClick:()=>r("Results"),children:"Results"}),e.jsx("h4",{onClick:()=>r("Drive"),children:"Drive"})]})]})};export{w as default};
+`.slice(1,-1),m=()=>{const{sidebarActive:s,setSidebarActive:o}=i.useContext(p),r=c=>{const t=document.getElementById(c),l=t==null?void 0:t.getBoundingClientRect().top;let a=0;l!==void 0&&(a=l+window.scrollY-85),window.scrollTo({top:a,behavior:"smooth"})};return i.useEffect(()=>{s===null&&o(!0)},[s,o]),e.jsxs("article",{className:s?"article-content-sb-active":"article-content",children:[e.jsx("h2",{children:"Google"}),e.jsx("h3",{id:"Search",children:"Search"}),e.jsx(n,{snippet:g,font:"Helvetica"}),e.jsx("h3",{id:"Results",children:"Results"}),e.jsx(n,{snippet:u,font:"Helvetica"}),e.jsx("h3",{id:"Drive",children:"Drive"}),e.jsx(n,{snippet:v}),e.jsxs("footer",{children:[e.jsx(d,{to:"/typography/text-formatting",children:"Text Formatting"}),e.jsx(d,{to:"/showcase/twitter",children:"Twitter"})]}),e.jsxs("div",{className:"article-sidebar",children:[e.jsx("h3",{children:"Contents"}),e.jsx("h4",{onClick:()=>r(""),children:"Google"}),e.jsx("h4",{onClick:()=>r("Search"),children:"Search"}),e.jsx("h4",{onClick:()=>r("Results"),children:"Results"}),e.jsx("h4",{onClick:()=>r("Drive"),children:"Drive"})]})]})};export{m as default};

@@ -2,9 +2,14 @@
 
 @mixin gen-states($class) {
   .#{$class} { @content; }
+
   .hover\:#{$class} { &:hover { @content; } }
   .active\:#{$class} { &:active { @content; } }
   .focus\:#{$class} { &:focus { @content; } }
+
+  .theme-dark .hover\:#{$class} { &:hover { @content; } }
+  .theme-dark .active\:#{$class} { &:active { @content; } }
+  .theme-dark .focus\:#{$class} { &:focus { @content; } }
 }
 
 @mixin gen-themes($class) {

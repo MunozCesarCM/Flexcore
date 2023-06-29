@@ -17,12 +17,12 @@
   .theme-dark .dark\:hover\:#{$class} { &:hover { @content; } }
 }
 
-@mixin gen-size($class) {
-  .sm\:#{$class} { @media (max-width: 640px) { @content; } }
-  .md\:#{$class} { @media (max-width: 768px) { @content; } }
-  .lg\:#{$class} { @media (max-width: 1024px) { @content; } }
-  .xl\:#{$class} { @media (max-width: 1536px) { @content; } }
-}
+// @mixin gen-size($class) {
+//   .sm\:#{$class} { @media (max-width: 640px) { @content; } }
+//   .md\:#{$class} { @media (max-width: 768px) { @content; } }
+//   .lg\:#{$class} { @media (max-width: 1024px) { @content; } }
+//   .xl\:#{$class} { @media (max-width: 1536px) { @content; } }
+// }
 
 // Theming
 
@@ -44,12 +44,17 @@
   --color-secondary: #E50072;
 }
 
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-normal);
+}
+
 * {
   h1, h2, h3, h4, h5, h6, strong {
     color: var(--color-header);
   }
-  color: inherit;
   background-color: inherit;
+  color: inherit;
   // padding: 0;
   // margin: 0;
 }
@@ -1004,50 +1009,36 @@
 // Typography - Text Formatting - Font Customization
 
 @include gen-states(text-xs) { font-size: 0.75em; }
-@include gen-size(text-xs) { font-size: 0.75em; }
+// @include gen-state(text-xs) { font-size: 0.75em; }
 @include gen-states(text-sm) { font-size: 0.875em; }
-@include gen-size(text-sm) { font-size: 0.875em; }
+// @include gen-state(text-sm) { font-size: 0.875em; }
 @include gen-states(text-md) { font-size: 1em; }
-@include gen-size(text-md) { font-size: 1em; }
+// @include gen-state(text-md) { font-size: 1em; }
 @include gen-states(text-lg) { font-size: 1.125em; }
-@include gen-size(text-lg) { font-size: 1.125em; }
+// @include gen-state(text-lg) { font-size: 1.125em; }
 @include gen-states(text-xl) { font-size: 1.25em; }
-@include gen-size(text-xl) { font-size: 1.25em; }
+// @include gen-state(text-xl) { font-size: 1.25em; }
 @include gen-states(text-2xl) { font-size: 1.5em; }
-@include gen-size(text-2xl) { font-size: 1.5em; }
+// @include gen-state(text-2xl) { font-size: 1.5em; }
 @include gen-states(text-3xl) { font-size: 1.875em; }
-@include gen-size(text-3xl) { font-size: 1.875em; }
+// @include gen-state(text-3xl) { font-size: 1.875em; }
 @include gen-states(text-4xl) { font-size: 2.25em; }
-@include gen-size(text-4xl) { font-size: 2.25em; }
+// @include gen-state(text-4xl) { font-size: 2.25em; }
 @include gen-states(text-5xl) { font-size: 3em; }
-@include gen-size(text-5xl) { font-size: 3em; }
+// @include gen-state(text-5xl) { font-size: 3em; }
 @include gen-states(text-6xl) { font-size: 3.75em; }
-@include gen-size(text-6xl) { font-size: 3.75em; }
+// @include gen-state(text-6xl) { font-size: 3.75em; }
 @include gen-states(text-7xl) { font-size: 4.5em; }
-@include gen-size(text-7xl) { font-size: 4.5em; }
+// @include gen-state(text-7xl) { font-size: 4.5em; }
 @include gen-states(text-8xl) { font-size: 6em; }
-@include gen-size(text-8xl) { font-size: 6em; }
+// @include gen-state(text-8xl) { font-size: 6em; }
 @include gen-states(text-9xl) { font-size: 8em; }
-@include gen-size(text-9xl) { font-size: 8em; }
+// @include gen-state(text-9xl) { font-size: 8em; }
 
-@include gen-states(weight-100) { font-weight: 100; }
-@include gen-size(weight-100) { font-weight: 100; }
-@include gen-states(weight-200) { font-weight: 200; }
-@include gen-size(weight-200) { font-weight: 200; }
-@include gen-states(weight-300) { font-weight: 300; }
-@include gen-size(weight-300) { font-weight: 300; }
-@include gen-states(weight-400) { font-weight: 400; }
-@include gen-size(weight-400) { font-weight: 400; }
-@include gen-states(weight-500) { font-weight: 500; }
-@include gen-size(weight-500) { font-weight: 500; }
-@include gen-states(weight-600) { font-weight: 600; }
-@include gen-size(weight-600) { font-weight: 600; }
-@include gen-states(weight-700) { font-weight: 700; }
-@include gen-size(weight-700) { font-weight: 700; }
-@include gen-states(weight-800) { font-weight: 800; }
-@include gen-size(weight-800) { font-weight: 800; }
-@include gen-states(weight-900) { font-weight: 900; }
-@include gen-size(weight-900) { font-weight: 900; }
+@for $i from 1 through 10 {
+  $weight: $i * 100;
+  @include gen-states(weight-#{$weight}) { font-weight: $weight; }
+}
 
 @include gen-states(italic) { font-style: italic; }
 @include gen-states(overline) { text-decoration: overline; }
@@ -1059,13 +1050,13 @@
 // Typography - Text Formatting - Layout and Alignment
 
 @include gen-states(text-left) { text-align: left; }
-@include gen-size(text-left) { text-align: left; }
+// @include gen-state(text-left) { text-align: left; }
 @include gen-states(text-center) { text-align: center; }
-@include gen-size(text-center) { text-align: center; }
+// @include gen-state(text-center) { text-align: center; }
 @include gen-states(text-right) { text-align: right; }
-@include gen-size(text-right) { text-align: right; }
+// @include gen-state(text-right) { text-align: right; }
 @include gen-states(text-justify) { text-align: justify; }
-@include gen-size(text-justify) { text-align: justify; }
+// @include gen-state(text-justify) { text-align: justify; }
 
 @include gen-states(uppercase) { text-transform: uppercase; }
 @include gen-states(lowercase) { text-transform: lowercase; }
@@ -1073,86 +1064,86 @@
 @include gen-states(normal-case) { text-transform: none; }
 
 @include gen-states(line-height-0-5) { line-height: 0.5; }
-@include gen-size(line-height-0-5) { line-height: 0.5; }
+// @include gen-state(line-height-0-5) { line-height: 0.5; }
 @include gen-states(line-height-0-75) { line-height: 0.75; }
-@include gen-size(line-height-0-75) { line-height: 0.75; }
+// @include gen-state(line-height-0-75) { line-height: 0.75; }
 @include gen-states(line-height-1) { line-height: 1; }
-@include gen-size(line-height-1) { line-height: 1; }
+// @include gen-state(line-height-1) { line-height: 1; }
 @include gen-states(line-height-1-25) { line-height: 1.25; }
-@include gen-size(line-height-1-25) { line-height: 1.25; }
+// @include gen-state(line-height-1-25) { line-height: 1.25; }
 @include gen-states(line-height-1-5) { line-height: 1.5; }
-@include gen-size(line-height-1-5) { line-height: 1.5; }
+// @include gen-state(line-height-1-5) { line-height: 1.5; }
 @include gen-states(line-height-1-75) { line-height: 1.75; }
-@include gen-size(line-height-1-75) { line-height: 1.75; }
+// @include gen-state(line-height-1-75) { line-height: 1.75; }
 @include gen-states(line-height-2) { line-height: 2; }
-@include gen-size(line-height-2) { line-height: 2; }
+// @include gen-state(line-height-2) { line-height: 2; }
 @include gen-states(line-height-2-25) { line-height: 2.25; }
-@include gen-size(line-height-2-25) { line-height: 2.25; }
+// @include gen-state(line-height-2-25) { line-height: 2.25; }
 @include gen-states(line-height-2-5) { line-height: 2.5; }
-@include gen-size(line-height-2-5) { line-height: 2.5; }
+// @include gen-state(line-height-2-5) { line-height: 2.5; }
 @include gen-states(line-height-2-75) { line-height: 2.75; }
-@include gen-size(line-height-2-75) { line-height: 2.75; }
+// @include gen-state(line-height-2-75) { line-height: 2.75; }
 @include gen-states(line-height-3) { line-height: 3; }
-@include gen-size(line-height-3) { line-height: 3; }
+// @include gen-state(line-height-3) { line-height: 3; }
 @include gen-states(line-height-3-25) { line-height: 3.25; }
-@include gen-size(line-height-3-25) { line-height: 3.25; }
+// @include gen-state(line-height-3-25) { line-height: 3.25; }
 @include gen-states(line-height-3-5) { line-height: 3.5; }
-@include gen-size(line-height-3-5) { line-height: 3.5; }
+// @include gen-state(line-height-3-5) { line-height: 3.5; }
 @include gen-states(line-height-3-75) { line-height: 3.75; }
-@include gen-size(line-height-3-75) { line-height: 3.75; }
+// @include gen-state(line-height-3-75) { line-height: 3.75; }
 @include gen-states(line-height-4) { line-height: 4; }
-@include gen-size(line-height-4) { line-height: 4; }
+// @include gen-state(line-height-4) { line-height: 4; }
 @include gen-states(line-height-4-25) { line-height: 4.25; }
-@include gen-size(line-height-4-25) { line-height: 4.25; }
+// @include gen-state(line-height-4-25) { line-height: 4.25; }
 @include gen-states(line-height-4-5) { line-height: 4.5; }
-@include gen-size(line-height-4-5) { line-height: 4.5; }
+// @include gen-state(line-height-4-5) { line-height: 4.5; }
 @include gen-states(line-height-4-75) { line-height: 4.75; }
-@include gen-size(line-height-4-75) { line-height: 4.75; }
+// @include gen-state(line-height-4-75) { line-height: 4.75; }
 @include gen-states(line-height-5-25) { line-height: 5.25; }
-@include gen-size(line-height-5-25) { line-height: 5.25; }
+// @include gen-state(line-height-5-25) { line-height: 5.25; }
 @include gen-states(line-height-5-5) { line-height: 5.5; }
-@include gen-size(line-height-5-5) { line-height: 5.5; }
+// @include gen-state(line-height-5-5) { line-height: 5.5; }
 @include gen-states(line-height-5-75) { line-height: 5.75; }
-@include gen-size(line-height-5-75) { line-height: 5.75; }
+// @include gen-state(line-height-5-75) { line-height: 5.75; }
 @include gen-states(line-height-6-25) { line-height: 6.25; }
-@include gen-size(line-height-6-25) { line-height: 6.25; }
+// @include gen-state(line-height-6-25) { line-height: 6.25; }
 @include gen-states(line-height-6-5) { line-height: 6.5; }
-@include gen-size(line-height-6-5) { line-height: 6.5; }
+// @include gen-state(line-height-6-5) { line-height: 6.5; }
 @include gen-states(line-height-6-75) { line-height: 6.75; }
-@include gen-size(line-height-6-75) { line-height: 6.75; }
+// @include gen-state(line-height-6-75) { line-height: 6.75; }
 @include gen-states(line-height-7-25) { line-height: 7.25; }
-@include gen-size(line-height-7-25) { line-height: 7.25; }
+// @include gen-state(line-height-7-25) { line-height: 7.25; }
 @include gen-states(line-height-7-5) { line-height: 7.5; }
-@include gen-size(line-height-7-5) { line-height: 7.5; }
+// @include gen-state(line-height-7-5) { line-height: 7.5; }
 @include gen-states(line-height-7-75) { line-height: 7.75; }
-@include gen-size(line-height-7-75) { line-height: 7.75; }
+// @include gen-state(line-height-7-75) { line-height: 7.75; }
 @include gen-states(line-height-8-25) { line-height: 8.25; }
-@include gen-size(line-height-8-25) { line-height: 8.25; }
+// @include gen-state(line-height-8-25) { line-height: 8.25; }
 @include gen-states(line-height-8-5) { line-height: 8.5; }
-@include gen-size(line-height-8-5) { line-height: 8.5; }
+// @include gen-state(line-height-8-5) { line-height: 8.5; }
 @include gen-states(line-height-8-75) { line-height: 8.75; }
-@include gen-size(line-height-8-75) { line-height: 8.75; }
+// @include gen-state(line-height-8-75) { line-height: 8.75; }
 @include gen-states(line-height-9-25) { line-height: 9.25; }
-@include gen-size(line-height-9-25) { line-height: 9.25; }
+// @include gen-state(line-height-9-25) { line-height: 9.25; }
 @include gen-states(line-height-9-5) { line-height: 9.5; }
-@include gen-size(line-height-9-5) { line-height: 9.5; }
+// @include gen-state(line-height-9-5) { line-height: 9.5; }
 @include gen-states(line-height-9-75) { line-height: 9.75; }
-@include gen-size(line-height-9-75) { line-height: 9.75; }
+// @include gen-state(line-height-9-75) { line-height: 9.75; }
 @include gen-states(line-height-10) { line-height: 10; }
-@include gen-size(line-height-10) { line-height: 10; }
+// @include gen-state(line-height-10) { line-height: 10; }
 
 @include gen-states(letter-tighter) { letter-spacing: -0.05em; }
-@include gen-size(letter-tighter) { letter-spacing: -0.05em; }
+// @include gen-state(letter-tighter) { letter-spacing: -0.05em; }
 @include gen-states(letter-tight) { letter-spacing: -0.025em; }
-@include gen-size(letter-tight) { letter-spacing: -0.025em; }
+// @include gen-state(letter-tight) { letter-spacing: -0.025em; }
 @include gen-states(letter-normal) { letter-spacing: normal; }
-@include gen-size(letter-normal) { letter-spacing: normal; }
+// @include gen-state(letter-normal) { letter-spacing: normal; }
 @include gen-states(letter-wide) { letter-spacing: 0.025em; }
-@include gen-size(letter-wide) { letter-spacing: 0.025em; }
+// @include gen-state(letter-wide) { letter-spacing: 0.025em; }
 @include gen-states(letter-wider) { letter-spacing: 0.05em; }
-@include gen-size(letter-wider) { letter-spacing: 0.05em; }
+// @include gen-state(letter-wider) { letter-spacing: 0.05em; }
 @include gen-states(letter-widest) { letter-spacing: 0.1em; }
-@include gen-size(letter-widest) { letter-spacing: 0.1em; }
+// @include gen-state(letter-widest) { letter-spacing: 0.1em; }
 
 // Typography - Text Formatting - Lists
 
@@ -1173,19 +1164,21 @@
 // Layouts - Flexbox - Flex
 
 @for $i from 0 through 100 {
-  $basis: $i * 0.25em;
-  @include gen-states(basis-#{$i}) { flex-basis: $basis; }
-  @include gen-size(basis-#{$i}) { flex-basis: $basis; }
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $basis: $i * 0.25em;
+    @include gen-states(basis-#{$i}) { flex-basis: $basis; }
+    // @include gen-state(basis-#{$i}) { flex-basis: $basis; }
+  }
 }
 
 @include gen-states(flex-row) { flex-direction: row; }
-@include gen-size(flex-row) { flex-direction: row; }
+// @include gen-state(flex-row) { flex-direction: row; }
 @include gen-states(flex-row-reverse) { flex-direction: row-reverse; }
-@include gen-size(flex-row-reverse) { flex-direction: row-reverse; }
+// @include gen-state(flex-row-reverse) { flex-direction: row-reverse; }
 @include gen-states(flex-col) { flex-direction: column; }
-@include gen-size(flex-col) { flex-direction: column; }
+// @include gen-state(flex-col) { flex-direction: column; }
 @include gen-states(flex-col-reverse) { flex-direction: column-reverse; }
-@include gen-size(flex-col-reverse) { flex-direction: column-reverse; }
+// @include gen-state(flex-col-reverse) { flex-direction: column-reverse; }
 
 @include gen-states(flex-wrap) { flex-wrap: wrap; }
 @include gen-states(flex-wrap-reverse) { flex-wrap: wrap-reverse; }
@@ -1193,77 +1186,79 @@
 
 @for $i from 0 through 10 {
   @include gen-states(flex-grow-#{$i}) { flex-grow: $i; }
-  @include gen-size(flex-grow-#{$i}) { flex-grow: $i; }
+  // @include gen-state(flex-grow-#{$i}) { flex-grow: $i; }
   @include gen-states(flex-shrink-#{$i}) { flex-shrink: $i; }
-  @include gen-size(flex-shrink-#{$i}) { flex-shrink: $i; }
+  // @include gen-state(flex-shrink-#{$i}) { flex-shrink: $i; }
 }
 
 @for $i from 0 through 100 {
-  $gap: $i * 0.25em;
-  @include gen-states(gap-#{$i}) { gap: $gap; }
-  @include gen-size(gap-#{$i}) { gap: $gap; }
-  @include gen-states(gap-x-#{$i}) { column-gap: $gap; }
-  @include gen-size(gap-x-#{$i}) { column-gap: $gap; }
-  @include gen-states(gap-y-#{$i}) { row-gap: $gap; }
-  @include gen-size(gap-y-#{$i}) { row-gap: $gap; }
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $gap: $i * 0.25em;
+    @include gen-states(gap-#{$i}) { gap: $gap; }
+    // @include gen-state(gap-#{$i}) { gap: $gap; }
+    @include gen-states(gap-x-#{$i}) { column-gap: $gap; }
+    // @include gen-state(gap-x-#{$i}) { column-gap: $gap; }
+    @include gen-states(gap-y-#{$i}) { row-gap: $gap; }
+    // @include gen-state(gap-y-#{$i}) { row-gap: $gap; }
+  }
 }
 
 @include gen-states(justify-start) { justify-content: flex-start; }
-@include gen-size(justify-start) { justify-content: flex-start; }
+// @include gen-state(justify-start) { justify-content: flex-start; }
 @include gen-states(justify-center) { justify-content: center; }
-@include gen-size(justify-center) { justify-content: center; }
+// @include gen-state(justify-center) { justify-content: center; }
 @include gen-states(justify-end) { justify-content: flex-end; }
-@include gen-size(justify-end) { justify-content: flex-end; }
+// @include gen-state(justify-end) { justify-content: flex-end; }
 @include gen-states(justify-between) { justify-content: space-between; }
-@include gen-size(justify-between) { justify-content: space-between; }
+// @include gen-state(justify-between) { justify-content: space-between; }
 @include gen-states(justify-around) { justify-content: space-around; }
-@include gen-size(justify-around) { justify-content: space-around; }
+// @include gen-state(justify-around) { justify-content: space-around; }
 @include gen-states(justify-evenly) { justify-content: space-evenly; }
-@include gen-size(justify-evenly) { justify-content: space-evenly; }
+// @include gen-state(justify-evenly) { justify-content: space-evenly; }
 
 @include gen-states(items-stretch) { align-items: stretch; }
-@include gen-size(items-stretch) { align-items: stretch; }
+// @include gen-state(items-stretch) { align-items: stretch; }
 @include gen-states(items-start) { align-items: flex-start; }
-@include gen-size(items-start) { align-items: flex-start; }
+// @include gen-state(items-start) { align-items: flex-start; }
 @include gen-states(items-center) { align-items: center; }
-@include gen-size(items-center) { align-items: center; }
+// @include gen-state(items-center) { align-items: center; }
 @include gen-states(items-end) { align-items: flex-end; }
-@include gen-size(items-end) { align-items: flex-end; }
+// @include gen-state(items-end) { align-items: flex-end; }
 @include gen-states(items-baseline) { align-items: baseline; }
-@include gen-size(items-baseline) { align-items: baseline; }
+// @include gen-state(items-baseline) { align-items: baseline; }
 
 @include gen-states(self-auto) { align-self: auto; }
-@include gen-size(self-auto) { align-self: auto; }
+// @include gen-state(self-auto) { align-self: auto; }
 @include gen-states(self-start) { align-self: flex-start; }
-@include gen-size(self-start) { align-self: flex-start; }
+// @include gen-state(self-start) { align-self: flex-start; }
 @include gen-states(self-center) { align-self: center; }
-@include gen-size(self-center) { align-self: center; }
+// @include gen-state(self-center) { align-self: center; }
 @include gen-states(self-end) { align-self: flex-end; }
-@include gen-size(self-end) { align-self: flex-end; }
+// @include gen-state(self-end) { align-self: flex-end; }
 @include gen-states(self-stretch) { align-self: stretch; }
-@include gen-size(self-stretch) { align-self: stretch; }
+// @include gen-state(self-stretch) { align-self: stretch; }
 @include gen-states(self-baseline) { align-self: baseline; }
-@include gen-size(self-baseline) { align-self: baseline; }
+// @include gen-state(self-baseline) { align-self: baseline; }
 
 @include gen-states(justify-items-stretch) { justify-items: stretch; }
-@include gen-size(justify-items-stretch) { justify-items: stretch; }
+// @include gen-state(justify-items-stretch) { justify-items: stretch; }
 @include gen-states(justify-items-start) { justify-items: start; }
-@include gen-size(justify-items-start) { justify-items: start; }
+// @include gen-state(justify-items-start) { justify-items: start; }
 @include gen-states(justify-items-center) { justify-items: center; }
-@include gen-size(justify-items-center) { justify-items: center; }
+// @include gen-state(justify-items-center) { justify-items: center; }
 @include gen-states(justify-items-end) { justify-items: end; }
-@include gen-size(justify-items-end) { justify-items: end; }
+// @include gen-state(justify-items-end) { justify-items: end; }
 
 @include gen-states(justify-self-stretch) { justify-self: stretch; }
-@include gen-size(justify-self-stretch) { justify-self: stretch; }
+// @include gen-state(justify-self-stretch) { justify-self: stretch; }
 @include gen-states(justify-self-start) { justify-self: start; }
-@include gen-size(justify-self-start) { justify-self: start; }
+// @include gen-state(justify-self-start) { justify-self: start; }
 @include gen-states(justify-self-center) { justify-self: center; }
-@include gen-size(justify-self-center) { justify-self: center; }
+// @include gen-state(justify-self-center) { justify-self: center; }
 @include gen-states(justify-self-end) { justify-self: end; }
-@include gen-size(justify-self-end) { justify-self: end; }
+// @include gen-state(justify-self-end) { justify-self: end; }
 @include gen-states(justify-self-auto) { justify-self: auto; }
-@include gen-size(justify-self-auto) { justify-self: auto; }
+// @include gen-state(justify-self-auto) { justify-self: auto; }
 
 // Utilities - Borders - Properties
 
@@ -1283,79 +1278,79 @@ $border-radius-values: (
 
 @each $size, $value in $border-radius-values {
   @include gen-states(rounded#{$size}) { border-radius: $value; }
-  @include gen-size(rounded#{$size}) { border-radius: $value; }
+  // @include gen-state(rounded#{$size}) { border-radius: $value; }
 
   @include gen-states(rounded-tl#{$size}) { border-top-left-radius: $value; }
-  @include gen-size(rounded-tl#{$size}) { border-top-left-radius: $value; }
+  // @include gen-state(rounded-tl#{$size}) { border-top-left-radius: $value; }
   @include gen-states(rounded-tr#{$size}) { border-top-right-radius: $value; }
-  @include gen-size(rounded-tr#{$size}) { border-top-right-radius: $value; }
+  // @include gen-state(rounded-tr#{$size}) { border-top-right-radius: $value; }
   @include gen-states(rounded-br#{$size}) { border-bottom-right-radius: $value; }
-  @include gen-size(rounded-br#{$size}) { border-bottom-right-radius: $value; }
+  // @include gen-state(rounded-br#{$size}) { border-bottom-right-radius: $value; }
   @include gen-states(rounded-bl#{$size}) { border-bottom-left-radius: $value; }
-  @include gen-size(rounded-bl#{$size}) { border-bottom-left-radius: $value; }
+  // @include gen-state(rounded-bl#{$size}) { border-bottom-left-radius: $value; }
 
   @include gen-states(rounded-t#{$size}) {
     border-top-left-radius: $value;
     border-top-right-radius: $value;
   }
-  @include gen-size(rounded-t#{$size}) {
-    border-top-left-radius: $value;
-    border-top-right-radius: $value;
-  }
+  // @include gen-state(rounded-t#{$size}) {
+  //   border-top-left-radius: $value;
+  //   border-top-right-radius: $value;
+  // }
 
   @include gen-states(rounded-r#{$size}) {
     border-top-right-radius: $value;
     border-bottom-right-radius: $value;
   }
-  @include gen-size(rounded-r#{$size}) {
-    border-top-right-radius: $value;
-    border-bottom-right-radius: $value;
-  }
+  // @include gen-state(rounded-r#{$size}) {
+  //   border-top-right-radius: $value;
+  //   border-bottom-right-radius: $value;
+  // }
 
   @include gen-states(rounded-b#{$size}) {
     border-bottom-right-radius: $value;
     border-bottom-left-radius: $value;
   }
-  @include gen-size(rounded-b#{$size}) {
-    border-bottom-right-radius: $value;
-    border-bottom-left-radius: $value;
-  }
+  // @include gen-state(rounded-b#{$size}) {
+  //   border-bottom-right-radius: $value;
+  //   border-bottom-left-radius: $value;
+  // }
 
   @include gen-states(rounded-l#{$size}) {
     border-top-left-radius: $value;
     border-bottom-left-radius: $value;
   }
-  @include gen-size(rounded-l#{$size}) {
-    border-top-left-radius: $value;
-    border-bottom-left-radius: $value;
-  }
+  // @include gen-state(rounded-l#{$size}) {
+  //   border-top-left-radius: $value;
+  //   border-bottom-left-radius: $value;
+  // }
 }
 
 @for $i from 0 through 10 {
   $size: $i * 1px;
   @if $i == 1 {
     @include gen-states(border) { border-width: $size; }
-    @include gen-size(border) { border-width: $size; }
+    // @include gen-state(border) { border-width: $size; }
     @include gen-states(border-t) { border-top-width: $size; }
-    @include gen-size(border-t) { border-top-width: $size; }
+    // @include gen-state(border-t) { border-top-width: $size; }
     @include gen-states(border-r) { border-right-width: $size; }
-    @include gen-size(border-r) { border-right-width: $size; }
+    // @include gen-state(border-r) { border-right-width: $size; }
     @include gen-states(border-b) { border-bottom-width: $size; }
-    @include gen-size(border-b) { border-bottom-width: $size; }
+    // @include gen-state(border-b) { border-bottom-width: $size; }
     @include gen-states(border-l) { border-left-width: $size; }
-    @include gen-size(border-l) { border-left-width: $size; }
+    // @include gen-state(border-l) { border-left-width: $size; }
   }
   @else {
     @include gen-states(border-#{$i}) { border-width: $size; }
-    @include gen-size(border-#{$i}) { border-width: $size; }
+    // @include gen-state(border-#{$i}) { border-width: $size; }
     @include gen-states(border-t-#{$i}) { border-top-width: $size; }
-    @include gen-size(border-t-#{$i}) { border-top-width: $size; }
+    // @include gen-state(border-t-#{$i}) { border-top-width: $size; }
     @include gen-states(border-r-#{$i}) { border-right-width: $size; }
-    @include gen-size(border-r-#{$i}) { border-right-width: $size; }
+    // @include gen-state(border-r-#{$i}) { border-right-width: $size; }
     @include gen-states(border-b-#{$i}) { border-bottom-width: $size; }
-    @include gen-size(border-b-#{$i}) { border-bottom-width: $size; }
+    // @include gen-state(border-b-#{$i}) { border-bottom-width: $size; }
     @include gen-states(border-l-#{$i}) { border-left-width: $size; }
-    @include gen-size(border-l-#{$i}) { border-left-width: $size; }
+    // @include gen-state(border-l-#{$i}) { border-left-width: $size; }
   }
 }
 
@@ -1798,11 +1793,11 @@ $border-radius-values: (
   $size: $i * 1px;
   @if $i == 1 {
     @include gen-states(outline) { outline-width: $size; }
-    @include gen-size(outline) { outline-width: $size; }
+    // @include gen-state(outline) { outline-width: $size; }
   }
   @else {
     @include gen-states(outline-#{$i}) { outline-width: $size; }
-    @include gen-size(outline-#{$i}) { outline-width: $size; }
+    // @include gen-state(outline-#{$i}) { outline-width: $size; }
   }
 }
 
@@ -2216,183 +2211,188 @@ $border-radius-values: (
 @for $i from 0 through 10 {
   $offset: $i * 1px;
   @include gen-states(outline-offset-#{$i}) { outline-offset: $offset; }
-  @include gen-size(outline-offset-#{$i}) { outline-offset: $offset; }
+  // @include gen-state(outline-offset-#{$i}) { outline-offset: $offset; }
 }
 
 // Utilities - Sizing - Width
 
 @include gen-states(w-auto) { width: auto; }
-@include gen-size(w-auto) { width: auto; }
+// @include gen-state(w-auto) { width: auto; }
 @include gen-states(w-full) { width: 100%; }
-@include gen-size(w-full) { width: 100%; }
+// @include gen-state(w-full) { width: 100%; }
 @include gen-states(w-screen) { width: 100vw; }
-@include gen-size(w-screen) { width: 100vw; }
-@include gen-states(w-min) { width: min-content; }
-@include gen-size(w-min) { width: min-content; }
+// @include gen-state(w-screen) { width: 100vw; }
+@include gen-states(w-min) { width: min-content; } // @include gen-state(w-min) { width: min-content; }
 @include gen-states(w-max) { width: max-content; }
-@include gen-size(w-max) { width: max-content; }
+// @include gen-state(w-max) { width: max-content; }
 @include gen-states(w-fit) { width: fit-content; }
-@include gen-size(w-fit) { width: fit-content; }
+// @include gen-state(w-fit) { width: fit-content; }
 @include gen-states(w-1\/2) { width: 50%; }
-@include gen-size(w-1\/2) { width: 50%; }
+// @include gen-state(w-1\/2) { width: 50%; }
 @include gen-states(w-1\/3) { width: 33.333333%; }
-@include gen-size(w-1\/3) { width: 33.333333%; }
+// @include gen-state(w-1\/3) { width: 33.333333%; }
 @include gen-states(w-2\/3) { width: 66.666667%; }
-@include gen-size(w-2\/3) { width: 66.666667%; }
+// @include gen-state(w-2\/3) { width: 66.666667%; }
 @include gen-states(w-1\/4) { width: 25%; }
-@include gen-size(w-1\/4) { width: 25%; }
+// @include gen-state(w-1\/4) { width: 25%; }
 @include gen-states(w-2\/4) { width: 50%; }
-@include gen-size(w-2\/4) { width: 50%; }
+// @include gen-state(w-2\/4) { width: 50%; }
 @include gen-states(w-3\/4) { width: 75%; }
-@include gen-size(w-3\/4) { width: 75%; }
+// @include gen-state(w-3\/4) { width: 75%; }
 @include gen-states(w-1\/5) { width: 20%; }
-@include gen-size(w-1\/5) { width: 20%; }
+// @include gen-state(w-1\/5) { width: 20%; }
 @include gen-states(w-2\/5) { width: 40%; }
-@include gen-size(w-2\/5) { width: 40%; }
+// @include gen-state(w-2\/5) { width: 40%; }
 @include gen-states(w-3\/5) { width: 60%; }
-@include gen-size(w-3\/5) { width: 60%; }
+// @include gen-state(w-3\/5) { width: 60%; }
 @include gen-states(w-4\/5) { width: 80%; }
-@include gen-size(w-4\/5) { width: 80%; }
+// @include gen-state(w-4\/5) { width: 80%; }
 @include gen-states(w-1\/6) { width: 16.666667%; }
-@include gen-size(w-1\/6) { width: 16.666667%; }
+// @include gen-state(w-1\/6) { width: 16.666667%; }
 @include gen-states(w-2\/6) { width: 33.333333%; }
-@include gen-size(w-2\/6) { width: 33.333333%; }
+// @include gen-state(w-2\/6) { width: 33.333333%; }
 @include gen-states(w-3\/6) { width: 50%; }
-@include gen-size(w-3\/6) { width: 50%; }
+// @include gen-state(w-3\/6) { width: 50%; }
 @include gen-states(w-4\/6) { width: 66.666667%; }
-@include gen-size(w-4\/6) { width: 66.666667%; }
+// @include gen-state(w-4\/6) { width: 66.666667%; }
 @include gen-states(w-5\/6) { width: 83.333333%; }
-@include gen-size(w-5\/6) { width: 83.333333%; }
+// @include gen-state(w-5\/6) { width: 83.333333%; }
 
 @for $i from 0 through 100 {
-  $width: $i * 0.25em;
-  @include gen-states(w-#{$i}) { width: $width; }
-  @include gen-size(w-#{$i}) { width: $width; }
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $width: $i * 0.25em;
+    @include gen-states(w-#{$i}) { width: $width; }
+    // @include gen-state(w-#{$i}) { width: $width; }
+  }
 }
 
 @include gen-states(min-w-0) { min-width: 0; }
-@include gen-size(min-w-0) { min-width: 0; }
+// @include gen-state(min-w-0) { min-width: 0; }
 @include gen-states(min-w-full) { min-width: 100%; }
-@include gen-size(min-w-full) { min-width: 100%; }
+// @include gen-state(min-w-full) { min-width: 100%; }
 @include gen-states(min-w-min) { min-width: min-content; }
-@include gen-size(min-w-min) { min-width: min-content; }
+// @include gen-state(min-w-min) { min-width: min-content; }
 @include gen-states(min-w-max) { min-width: max-content; }
-@include gen-size(min-w-max) { min-width: max-content; }
+// @include gen-state(min-w-max) { min-width: max-content; }
 @include gen-states(min-w-fit) { min-width: fit-content; }
-@include gen-size(min-w-fit) { min-width: fit-content; }
+// @include gen-state(min-w-fit) { min-width: fit-content; }
 
 @include gen-states(max-w-0) { max-width: 0rem; }
-@include gen-size(max-w-0) { max-width: 0rem; }
+// @include gen-state(max-w-0) { max-width: 0rem; }
 @include gen-states(max-w-none) { max-width: none; }
-@include gen-size(max-w-none) { max-width: none; }
+// @include gen-state(max-w-none) { max-width: none; }
 @include gen-states(max-w-xs) { max-width: 20rem; }
-@include gen-size(max-w-xs) { max-width: 20rem; }
+// @include gen-state(max-w-xs) { max-width: 20rem; }
 @include gen-states(max-w-sm) { max-width: 24rem; }
-@include gen-size(max-w-sm) { max-width: 24rem; }
+// @include gen-state(max-w-sm) { max-width: 24rem; }
 @include gen-states(max-w-md) { max-width: 28rem; }
-@include gen-size(max-w-md) { max-width: 28rem; }
+// @include gen-state(max-w-md) { max-width: 28rem; }
 @include gen-states(max-w-lg) { max-width: 32rem; }
-@include gen-size(max-w-lg) { max-width: 32rem; }
+// @include gen-state(max-w-lg) { max-width: 32rem; }
 @include gen-states(max-w-xl) { max-width: 36rem; }
-@include gen-size(max-w-xl) { max-width: 36rem; }
+// @include gen-state(max-w-xl) { max-width: 36rem; }
 @include gen-states(max-w-2xl) { max-width: 42rem; }
-@include gen-size(max-w-2xl) { max-width: 42rem; }
+// @include gen-state(max-w-2xl) { max-width: 42rem; }
 @include gen-states(max-w-3xl) { max-width: 48rem; }
-@include gen-size(max-w-3xl) { max-width: 48rem; }
+// @include gen-state(max-w-3xl) { max-width: 48rem; }
 @include gen-states(max-w-4xl) { max-width: 56rem; }
-@include gen-size(max-w-4xl) { max-width: 56rem; }
+// @include gen-state(max-w-4xl) { max-width: 56rem; }
 @include gen-states(max-w-5xl) { max-width: 64rem; }
-@include gen-size(max-w-5xl) { max-width: 64rem; }
+// @include gen-state(max-w-5xl) { max-width: 64rem; }
 @include gen-states(max-w-6xl) { max-width: 72rem; }
-@include gen-size(max-w-6xl) { max-width: 72rem; }
+// @include gen-state(max-w-6xl) { max-width: 72rem; }
 @include gen-states(max-w-7xl) { max-width: 80rem; }
-@include gen-size(max-w-7xl) { max-width: 80rem; }
+// @include gen-state(max-w-7xl) { max-width: 80rem; }
 @include gen-states(max-w-full) { max-width: 100%; }
-@include gen-size(max-w-full) { max-width: 100%; }
+// @include gen-state(max-w-full) { max-width: 100%; }
 @include gen-states(max-w-min) { max-width: min-content; }
-@include gen-size(max-w-min) { max-width: min-content; }
+// @include gen-state(max-w-min) { max-width: min-content; }
 @include gen-states(max-w-max) { max-width: max-content; }
-@include gen-size(max-w-max) { max-width: max-content; }
+// @include gen-state(max-w-max) { max-width: max-content; }
 @include gen-states(max-w-fit) { max-width: fit-content; }
-@include gen-size(max-w-fit) { max-width: fit-content; }
+// @include gen-state(max-w-fit) { max-width: fit-content; }
 
 // Utilities - Sizing - Height
 
 @include gen-states(h-auto) { height: auto; }
-@include gen-size(h-auto) { height: auto; }
+// @include gen-state(h-auto) { height: auto; }
 @include gen-states(h-full) { height: 100%; }
-@include gen-size(h-full) { height: 100%; }
+// @include gen-state(h-full) { height: 100%; }
 @include gen-states(h-screen) { height: 100vh; }
-@include gen-size(h-screen) { height: 100vh; }
+// @include gen-state(h-screen) { height: 100vh; }
 @include gen-states(h-min) { height: min-content; }
-@include gen-size(h-min) { height: min-content; }
+// @include gen-state(h-min) { height: min-content; }
 @include gen-states(h-max) { height: max-content; }
-@include gen-size(h-max) { height: max-content; }
+// @include gen-state(h-max) { height: max-content; }
 @include gen-states(h-fit) { height: fit-content; }
-@include gen-size(h-fit) { height: fit-content; }
+// @include gen-state(h-fit) { height: fit-content; }
 @include gen-states(h-1\/2) { height: 50%; }
-@include gen-size(h-1\/2) { height: 50%; }
+// @include gen-state(h-1\/2) { height: 50%; }
 @include gen-states(h-1\/3) { height: 33.333333%; }
-@include gen-size(h-1\/3) { height: 33.333333%; }
+// @include gen-state(h-1\/3) { height: 33.333333%; }
 @include gen-states(h-2\/3) { height: 66.666667%; }
-@include gen-size(h-2\/3) { height: 66.666667%; }
+// @include gen-state(h-2\/3) { height: 66.666667%; }
 @include gen-states(h-1\/4) { height: 25%; }
-@include gen-size(h-1\/4) { height: 25%; }
+// @include gen-state(h-1\/4) { height: 25%; }
 @include gen-states(h-2\/4) { height: 50%; }
-@include gen-size(h-2\/4) { height: 50%; }
+// @include gen-state(h-2\/4) { height: 50%; }
 @include gen-states(h-3\/4) { height: 75%; }
-@include gen-size(h-3\/4) { height: 75%; }
+// @include gen-state(h-3\/4) { height: 75%; }
 @include gen-states(h-1\/5) { height: 20%; }
-@include gen-size(h-1\/5) { height: 20%; }
+// @include gen-state(h-1\/5) { height: 20%; }
 @include gen-states(h-2\/5) { height: 40%; }
-@include gen-size(h-2\/5) { height: 40%; }
+// @include gen-state(h-2\/5) { height: 40%; }
 @include gen-states(h-3\/5) { height: 60%; }
-@include gen-size(h-3\/5) { height: 60%; }
+// @include gen-state(h-3\/5) { height: 60%; }
 @include gen-states(h-4\/5) { height: 80%; }
-@include gen-size(h-4\/5) { height: 80%; }
+// @include gen-state(h-4\/5) { height: 80%; }
 @include gen-states(h-1\/6) { height: 16.666667%; }
-@include gen-size(h-1\/6) { height: 16.666667%; }
+// @include gen-state(h-1\/6) { height: 16.666667%; }
 @include gen-states(h-2\/6) { height: 33.333333%; }
-@include gen-size(h-2\/6) { height: 33.333333%; }
+// @include gen-state(h-2\/6) { height: 33.333333%; }
 @include gen-states(h-3\/6) { height: 50%; }
-@include gen-size(h-3\/6) { height: 50%; }
+// @include gen-state(h-3\/6) { height: 50%; }
 @include gen-states(h-4\/6) { height: 66.666667%; }
-@include gen-size(h-4\/6) { height: 66.666667%; }
+// @include gen-state(h-4\/6) { height: 66.666667%; }
 @include gen-states(h-5\/6) { height: 83.333333%; }
-@include gen-size(h-5\/6) { height: 83.333333%; }
+// @include gen-state(h-5\/6) { height: 83.333333%; }
 
 @for $i from 0 through 100 {
-  $height: $i * 0.25em;
-  @include gen-states(h-#{$i}) { height: $height; }
-  @include gen-size(h-#{$i}) { height: $height; }
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $height: $i * 0.25em;
+    @include gen-states(h-#{$i}) { height: $height; }
+    // @include gen-state(h-#{$i}) { height: $height; }
+  }
 }
 
 @include gen-states(min-h-0) { min-height: 0; }
-@include gen-size(min-h-0) { min-height: 0; }
+// @include gen-state(min-h-0) { min-height: 0; }
 @include gen-states(min-h-full) { min-height: 100%; }
-@include gen-size(min-h-full) { min-height: 100%; }
+// @include gen-state(min-h-full) { min-height: 100%; }
 @include gen-states(min-h-min) { min-height: min-content; }
-@include gen-size(min-h-min) { min-height: min-content; }
+// @include gen-state(min-h-min) { min-height: min-content; }
 @include gen-states(min-h-max) { min-height: max-content; }
-@include gen-size(min-h-max) { min-height: max-content; }
+// @include gen-state(min-h-max) { min-height: max-content; }
 @include gen-states(min-h-fit) { min-height: fit-content; }
-@include gen-size(min-h-fit) { min-height: fit-content; }
+// @include gen-state(min-h-fit) { min-height: fit-content; }
 
 @include gen-states(max-h-none) { max-height: none; }
-@include gen-size(max-h-none) { max-height: none; }
+// @include gen-state(max-h-none) { max-height: none; }
 @include gen-states(max-h-full) { max-height: 100%; }
-@include gen-size(max-h-full) { max-height: 100%; }
+// @include gen-state(max-h-full) { max-height: 100%; }
 @include gen-states(max-h-min) { max-height: min-content; }
-@include gen-size(max-h-min) { max-height: min-content; }
+// @include gen-state(max-h-min) { max-height: min-content; }
 @include gen-states(max-h-max) { max-height: max-content; }
-@include gen-size(max-h-max) { max-height: max-content; }
+// @include gen-state(max-h-max) { max-height: max-content; }
 @include gen-states(max-h-fit) { max-height: fit-content; }
-@include gen-size(max-h-fit) { max-height: fit-content; }
+// @include gen-state(max-h-fit) { max-height: fit-content; }
 
 @for $i from 0 through 100 {
-  $height: $i * 0.25em;
-  @include gen-states(max-h-#{$i}) { max-height: $height; }
-  @include gen-size(max-h-#{$i}) { max-height: $height; }
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $height: $i * 0.25em;
+    @include gen-states(max-h-#{$i}) { max-height: $height; }
+    // @include gen-state(max-h-#{$i}) { max-height: $height; }
+  }
 }
 
 // Utilities - Layout - Box Sizing
@@ -2403,133 +2403,141 @@ $border-radius-values: (
 // Utilities - Layout - Display
 
 @include gen-states(block) { display: block; }
-@include gen-size(block) { display: block; }
+// @include gen-state(block) { display: block; }
 @include gen-themes(block) { display: block; }
 @include gen-states(inline-block) { display: inline-block; }
-@include gen-size(inline-block) { display: inline-block; }
+// @include gen-state(inline-block) { display: inline-block; }
 @include gen-states(inline) { display: inline; }
-@include gen-size(inline) { display: inline; }
+// @include gen-state(inline) { display: inline; }
 @include gen-states(flex) { display: flex; }
-@include gen-size(flex) { display: flex; }
+// @include gen-state(flex) { display: flex; }
 @include gen-states(inline-flex) { display: inline-flex; }
-@include gen-size(inline-flex) { display: inline-flex; }
+// @include gen-state(inline-flex) { display: inline-flex; }
 @include gen-states(table) { display: table; }
-@include gen-size(table) { display: table; }
+// @include gen-state(table) { display: table; }
 @include gen-states(inline-table) { display: inline-table; }
-@include gen-size(inline-table) { display: inline-table; }
+// @include gen-state(inline-table) { display: inline-table; }
 @include gen-states(table-caption) { display: table-caption; }
-@include gen-size(table-caption) { display: table-caption; }
+// @include gen-state(table-caption) { display: table-caption; }
 @include gen-states(table-cell) { display: table-cell; }
-@include gen-size(table-cell) { display: table-cell; }
+// @include gen-state(table-cell) { display: table-cell; }
 @include gen-states(table-column) { display: table-column; }
-@include gen-size(table-column) { display: table-column; }
+// @include gen-state(table-column) { display: table-column; }
 @include gen-states(table-column-group) { display: table-column-group; }
-@include gen-size(table-column-group) { display: table-column-group; }
+// @include gen-state(table-column-group) { display: table-column-group; }
 @include gen-states(table-footer-group) { display: table-footer-group; }
-@include gen-size(table-footer-group) { display: table-footer-group; }
+// @include gen-state(table-footer-group) { display: table-footer-group; }
 @include gen-states(table-header-group) { display: table-header-group; }
-@include gen-size(table-header-group) { display: table-header-group; }
+// @include gen-state(table-header-group) { display: table-header-group; }
 @include gen-states(table-row-group) { display: table-row-group; }
-@include gen-size(table-row-group) { display: table-row-group; }
+// @include gen-state(table-row-group) { display: table-row-group; }
 @include gen-states(table-row) { display: table-row; }
-@include gen-size(table-row) { display: table-row; }
+// @include gen-state(table-row) { display: table-row; }
 @include gen-states(flow-root) { display: flow-root; }
-@include gen-size(flow-root) { display: flow-root; }
+// @include gen-state(flow-root) { display: flow-root; }
 @include gen-states(grid) { display: grid; }
-@include gen-size(grid) { display: grid; }
+// @include gen-state(grid) { display: grid; }
 @include gen-states(inline-grid) { display: inline-grid; }
-@include gen-size(inline-grid) { display: inline-grid; }
+// @include gen-state(inline-grid) { display: inline-grid; }
 @include gen-states(contents) { display: contents; }
-@include gen-size(contents) { display: contents; }
+// @include gen-state(contents) { display: contents; }
 @include gen-states(list-item) { display: list-item; }
-@include gen-size(list-item) { display: list-item; }
+// @include gen-state(list-item) { display: list-item; }
 @include gen-states(hidden) { display: none; }
-@include gen-size(hidden) { display: none; }
+// @include gen-state(hidden) { display: none; }
 @include gen-themes(hidden) { display: none; }
 
 // Utilities - Layout - Float
 
 @include gen-states(float-right) { float: right };
-@include gen-size(float-right) { float: right };
+// @include gen-state(float-right) { float: right };
 @include gen-states(float-left) { float: left };
-@include gen-size(float-left) { float: left };
+// @include gen-state(float-left) { float: left };
 @include gen-states(float-none) { float: none };
-@include gen-size(float-none) { float: none };
+// @include gen-state(float-none) { float: none };
 
 // Utilities - Layout - Overflow
 
 @include gen-states(overflow-auto) { overflow: auto; }
-@include gen-size(overflow-auto) { overflow: auto; }
+// @include gen-state(overflow-auto) { overflow: auto; }
 @include gen-states(overflow-x-auto) { overflow-x: auto; }
-@include gen-size(overflow-x-auto) { overflow-x: auto; }
+// @include gen-state(overflow-x-auto) { overflow-x: auto; }
 @include gen-states(overflow-y-auto) { overflow-y: auto; }
-@include gen-size(overflow-y-auto) { overflow-y: auto; }
+// @include gen-state(overflow-y-auto) { overflow-y: auto; }
 @include gen-states(overflow-hidden) { overflow: hidden; }
-@include gen-size(overflow-hidden) { overflow: hidden; }
+// @include gen-state(overflow-hidden) { overflow: hidden; }
 @include gen-states(overflow-x-hidden) { overflow-x: hidden; }
-@include gen-size(overflow-x-hidden) { overflow-x: hidden; }
+// @include gen-state(overflow-x-hidden) { overflow-x: hidden; }
 @include gen-states(overflow-y-hidden) { overflow-y: hidden; }
-@include gen-size(overflow-y-hidden) { overflow-y: hidden; }
+// @include gen-state(overflow-y-hidden) { overflow-y: hidden; }
 @include gen-states(overflow-visible) { overflow: visible; }
-@include gen-size(overflow-visible) { overflow: visible; }
+// @include gen-state(overflow-visible) { overflow: visible; }
 @include gen-states(overflow-x-visible) { overflow-x: visible; }
-@include gen-size(overflow-x-visible) { overflow-x: visible; }
+// @include gen-state(overflow-x-visible) { overflow-x: visible; }
 @include gen-states(overflow-y-visible) { overflow-y: visible; }
-@include gen-size(overflow-y-visible) { overflow-y: visible; }
+// @include gen-state(overflow-y-visible) { overflow-y: visible; }
 @include gen-states(overflow-scroll) { overflow: scroll; }
-@include gen-size(overflow-scroll) { overflow: scroll; }
+// @include gen-state(overflow-scroll) { overflow: scroll; }
 @include gen-states(overflow-x-scroll) { overflow-x: scroll; }
-@include gen-size(overflow-x-scroll) { overflow-x: scroll; }
+// @include gen-state(overflow-x-scroll) { overflow-x: scroll; }
 @include gen-states(overflow-y-scroll) { overflow-y: scroll; }
-@include gen-size(overflow-y-scroll) { overflow-y: scroll; }
+// @include gen-state(overflow-y-scroll) { overflow-y: scroll; }
 
 // Utilities - Layout - Position
 
 @include gen-states(static) { position: static; }
-@include gen-size(static) { position: static; }
+// @include gen-state(static) { position: static; }
 @include gen-states(fixed) { position: fixed; }
-@include gen-size(fixed) { position: fixed; }
+// @include gen-state(fixed) { position: fixed; }
 @include gen-states(absolute) { position: absolute; }
-@include gen-size(absolute) { position: absolute; }
+// @include gen-state(absolute) { position: absolute; }
 @include gen-states(relative) { position: relative; }
-@include gen-size(relative) { position: relative; }
+// @include gen-state(relative) { position: relative; }
 @include gen-states(sticky) { position: sticky; }
-@include gen-size(sticky) { position: sticky; }
+// @include gen-state(sticky) { position: sticky; }
 
 @include gen-states(top-auto) { top: auto; }
 @for $i from 0 through 100 {
-  $top: $i * 0.25em;
-  @include gen-states(top-#{$i}) { top: $top; }
-  @include gen-size(top-#{$i}) { top: $top; }
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $top: $i * 0.25em;
+    @include gen-states(top-#{$i}) { top: $top; }
+    // @include gen-state(top-#{$i}) { top: $top; }
+  }
 }
 
 @include gen-states(right-auto) { right: auto; }
 @for $i from 0 through 100 {
-  $right: $i * 0.25em;
-  @include gen-states(right-#{$i}) { right: $right; }
-  @include gen-size(right-#{$i}) { right: $right; }
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $right: $i * 0.25em;
+    @include gen-states(right-#{$i}) { right: $right; }
+    // @include gen-state(right-#{$i}) { right: $right; }
+  }
 }
 
 @include gen-states(bottom-auto) { bottom: auto; }
 @for $i from 0 through 100 {
-  $bottom: $i * 0.25em;
-  @include gen-states(bottom-#{$i}) { bottom: $bottom; }
-  @include gen-size(bottom-#{$i}) { bottom: $bottom; }
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $bottom: $i * 0.25em;
+    @include gen-states(bottom-#{$i}) { bottom: $bottom; }
+    // @include gen-state(bottom-#{$i}) { bottom: $bottom; }
+  }
 }
 
 @include gen-states(left-auto) { left: auto; }
 @for $i from 0 through 100 {
-  $left: $i * 0.25em;
-  @include gen-states(left-#{$i}) { left: $left; }
-  @include gen-size(left-#{$i}) { left: $left; }
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $left: $i * 0.25em;
+    @include gen-states(left-#{$i}) { left: $left; }
+    // @include gen-state(left-#{$i}) { left: $left; }
+  }
 }
 
 // Utilities - Layout - Visibility
 
 @include gen-states(visible) { visibility: visible; }
-@include gen-size(visible) { visibility: visible; }
+// @include gen-state(visible) { visibility: visible; }
 @include gen-states(hidden) { visibility: hidden; }
-@include gen-size(hidden) { visibility: hidden; }
+// @include gen-state(hidden) { visibility: hidden; }
 
 // Utilities - Layout - Z Index
 
@@ -2537,133 +2545,161 @@ $border-radius-values: (
 @for $i from 0 through 10 {
   $index: $i * 10;
   @include gen-states(z-#{$i * 10}) { z-index: $index; }
-  @include gen-size(z-#{$i * 10}) { z-index: $index; }
+  // @include gen-state(z-#{$i * 10}) { z-index: $index; }
 }
 
 // Utilities - Spacing - Padding
 
 @for $i from 0 through 100 {
-  $padding: $i * 0.25em;
-  @include gen-states(p-#{$i}) { padding: $padding; }
-  @include gen-size(p-#{$i}) { padding: $padding; }
-}
-
-@for $i from 0 through 100 {
-  $padding-top: $i * 0.25em;
-  @include gen-states(pt-#{$i}) { padding-top: $padding-top; }
-  @include gen-size(pt-#{$i}) { padding-top: $padding-top; }
-}
-
-@for $i from 0 through 100 {
-  $padding-right: $i * 0.25em;
-  @include gen-states(pr-#{$i}) { padding-right: $padding-right; }
-  @include gen-size(pr-#{$i}) { padding-right: $padding-right; }
-}
-
-@for $i from 0 through 100 {
-  $padding-bottom: $i * 0.25em;
-  @include gen-states(pb-#{$i}) { padding-bottom: $padding-bottom; }
-  @include gen-size(pb-#{$i}) { padding-bottom: $padding-bottom; }
-}
-
-@for $i from 0 through 100 {
-  $padding-left: $i * 0.25em;
-  @include gen-states(pl-#{$i}) { padding-left: $padding-left; }
-  @include gen-size(pl-#{$i}) { padding-left: $padding-left; }
-}
-
-@for $i from 0 through 100 {
-  $padding-x: $i * 0.25em;
-  @include gen-states(px-#{$i}) {
-    padding-left: $padding-x;
-    padding-right: $padding-x;
-  }
-  @include gen-size(px-#{$i}) {
-    padding-left: $padding-x;
-    padding-right: $padding-x;
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $padding: $i * 0.25em;
+    @include gen-states(p-#{$i}) { padding: $padding; }
+    // @include gen-state(p-#{$i}) { padding: $padding; }
   }
 }
 
 @for $i from 0 through 100 {
-  $padding-y: $i * 0.25em;
-  @include gen-states(py-#{$i}) {
-    padding-top: $padding-y;
-    padding-bottom: $padding-y;
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $padding-top: $i * 0.25em;
+    @include gen-states(pt-#{$i}) { padding-top: $padding-top; }
+    // @include gen-state(pt-#{$i}) { padding-top: $padding-top; }
   }
-  @include gen-size(py-#{$i}) {
-    padding-top: $padding-y;
-    padding-bottom: $padding-y;
+}
+
+@for $i from 0 through 100 {
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $padding-right: $i * 0.25em;
+    @include gen-states(pr-#{$i}) { padding-right: $padding-right; }
+    // @include gen-state(pr-#{$i}) { padding-right: $padding-right; }
+  }
+}
+
+@for $i from 0 through 100 {
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $padding-bottom: $i * 0.25em;
+    @include gen-states(pb-#{$i}) { padding-bottom: $padding-bottom; }
+    // @include gen-state(pb-#{$i}) { padding-bottom: $padding-bottom; }
+  }
+}
+
+@for $i from 0 through 100 {
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $padding-left: $i * 0.25em;
+    @include gen-states(pl-#{$i}) { padding-left: $padding-left; }
+    // @include gen-state(pl-#{$i}) { padding-left: $padding-left; }
+  }
+}
+
+@for $i from 0 through 100 {
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $padding-x: $i * 0.25em;
+    @include gen-states(px-#{$i}) {
+      padding-left: $padding-x;
+      padding-right: $padding-x;
+    }
+    // @include gen-state(px-#{$i}) {
+    //   padding-left: $padding-x;
+    //   padding-right: $padding-x;
+    // }
+  }
+}
+
+@for $i from 0 through 100 {
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $padding-y: $i * 0.25em;
+    @include gen-states(py-#{$i}) {
+      padding-top: $padding-y;
+      padding-bottom: $padding-y;
+    }
+    // @include gen-state(py-#{$i}) {
+    //   padding-top: $padding-y;
+    //   padding-bottom: $padding-y;
+    // }
   }
 }
 
 // Utilities - Spacing - Margin
 
 @for $i from 0 through 100 {
-  $margin: $i * 0.25em;
-  @include gen-states(m-#{$i}) { margin: $margin; }
-  @include gen-size(m-#{$i}) { margin: $margin; }
-}
-
-@for $i from 0 through 100 {
-  $margin-top: $i * 0.25em;
-  @include gen-states(mt-#{$i}) { margin-top: $margin-top; }
-  @include gen-size(mt-#{$i}) { margin-top: $margin-top; }
-}
-
-@for $i from 0 through 100 {
-  $margin-right: $i * 0.25em;
-  @include gen-states(mr-#{$i}) { margin-right: $margin-right; }
-  @include gen-size(mr-#{$i}) { margin-right: $margin-right; }
-}
-
-@for $i from 0 through 100 {
-  $margin-bottom: $i * 0.25em;
-  @include gen-states(mb-#{$i}) { margin-bottom: $margin-bottom; }
-  @include gen-size(mb-#{$i}) { margin-bottom: $margin-bottom; }
-}
-
-@for $i from 0 through 100 {
-  $margin-left: $i * 0.25em;
-  @include gen-states(ml-#{$i}) { margin-left: $margin-left; }
-  @include gen-size(ml-#{$i}) { margin-left: $margin-left; }
-}
-
-@for $i from 0 through 100 {
-  $margin-x: $i * 0.25em;
-  @include gen-states(mx-#{$i}) {
-    margin-left: $margin-x;
-    margin-right: $margin-x;
-  }
-  @include gen-size(mx-#{$i}) {
-    margin-left: $margin-x;
-    margin-right: $margin-x;
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $margin: $i * 0.25em;
+    @include gen-states(m-#{$i}) { margin: $margin; }
+    // @include gen-state(m-#{$i}) { margin: $margin; }
   }
 }
 
 @for $i from 0 through 100 {
-  $margin-y: $i * 0.25em;
-  @include gen-states(my-#{$i}) {
-    margin-top: $margin-y;
-    margin-bottom: $margin-y;
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $margin-top: $i * 0.25em;
+    @include gen-states(mt-#{$i}) { margin-top: $margin-top; }
+    // @include gen-state(mt-#{$i}) { margin-top: $margin-top; }
   }
-  @include gen-size(my-#{$i}) {
-    margin-top: $margin-y;
-    margin-bottom: $margin-y;
+}
+
+@for $i from 0 through 100 {
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $margin-right: $i * 0.25em;
+    @include gen-states(mr-#{$i}) { margin-right: $margin-right; }
+    // @include gen-state(mr-#{$i}) { margin-right: $margin-right; }
+  }
+}
+
+@for $i from 0 through 100 {
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $margin-bottom: $i * 0.25em;
+    @include gen-states(mb-#{$i}) { margin-bottom: $margin-bottom; }
+    // @include gen-state(mb-#{$i}) { margin-bottom: $margin-bottom; }
+  }
+}
+
+@for $i from 0 through 100 {
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $margin-left: $i * 0.25em;
+    @include gen-states(ml-#{$i}) { margin-left: $margin-left; }
+    // @include gen-state(ml-#{$i}) { margin-left: $margin-left; }
+  }
+}
+
+@for $i from 0 through 100 {
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $margin-x: $i * 0.25em;
+    @include gen-states(mx-#{$i}) {
+      margin-left: $margin-x;
+      margin-right: $margin-x;
+    }
+    // @include gen-state(mx-#{$i}) {
+    //   margin-left: $margin-x;
+    //   margin-right: $margin-x;
+    // }
+  }
+}
+
+@for $i from 0 through 100 {
+  @if $i <= 20 or ($i <= 50 and $i % 2 == 0) or ($i <= 100 and $i % 5 == 0) {
+    $margin-y: $i * 0.25em;
+    @include gen-states(my-#{$i}) {
+      margin-top: $margin-y;
+      margin-bottom: $margin-y;
+    }
+    // @include gen-state(my-#{$i}) {
+    //   margin-top: $margin-y;
+    //   margin-bottom: $margin-y;
+    // }
   }
 }
 
 @include gen-states(mt-auto) { margin-top: auto; }
-@include gen-size(mt-auto) { margin-top: auto; }
+// @include gen-state(mt-auto) { margin-top: auto; }
 @include gen-states(mr-auto) { margin-right: auto; }
-@include gen-size(mr-auto) { margin-right: auto; }
+// @include gen-state(mr-auto) { margin-right: auto; }
 @include gen-states(mb-auto) { margin-bottom: auto; }
-@include gen-size(mb-auto) { margin-bottom: auto; }
+// @include gen-state(mb-auto) { margin-bottom: auto; }
 @include gen-states(ml-auto) { margin-left: auto; }
-@include gen-size(ml-auto) { margin-left: auto; }
+// @include gen-state(ml-auto) { margin-left: auto; }
 @include gen-states(mx-auto) { margin-left: auto; margin-right: auto; }
-@include gen-size(mx-auto) { margin-left: auto; margin-right: auto; }
+// @include gen-state(mx-auto) { margin-left: auto; margin-right: auto; }
 @include gen-states(my-auto) { margin-top: auto; margin-bottom: auto; }
-@include gen-size(my-auto) { margin-top: auto; margin-bottom: auto; }
+// @include gen-state(my-auto) { margin-top: auto; margin-bottom: auto; }
 
 // Utilities - Interactivity
 

@@ -52,7 +52,7 @@ const data = [
     label: 'Layouts',
     icon: 'TbArrowAutofitContentFilled',
     // children: ['Container', 'Grid', 'Flexbox', 'Design Utilities', 'Sticky'],
-    children: ['Container', 'Flexbox'],
+    children: ['Container', 'Grid', 'Flexbox'],
   },
   // {
   //   label: 'Data Display',

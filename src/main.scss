@@ -419,10 +419,13 @@ input[type=text] {
     tbody {
       display: table;
       width: 100%;
-      border-bottom: 2px solid var(--color-border);
 
       tr {
         border-bottom: 1px solid var(--color-border);
+
+        &:last-child {
+          border-bottom: none;
+        }
 
         td {
           font-family: 'Roboto Mono', monospace;

@@ -53,7 +53,7 @@ const Flexbox = () => {
 
       <footer>
         <Link to='/forms-and-inputs/text-fields'>Text Fields</Link>
-        <Link to='/layouts/flexbox'>Flexbox</Link>
+        <Link to='/layouts/grid'>Grid</Link>
       </footer>
 
       <div className='article-sidebar'>

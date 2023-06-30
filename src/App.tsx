@@ -16,8 +16,9 @@ const Twitter = React.lazy(() => import('./pages/Showcase/Twitter'));
 const Buttons = React.lazy(() => import('./pages/FormsInputs/Buttons'));
 const TextFields = React.lazy(() => import('./pages/FormsInputs/TextFields'));
 
-const Flexbox = React.lazy(() => import('./pages/Layouts/Flexbox'));
 const Container = React.lazy(() => import('./pages/Layouts/Container'));
+const Grid = React.lazy(() => import('./pages/Layouts/Grid'));
+const Flexbox = React.lazy(() => import('./pages/Layouts/Flexbox'));
 
 const Borders = React.lazy(() => import('./pages/Utilities/Borders'));
 const Sizing = React.lazy(() => import('./pages/Utilities/Sizing'));
@@ -32,7 +33,7 @@ const getTheme = () => {
 }
 
 const App = () => {
-  const [sidebarActive, setSidebarActive] = useState(true);
+  const [sidebarActive, setSidebarActive] = useState(window.innerWidth > 1700);
   const [siteTheme, setSiteTheme] = useState(getTheme);
   const [editorTheme, setEditorTheme] = useState(siteTheme);
   const { pathname } = useLocation();
@@ -65,6 +66,7 @@ const App = () => {
             <Route path='/forms-and-inputs/text-fields' element={<TextFields />} />
 
             <Route path='/layouts/container' element={<Container />} />
+            <Route path='/layouts/grid' element={<Grid />} />
             <Route path='/layouts/flexbox' element={<Flexbox />} />
 
             <Route path='/utilities/borders' element={<Borders />} />

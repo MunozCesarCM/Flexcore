@@ -96,7 +96,7 @@ const Flexbox = () => {
       <CodeExample snippet={example8} />
 
       <footer>
-        <Link to='/layouts/container'>Container</Link>
+        <Link to='/layouts/grid'>Grid</Link>
         <Link to='/utilities/borders'>Borders</Link>
       </footer>
 

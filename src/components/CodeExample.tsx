@@ -22,7 +22,7 @@ const CodeExample = ({ snippet, template = true, font = 'Poppins' }: CodeExample
   const {editorTheme, setEditorTheme, siteTheme} = useContext(AppContext);
 
   const snippetLines = snippet.split('\n').length;
-  const [showComplete, setShowComplete] = useState(snippetLines < 10 ? true : false);
+  const [showComplete, setShowComplete] = useState(snippetLines < 10);
 
   const notify = () => toast.success('Text Copied to Clipboard!');
 
@@ -30,7 +30,7 @@ const CodeExample = ({ snippet, template = true, font = 'Poppins' }: CodeExample
     let newTheme = null;
     newTheme = (editorTheme === 'light') ? 'dark' : 'light';
     setEditorTheme(newTheme);
-  }
+  };
 
   const onLoad = () => {
     if (ref.current !== null && ref.current.contentWindow !== null) {
@@ -41,7 +41,7 @@ const CodeExample = ({ snippet, template = true, font = 'Poppins' }: CodeExample
   const handleCopy = () => {
     navigator.clipboard.writeText(srcDoc);
     notify();
-  }
+  };
 
   return (
     <>
@@ -52,8 +52,7 @@ const CodeExample = ({ snippet, template = true, font = 'Poppins' }: CodeExample
           srcDoc={formatCode(srcDoc, template, editorTheme, siteTheme, font)}
           title='output'
           sandbox='allow-same-origin'
-          frameBorder='0'
-          style={{height: height}}
+          style={{height: height, border: '1px solid var(--color-border)'}}
           className='h-full w-full overflow-y-hidden border border-neutral-200 dark:border-neutral-800 rounded'
         />
       </div>
@@ -92,6 +91,7 @@ const CodeExample = ({ snippet, template = true, font = 'Poppins' }: CodeExample
               ]
             })}
             extensions={[html()]}
+            editable={showComplete}
             onChange={(e) => setSrcDoc(e)}
             basicSetup={{
               foldGutter: false,

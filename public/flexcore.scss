@@ -1156,9 +1156,40 @@ body {
 
 // Typography - Color Styling - Opacity
 
-@for $i from 0 through 20 {
+@for $i from 1 through 20 {
   $opacity: $i * 0.05;
   @include gen-states(opacity-#{$i * 5}) { opacity: $opacity; }
+}
+
+// Layouts - Grid
+
+.grid-cols-none { grid-template-columns: none; }
+@for $i from 1 through 12 {
+  @include gen-states(grid-cols-#{$i}) {
+    grid-template-columns: repeat($i, minmax(0, 1fr));
+  }
+}
+
+.col-auto { grid-column: auto; }
+@for $i from 1 through 12 {
+  @include gen-states(col-span-#{$i}) {
+    grid-column: span #{$i} / span #{$i};
+  }
+}
+.col-span-full { grid-column: 1 / -1; }
+
+.col-start-auto { grid-column-start: auto; }
+@for $i from 1 through 12 {
+  @include gen-states(col-start-#{$i}) {
+    grid-column-start: #{$i};
+  }
+}
+
+.col-end-auto { grid-column-end: auto; }
+@for $i from 1 through 12 {
+  @include gen-states(col-end-#{$i}) {
+    grid-column-end: #{$i};
+  }
 }
 
 // Layouts - Flexbox - Flex

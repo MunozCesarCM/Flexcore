@@ -47,8 +47,7 @@ const Home = () => {
             srcDoc={formatCode(example1, true, siteTheme, siteTheme, 'Poppins')}
             title='output'
             sandbox='allow-same-origin'
-            frameBorder='0'
-            style={{height: height, width: '55vw'}}
+            style={{height: height, width: '55vw', border: '1px solid var(--color-border)'}}
           />
         </section>
       </header>

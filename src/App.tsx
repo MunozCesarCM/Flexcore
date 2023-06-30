@@ -33,10 +33,10 @@ const getTheme = () => {
 }
 
 const App = () => {
-  const [sidebarActive, setSidebarActive] = useState(window.innerWidth > 1700);
+  const { pathname } = useLocation();
+  const [sidebarActive, setSidebarActive] = useState(window.innerWidth > 1700 && pathname !== '/');
   const [siteTheme, setSiteTheme] = useState(getTheme);
   const [editorTheme, setEditorTheme] = useState(siteTheme);
-  const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);

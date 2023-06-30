@@ -77,6 +77,26 @@ export const example4 = `
 </section>
 `.slice(1,-1);
 
+export const example5 = `
+<section class="grid grid-cols-12 gap-2">
+  <div class="bg-primary text-white py-9 text-center col-span-2 row-span-2"></div>
+  <div class="bg-purple-500 text-white py-9 text-center"></div>
+  <div class="bg-yellow-400 text-white py-9 text-center"></div>
+  <div class="bg-primary text-white py-9 text-center col-span-4 row-span-2"></div>
+  <div class="bg-yellow-400 text-white py-9 text-center col-span-2 row-span-2"></div>
+  <div class="bg-secondary text-white py-9 text-center col-span-2 row-span-2"></div>
+  <div class="bg-yellow-400 text-white py-9 text-center"></div>
+  <div class="bg-secondary text-white py-9 text-center"></div>
+  <div class="bg-purple-500 text-white py-9 text-center col-span-4 row-span-2"></div>
+  <div class="bg-secondary text-white py-9 text-center col-span-4 row-span-4"></div>
+  <div class="bg-primary text-white py-9 text-center col-span-4 row-span-2"></div>
+  <div class="bg-primary text-white py-9 text-center col-span-2 row-span-2"></div>
+  <div class="bg-yellow-400 text-white py-9 text-center col-span-2 row-span-2"></div>
+  <div class="bg-secondary text-white py-9 text-center col-span-2 row-span-2"></div>
+  <div class="bg-purple-500 text-white py-9 text-center col-span-2 row-span-2"></div>
+</section>
+`.slice(1,-1);
+
 export const table1 = {
   body: [
     ...(function() {

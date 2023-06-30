@@ -8,6 +8,7 @@ import {
   example2,
   example3,
   example4,
+  example5,
   table1,
   table2,
   table3,
@@ -77,6 +78,10 @@ const Grid = () => {
       <p>The <mark>grid-row-start</mark> and <mark>grid-row-end</mark> properties define the starting and ending position of grid items within a grid row:</p>
       <ClassTable tableItems={table6} />
 
+      <h3 id='Showcase'>Showcase</h3>
+      <CodeExample snippet={example5} />
+
+
       <footer>
         <Link to='/layouts/container'>Container</Link>
         <Link to='/layouts/flexbox'>Flexbox</Link>
@@ -93,6 +98,7 @@ const Grid = () => {
         <h4 onClick={() => scrollPosition('Row Placement')}>Row Placement</h4>
         <h5 onClick={() => scrollPosition('Row Grid Span')}>Grid Span</h5>
         <h5 onClick={() => scrollPosition('Row Grid Start End')}>Grid Start / End</h5>
+        <h4 onClick={() => scrollPosition('Showcase')}>Showcase</h4>
       </div>
     </article>
   );

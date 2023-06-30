@@ -60,17 +60,20 @@ export const example3 = `
 `.slice(1,-1);
 
 export const example4 = `
-<section class="grid grid-cols-4 gap-2">
-  <div class="bg-secondary text-white text-center col-end-2">End 2</div>
-  <div class="bg-primary text-white text-center">Item</div>
-  <div class="bg-primary text-white text-center">Item</div>
-  <div class="bg-primary text-white text-center">Item</div>
-  <div class="bg-secondary text-white text-center col-end-3">End 3</div>
-  <div class="bg-primary text-white text-center">Item</div>
-  <div class="bg-primary text-white text-center">Item</div>
-  <div class="bg-secondary text-white text-center col-end-4">End 4</div>
-  <div class="bg-primary text-white text-center">Item</div>
-  <div class="bg-secondary text-white text-center col-end-5">End 5</div>
+<section class="grid grid-cols-4 gap-1">
+  <div class="bg-secondary text-white text-center row-span-3">One</div>
+  <div class="bg-primary text-white text-center">Two</div>
+  <div class="bg-primary text-white text-center">Three</div>
+  <div class="bg-secondary text-white text-center row-span-4">Four</div>
+  <div class="bg-primary text-white text-center">Five</div>
+  <div class="bg-primary text-white text-center">Six</div>
+  <div class="bg-secondary text-white text-center row-span-2">Seven</div>
+  <div class="bg-primary text-white text-center">Eight</div>
+  <div class="bg-primary text-white text-center">Nine</div>
+  <div class="bg-secondary text-white text-center row-span-2">Ten</div>
+  <div class="bg-primary text-white text-center">Eleven</div>
+  <div class="bg-primary text-white text-center">Twelve</div>
+  <div class="bg-primary text-white text-center">Thirteen</div>
 </section>
 `.slice(1,-1);
 
@@ -148,6 +151,10 @@ export const table3 = {
           desc: `grid-column-end: ${i}`,
         });
       }
+      array.push({
+        title: `col-end-13`,
+        desc: `grid-column-end: 13`,
+      });
 
       return array;
     })()
@@ -159,12 +166,79 @@ export const table4 = {
     ...(function() {
       const array = [];
 
-      for (let i = 1; i <= 12; ++i) {
+      for (let i = 1; i <= 6; ++i) {
         array.push({
-          title: `col-end-${i}`,
-          desc: `grid-column-end: ${i}`,
+          title: `grid-rows-${i}`,
+          desc: `grid-template-rows: repeat(${i}, minmax(0, 1fr))`,
         });
       }
+
+      array.push({
+        title: `grid-rows-none`,
+        desc: `grid-template-rows: none`,
+      })
+
+      return array;
+    })()
+  ],
+};
+
+export const table5 = {
+  body: [
+    ...(function() {
+      const array = [];
+
+      array.push({
+        title: `row-auto`,
+        desc: `grid-row: auto`,
+      })
+
+      for (let i = 1; i <= 6; ++i) {
+        array.push({
+          title: `row-span-${i}`,
+          desc: `grid-row: span ${i} / span ${i}`,
+        });
+      }
+
+      array.push({
+        title: `row-span-full`,
+        desc: `grid-row: 1 / -1`,
+      })
+
+      return array;
+    })()
+  ],
+};
+
+export const table6 = {
+  body: [
+    ...(function() {
+      const array = [];
+
+      array.push({
+        title: `row-start-auto`,
+        desc: `grid-row-start: auto`,
+      })
+
+      array.push({
+        title: `row-end-auto`,
+        desc: `grid-row-end: auto`,
+      })
+
+      for (let i = 1; i <= 6; ++i) {
+        array.push({
+          title: `row-start-${i}`,
+          desc: `grid-row-start: ${i}`,
+        });
+        array.push({
+          title: `row-end-${i}`,
+          desc: `grid-row-end: ${i}`,
+        });
+      }
+      array.push({
+        title: `row-end-7`,
+        desc: `grid-row-end: 7`,
+      });
 
       return array;
     })()

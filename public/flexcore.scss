@@ -1161,7 +1161,7 @@ body {
   @include gen-states(opacity-#{$i * 5}) { opacity: $opacity; }
 }
 
-// Layouts - Grid
+// Layouts - Grid - Columns
 
 .grid-cols-none { grid-template-columns: none; }
 @for $i from 1 through 12 {
@@ -1186,9 +1186,40 @@ body {
 }
 
 .col-end-auto { grid-column-end: auto; }
-@for $i from 1 through 12 {
+@for $i from 1 through 13 {
   @include gen-states(col-end-#{$i}) {
     grid-column-end: #{$i};
+  }
+}
+
+// Layouts - Grid - Rows
+
+.grid-rows-none { grid-template-rows: none; }
+@for $i from 1 through 6 {
+  @include gen-states(grid-rows-#{$i}) {
+    grid-template-rows: repeat($i, minmax(0, 1fr));
+  }
+}
+
+.row-auto { grid-row: auto; }
+@for $i from 1 through 6 {
+  @include gen-states(row-span-#{$i}) {
+    grid-row: span #{$i} / span #{$i};
+  }
+}
+.row-span-full { grid-row: 1 / -1; }
+
+.row-start-auto { grid-row-start: auto; }
+@for $i from 1 through 6 {
+  @include gen-states(row-start-#{$i}) {
+    grid-row-start: #{$i};
+  }
+}
+
+.row-end-auto { grid-row-end: auto; }
+@for $i from 1 through 7 {
+  @include gen-states(row-end-#{$i}) {
+    grid-row-end: #{$i};
   }
 }
 

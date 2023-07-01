@@ -1,4 +1,4 @@
-import{r as l,A as a,j as e,L as b}from"./index-e977f244.js";import{C as o}from"./CodeExample-afb20d1c.js";import"./toast-04da3939.js";import"./formatCode-85636521.js";const c=`
+import{r as l,A as a,j as e,L as b}from"./index-fee59e8d.js";import{C as o}from"./CodeExample-f9018ae5.js";import"./toast-e3b7705e.js";import"./formatCode-85636521.js";const c=`
 <button class="bg-blue-600 text-white weight-500 border-none px-5 py-2 rounded hover:bg-blue-700 duration-100 cursor-pointer active:bg-blue-800">Blue</button>
 <button class="bg-red-600 text-white weight-500 border-none px-5 py-2 rounded hover:bg-red-700 duration-100 cursor-pointer active:bg-red-800">Red</button>
 <button class="bg-yellow-500 text-white weight-500 border-none px-5 py-2 rounded hover:bg-yellow-600 duration-100 cursor-pointer active:bg-yellow-700">Yellow</button>

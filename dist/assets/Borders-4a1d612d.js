@@ -1,4 +1,4 @@
-import{r as n,A as p,j as e,b as F,a as y,L as u}from"./index-e977f244.js";import{C as l}from"./CodeExample-afb20d1c.js";import{C as i}from"./ClassTable-b71af7d4.js";import"./toast-04da3939.js";import"./formatCode-85636521.js";const m=`
+import{r as n,A as p,j as e,b as F,a as y,L as u}from"./index-fee59e8d.js";import{C as l}from"./CodeExample-f9018ae5.js";import{C as i}from"./ClassTable-352d230e.js";import"./toast-e3b7705e.js";import"./formatCode-85636521.js";const m=`
 <span class="bg-primary text-white px-4 py-2 rounded">Normal</span>
 <span class="bg-primary text-white px-4 py-2 rounded-lg">Large</span>
 <span class="bg-primary text-white px-4 py-2 rounded-xl">Extra Large</span>

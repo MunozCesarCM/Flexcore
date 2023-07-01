@@ -1,4 +1,4 @@
-import{r as n,A as i,j as e,T as c,L as u}from"./index-e977f244.js";import{C as l}from"./CodeExample-afb20d1c.js";import"./toast-04da3939.js";import"./formatCode-85636521.js";const x=`
+import{r as n,A as i,j as e,T as c,L as u}from"./index-fee59e8d.js";import{C as l}from"./CodeExample-f9018ae5.js";import"./toast-e3b7705e.js";import"./formatCode-85636521.js";const x=`
 <label class="block text-sm weight-500">First Name</label>
 <input type="text" value="Cesar" class="w-50 bg-neutral-50 dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600 dark:text-white focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg px-3 py-1" />
 `.slice(1,-1),p=`

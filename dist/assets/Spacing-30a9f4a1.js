@@ -1,4 +1,4 @@
-import{r as o,A as m,j as e,T as g,L as l}from"./index-e977f244.js";import{C as d}from"./CodeExample-afb20d1c.js";import{C as s}from"./ClassTable-b71af7d4.js";import"./toast-04da3939.js";import"./formatCode-85636521.js";const h=`
+import{r as o,A as m,j as e,T as g,L as l}from"./index-fee59e8d.js";import{C as d}from"./CodeExample-f9018ae5.js";import{C as s}from"./ClassTable-352d230e.js";import"./toast-e3b7705e.js";import"./formatCode-85636521.js";const h=`
 <span class="bg-primary text-white p-0">padding 0</span>
 <span class="bg-primary text-white p-1">padding 1</span>
 <span class="bg-primary text-white p-2">padding 2</span>

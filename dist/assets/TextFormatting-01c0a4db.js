@@ -1,4 +1,4 @@
-import{r,A as x,j as e,T as h,L as d}from"./index-e977f244.js";import{C as i}from"./CodeExample-afb20d1c.js";import{C as s}from"./ClassTable-b71af7d4.js";import"./toast-04da3939.js";import"./formatCode-85636521.js";const p=`
+import{r,A as x,j as e,T as h,L as d}from"./index-fee59e8d.js";import{C as i}from"./CodeExample-f9018ae5.js";import{C as s}from"./ClassTable-352d230e.js";import"./toast-e3b7705e.js";import"./formatCode-85636521.js";const p=`
 <h1>Welcome to Flexcore</h1>
 <h2>Welcome to Flexcore</h2>
 <h3>Welcome to Flexcore</h3>

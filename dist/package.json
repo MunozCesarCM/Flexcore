@@ -1,6 +1,6 @@
 {
   "name": "flexcore",
-  "version": "1.1.0",
+  "version": "1.3.0",
   "description": "An advanced UI library designed to simplify the process of building stunning and responsive web interfaces.",
   "main": "flexcore.css",
   "scripts": {
@@ -16,5 +16,5 @@
   "bugs": {
     "url": "https://github.com/MunozCesarCM/Flexcore/issues"
   },
-  "homepage": "https://github.com/MunozCesarCM/Flexcore#readme"
+  "homepage": "https://github.com/MunozCesarCM/Flexcore/blob/main/public/README.md"
 }
